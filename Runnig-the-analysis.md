@@ -29,19 +29,19 @@ There is a maven plugin which automates running of a sonar analysis on a C++ pro
 1. Getting and installing the [cxx-maven-plugin](https://github.com/franckbonin/cxx-maven-plugin) ([usage](https://github.com/franckbonin/cxx-maven-plugin/wiki/Introduction)). If you use multiple source directories and depend on cxx:addsource goal, you shall use -Dsonar.phase=cxx:addsource option (see [Sonar Maven Plugin Project Configuration](http://docs.codehaus.org/display/SONAR/Analysis+Parameters) )
 
 2. Setting the language property and the source directory in your pom:
+``` 
+  <properties>
+    ...
+    <sonar.language>c++</sonar.language>
+    ...
+  </properties>
  
-<properties>
-  ...
-  <sonar.language>c++</sonar.language>
-  ...
-</properties>
- 
-<build>
-  ...
-  <sourceDirectory> path </sourceDirectory>
-  ...
-</build>
-
+  <build>
+    ...
+    <sourceDirectory> path </sourceDirectory>
+    ...
+  </build>
+```
 3. Make sure your SonarQube server is running.
 
 4. Start the analysis with "mvn sonar:sonar" or "mvn sonar:sonar -Dsonar.phase=cxx:addsource"
