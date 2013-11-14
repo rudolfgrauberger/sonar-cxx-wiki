@@ -24,8 +24,7 @@ Example: .C,.c
 <td>.hxx,.hpp,.hh,.h</td>
 <td>Comma separated list of file name extensions to be considered as C++ header files during analysis.
 <br>
-Example:
-.H,.h
+Example: .H,.h
 </td>
 </tr>
 
