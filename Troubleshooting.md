@@ -8,5 +8,10 @@ This is the list of frequently asked questions and less frequently given answers
 * Be sure that the tools are run in the same location as the analysis. And that you dont move reports between locations with different paths.
 
 **Q: I still dont see any Cppcheck violations in SonarQube**
+
 **A:** Cppcheck supports two different formats for XML reports: 'version 1' and 'version 2'. Make sure you use the former.
 
+
+**Q: SonarQube fails to start with error messages: Cannot insert duplicate key row in object 'dbo.rules'**
+
+**A:** This problem can occur when using MS SQL database configured to be case insensitive. Make sure database is set to be case sensitive and restart SonarQube. For more information check database requirements for SonarQube: [Requirements](http://docs.codehaus.org/display/SONAR/Requirements)
