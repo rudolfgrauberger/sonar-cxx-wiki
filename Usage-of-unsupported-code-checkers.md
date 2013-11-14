@@ -25,15 +25,32 @@ _$SONARQUBEHOME\extensions\rules\cxxexternal_. Use the format described in [[Ext
 
 Where the fields have the following semantics:
 
+<table>
+<tr>
+<td><b>Tag/Attribute</b></td>
+<td><b>Semantic</b></td>
+</tr>
 
-Example:
-```XML
-<?xml version="1.0"?>
-<results>
-<error file="sources/utils/code_chunks.cpp" line="1" id="cxxexternal-unusedFunction" msg="The function 'foo' is never used"/>
-<error file="sources/utils/utils.cpp" line="1" id="cxxexternal-unusedFunction" msg="The function 'utils' is never used"/>
-</results>
-```
+<tr>
+<td>file</td>
+<td>Source file, relative to project path</td>
+</tr>
+
+<tr>
+<td>Line number where the violation occurres</td>
+<td></td>
+</tr>
+
+<tr>
+<td>id</td>
+<td>The ID of the violated SonarQube rule</td>
+</tr>
+
+<tr>
+<td>msg</td>
+<td>Description of the violation</td>
+</tr>
+<table>
 
 3. Set the property **sonar.cxx.externalrules.reportPath** to point to the location of transformed report (relative to project root). 
 
