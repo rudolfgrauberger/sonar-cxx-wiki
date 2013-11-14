@@ -5,5 +5,7 @@ _Note: C++ Community Plugin does not run any of them itself. You have to run the
 See below for hints on how to do that for a range of tools.
 
 [[Code checkers]]
+
 [[Coverage tracers]]
+
 [[Test runners]]
