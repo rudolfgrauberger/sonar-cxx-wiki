@@ -67,3 +67,5 @@ Example:
 </rule>
 </rules>
 ```
+
+**_Important: Once rules have been added to extensions/rules, they should be enabled in the relevant quality profile in SonarQube. Only after this has been done, the analysis can be performed_**
