@@ -1,0 +1,1 @@
+Welcome to the sonar-cxx wiki!
