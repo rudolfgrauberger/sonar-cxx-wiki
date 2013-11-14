@@ -1,6 +1,6 @@
 # Usage
 
-You can analyze your projects using the usual means (see this page for all available). All runners should work. See below for details.
+You can analyze your projects using the usual means (see [this](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) page for all available). All runners should work. See below for details.
 
 # The usual setup
 
