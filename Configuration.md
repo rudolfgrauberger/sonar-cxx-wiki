@@ -1,4 +1,5 @@
-C++ Community Plugin uses the following properties during analysis. See here for the ways how to pass them to the plugin.
+C++ Community Plugin uses the following properties during analysis. See [here](
+http://docs.codehaus.org/display/SONAR/Analyzing+Source+Code) for the ways how to pass them to the plugin.
 
 <table>
 <tr>
@@ -34,9 +35,10 @@ Example: .H,.h
 <td><\td>
 <td>Comma separated list of directories where the plugin will be looking for included files.
 <br>
-Note: the plugin doesn't know any standard include paths. If they should be used, configure them manually using this property.<\td>
+Note: the plugin doesn't know any standard include paths. If they should be used, configure them manually using this property.
 <br>
 Example: include, /usr/include
+</td>
 </tr>
 
 <tr>
@@ -99,9 +101,10 @@ Example: vera-report-*.xml
 <td>sonar.cxx.xunit.reportPath</td>
 <td>project</td>
 <td>xunit-reports/xunit-result-*.xml</td>
-<td>Ant pattern describing the path to unit test execution reports, <b>relative to projects root</b>.</td>
+<td>Ant pattern describing the path to unit test execution reports, <b>relative to projects root</b>.
 <br>
 Example: xunit-report-*.xml
+</td>
 </tr>
 
 <tr>
@@ -129,12 +132,12 @@ Example: externalrules-result-*.xml
 <td>project</td>
 <td></td>
 <td>A name of a built in XSLT-file or an URL to an external one. Available builtins:
-<li>boosttest-1.x-to-junit-1.0.xsl For transforming Boost-reports</li>
-<li>cpptestunit-1.x-to-junit-1.0.xsl For transforming CppTestUnit-reports</li>
-<li>cppunit-1.x-to-junit-1.0.xsl For transforming CppUnit-reports</li>
-</td>
+<li>boosttest-1.x-to-junit-1.0.xsl: For transforming Boost-reports</li>
+<li>cpptestunit-1.x-to-junit-1.0.xsl: For transforming CppTestUnit-reports</li>
+<li>cppunit-1.x-to-junit-1.0.xsl: For transforming CppUnit-reports</li>
 <br>
 Example: cppunit-1.x-to-junit-1.0.xsl
+</td>
 </tr>
 
 <tr>
