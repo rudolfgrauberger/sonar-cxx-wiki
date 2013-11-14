@@ -1,10 +1,10 @@
 _The C++ Community plugin wont execute neither test runners not coverage tracers nor static checkers itself. All this data has to be provided in form of reports. See [[Running tools]]._
 
-## Usage
+### Usage
 
 You can analyze your projects using the usual means (see [this](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) page for all available). All runners should work. See below for details.
 
-## The usual setup
+### The usual setup
 
 Analysis of a c++ project involves usually three steps:
 
@@ -22,7 +22,7 @@ There may be a Step '0' too: "_use your build system to make a build suitable fo
 
 For details how to invoke the tools and tie it all together see the [sample project](https://github.com/wenns/sonar-cxx/tree/master/sonar-cxx-plugin/src/samples/SampleProject2).
 
-## Maven projects
+### Maven projects
 
 There is a maven plugin which automates running of a sonar analysis on a C++ project but requires a maven setup. Running a SonarQube analysis on maven projects is quite simple and usually a matter of:
 
@@ -44,6 +44,14 @@ There is a maven plugin which automates running of a sonar analysis on a C++ pro
 ```
 3. Make sure your SonarQube server is running.
 
-4. Start the analysis with "mvn sonar:sonar" or "mvn sonar:sonar -Dsonar.phase=cxx:addsource"
+4. Start the analysis with
+```bash
+$ mvn sonar:sonar
+```
+or
+```bash
+$ mvn sonar:sonar -Dsonar.phase=cxx:addsource
+```
+
 
 For details see the [sample maven project](https://github.com/wenns/sonar-cxx/tree/master/sonar-cxx-plugin/src/samples/SampleProject).
