@@ -18,3 +18,4 @@ The C++ Community plugin accepts two different formats for the test coverage rep
 SonarQube <3.2 provides metrics for line coverage and branch coverage. Bullseye users have function and branch/decision coverage instead. The C++ Community plugin converts the second directly into branch coverage however line coverage is far more complex and cannot be correlated directly into function coverage.
 
 Line coverage imported from a bullseye report means than function coverage + line branch coverage (this second occurs since SonarQube will not display branch coverage if there isn't a line it associated with it). This means also that overall coverage will be affected in SonarQube and cannot be compared directly to bullseye results. The following pictures illustrates this for a small example project.
+
