@@ -7,50 +7,50 @@ _$SONARQUBEHOME\extensions\rules\cxxexternal_. Use the format described in [[Ext
 2. Run your checker and create a report 
 
 3. Transform the report such that it conform to the following RNG schema:
-```XML
-<element name="results" xmlns="http://relaxng.org/ns/structure/1.0">
- <zeroOrMore>
-   <element name="error">
-     <attribute name="file"/>
-     <attribute name="msg"/>
-     <attribute name="id"/>
-     <attribute name="line">
-       <data type="integer" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" />
-     </attribute>
-     <text/>
+   ```XML
+   <element name="results" xmlns="http://relaxng.org/ns/structure/1.0">
+     <zeroOrMore>
+       <element name="error">
+         <attribute name="file"/>
+         <attribute name="msg"/>
+         <attribute name="id"/>
+         <attribute name="line">
+           <data type="integer" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" />
+         </attribute>
+         <text/>
+       </element>
+     </zeroOrMore>
    </element>
- </zeroOrMore>
-</element>
-```
+   ```
 
-Where the fields have the following semantics:
+  Where the fields have the following semantics:
 
-<table>
-<tr>
-<td><b>Tag/Attribute</b></td>
-<td><b>Semantic</b></td>
-</tr>
+  <table>
+  <tr>
+  <td><b>Tag/Attribute</b></td>
+  <td><b>Semantic</b></td>
+  </tr>
 
-<tr>
-<td>file</td>
-<td>Source file, relative to project path</td>
-</tr>
+  <tr>
+  <td>file</td>
+  <td>Source file, relative to project path</td>
+  </tr>
 
-<tr>
-<td>Line number where the violation occurres</td>
-<td></td>
-</tr>
+  <tr>
+  <td>line</td>
+  <td>Line number where the violation occurres</td>
+  </tr>
 
-<tr>
-<td>id</td>
-<td>The ID of the violated SonarQube rule</td>
-</tr>
+  <tr>
+  <td>id</td>
+  <td>The ID of the violated SonarQube rule</td>
+  </tr>
 
-<tr>
-<td>msg</td>
-<td>Description of the violation</td>
-</tr>
-<table>
+  <tr>
+  <td>msg</td>
+  <td>Description of the violation</td>
+  </tr>
+  <table>
 
 3. Set the property **sonar.cxx.externalrules.reportPath** to point to the location of transformed report (relative to project root). 
 
