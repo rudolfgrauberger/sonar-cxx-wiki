@@ -19,3 +19,4 @@ SonarQube <3.2 provides metrics for line coverage and branch coverage. Bullseye 
 
 Line coverage imported from a bullseye report means than function coverage + line branch coverage (this second occurs since SonarQube will not display branch coverage if there isn't a line it associated with it). This means also that overall coverage will be affected in SonarQube and cannot be compared directly to bullseye results. The following pictures illustrates this for a small example project.
 
+![Coverage visualisation for Bullseye users](images/CovBrowser.png)
