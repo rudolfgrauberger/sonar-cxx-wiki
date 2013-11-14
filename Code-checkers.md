@@ -4,7 +4,7 @@ Here is a quick guide how to run the supported analyzers and generate reports su
 
 In order to run Cppcheck and generate a fitting report, make sure:
 
-* to pass all include directories (using _-I <path>_) as otherwise the analysis will be incomplete
+* to pass all include directories (using _-I \<path\>_) as otherwise the analysis will be incomplete
 * that the <sources> parameter matches the **sonar.sources** list in _sonar-project.properties_
 * to create a XML-report 'version 1' using the parameters ```--xml --xml-version=1```
 * to get the report from the standard error channel
@@ -22,7 +22,7 @@ A Cppcheck run may take a while on a big code base. To cut down analysis times, 
 * Restrict checking of preprocessor configurations using the options ```-D -U```
 * Get a faster machine ;)
  
-To extend the set of known Cppcheck rules define them in the file _$SONARQUBE_HOME/extensions/rules/cppcheck_. See [[Extending rules in C++ analysers]] for details.
+To extend the set of known Cppcheck rules define them in the file _$SONARQUBEHOME/extensions/rules/cppcheck_. See [[Extending rules in C++ analysers]] for details.
 
 ### Valgrind
 SonarQube can be fed with results of a Valgrind/Memcheck analysis. That's very valuable because:
@@ -35,7 +35,7 @@ Just tell Valgrind to generate XML output. The 'tool' option isn't necessary as 
 valgrind --xml=yes --xml-file=report.xml <program> <arguments>
 ```
 
-To extend the set of known Vagrind rules define them in the file _$SONARQUBE_HOME/extensions/rules/valgrind_. See [[Extending rules in C++ analysers]] for details.
+To extend the set of known Vagrind rules define them in the file _$SONARQUBEHOME/extensions/rules/valgrind_. See [[Extending rules in C++ analysers]] for details.
 
 ### Vera++
 Vera++ does static C++ code checking, focusing mostly on style issues. To feed Vera++ analysis results into SonarQube:
@@ -46,15 +46,15 @@ Vera++ does static C++ code checking, focusing mostly on style issues. To feed V
 find <path> -regex ".*\.cc\|.*\.hh" | vera++ - -showrules -nodup |& vera++Report2checkstyleReport.perl > report.xml
 ```
 
-To extend the set of known Vera++ rules define them in the file _$SONARQUBE_HOME/extensions/rules/vera++_. See [[Extending rules in C++ analysers]] for details.
+To extend the set of known Vera++ rules define them in the file _$SONARQUBEHOME/extensions/rules/vera++_. See [[Extending rules in C++ analysers]] for details.
 
-###RATS
+### RATS
 RATS stands for "Rough Auditing Tool for Security". This tool performs static C++ code checks focusing mainly on security issues. Just tell it to create XML output and redirect the standard channel into a file.
 
 ```BASH
 rats -w 3 --xml <sources> > report.xml
 ```
-To extend the set of known RATS rules define them in the file _$SONARQUBE_HOME/extensions/rules/rats_. See [[Extending rules in C++ analysers]] for details.
+To extend the set of known RATS rules define them in the file _$SONARQUBEHOME/extensions/rules/rats_. See [[Extending rules in C++ analysers]] for details.
 
 ### Pc-Lint
 The Pc-Lint XML output needs to be formated to fit SonarQube.
@@ -73,7 +73,7 @@ The Pc-Lint XML output needs to be formated to fit SonarQube.
 
 This formatting has been verifed with Pc-Lint 9.0i. For further details on how to configure Pc-Lint please refer to [product page](http://www.gimpel.com/html/pcl.htm).
 
-To extend the set of known Pc-Lint rules define them in the file _$SONARQUBE_HOME/extensions/rules/pclint_. See [[Extending rules in C++ analysers]] for details.
+To extend the set of known Pc-Lint rules define them in the file _$SONARQUBEHOME/extensions/rules/pclint_. See [[Extending rules in C++ analysers]] for details.
 
 _Note: Rules for this tool are disabled by default, so they need to be enabled in the relevant quality profile before they can be imported into SonarQube._
 
