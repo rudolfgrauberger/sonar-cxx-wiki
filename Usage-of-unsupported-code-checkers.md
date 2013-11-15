@@ -57,7 +57,7 @@ _$SONARQUBEHOME\extensions\rules\cxxexternal_. Use the format described in [[Ext
 5. Run the analysis
 
 
-# Resources
+## Resources
 
 Below you find a list of code analyzers which have already been integrated using this feature and according resources. The setups have been proven to work in one particular environment; you may need to adapt it to make work in yours.
 
