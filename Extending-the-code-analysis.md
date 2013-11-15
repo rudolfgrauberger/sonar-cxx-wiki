@@ -1,18 +1,18 @@
 ## Extending rules in supported code analysers
 
 If you're using a patched or not-yet-supported version of an integrated code checker (like Cppcheck), you probably want to see those new checks in SonarQube, too. To do this, you have to:
-- Define those rules using the XML format described further below in a file "rules.xml"
-- Place this file in a directory maching the name of the analyzer under _$SONARQUBEHOME\extensions\rules_. Example: for cppcheck, the rules file would be expected to be here: 
 
-_$SONARQUBEHOME\extensions\rules\cppcheck\rules.xml_
+1. Define those rules using the XML format described further below in a file "rules.xml"
+2. Place this file in a directory matching the name of the analyzer under _$SONARQUBEHOME\extensions\rules_; e.g. for cppcheck, the rules file would be expected to be here: 
 
-- Restart the SonarQube server
-- Make sure the newly added rules are visible in the quality profile; enable them
-- Run the analysis
+```_$SONARQUBEHOME\extensions\rules\cppcheck\rules.xml_```
 
-_$SONARQUBEHOME\extensions\rules\cppcheck\rules.xml_
+3. Restart the SonarQube server
+4. Make sure the newly added rules are visible in the quality profile; enable them
+5. Run the analysis
 
-The format of the XML file is expected to be the following:
+### The format of the rules file
+The format of rules file is expected to be the following:
 
 ```XML
 <rules> 
@@ -77,7 +77,3 @@ Example:
 </rule>
 </rules>
 ```
-
-**_Important: Once rules have been added to extensions/rules, they should be enabled in the relevant quality profile in SonarQube. Only after this has been done, the analysis can be performed_**
-
-TBD
