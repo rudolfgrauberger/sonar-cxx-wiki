@@ -84,8 +84,9 @@ Example:
 If you're using a code checker which is **not** supported by the plugin, this feature is for you. It allows to feed violatios into SonarQube in a code checker agnostic way. To do this follow the steps below:
 
 1. Create and install a rule set
-Create a XML file describing the rules and copy it to the directory 
-_$SONARQUBEHOME\extensions\rules\cxxexternal_. Use the format described in [[Extending rules in code analysers]].
+   Create a XML file describing the rules and copy it to the directory 
+   _$SONARQUBEHOME\extensions\rules\cxxexternal_. Use the format described in [[Extending rules in code    
+   analysers]].
 
 2. Run your checker and create a report 
 
@@ -140,7 +141,7 @@ _$SONARQUBEHOME\extensions\rules\cxxexternal_. Use the format described in [[Ext
 5. Run the analysis
 
 
-## Resources
+### Resources
 
 Below you find a list of code analyzers which have already been integrated using this feature and according resources. The setups have been proven to work in one particular environment; you may need to adapt it to make work in yours.
 
