@@ -1,3 +1,3 @@
-- Make sure you know which plugin release is compatible with your SonarQube instance
+- TODO: Make sure you know which plugin release is compatible with your SonarQube instance
 - Download the jar package into the SONARQUBE_HOME/extensions/plugins directory
 - Restart the SonarQube server
