@@ -6,7 +6,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Description / Features]]
 
 ## Installation
-* [Installation]
+* [[Installation]]
 
 ## Usage
 * [[Running analysis]]
@@ -24,6 +24,5 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Get test execution metrics]]
 * [[Get code issues]]
 
-
-
-sonar-cxx wiki!
+## Troubleshooting
+* [[FAQ]]
