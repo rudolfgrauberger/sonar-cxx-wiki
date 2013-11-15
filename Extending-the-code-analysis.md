@@ -85,8 +85,7 @@ If you're using a code checker which is **not** supported by the plugin, this fe
 
 1. Create and install a rule set
    Create a XML file describing the rules and copy it to the directory 
-   _$SONARQUBEHOME\extensions\rules\cxxexternal_. Use the format described in [[Extending rules in code    
-   analysers]].
+   _$SONARQUBEHOME\extensions\rules\cxxexternal_. Use the format described above.
 
 2. Run your checker and create a report 
 
