@@ -1,4 +1,4 @@
-C++ Community Plugin uses the following properties during analysis. See [here](
+The C++ Community Plugin uses the following properties during analysis. See [here](
 http://docs.codehaus.org/display/SONAR/Analyzing+Source+Code) for the ways how to pass them to the plugin.
 
 <table>
