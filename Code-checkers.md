@@ -29,7 +29,7 @@ SonarQube can be fed with results of a Valgrind/Memcheck analysis. That's very v
 * due to its dynamic nature, the false positives rate is very low (Given good maintained suppression files, of course) 
 * it is able to find serious issues which are often hard to detect otherwise
 
-Just tell Valgrind to generate XML output. The 'tool' option isn't necessary as 'memcheck' is the default one. Make sure the binaries contain debug info.
+Just tell Valgrind to generate XML output. The 'tool' option isn't necessary as 'memcheck' is the default one. Make sure the binaries contain debug info. The actual call should look something like:
 
 ```BASH
 valgrind --xml=yes --xml-file=report.xml <program> <arguments>
@@ -42,6 +42,9 @@ Vera++ does static C++ code checking, focusing mostly on style issues. To feed V
 * Find all the files we want to be analysed
 * Pipe this list into Vera++ and 
 * Pipe the resulting output into a Perl script which finally generates the required XML. 
+
+Altogether:
+
 ```BASH
 find <path> -regex ".*\.cc\|.*\.hh" | vera++ - -showrules -nodup |& vera++Report2checkstyleReport.perl > report.xml
 ```
@@ -49,7 +52,7 @@ find <path> -regex ".*\.cc\|.*\.hh" | vera++ - -showrules -nodup |& vera++Report
 To extend the set of known Vera++ rules define them in the file _$SONARQUBEHOME/extensions/rules/vera++_. See [[Extending rules in C++ analysers]] for details.
 
 ### RATS
-RATS stands for "Rough Auditing Tool for Security". This tool performs static C++ code checks focusing mainly on security issues. Just tell it to create XML output and redirect the standard channel into a file.
+RATS stands for "Rough Auditing Tool for Security". This tool performs static C++ code checks focusing mainly on security issues. Just tell it to create XML output and redirect the standard channel into a file:
 
 ```BASH
 rats -w 3 --xml <sources> > report.xml
