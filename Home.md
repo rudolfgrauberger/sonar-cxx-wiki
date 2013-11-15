@@ -12,11 +12,17 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Running analysis]]
 
 ## Going Deeper
-  Configuration Details
-  Running tools
-  Extending rules in code analysers
-  Usage of unsupported code checkers
+* [[Configuration]]
+* [[Running tools]]
+* [[Extending rules in code analysers]]
+* [[Usage of unsupported code checkers]]
 
+## HowTo...
+* [[Get basic size metrics]]
+* [[Get complexity metric]]
+* [[Get code coverage metrics]]
+* [[Get test execution metrics]]
+* [[Get code issues]]
 
 
 
