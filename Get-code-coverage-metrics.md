@@ -3,7 +3,7 @@ To collect C++ test coverage metrics with C++ Community Plugin, you have to:
 1. Create a coverage report (or many of them) using your favorite coverage tracer (see [[Coverage tracers]] for examples)
 2. Configure your project to point to the report and rerun the analysis
 
-Three types of test coverage are supported:  _Unit_, _Integration_ and _Overall_ coverage. Use one of the following configuration properties dependent of the coverage type (see also [[Configuration]] for details):
+Three types of test coverage are supported:  _Unit_, _Integration_ and _Overall_ coverage. Use one of the following configuration properties dependent of the coverage type (see also [[Supported configuration properties]] for details):
 
 * **sonar.cxx.coverage.reportPath** for unit test coverage
 * **sonar.cxx.coverage.itReportPath** for integration test coverage
