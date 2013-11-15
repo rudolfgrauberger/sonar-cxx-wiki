@@ -22,12 +22,11 @@
 <tr>
 <td>C++ (Community) plugin</td>
 <td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a></td>	
-<td>0.9</td>	
-<td>0.9</td>	
-<td>0.9</td>	
-<td>0.9*</td>
+<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a></td>	
+<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a></td>	
+<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a></td>	
+<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a>*</td>
 </tr>
-
 
 </table>
 
