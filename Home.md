@@ -18,7 +18,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 
 ### HowTo...
 * [[Get basic size metrics]]
-* [[Get complexity metric]]
+* [[Get complexity metrics]]
 * [[Get code coverage metrics]]
 * [[Get test execution metrics]]
 * [[Get code issues]]
