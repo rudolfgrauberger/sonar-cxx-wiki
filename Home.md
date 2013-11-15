@@ -12,7 +12,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Running the analysis]]
 
 ## Going Deeper
-* [[Configuration]]
+* [[Supported configuration properties]]
 * [[Running tools]]
 * [[Extending rules in code analysers]]
 * [[Usage of unsupported code checkers]]
