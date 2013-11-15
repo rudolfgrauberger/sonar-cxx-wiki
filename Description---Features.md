@@ -27,7 +27,7 @@ the amount of metrics collected:
   - [Vera++](http://www.inspirel.com/vera/): focuses on code style issues. There's a binary package for Windows, users of other platforms are likely to compile themselves.
   - [Valgrind](http://valgrind.org/): Detects various memory management problems at runtime. Basically Linux only; just use the packages from your distribution.
   - [Pc-Lint](http://www.gimpel.com/html/pcl.htm). Static analyzer from Gimpel Software
-- [gcov](http://gcc.gnu.org/onlinedocs/gcc/Gcov.html), [gcovr](https://software.sandia.gov/trac/fast/wiki/gcovr) and [Bullseye](http://www.bullseye.com/) for coverage determination.   
+- [gcov](http://gcc.gnu.org/onlinedocs/gcc/Gcov.html), [gcovr](http://gcovr.com/) and [Bullseye](http://www.bullseye.com/) for coverage determination.   
 
 ## Known Limitations
 - Not all of C++ can be parsed by now. You may hit parse errors when analyzing your project.
