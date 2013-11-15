@@ -52,15 +52,15 @@ _$SONARQUBEHOME\extensions\rules\cxxexternal_. Use the format described in [[Ext
   </tr>
   <table>
 
-3. Set the property **sonar.cxx.externalrules.reportPath** to point to the location of transformed report (relative to project root). 
+4. Set the property **sonar.cxx.externalrules.reportPath** to point to the location of transformed report (relative to project root). 
 
-4. Run the analysis
+5. Run the analysis
 
 
+# Resources
 
-## Resources
+Below you find a list of code analyzers which have already been integrated using this feature and according resources. The setups have been proven to work in one particular environment; you may need to adapt it to make work in yours.
 
-Below you find a list of code analyzers which have already been integrated using this feature and according resources:
 
 <table>
 <tr>
@@ -118,5 +118,4 @@ SonarQube.
 </li>
 </td>
 </tr>
-
 </table>
