@@ -14,8 +14,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 ## Going Deeper
 * [[Supported configuration properties]]
 * [[Running tools]]
-* [[Extending rules in code analysers]]
-* [[Usage of unsupported code checkers]]
+* [[Extending code analysis]]
 
 ## HowTo...
 * [[Get basic size metrics]]
