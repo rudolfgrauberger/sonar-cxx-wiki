@@ -2,26 +2,26 @@
 
 This WiKi contains as well usage guidelines as also developer resources. Just navigate to the topic of your interest.
 
-## General
+### General
 * [[Description / Features]]
 
-## Installation
+### Installation
 * [[Installation]]
 
-## Usage
+### Usage
 * [[Running the analysis]]
 
-## Going Deeper
+### Going Deeper
 * [[Supported configuration properties]]
 * [[Running tools]]
 * [[Extending the code analysis]]
 
-## HowTo...
+### HowTo...
 * [[Get basic size metrics]]
 * [[Get complexity metric]]
 * [[Get code coverage metrics]]
 * [[Get test execution metrics]]
 * [[Get code issues]]
 
-## Troubleshooting
+### Troubleshooting
 * [[FAQ]]
