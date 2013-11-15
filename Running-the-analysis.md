@@ -6,17 +6,21 @@ You can analyze your projects using the usual means (see [this](http://docs.code
 
 ### The usual setup
 
-Analysis of a c++ project involves usually three steps:
+Analysis of a C++ project involves usually three steps:
 
 1. Run the tools (see [[Running tools]]) which are of interest for you and store the results in a file somewhere underneath the root directory of your project. Its usually convenient to put this into the build system; a shell script may be a good choice, too.
 
 2. Provide a configuration using the file "sonar-project.properties". Set following properties, besides the standard ones:
-
-   - Required: **sonar.language** to "c++".
+   - Required: **sonar.language** to "c++"
    - Optional: **sonar.cxx.include_directories** and **sonar.cxx.defines** (see [[Configuration]])
    - Optional: paths to the generated reports (see [[Configuration]])
 
-3. Use the SonarQube runner to start the analysis and feed the data into SonarQube.
+3. Make sure the SonarQube Server is running
+4. Use the SonarQube runner to start the analysis and feed the data into SonarQube. This usualy boils down to calling the runner in the root directory of your project:
+```BASH
+$ cd <project root>
+$ sonar-runner
+```
 
 There may be a Step '0' too: "_use your build system to make a build suitable for running the Step 1_". This may be the case for collecting coverage statistics when using gcc+gcov, for example.
 
