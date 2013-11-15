@@ -58,21 +58,21 @@ _$SONARQUBEHOME\extensions\rules\cxxexternal_. Use the format described in [[Ext
 
 
 
-### List of code analyzers and according helper scripts
+## Resources
 
+Below you find a list of code analyzers which have already been integrated using this feature and according resources:
 
 <table>
 <tr>
 <td>Tool</td>
 <td>Usage</td>
-<td>Resources</td>
 </tr>
 
 <tr>
 <td><a href="http://google-styleguide.googlecode.com/svn/trunk/cpplint/cpplint.py">cpplint</a></td>
 <td>
 <ol>
-<li>Create the rules profile and the modified cpplint python script with:
+<li>Create the rules profile using the <a href="https://github.com/wenns/sonar-cxx/blob/master/sonar-cxx-plugin/src/tools/cpplint_createrules.py">profile creator script</a>:
 <br>
 <code>python cpplint_createrules.py cpplint.py</code>
 <br>
@@ -91,13 +91,31 @@ After this you can run the cpplint_mod.py against any source file like this:
 <br>
 <code>python cpplint_mod.py source.cpp 2> report.txt</code>
 <br>
-The output file report.txt needs to be converted to the XML format described above. For convenience a Perl script is available here and can be run as follows:
+The output file report.txt needs to be converted to the XML format described above. For convenience a Perl script is available 
+<a href="https://github.com/wenns/sonar-cxx/blob/master/sonar-cxx-plugin/src/tools/cpplintReport2checkstyleReport.perl">here</a>
+and can be run as follows:
 <code>perl cpplintReport2checkstyleReport.perl report.txt splint-result-0.xml</code>
 </li>
 </td>
+</tr>
+
+<tr>
+<td><a href="http://software.intel.com/en-us/intel-inspector-xe">Intel Inspector XE 2013</a></td>
 <td>
-<a href="https://github.com/wenns/sonar-cxx/blob/master/sonar-cxx-plugin/src/tools/cpplint_createrules.py">profile creator</a>
-<a href="https://github.com/wenns/sonar-cxx/blob/master/sonar-cxx-plugin/src/tools/cpplintReport2checkstyleReport.perl">report converter</a>
+
+<ol>
+<li>Copy the
+<a href="https://github.com/wenns/sonar-cxx/blob/master/sonar-cxx-plugin/src/main/resources/external/intel_inspector_rules.xml">Intel Inspector rules</a>
+to $SONARQUBEHOME/extension/rules/cxxexternal and restart the server
+</li>
+<li>Modify the used SonarQube quality profile to accommodate the newly added rules</li>
+<li>Run your test/application using the Intel Inspector and generate a CSV report</li>
+<li>Convert the report with:
+<code>python <a href="">intelInspectorReport_2_cppcheckReport.py</a>
+in.csv out.xml <path to project> <test executable></code>
+The out.xml can be then used during the analysis to feed the Intel Inspector results into 
+SonarQube.
+</li>
 </td>
 </tr>
 
