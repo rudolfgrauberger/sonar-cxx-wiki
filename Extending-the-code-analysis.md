@@ -3,9 +3,10 @@
 If you're using a patched or not-yet-supported version of an integrated code checker (like Cppcheck), you probably want to see those new checks in SonarQube, too. To do this, you have to:
 
 1. Define those rules using the XML format described further below in a file "rules.xml"
-2. Place this file in a directory matching the name of the analyzer under _$SONARQUBEHOME\extensions\rules_; e.g. for cppcheck, the rules file would be expected to be here: 
-
-```_$SONARQUBEHOME\extensions\rules\cppcheck\rules.xml_```
+2. Place this file in a directory matching the name of the analyzer under _$SONARQUBEHOME\extensions\rules_; e.g. for Cppcheck, the rules file would be expected to be here: 
+```BASH
+$SONARQUBEHOME\extensions\rules\cppcheck\rules.xml
+```
 
 3. Restart the SonarQube server
 4. Make sure the newly added rules are visible in the quality profile; enable them
