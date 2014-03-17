@@ -46,14 +46,15 @@ Example: include, /usr/include
 <td>system, project<\td>
 <td><\td>
 <td>
-Comma separated list of macros which should be used during analysis. The syntax is the same the of according #define-directives, except:
+List of macros which should be used during analysis. The syntax is the same the body of #define-directives, except the #define keyword itself. This is a multiline property, which means:
+<li> If you're using Sonar's Web UI just write a macro per line </li>
+<li> When setting via .properties-file seperate macros using '\n\' </li>
 <br>
-* The keyword #define at the beginning has to be skipped
-<br>
-* Commas in the macro body have to be escaped with four (in sonar-project.properties) or one (in pom.xml) 
-backslashes.
-<br>
-Example: va_arg(a\\\\, b) 0, PRIx64 ""
+Example for the latter case: 
+<code>sonar.cxx.defines = va_arg(a, b) 0, \n\<br>
+                          PRIx64 ""       \n\<br>
+                          DEBUG 1         
+</code>
 <\td>
 <\tr>
 
