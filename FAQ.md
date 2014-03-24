@@ -15,3 +15,7 @@ This is the list of frequently asked questions and less frequently given answers
 **Q: SonarQube fails to start with error messages: Cannot insert duplicate key row in object 'dbo.rules'**
 
 **A:** This problem can occur when using MS SQL database configured to be case insensitive. Make sure database is set to be case sensitive and restart SonarQube. For more information check database requirements for SonarQube: [Requirements](http://docs.codehaus.org/display/SONAR/Requirements)
+
+**Q: Why does Sonar alternate between two different values for coverage, although the code didnt change inbetween?**
+
+**A:** This effect can be observed if you feed multiple coverage reports which include coverage data for same source files. To prevent this, merge the coverage report outside Sonar before feeding them.
