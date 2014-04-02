@@ -23,5 +23,8 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Get test execution metrics]]
 * [[Get code issues]]
 
+### Roadmap
+* [[Roadmap]]
+
 ### Troubleshooting
 * [[FAQ]]
