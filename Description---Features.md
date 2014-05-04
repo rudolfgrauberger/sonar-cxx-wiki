@@ -11,9 +11,9 @@ This is a [SonarQube](http://www.sonarqube.org/) plugin, which adds support for 
   - Unit test coverage (line and branch)
   - Integration test coverage (line and branch)
   - Overall branch coverage (line and branch)
-- Unit test execution metrics including
+- Unit test execution metrics
 - Recognition of code duplication
-- Basic highlighting mode for C++ in SonarQube UI
+- Highlighting mode for C++ in SonarQube UI
 
 ## Dependencies
 The plugin doesn't have obligatory dependencies.
