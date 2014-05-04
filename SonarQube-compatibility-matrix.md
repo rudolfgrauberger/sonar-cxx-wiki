@@ -13,7 +13,7 @@
 </tr>
 
 <tr>
-<td><b>Plugin / Release Date</b></td>
+<td><b>Plugin version / Release Date</b></td>
 <td>Jan. 2013</td>
 <td>Mar. 2013</td>
 <TD>Jun. 2013</td>
@@ -24,16 +24,26 @@
 </tr>
 
 <tr>
-<td>C++ (Community) plugin</td>
-<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a></td>	
-<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a></td>	
-<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a></td>	
-<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a></td>	
-<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a>*</td>
-<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9.1">v0.9.1</a></td>	
-<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9.1">v0.9.1</a></td>
+<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a></td>
+<td>X</td>	
+<td>X</td>	
+<td>X</td>	
+<td>X</td>	
+<td>X</td>
+<td>X</td>	
+<td>-</td>
 </tr>
 
+<tr>
+<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9.1</a>*</td>
+<td>-</td>	
+<td>-</td>	
+<td>-</td>	
+<td>-</td>	
+<td>X</td>
+<td>X</td>	
+<td>X</td>
+</tr>
 </table>
 
 \*: Currently, there is a severe restriction when using the plugin with SonarQube v4.0: The **sonar.cxx.define** property doesnt work.
