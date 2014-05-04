@@ -46,4 +46,4 @@
 </tr>
 </table>
 
-\*: Currently, there is a severe restriction when using the plugin with SonarQube v4.0: The **sonar.cxx.define** property doesnt work.
+\*: Not released yet.
