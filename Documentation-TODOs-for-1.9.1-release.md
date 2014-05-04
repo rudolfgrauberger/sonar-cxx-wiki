@@ -12,3 +12,4 @@ Pull requests / issues which need to be documented in the WiKi:
 - Support of the new multi-language feature (requires SonarQube >=4.2) -> @wenns
  (#124)
 - Microsoft-specific extensions to C++ (#92)                           -> @guwirth
+- Technical debt / SQALE stuff                                         -> @jmecosta
