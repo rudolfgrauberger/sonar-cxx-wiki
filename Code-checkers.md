@@ -4,15 +4,16 @@ Here is a quick guide how to run the supported analyzers and generate reports su
 
 In order to run Cppcheck and generate a fitting report, make sure:
 
+* to call it from the projects root directory
 * to pass all include directories (using _-I \<path\>_) as otherwise the analysis will be incomplete
 * that the <sources> parameter matches the **sonar.sources** list in _sonar-project.properties_
-* to create a XML-report 'version 1' using the parameters ```--xml --xml-version=1```
+* to create a XML-report using the parameter ```--xml```
 * to get the report from the standard error channel
 
 Example command line:
 
 ```BASH
-cppcheck -v --enable=all --xml --xml-version=1 -I<include directory> <sources> 2> report.xml
+cppcheck -v --enable=all --xml -I<include directory> <sources> 2> report.xml
 ```
  
 A Cppcheck run may take a while on a big code base. To cut down analysis times, check the following options:
