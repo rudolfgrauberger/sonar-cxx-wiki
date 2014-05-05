@@ -6,9 +6,16 @@ Pull requests / issues which need to be documented in the WiKi:
   * Coverage tracers
   * Get code coverage metrics
 
-- Make the custom rules definition be compatible with all SonarQube's
-  in [3.7 .. 4.2] (#181, #127)                                         -> @jmecosta 
+- Make the custom rules definition be compatible with all SonarQube's in [3.7 .. 4.2] (#181, #127)                                  -> @jmecosta 
+
+  where: 
+  * Extending the code analysis
+
 - Add support for Cppcheck's XML reports version 2 (#158)              -> @wenns
+
+  where: 
+  * Code checkers                                                         DONE
+
 - Add support for feeding GCC's build warnings (#143)                  -> @typz or @wenns
 - Add header file to mock up Visual Studio 2010 specific extensions to -> @guwirth
   C++
