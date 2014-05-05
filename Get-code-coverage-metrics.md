@@ -14,6 +14,8 @@ The C++ Community plugin accepts two different formats for the test coverage rep
 * Cobertura XML: the format introduced by [Cobertura](http://cobertura.github.io/cobertura/)
 * The XML format used by [Bullseye](http://www.bullseye.com/)
 
+TODO @guwirth: ms code coverage additions
+
 ### Notes for BullseyeCoverage users:
 SonarQube <3.2 provides metrics for line coverage and branch coverage. Bullseye users have function and branch/decision coverage instead. The C++ Community plugin converts the second directly into branch coverage however line coverage is far more complex and cannot be correlated directly into function coverage.
 
