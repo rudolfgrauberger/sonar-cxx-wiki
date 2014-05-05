@@ -17,3 +17,6 @@ To merge two coverage files (e.g. to obtain the overall coverage):
 ```BASH 
 covmerge -c ITCoverage.cov UTCoverage.cov -f ALLCOVERAGE.cov
 ````
+
+### Microsofts Code Coverage
+TODO @guwirth
