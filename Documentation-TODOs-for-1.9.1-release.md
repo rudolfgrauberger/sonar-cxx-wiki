@@ -16,7 +16,11 @@ Pull requests / issues which need to be documented in the WiKi:
   where: 
   * Code checkers                                                         DONE
 
-- Add support for feeding GCC's build warnings (#143)                  -> @typz or @wenns
+- Add support for feeding GCC's build warnings (#143)                  -> @typz, @wenns, @bertk
+
+  where:
+  * Compilers 
+
 - Add header file to mock up Visual Studio 2010 specific extensions to -> @guwirth
   C++
 - Parser Error Recovery (#140, #133)                                   -> @guwirth or @wenns
