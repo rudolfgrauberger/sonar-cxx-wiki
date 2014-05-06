@@ -11,7 +11,7 @@ Analysis of a C++ project involves usually three steps:
 1. Run the tools (see [[Running tools]]) which are of interest for you and store the results in a file somewhere underneath the root directory of your project. Its usually convenient to put this into the build system; a shell script may be a good choice, too.
 
 2. Provide a configuration using the file "sonar-project.properties". Set following properties, besides the standard ones:
-   - Required: **sonar.language** to "c++"
+   - **sonar.language** to "c++". This is required for SonarQube's < 4.2. For SonarQube's >= 4.2, leaving this property unset enables the [multi-language feature](http://www.sonarqube.org/at-long-last-sonarqube-is-a-true-polyglot/).
    - Optional: **sonar.cxx.include_directories** and **sonar.cxx.defines** (see [[Configuration]])
    - Optional: paths to the generated reports (see [[Configuration]])
 
