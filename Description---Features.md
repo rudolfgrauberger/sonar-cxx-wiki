@@ -1,11 +1,14 @@
 This is a [SonarQube](http://www.sonarqube.org/) plugin, which adds support for C++ language. It provides following features:
 
+- A full stack of components (preprocessor, lexer and parser) needed to parse, analyse and create a Model (AST) from your sources.
+- A parse error recovery, which allows the plugin to skip only those units of code which could not be parsed.
 - Calculation of various size metrics (Number of lines/statements/classes/methods, LOC etc.)
 - Feeding of code analysis results for virtually any analyzer, including but not limited to:
   - Cppcheck
   - RATS
   - Vera++
   - Valgrind
+- Predefined rules for supported analyzers
 - Cyclomatic (McCabe) complexity metrics
 - Code coverage metrics including:
   - Unit test coverage (line and branch)
@@ -14,6 +17,7 @@ This is a [SonarQube](http://www.sonarqube.org/) plugin, which adds support for 
 - Unit test execution metrics
 - Recognition of code duplication
 - Highlighting mode for C++ in SonarQube UI
+- Parse Error Recovery: If the code cannot be parsed 
 
 ## Dependencies
 The plugin doesn't have obligatory dependencies.
