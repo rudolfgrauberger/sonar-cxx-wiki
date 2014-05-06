@@ -2,7 +2,7 @@ This is a [SonarQube](http://www.sonarqube.org/) plugin, which adds support for 
 
 - A full stack of components (preprocessor, lexer and parser) needed to parse, create a model and analyse your sources.
 - A parse error recovery, which allows the plugin to skip only those units of code which could not be parsed successfully.
-- A nearly complete support of the standards C++03 and C++11
+- A nearly complete support of the standards C++03 and C++11, support for a few GNU and Microsoft extensions.
 - Support for the [multi-language feature](http://www.sonarqube.org/at-long-last-sonarqube-is-a-true-polyglot/) found in SonarQube >= 4.2
 - Calculation of various size metrics (Number of lines/statements/classes/methods, LOC etc.)
 - Feeding of code analysis results for virtually any analyzer, including but not limited to:
