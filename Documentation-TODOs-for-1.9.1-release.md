@@ -26,10 +26,16 @@ Pull requests / issues which need to be documented in the WiKi:
 - Parser Error Recovery (#140, #133)                                   -> @guwirth or @wenns
 
   where:
-  * Features / Description
+  * Features / Description DONE
 
 - Force inclusion of a header file (#139, #85)                         -> @guwirth
+
 - Support of the new multi-language feature (requires SonarQube >=4.2) -> @wenns
  (#124)
+
+where:
+* Desctiption Features
+* running analysis
+
 - Microsoft-specific extensions to C++ (#92)                           -> @guwirth
 - Technical debt / SQALE stuff                                         -> @jmecosta
