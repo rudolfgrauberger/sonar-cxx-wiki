@@ -23,7 +23,7 @@ A Cppcheck run may take a while on a big code base. To cut down analysis times, 
 * Restrict checking of preprocessor configurations using the options ```-D -U```
 * Get a faster machine ;)
  
-To extend the set of known Cppcheck rules define them in the file _$SONARQUBEHOME/extensions/rules/cppcheck_. See [[Extending rules in C++ analysers]] for details.
+To extend the set of known Cppcheck rules define them in the file _$SONARQUBEHOME/extensions/rules/cppcheck_. See [[Extending the code analysis]] for details.
 
 ### Valgrind
 SonarQube can be fed with results of a Valgrind/Memcheck analysis. That's very valuable because:
@@ -36,7 +36,7 @@ Just tell Valgrind to generate XML output. The 'tool' option isn't necessary as 
 valgrind --xml=yes --xml-file=report.xml <program> <arguments>
 ```
 
-To extend the set of known Vagrind rules define them in the file _$SONARQUBEHOME/extensions/rules/valgrind_. See [[Extending rules in C++ analysers]] for details.
+To extend the set of known Vagrind rules define them in the file _$SONARQUBEHOME/extensions/rules/valgrind_. See [[Extending the code analysis]] for details.
 
 ### Vera++
 Vera++ does static C++ code checking, focusing mostly on style issues. To feed Vera++ analysis results into SonarQube:
@@ -50,7 +50,7 @@ Altogether:
 find <path> -regex ".*\.cc\|.*\.hh" | vera++ - -showrules -nodup |& vera++Report2checkstyleReport.perl > report.xml
 ```
 
-To extend the set of known Vera++ rules define them in the file _$SONARQUBEHOME/extensions/rules/vera++_. See [[Extending rules in C++ analysers]] for details.
+To extend the set of known Vera++ rules define them in the file _$SONARQUBEHOME/extensions/rules/vera++_. See [[Extending the code analysis]] for details.
 
 ### RATS
 RATS stands for "Rough Auditing Tool for Security". This tool performs static C++ code checks focusing mainly on security issues. Just tell it to create XML output and redirect the standard channel into a file:
@@ -58,7 +58,7 @@ RATS stands for "Rough Auditing Tool for Security". This tool performs static C+
 ```BASH
 rats -w 3 --xml <sources> > report.xml
 ```
-To extend the set of known RATS rules define them in the file _$SONARQUBEHOME/extensions/rules/rats_. See [[Extending rules in C++ analysers]] for details.
+To extend the set of known RATS rules define them in the file _$SONARQUBEHOME/extensions/rules/rats_. See [[Extending the code analysis]] for details.
 
 ### Pc-Lint
 The Pc-Lint XML output needs to be formated to fit SonarQube.
@@ -77,7 +77,7 @@ The Pc-Lint XML output needs to be formated to fit SonarQube.
 
 This formatting has been verifed with Pc-Lint 9.0i. For further details on how to configure Pc-Lint please refer to [product page](http://www.gimpel.com/html/pcl.htm).
 
-To extend the set of known Pc-Lint rules define them in the file _$SONARQUBEHOME/extensions/rules/pclint_. See [[Extending rules in C++ analysers]] for details.
+To extend the set of known Pc-Lint rules define them in the file _$SONARQUBEHOME/extensions/rules/pclint_. See [[Extending the code analysis]] for details.
 
 _Note: Rules for this tool are disabled by default, so they need to be enabled in the relevant quality profile before they can be imported into SonarQube._
 
