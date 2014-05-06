@@ -24,6 +24,10 @@ Pull requests / issues which need to be documented in the WiKi:
 - Add header file to mock up Visual Studio 2010 specific extensions to -> @guwirth
   C++
 - Parser Error Recovery (#140, #133)                                   -> @guwirth or @wenns
+
+  where:
+  * Features / Description
+
 - Force inclusion of a header file (#139, #85)                         -> @guwirth
 - Support of the new multi-language feature (requires SonarQube >=4.2) -> @wenns
  (#124)
