@@ -18,8 +18,6 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Dealing with Microsoft specific code peaces]]
 
 ### HowTo...
-* [[Get basic size metrics]]
-* [[Get complexity metrics]]
 * [[Get code coverage metrics]]
 * [[Get test execution metrics]]
 * [[Get code issues]]
