@@ -15,6 +15,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Supported configuration properties]]
 * [[Running tools]]
 * [[Extending the code analysis]]
+* [[Dealing with Microsoft specific code peaces]]
 
 ### HowTo...
 * [[Get basic size metrics]]
