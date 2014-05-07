@@ -51,4 +51,4 @@ Pull requests / issues which need to be documented in the WiKi:
 - Technical debt / SQALE stuff                                         -> @jmecosta  
   where:
   * [[Description / Features]] DONE  
-  * somewhere else?
+  * somewhere else? No, Done
