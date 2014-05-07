@@ -9,7 +9,7 @@ Pull requests / issues which need to be documented in the WiKi:
 - Make the custom rules definition be compatible with all SonarQube's in [3.7 .. 4.2] (#181, #127)                                  -> @jmecosta 
 
   where: 
-  * [[Extending the code analysis]]
+  * [[Extending the code analysis]] Done
 
 - Add support for Cppcheck's XML reports version 2 (#158)              -> @wenns
 
