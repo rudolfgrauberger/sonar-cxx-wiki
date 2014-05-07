@@ -3,10 +3,9 @@
 If you're using a patched or not-yet-supported version of an integrated code checker (like Cppcheck), you probably want to see those new checks in SonarQube, too. To do this, you have to:
 
 1. Define those rules using the XML format described further below in a file "rules.xml"
-2. Place this file in a directory matching the name of the analyzer under _$SONARQUBEHOME\extensions\rules_; e.g. for Cppcheck, the rules file would be expected to be here: 
-```BASH
-$SONARQUBEHOME\extensions\rules\cppcheck\rules.xml
-```
+2. Paste the content of file into the relevant configuration property in the SonarQube server.
+
+![Ui Settings](images/custom-rules-configuation.png)
 
 3. Restart the SonarQube server
 4. Make sure the newly added rules are visible in the quality profile; enable them
@@ -83,9 +82,11 @@ Example:
 ## Usage of unsupported code checkers
 If you're using a code checker which is **not** supported by the plugin, this feature is for you. It allows to feed violatios into SonarQube in a code checker agnostic way. To do this follow the steps below:
 
-1. Create and install a rule set
-   Create a XML file describing the rules and copy it to the directory 
-   _$SONARQUBEHOME\extensions\rules\cxxexternal_. Use the format described above.
+1. Create a XML file describing the rules and place it in global setting in the SonarQube server under sonar.cxx.customRules.cxxexternal
+
+![Ui Settings](images/external-custom-rules-configuation.png)
+ 
+Use the format described above. You can import multiple custom rules by clicking the Add value and save the settings
 
 2. Run your checker and create a report 
 
