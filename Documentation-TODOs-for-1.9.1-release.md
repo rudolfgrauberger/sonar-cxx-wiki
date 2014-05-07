@@ -30,6 +30,10 @@ Pull requests / issues which need to be documented in the WiKi:
 
 - Force inclusion of a header file (#139, #85)                         -> @guwirth
 
+  where:
+  * [[Supported configuration properties]]
+  * [[Description / Features]] (??)
+
 - Support of the new multi-language feature (requires SonarQube >=4.2) -> @wenns
  (#124)
 
@@ -38,4 +42,9 @@ Pull requests / issues which need to be documented in the WiKi:
   * running analysis DONE
 
 - Microsoft-specific extensions to C++ (#92)                           -> @guwirth
+
+  where: 
+  * Dealing with Microsoft specific code peaces
+  what: using the shipped header (?)
+
 - Technical debt / SQALE stuff                                         -> @jmecosta
