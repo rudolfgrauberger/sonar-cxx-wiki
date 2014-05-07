@@ -11,7 +11,7 @@ This is a [SonarQube](http://www.sonarqube.org/) plugin, which adds support for 
   - Vera++
   - Valgrind
 - Predefined rules for supported analyzers
-- A SQALE Model which covers most of Cppcheck and PC-lint rules
+- A SQALE Model which covers most of Cppcheck, PC-lint, Vera and Rats rules.
 - Cyclomatic (McCabe) complexity metrics
 - Code coverage metrics including:
   - Unit test coverage (line and branch)
