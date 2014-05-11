@@ -2,6 +2,15 @@
 
 Talking about coverage the most important question is: what coverage your are talking about. There are different kinds of coverage measurement and each tool has a slightly different way doing it and displaying the results. If you are looking for a very good introduction read [Code Coverage Analysis](http://www.bullseye.com/coverage.html) on the [Bullseye](http://www.bullseye.com) page.
 
+SonarQube API provides the possibility to set the covered lines (setHits) and covered conditions (setConditions). All other metrics are derived from these settings:
+
+* __Line coverage__: On a given line of code, Line coverage simply answers the following question: Has this line of code been executed during the execution of the unit tests?
+* __Conditions by line / Covered conditions by line__: These are the number of conditions by line and number of covered conditions by line.
+* __Branch coverage__: On each line of code containing some boolean expressions, the branch coverage simply answers the following question: 'Has each boolean expression been evaluated both to true and false?'. This is the density of possible branches in flow control structures that have been followed during unit tests execution.
+* __Coverage__: It is a mix of Line coverage and Branch coverage. Its goal is to provide an even more accurate answer to the following question: How much of the source code has been covered by the unit tests?
+
+For more details and exact calculation see [Metric Definitions](http://docs.codehaus.org/plugins/servlet/mobile#Metricdefinitions-Tests) on the SonarQube page.
+
 ### Setup the C++ Community Plugin
 
 To collect C++ test coverage metrics with C++ Community Plugin, you have to:
