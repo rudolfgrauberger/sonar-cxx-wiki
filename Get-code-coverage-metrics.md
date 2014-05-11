@@ -1,3 +1,9 @@
+### It is not all the same
+
+Talking about coverage the most important question is: what coverage your are talking about. There are different kinds of coverage measurement and each tool has a slightly different way doing it and displaying the results. If you are looking for a very good introduction read [Code Coverage Analysis](http://www.bullseye.com/coverage.html) on the [Bullseye](http://www.bullseye.com) page.
+
+### Setup the C++ Community Plugin
+
 To collect C++ test coverage metrics with C++ Community Plugin, you have to:
 
 1. Create a coverage report (or many of them) using your favorite coverage tracer (see [[Coverage tracers]] for examples)
