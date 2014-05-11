@@ -1,6 +1,6 @@
 ### It is not all the same
 
-Talking about coverage the most important question is: what coverage your are talking about. There are different kinds of coverage measurement and each tool has a slightly different way doing it and displaying the results. If you are looking for a very good introduction read [Code Coverage Analysis](http://www.bullseye.com/coverage.html) on the [Bullseye](http://www.bullseye.com) page.
+Talking about coverage the most important question is: what coverage your are talking about? There are different kinds of coverage measurement and each tool has a slightly different way doing it and displaying the results. If you are looking for a very good introduction read [Code Coverage Analysis](http://www.bullseye.com/coverage.html) on the [Bullseye](http://www.bullseye.com) page.
 
 SonarQube API provides the possibility to set the covered lines (setHits) and covered conditions (setConditions). All other metrics are derived from these settings:
 
