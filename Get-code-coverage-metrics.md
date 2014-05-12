@@ -28,7 +28,7 @@ The C++ Community plugin accepts three different formats for the test coverage r
 
 * Cobertura XML: the format introduced by [Cobertura](http://cobertura.github.io/cobertura/).
 * The XML format used by [Bullseye](http://www.bullseye.com/).
-* The XML format used by Microsoft Visual Studio.
+* The XML format used by [Microsoft Visual Studio](http://msdn.microsoft.com/de-de/library/dd537628.aspx).
 
 ### Notes for BullseyeCoverage users:
 SonarQube <3.2 provides metrics for line coverage and branch coverage. Bullseye users have function and branch/decision coverage instead. The C++ Community plugin converts the branch/decision coverage directly into branch coverage however line coverage is far more complex and cannot be correlated directly into function coverage.
@@ -40,6 +40,18 @@ Line coverage imported from a bullseye report means than function coverage + lin
 ### Notes for Visual Studio coverage users
 
 TBD guwirth
+
+Prerequisites
+* Visual Studio Premium or Visual Studio Ultimate 2010, 2012 or 2013
+* MSDN: [Using Code Coverage to Determine How Much Code is being Tested](http://msdn.microsoft.com/de-de/library/dd537628.aspx)
+
+Visual Studio provides block or line coverage:
+* __block coverage__:  A block is a piece of code with exactly one entry and exit point. If the program’s control flow passes through a block during a test run, that block is counted as covered. The number of times the block is used has no effect on the result. The block coverage is only on function level available.
+* __line coverage__: Counts the number of executed lines of code. A line could be covered (covered="yes"), not covered (covered="no") or partial covered (covered="partial").
+
+Mapping this to the SonarQube model this result in:
+* Condition coverage within the code is not available. Block coverage will be set for each function in the first line.
+* SonarQube does not support partial covered lines. Partial covered lines are marked as covered.
 
 See below an example for coverage result calling with **myFunc(0, 1)**:
 
@@ -104,5 +116,3 @@ Resulting Visual Studio XML coverage file:
   </modules>
 </results>
 ```
-
-* [Using Code Coverage to Determine How Much Code is being Tested](http://msdn.microsoft.com/de-de/library/dd537628.aspx)
