@@ -29,7 +29,7 @@ the amount of metrics collected:
 
 - Various external code analyzers:
   - [Cppcheck](http://cppcheck.sourceforge.net/): detects a wide range of problems ranging from performance issues and resource leakage to undefined behaviour. Binary packets are available on/for various platforms. Using the latest release pays off in general; compile from source if in doubt.
-  - [RATS](https://www.fortify.com/ssa-elements/threat-intelligence/rats.html): detects (potential) security problems in code, sensible for code bases with increased security requirements. Use binary packages or compile from source.
+  - [RATS](https://code.google.com/p/rough-auditing-tool-for-security/): detects (potential) security problems in code, sensible for code bases with increased security requirements. Use binary packages or compile from source.
   - [Vera++](http://www.inspirel.com/vera/): focuses on code style issues. There's a binary package for Windows, users of other platforms are likely to compile themselves.
   - [Valgrind](http://valgrind.org/): Detects various memory management problems at runtime. Basically Linux only; just use the packages from your distribution.
   - [Pc-Lint](http://www.gimpel.com/html/pcl.htm). Static analyzer from Gimpel Software
