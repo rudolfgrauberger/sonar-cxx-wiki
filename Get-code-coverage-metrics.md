@@ -9,7 +9,7 @@ SonarQube API provides the possibility to set the covered lines (setHits) and co
 * __Branch coverage__: On each line of code containing some boolean expressions, the branch coverage simply answers the following question: 'Has each boolean expression been evaluated both to true and false?'. This is the density of possible branches in flow control structures that have been followed during unit tests execution.
 * __Coverage__: It is a mix of Line coverage and Branch coverage. Its goal is to provide an even more accurate answer to the following question: How much of the source code has been covered by the unit tests?
 
-For more details and exact calculation see [Metric Definitions](http://docs.codehaus.org/plugins/servlet/mobile#Metricdefinitions-Tests) on the SonarQube page.
+For more details and exact calculation see [Metric Definitions](http://docs.codehaus.org/display/SONAR/Metric+definitions#Metricdefinitions-Tests) on the SonarQube page.
 
 ### Setup the C++ Community Plugin
 
