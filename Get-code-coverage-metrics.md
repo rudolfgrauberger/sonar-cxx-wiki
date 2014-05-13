@@ -39,8 +39,6 @@ Line coverage imported from a bullseye report means than function coverage + lin
 
 ### Notes for Visual Studio coverage users
 
-TBD guwirth
-
 Prerequisites
 * Visual Studio Premium or Visual Studio Ultimate 2010, 2012 or 2013
 * MSDN: [Using Code Coverage to Determine How Much Code is being Tested](http://msdn.microsoft.com/de-de/library/dd537628.aspx)
@@ -55,33 +53,8 @@ Mapping this to the SonarQube model this result in:
 
 See below an example for coverage result calling with **myFunc(0, 1)**:
 
-```C++
-#include "stdafx.h"
+![Coverage visualization for Visual Studio users](images/VisualStudioCoverage.png)
 
-void myFunc(int a, int b)
-{
-	int x = 0;
-	int y = 0;
-
-	if( a ) {
-		x = 1;
-		y = 1;
-	}
-
-	if( b )
-	{
-		x = 2;
-		y = 2;
-	}
-
-	if( a &&
-		b
-		) {
-			x = 3;
-			y = 3;
-	}
-}
-```
 Resulting Visual Studio XML coverage file:
 
 ```XML
@@ -90,7 +63,7 @@ Resulting Visual Studio XML coverage file:
   <modules>
     <module name="unittest1.dll" path="unittest1.dll" id="93AA4138F7AFB24C91DC9614B700B83C07000000" block_coverage="72.73" line_coverage="68.75" blocks_covered="8" blocks_not_covered="3" lines_covered="11" lines_partially_covered="1" lines_not_covered="4">
       <functions>
-        <function id="77200" name="myFunc" type_name="" block_coverage="62.50" line_coverage="61.54" blocks_covered="5" blocks_not_covered="3" lines_covered="8" lines_partially_covered="1" lines_not_covered="4">
+        <function id="77200" name="myFunc1" type_name="" block_coverage="62.50" line_coverage="61.54" blocks_covered="5" blocks_not_covered="3" lines_covered="8" lines_partially_covered="1" lines_not_covered="4">
           <ranges>
             <range source_id="0" covered="yes" start_line="4" start_column="0" end_line="4" end_column="0" />
             <range source_id="0" covered="yes" start_line="5" start_column="0" end_line="5" end_column="0" />
@@ -109,7 +82,7 @@ Resulting Visual Studio XML coverage file:
         </function>
       </functions>
       <source_files>
-        <source_file id="0" path="x:\coveragetest\source.cpp" checksum_type="MD5" checksum="8A4EC27BE0FE2BCE77401F836581836D">
+        <source_file id="0" path="x:\coveragetest\source1.cpp" checksum_type="MD5" checksum="8A4EC27BE0FE2BCE77401F836581836D">
         </source_file>
       </source_files>
     </module>
