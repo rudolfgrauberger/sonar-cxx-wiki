@@ -31,8 +31,8 @@ Pull requests / issues which need to be documented in the WiKi:
 - Force inclusion of a header file (#139, #85)                         -> @guwirth
 
   where:
-  * [[Supported configuration properties]]
-  * [[Description / Features]] (??)
+  * [[Supported configuration properties]] **2014-05-13 guwirth/done**
+  * [[Description / Features]] **2014-05-13 guwirth/done**
 
 - Support of the new multi-language feature (requires SonarQube >=4.2) -> @wenns
  (#124)
