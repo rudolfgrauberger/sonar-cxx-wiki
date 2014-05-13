@@ -3,8 +3,8 @@ Pull requests / issues which need to be documented in the WiKi:
 - Support of Visual Studio Code Coverage reports (#186, #79)           -> @guwirth
   
   where:
-  * [[Coverage tracers]] 2014-05-13 guwirth/done
-  * [[Get code coverage metrics]] 2014-05-13 guwirth/done
+  * [[Coverage tracers]] **2014-05-13 guwirth/done**
+  * [[Get code coverage metrics]] **2014-05-13 guwirth/done**
 
 - Make the custom rules definition be compatible with all SonarQube's in [3.7 .. 4.2] (#181, #127)                                  -> @jmecosta 
 
