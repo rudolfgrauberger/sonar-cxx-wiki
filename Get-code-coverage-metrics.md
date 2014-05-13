@@ -47,11 +47,14 @@ Visual Studio provides block or line coverage:
 * __block coverage__:  A block is a piece of code with exactly one entry and exit point. If the program’s control flow passes through a block during a test run, that block is counted as covered. The number of times the block is used has no effect on the result. The block coverage is only on function level available.
 * __line coverage__: Counts the number of executed lines of code. A line could be covered (covered="yes"), not covered (covered="no") or partial covered (covered="partial").
 
-Mapping this to the SonarQube model this result in:
+Mapping this to the SonarQube model results in:
 * Condition coverage within the code is not available. Block coverage will be set for each function in the first line.
 * SonarQube does not support partial covered lines. Partial covered lines are marked as covered.
 
-See below an example for coverage result calling with **myFunc(0, 1)**:
+See below an example for coverage results calling with **myFunc(0, 1)**:
+The partial covered line 21 is marked as covered in SonarQube. This results also in another line coverage:
+* Visual Studio: covered [lines] 8; covered [%] 61,54%
+* SonarQube: covered [lines] 9; covered [%] 69,2%
 
 ![Coverage visualization for Visual Studio users](images/VisualStudioCoverage.png)
 
