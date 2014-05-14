@@ -1,9 +1,9 @@
-To get meaningful SonarQube results your code should be syntactically correct code. The C++ community plugin has error recovery on declaration level, but do not expect as much guidance as you can get from a C++ compiler.
+To get meaningful *SonarQube* results your code should be syntactically correct code. The C++ community plugin has error recovery on declaration level, but do not expect as much guidance as you can get from a C++ compiler.
 
 **Error recovery:**
 * Syntax errors within a declaration are skipped, analysis is continued with next declaration.
 * For erroneous declarations the parser output the file, line number and closest identifier during analyzer run (e.g. sonar-runner).
-* Rule to detected skipped code do support you to find issues: 'Sonar \ C++ skip parser error'.
+* Rule to detected skipped code do support you to find issues: Enable 'Sonar \ C++ skip parser error' in your *Quality Profile*.
 
 **Example:**
 ```C++
