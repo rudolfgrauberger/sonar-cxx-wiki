@@ -23,7 +23,7 @@ Pull requests / issues which need to be documented in the WiKi:
 
 - Add header file to mock up Visual Studio 2010 specific extensions to -> @guwirth
   C++
-- Parser Error Recovery (#140, #133)                                   -> @guwirth or @wenns
+> - Parser Error Recovery (#140, #133)                                   -> @guwirth or @wenns
 
   where:
   * [[Description / Features]] DONE
