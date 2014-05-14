@@ -135,7 +135,7 @@ Example: pclint-result-*.xml
 </tr>
 
 <tr>
-<td>sonar.cxx.xml.reportPath</td>
+<td>sonar.cxx.externalrules.reportPath</td>
 <td>project</td>
 <td>externalrules-result/externalrules-result-*.xml</td>
 <td>Ant pattern describing the path to unit test execution reports, <b>relative to projects root</b>.
@@ -223,5 +223,6 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 <br>
 </td>
 </tr>
-
 </table>
+
+* Use sonar.cxx.include_directories for the 0.9 release
