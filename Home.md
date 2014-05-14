@@ -10,6 +10,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 
 ### Usage
 * [[Running the analysis]]
+* [[Detect and fix parsing errors]]
 * [[Error Recovery]]
 
 ### Going Deeper
