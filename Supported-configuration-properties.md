@@ -30,7 +30,7 @@ Example: .H,.h
 </tr>
 
 <tr>
-<td>sonar.cxx.include_directories</td>
+<td>sonar.cxx.includeDirectories*</td>
 <td>system, project</td>
 <td><\td>
 <td>Comma separated list of directories where the plugin will be looking for included files.
@@ -42,14 +42,14 @@ Example: include, /usr/include
 </tr>
 
 <tr>
-<td>sonar.cxx.force_include</td>
+<td>sonar.cxx.forceInclude</td>
 <td>system, project</td>
 <td><\td>
-<td> Comma separated list of header files to be implicitly included at the beginning of each source file. This option has the same effect as specifying the file with double quotation marks in an #include directive on the first line of every source file.  If you add multiple files they are included in the order they are listed from left to right.
+<td> Comma separated list of header files to be implicitly included at the beginning of each source file. This option has the same effect as specifying the file with double quotation marks in an #include directive on the first line of every source file. If you add multiple files they are included in the order they are listed from left to right.
 <br><br>
 This method of “force-including” files is sometimes a useful way of defining macros, types or compiler built-ins.
 <br><br>
-The first directory searched for file is the preprocessor's working directory instead of the directory containing the main source file. If not found there, it is searched for in the remainder of the ‘#include "..."’ search chain as normal (sonar.cxx.include_directories).
+The first directory searched for file is the preprocessor's working directory instead of the directory containing the main source file. If not found there, it is searched for in the remainder of the ‘#include "..."’ search chain as normal (sonar.cxx.includeDirectories).
 <br><br>
 See also GCC --include, Visual Studio /FI or cppcheck --include
 <br><br>
@@ -135,7 +135,7 @@ Example: pclint-result-*.xml
 </tr>
 
 <tr>
-<td>sonar.cxx.externalrules.reportPath</td>
+<td>sonar.cxx.xml.reportPath</td>
 <td>project</td>
 <td>externalrules-result/externalrules-result-*.xml</td>
 <td>Ant pattern describing the path to unit test execution reports, <b>relative to projects root</b>.
