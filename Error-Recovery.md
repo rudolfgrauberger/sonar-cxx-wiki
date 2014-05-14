@@ -20,7 +20,7 @@ To get meaningful *SonarQube* results your code should be syntactically correct 
 11: }
 ```
 
-The parser will find a syntax error in line 5 (missing semicolon). This results in a syntax error in the *func1* declaration. You will get the error message below. The parser ignores the whole declaration starting from line 3 and ending with line 6. The parser continue with analysis in line 7 (*func2* is analyzed). 
+The parser will find a syntax error in line 5 (missing semicolon). This results in a syntax error in the *func1* declaration. You will get the error message below. The parser ignores the whole declaration starting from line 3 and ending with line 6. The parser continues with analysis in line 7 (*func2* is analyzed again). 
 
 ```
 15:54:45.567 WARN  - [example.cpp:3]: syntax error, skip 'func1'
