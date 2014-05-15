@@ -10,7 +10,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 
 ### Usage
 * [[Running the analysis]]
-* [[Detect and fix parsing errors]]
+* [[Compiler specific extensions]]
 * [[Error Recovery]]
 
 ### Going Deeper
@@ -23,6 +23,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Get code coverage metrics]]
 * [[Get test execution metrics]]
 * [[Get code issues]]
+* [[Detect and fix parsing errors]]
 
 ### Roadmap
 * [[Roadmap]]
