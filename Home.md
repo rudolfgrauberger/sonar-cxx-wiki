@@ -17,13 +17,13 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Supported configuration properties]]
 * [[Running tools]]
 * [[Extending the code analysis]]
-* [[Dealing with Microsoft specific code peaces]]
+* [[Dealing with compiler specific code peaces]]
+* [[Detect and fix parsing errors]]
 
 ### HowTo...
 * [[Get code coverage metrics]]
 * [[Get test execution metrics]]
 * [[Get code issues]]
-* [[Detect and fix parsing errors]]
 
 ### Roadmap
 * [[Roadmap]]
