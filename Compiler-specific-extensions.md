@@ -2,8 +2,41 @@ C++ community plugin implements a C++03 and C++11 compatible grammar. Additional
 
 ###Preprocessor
 
+**With GCC'S it is allowed to leave the variable argument out entirely**
+
+Example:
+```C++
+#define eprintf(format, ...) fprintf (stderr, format, __VA_ARGS__)
+eprintf("success!");
+```
+Results in:
+```C++
+fprintf(stderr, "success!", );
+```
+
 
 ###Parser
+
+**GCC's statement expression**
+
+A compound statement enclosed in parentheses may appear as an expression in GCC. This allows you to use loops, switches, and local variables within an expression. 
+
+Example:
+```C++
+#define maxint(a,b) \
+       ({int _a = (a), _b = (b); _a > _b ? _a : _b; })
+```
+
+
+**GCC's Conditionals with Omitted Operands**
+
+There is a GCC extension which allows the middle operand in a conditional expression to be omitted. Therefore, the expression 'x ? : y' has the value of x if that is nonzero; otherwise, the value of y.
+
+Example:
+```C++
+... = x ? : y;
+```
+
 
 **Microsoft Visual Studio Attributted ATL support**
 
