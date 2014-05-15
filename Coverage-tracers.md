@@ -40,7 +40,11 @@ mstest.exe /testmetadata:.\some.vsmdi /testlist:03_COMP_smoke/clientAndServer/pa
 
 ***(2) Convert the resulting coverage file into an XML file:***
 ```
-CodeCoverage.exe analyze /output:mstest_coverage.xml out.coverage
+CodeCoverage.exe analyze /output:result.xml out.coverage
+```
+With this option it is also possible to merge several coverage results into one XML file.
+```
+CodeCoverage.exe analyze /output:result.xml out1.coverage out2.coverage
 ```
 
 ***(3) Read coverage file with SonarQube***
