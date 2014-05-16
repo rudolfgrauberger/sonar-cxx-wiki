@@ -7,23 +7,51 @@ In order to run Cppcheck and generate a fitting report, make sure:
 * to call it from the projects root directory
 * to pass all include directories (using _-I \<path\>_) as otherwise the analysis will be incomplete
 * that the <sources> parameter matches the **sonar.sources** list in _sonar-project.properties_
-* to create a XML-report using the parameter ```--xml```
+* to create a XML-report using the parameter ```--xml-version=2``` for version 2 or ```--xml``` for version 1. Both versions are supported, version 2 is the default.
 * to get the report from the standard error channel
 
 Example command line:
 
 ```BASH
-cppcheck -v --enable=all --xml -I<include directory> <sources> 2> report.xml
+cppcheck --xml file1.cpp 2> report.xml
+cppcheck --xml-version=2 file1.cpp 2> report.xml
+
+cppcheck -v --enable=all --xml -I[include directory] [sources] 2> report.xml
 ```
- 
+Example report files:
+
+**V1:**
+```XML
+<?xml version="1.0"?>
+<results>
+  <error file=".\file1.cpp" line="123" id="someError"
+               severity="error" msg="some error text"/>
+</results>
+```
+
+**V2:**
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+   <cppcheck version="1.53">
+      <errors>
+         <error id="someError" severity="error" msg="short error text"
+                    verbose="long error text" inconclusive="true">
+            <location file=".\file1.cpp" line="1"/>
+         </error>
+      </errors>
+</results>
+```
+
 A Cppcheck run may take a while on a big code base. To cut down analysis times, check the following options:
 
 * Use ```-j N``` option to run _N_ workers in parallel
 * Use only checks you're interested in via the option ```_--enable=<check>_```
 * Restrict checking of preprocessor configurations using the options ```-D -U```
+* Start with project include folders (-I) without system include folders. System include folders and include folders of big libraries like Boost, XERXES, ... make Cppcheck run much slower.
 * Get a faster machine ;)
  
-To extend the set of known Cppcheck rules define them in the file _$SONARQUBEHOME/extensions/rules/cppcheck_. See [[Extending the code analysis]] for details.
+To extend the set of known Cppcheck rules see [[Extending the code analysis]].
 
 ### Valgrind
 SonarQube can be fed with results of a Valgrind/Memcheck analysis. That's very valuable because:
