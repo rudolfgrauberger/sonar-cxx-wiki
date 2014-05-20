@@ -52,3 +52,5 @@ Pull requests / issues which need to be documented in the WiKi:
   where:
   * [[Description / Features]] DONE  
   * somewhere else? No, Done
+
+- Review documentation of the configuration properties                 -> anybody
