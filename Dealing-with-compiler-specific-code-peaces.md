@@ -1,10 +1,6 @@
 C++ community plugin implements a C++03 and C++11 compatible grammar but most compilers support additional compiler specific extensions. To get no syntax errors and meaningful results you have to workaround these extensions.
 
-To keep the compiler grammer as simple as possible it was a conscious design to support such extensions mainly with marco definitions and not an extension of the grammar.
-
-Some examples for compiler specific extensions:
-* list with [Microsoft-Specific Modifiers](http://msdn.microsoft.com/en-us/library/6bh0054z.aspx)
-* tbd list with GCC-Specific Modifiers
+To keep the compiler grammer as simple as possible it was a conscious design to support such extensions mainly with marco definitions and not an extension of the grammar. There are only some exceptions to this, where preprocessor directives won't work, see [[Supported compiler specific extensions]].
 
 In the description below you find some typical practices to mock the extensions or to replace them with supported alternatives.
 
@@ -42,3 +38,7 @@ struct example {
 };
 ```
 There are two ways to add preprocessor directives to the C++ community plugin. Via the ```sonar.cxx.defines``` or the ```sonar.cxx.forceInclude``` configuration property, see [[Supported configuration properties]] for details. In most cases it is easier to write once a header file for the target build environment and reuse this header file with force include in all projects.
+
+To get an overview about compiler specific extensions the links below can help you:
+* list with [Microsoft-Specific Modifiers](http://msdn.microsoft.com/en-us/library/6bh0054z.aspx)
+* tbd list with GCC-Specific Modifiers
