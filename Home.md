@@ -10,7 +10,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 
 ### Usage
 * [[Running the analysis]]
-* [[Compiler specific extensions]]
+* [[Supported compiler specific extensions]]
 * [[Error Recovery]]
 
 ### Going Deeper
