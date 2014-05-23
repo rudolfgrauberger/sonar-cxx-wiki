@@ -14,12 +14,19 @@ By default, the JUnitReport format is expected. To import a report in an other f
 ```XML
 <?xml version="1.0" ?>
 <TestLog>
-  <TestSuite name="InfrastructureBaseException">
-    <TestCase name="ThrowExceptionsTest">
-      <Info file="./base.test.boost/exceptiontest.cpp" line="21"><![CDATA[check 'incorrect exception Exception is caught' passed]]></Info>
-      <Info file="./base.test.boost/exceptiontest.cpp" line="23"><![CDATA[check 'incorrect exception LocalException is caught' passed]]></Info>
-      <TestingTime>2000</TestingTime>
-    </TestCase>
+  <!-- BOOST_TEST_MODULE -->
+  <TestSuite name="BoostTestModuleName">
+    <!-- BOOST_AUTO_TEST_SUITE -->
+    <TestSuite name="BoostTestSuiteName">
+      <!--  BOOST_AUTO_TEST_CASE -->
+      <TestCase name="BoostTestCaseName">
+        <!--BOOST_CHECK_XXX -->
+        <Info file="./base.test.boost/exceptiontest.cpp" line="21"><![CDATA[check 'incorrect exception Exception is caught' passed]]></Info>
+        <!--BOOST_CHECK_XXX -->
+        <Info file="./base.test.boost/exceptiontest.cpp" line="23"><![CDATA[check 'incorrect exception LocalException is caught' passed]]></Info>
+        <TestingTime>2000</TestingTime>
+      </TestCase>
+    </TestSuite>
   </TestSuite>
 </TestLog>
 ```
