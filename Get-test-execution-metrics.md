@@ -8,3 +8,18 @@ By default, the JUnitReport format is expected. To import a report in an other f
 * boosttest-1.x-to-junit-1.0.xsl:       For transforming Boost-reports
 * cpptestunit-1.x-to-junit-1.0.xsl:     For transforming CppTestUnit-reports
 * cppunit-1.x-to-junit-1.0.xsl:         For transforming CppUnit-reports
+
+### Boost report example
+
+```XML
+<?xml version="1.0" ?>
+<TestLog>
+  <TestSuite name="InfrastructureBaseException">
+    <TestCase name="ThrowExceptionsTest">
+      <Info file="./base.test.boost/exceptiontest.cpp" line="21"><![CDATA[check 'incorrect exception Exception is caught' passed]]></Info>
+      <Info file="./base.test.boost/exceptiontest.cpp" line="23"><![CDATA[check 'incorrect exception LocalException is caught' passed]]></Info>
+      <TestingTime>2000</TestingTime>
+    </TestCase>
+  </TestSuite>
+</TestLog>
+```
