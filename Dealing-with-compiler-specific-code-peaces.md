@@ -1,6 +1,6 @@
 C++ community plugin implements a C++03 and C++11 compatible grammar but most compilers support additional compiler specific extensions. To get no syntax errors and meaningful results you have to workaround these extensions.
 
-To keep the compiler grammer as simple as possible it was a conscious design to support such extensions mainly with marco definitions and not an extension of the grammar. There are only some exceptions to this, where preprocessor directives won't work, see [[Supported compiler specific extensions]].
+To keep the compiler grammer as simple as possible it was a conscious design decision to support such extensions mainly with marco definitions and not an extension of the grammar. There are only some exceptions to this, where preprocessor directives won't work, see [[Supported compiler specific extensions]].
 
 In the description below you find some typical practices to mock the extensions or to replace them with supported alternatives.
 
