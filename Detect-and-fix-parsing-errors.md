@@ -44,4 +44,4 @@ C++ community plugin implements a C++03 and C++11 compatible grammar but most co
 
 **Incomplete support of C++ specification**
 
-In case there are still problems check if your code fits to the latest C++ specification. You can try to mock it away, but in most cases you can only raise an issue in this forum to ask for an extension.
+In case there are still problems check if your code fits to the latest C++ specification. In case the plugin does not support the code you can try to mock it away, but in most cases you can only raise an issue in this forum to ask for an extension of the grammar.
