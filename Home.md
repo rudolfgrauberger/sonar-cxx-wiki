@@ -10,13 +10,13 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 
 ### Usage
 * [[Running the analysis]]
-* [[Supported compiler specific extensions]]
 * [[Predefined Macros]]
 * [[Force Include]]
 * [[Error Recovery]]
 
 ### Going Deeper
 * [[Supported configuration properties]]
+* [[Supported compiler specific extensions]]
 * [[Running tools]]
 * [[Extending the code analysis]]
 * [[Dealing with compiler specific code peaces]]
