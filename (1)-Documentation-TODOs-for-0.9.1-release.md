@@ -21,8 +21,8 @@ Pull requests / issues which need to be documented in the WiKi:
   where:
   * [[Compilers]]
 
-- Add header file to mock up Visual Studio 2010 specific extensions to -> @guwirth
-  C++
+> - Add header file to mock up Visual Studio 2010 specific extensions to -> @guwirth
+>  C++
 > - Parser Error Recovery (#140, #133)                                   -> @guwirth or @wenns
 
   where:
@@ -41,10 +41,10 @@ Pull requests / issues which need to be documented in the WiKi:
   * [[Description / Features]] DONE
   * [[Running the analysis]] DONE
 
-- Microsoft-specific extensions to C++ (#92)                           -> @guwirth
-
-  where: 
-  * [[Dealing with Microsoft specific code peaces]]
+> - Microsoft-specific extensions to C++ (#92)                           -> @guwirth
+>
+>  where: 
+>  * [[Dealing with compiler specific code peaces]]
 
   what: using the shipped header to simulate most of MS extensions (?)
 
