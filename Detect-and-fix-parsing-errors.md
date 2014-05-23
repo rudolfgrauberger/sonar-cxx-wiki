@@ -1,5 +1,3 @@
-TBD guwirth
-
 To get meaningful results there should be no syntax errors in your code. This page contains a step-by-step instruction how to find and fix these kind of problems.
 
 **Provide syntactically correct code**
@@ -18,7 +16,12 @@ To parse the code in the same way as in your build environment you have to set t
 
 **Missing include paths**
 
+In most cases you also have to provide include paths. The plugin doesn't know any standard include paths and also no project specific paths. Copy the paths from your build environment and project to [sonar.cxx.includeDirectories](https://github.com/wenns/sonar-cxx/wiki/Supported-configuration-properties).
+
 **Missing support of compiler specific extensions**
+
+C++ community plugin implements a C++03 and C++11 compatible grammar but most compilers support additional compiler specific extensions. To get no syntax errors and meaningful results you have to find workarounds for these extensions. To keep the compiler grammer as simple as possible it was a conscious design decision to support such extensions mainly with marco definitions and not by an extension of the grammar. There are only some exceptions to this, where preprocessor directives won't work, see [[Supported compiler specific extensions]]. [[Dealing with compiler specific code peaces]] gives you an introduction how to do this.
 
 **Incomplete support of C++ specification**
 
+In case there are still problems check if your code fits to the latest C++ specification. You can try to mock it away, but in most cases you can only raise an issue in this forum to ask for an extension.
