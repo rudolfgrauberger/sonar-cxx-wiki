@@ -11,6 +11,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 ### Usage
 * [[Running the analysis]]
 * [[Supported compiler specific extensions]]
+* [[Force Include]]
 * [[Error Recovery]]
 
 ### Going Deeper
