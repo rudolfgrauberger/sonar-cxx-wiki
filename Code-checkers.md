@@ -88,8 +88,8 @@ rats -w 3 --xml <sources> > report.xml
 ```
 To extend the set of known RATS rules define them in the file _$SONARQUBEHOME/extensions/rules/rats_. See [[Extending the code analysis]] for details.
 
-### Pc-Lint
-The Pc-Lint XML output needs to be formated to fit SonarQube.
+### PC-lint
+The PC-lint XML output needs to be formated to fit SonarQube.
 
 ```
 // XML options for SONAR.
@@ -100,12 +100,12 @@ The Pc-Lint XML output needs to be formated to fit SonarQube.
 -"format=<issue file =\q%f\q line = \q%l\q number = \q%n\q desc = \q%m\q/>"
 -"format_specific= "
 -hFs1 // The height of a message should be 1 i.e. don't output the line in error
--e900 // 'Successful completion message' confuses ALOA
+-e900 // 'Successful completion message' 
 ```
 
-This formatting has been verifed with Pc-Lint 9.0i. For further details on how to configure Pc-Lint please refer to [product page](http://www.gimpel.com/html/pcl.htm).
+This formatting has been verifed with PC-lint 9.0k. For further details on how to configure PC-lint please refer to [product page](http://www.gimpel.com/html/pcl.htm).
 
-To extend the set of known Pc-Lint rules define them in the file _$SONARQUBEHOME/extensions/rules/pclint_. See [[Extending the code analysis]] for details.
+To extend the set of known PC-lint rules define them in the file _$SONARQUBEHOME/extensions/rules/pclint_. See [[Extending the code analysis]] for details.
 
 _Note: Rules for this tool are disabled by default, so they need to be enabled in the relevant quality profile before they can be imported into SonarQube._
 
