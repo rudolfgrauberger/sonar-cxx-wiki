@@ -17,6 +17,8 @@ Preconditions:
 - set option for 'Project and Solutions -> Build and Run': MSBuild Project build log verbosity = Normal
 - enable code analysis on build (per *.vcxproj property or on cpp user property page). This feature is available in premium or ultimate VS edition.
 
+![MSVS cpp.user-propery-pages](https://cloud.githubusercontent.com/assets/2315215/3085369/b7b3f4d4-e50f-11e3-8e9e-6d1712db1320.PNG)
+
 A typical log file for MSVC 11.0/12.0 will contain Compiler warnings shown in the following excerpt:
 ```
 Build started 26.02.2014 17:59:20.
