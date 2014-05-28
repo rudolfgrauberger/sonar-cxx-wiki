@@ -27,7 +27,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Get test execution metrics]]
 * [[Get code issues]]
 * [[Contribute]]
-* [[Build the C++ community plugin]]
+* [[Build the plugin]]
 
 ### Roadmap
 * [[Roadmap]]
