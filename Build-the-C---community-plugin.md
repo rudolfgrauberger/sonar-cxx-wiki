@@ -1,3 +1,7 @@
+###Sign up for GitHub
+
+TBD
+
 ###Checkout Sources
 
 If you have never used Git before, you need to do some setup first. Run the following commands so that GIT knows your name and email.
@@ -31,8 +35,15 @@ git clone git@github.com:wenns/sonar-cxx.git
 * Execute ```mvn clean install``` on command line in root folder of your local copy.
 * For development you can use e.g. Eclipse or NetBeans 8.0 or greater.
 
+###Debug
+
+TBD
+
+###Testing
+
+TBD
+
 ###Helpful Links
 * [Extension Guide](http://docs.codehaus.org/display/SONAR/Extension+Guide)
 * [Developing Plugins](http://docs.codehaus.org/display/SONAR/Developing+Plugins)
 * [API Changes](http://docs.codehaus.org/display/SONAR/API+Changes)
-
