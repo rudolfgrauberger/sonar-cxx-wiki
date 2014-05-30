@@ -37,7 +37,22 @@ git clone git@github.com:wenns/sonar-cxx.git
 
 ###Debug
 
-TBD
+If you want to debug your code there are at least three possibilities:
+
+1. Best and easiest possibility is to write an Unit Test for your changes. In this case you can run your debugger for your particular Unit Test to debug into your code within the IDE. Any other changes are not needed in this case.
+2. In case you have to debug code which is executed during analyzer run you have to prepare and start the sonar-runner for debugging.
+ 1. Copy your plugin's jar file to ```SONAR_HOME/extensions/plugins```
+ 2. Start SonarQube normally, (debug is commented out in wrapper.config)
+ 3. At a command prompt, cd to the directory of the project you'll be analyzing
+ 4. Start sonar-runner in debug mode with the following commands<br>```SET SONAR_RUNNER_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000```
+ 5. Attach the IDE to the debug process on port 8000, set breakpoints in the source, and debug!
+3. In case you have to debug code on the sever side do the following steps:
+ 1. Copy your plugin's jar file to ```SONAR_HOME/extensions/plugins```
+ 2. Edit ```SONAR_HOME/conf/wrapper.conf``` and uncomment the line: ```wrapper.java.additional.3=-agentlib:jdwp=transport=dt_socket,server=y,address=8000```
+ 3. Launch SonarQube normally. The following line will appear in the log: Listening for transport dt_socket at address: 8000
+ 4. Attach the IDE to the debug process on port 8000, set breakpoints in the source, and debug!
+
+See also [Coding a Plugin / Debugging](http://docs.codehaus.org/display/SONAR/Debugging)
 
 ###Testing
 
