@@ -7,6 +7,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 
 ### Installation
 * [[Installation]]
+* [[Upgrade Instructions]]
 
 ### Usage
 * [[Running the analysis]]
