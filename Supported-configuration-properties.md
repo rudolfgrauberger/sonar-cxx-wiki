@@ -129,12 +129,12 @@ Example: pclint-result-*.xml
 </tr>
 
 <tr>
-<td>sonar.cxx.externalrules.reportPath</td>
+<td>sonar.cxx.other.reportPath</td>
 <td>project</td>
-<td>externalrules-result/externalrules-result-*.xml</td>
+<td>other-result/other-result-*.xml</td>
 <td>Ant pattern describing the path to unit test execution reports, <b>relative to projects root</b>.
 <br>
-Example: externalrules-result-*.xml
+Example: other-result-*.xml
 </td>
 </tr>
 
