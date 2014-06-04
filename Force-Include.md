@@ -12,7 +12,7 @@ The first directory searched for file is the preprocessor's working directory in
 **Example: VS10Macros.h, MyMacros.h**
 
 ```
-sonar.cxx.forceInclude=VS10Macros.h,MyMacros.h
+sonar.cxx.forceIncludes=VS10Macros.h,MyMacros.h
 ```
 
 Original source code file:
