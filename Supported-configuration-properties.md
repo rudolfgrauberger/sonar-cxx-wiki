@@ -30,7 +30,7 @@ Example: .H,.h
 </tr>
 
 <tr>
-<td>sonar.cxx.includeDirectories*</td>
+<td>sonar.cxx.includeDirectories</td>
 <td>system, project</td>
 <td><\td>
 <td>Comma separated list of directories where the plugin will be looking for included files.
@@ -42,7 +42,7 @@ Example: include, /usr/include
 </tr>
 
 <tr>
-<td>sonar.cxx.forceInclude</td>
+<td>sonar.cxx.forceIncludes</td>
 <td>system, project</td>
 <td><\td>
 <td> Comma separated list of header files to be implicitly included at the beginning of each source file, for details see [[Force Include]]
