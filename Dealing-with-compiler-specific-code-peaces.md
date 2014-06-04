@@ -37,7 +37,7 @@ struct example {
    int a;
 };
 ```
-There are two ways to add preprocessor directives to the C++ community plugin. Via the ```sonar.cxx.defines``` or the ```sonar.cxx.forceInclude``` configuration property, see [[Supported configuration properties]] for details. In most cases it is easier to write once a header file for the target build environment and reuse this header file with force include in all projects.
+There are two ways to add preprocessor directives to the C++ community plugin. Via the ```sonar.cxx.defines``` or the ```sonar.cxx.forceIncludes``` configuration property, see [[Supported configuration properties]] for details. In most cases it is easier to write once a header file for the target build environment and reuse this header file with force include in all projects.
 
 To get an overview about available compiler specific extensions the links below can help you:
 * [Microsoft-Specific Modifiers](http://msdn.microsoft.com/en-us/library/6bh0054z.aspx)
