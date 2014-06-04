@@ -20,7 +20,7 @@ This is a [SonarQube](http://www.sonarqube.org/) plugin, which adds support for 
 - Unit test execution metrics
 - Recognition of code duplication
 - Highlighting mode for C++ in SonarQube UI
-- force include of header files (sonar.cxx.forceInclude), similar to GCC --include, Visual Studio /FI or cppcheck --include
+- force include of header files (sonar.cxx.forceIncludes), similar to GCC --include, Visual Studio /FI or cppcheck --include
 
 ## Dependencies
 The plugin doesn't have obligatory dependencies.
