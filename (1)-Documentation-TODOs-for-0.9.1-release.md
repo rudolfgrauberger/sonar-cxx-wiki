@@ -11,7 +11,7 @@ Pull requests / issues which need to be documented in the WiKi:
  - [x] [[Code checkers]]                                                      DONE
 
 - Add support for feeding GCC's build warnings (#143)                  -> @typz, @wenns, @bertk
- - [x] [[Compilers]] MSVC **2014-05-13 bertk/done**
+ - [x] [[Compilers]] MSVC **2014-05-27 bertk/done**
  - [ ] [[Compilers]] GCC
 
 - Add header file to mock up Visual Studio 2010 specific extensions to -> @guwirth
