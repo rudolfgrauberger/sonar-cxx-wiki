@@ -1,10 +1,15 @@
 The Community C++ Plugin supports feeding compiler warnings as violations into SonarQube. Here is a quick guide how to run the supported compilers and catch needed relevant output.
 
 ### GNU C++ Compiler
-TODO @typz or @wenns
+To feed GCC warnings into SonarQube, make sure to:
+
+1. Capture the warnings from your build into a file (e.g build.log) using shell redirections or similar
+2. Set according property: ```sonar.cxx.compiler.reportPath=build.log```
+3. Activate the rules from the rule repository "compiler-gcc"
+4. Run the analysis
 
 ### Microsofts Visual Compiler
-The Compiler sensor consumes the warning messages available in the MS build log. A regular expression can be configured to extract the information for SonarQube.
+The compiler sensor consumes the warning messages available in the MS build log. A regular expression can be configured to extract the information for SonarQube.
 
 ```
 sonar.cxx.compiler.parser=Visual C++
