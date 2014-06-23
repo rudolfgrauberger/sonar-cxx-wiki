@@ -1,5 +1,6 @@
 **Upgrade to 0.9.1**
 
+* Compatible with SonarQube 3.7 to 4.2.
 * Configuration setting ```sonar.cxx.cppncss.reportPath``` is no longer supported.
 * Rename configuration setting ```sonar.cxx.externalrules.reportPath``` to ```sonar.cxx.other.reportPath```
 * Rename configuration setting ```sonar.cxx.include_directories``` to ```sonar.cxx.includeDirectories```
