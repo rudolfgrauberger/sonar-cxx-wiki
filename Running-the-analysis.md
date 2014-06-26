@@ -12,7 +12,7 @@ Analysis of a C++ project involves usually three steps:
 
 2. Provide a configuration using the file "sonar-project.properties". Set following properties, besides the standard ones:
    - **sonar.language** to "c++". This is required for SonarQube's < 4.2. For SonarQube's >= 4.2, leaving this property unset enables the [multi-language feature](http://www.sonarqube.org/at-long-last-sonarqube-is-a-true-polyglot/).
-   - Optional: **sonar.cxx.include_directories** and **sonar.cxx.defines** (see [[Supported configuration properties]])
+   - Optional: **sonar.cxx.includeDirectories** and **sonar.cxx.defines** (see [[Supported configuration properties]])
    - Optional: paths to the generated reports (see [[Supported configuration properties]])
 
 3. Make sure the SonarQube Server is running
