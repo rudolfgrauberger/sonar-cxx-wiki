@@ -6,6 +6,16 @@ It focuses on ease of use, the parsing error recovery being the core feature for
 Besides that, there will be an assortment of new checks, support for new Sonar versions and a couple of bug fixes. This milestone includes the issues which go in: 
 https://github.com/wenns/sonar-cxx/issues?milestone=2&page=1&state=open
 
+## 0.9.2 Release
+Should be ready by the end of 08.2014. It should focus on:
+- more standard compliance, especially the preprocessor should be
+looked at
+- updating dependencies (like SSLR) to most recent versions
+- add a couple of new features (like dependency analysis) 
+The following milestone includes the issues which go in:
+
+https://github.com/wenns/sonar-cxx/issues?milestone=3&page=1&state=open
+
 ## 0.9.X Releases
 Releases after the 0.9.1 should focus getting all of c++ parsed. Other topics to address include:
 - Improving the performance
