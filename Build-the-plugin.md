@@ -62,4 +62,5 @@ The former can be run with e.g. ```mvn test```; refert to [[Usage of the integra
 ###Helpful Links
 * [Extension Guide](http://docs.codehaus.org/display/SONAR/Extension+Guide)
 * [Developing Plugins](http://docs.codehaus.org/display/SONAR/Developing+Plugins)
+* [Coding a Plugin](http://docs.codehaus.org/plugins/servlet/mobile#content/view/129565136)
 * [API Changes](http://docs.codehaus.org/display/SONAR/API+Changes)
