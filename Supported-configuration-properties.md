@@ -1,6 +1,8 @@
 The C++ Community Plugin uses the following properties during analysis. See [here](
 http://docs.codehaus.org/display/SONAR/Analyzing+Source+Code) for the ways how to pass them to the plugin.
 
+Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/display/SONAR/Analysis+Parameters) the plugin supports the parameter below:
+
 <table>
 <tr>
 <td>Property</td>
