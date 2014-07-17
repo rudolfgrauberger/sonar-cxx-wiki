@@ -2,8 +2,6 @@
 
 This WiKi contains as well usage guidelines as also developer resources. Just navigate to the topic of your interest.
 
-![Ui Settings](images/custom-rules-configuation.png)
-
 ### General
 * [[Description / Features]]
 
