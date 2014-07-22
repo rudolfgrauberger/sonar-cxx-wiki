@@ -32,7 +32,7 @@ Example: .H,.h
 </tr>
 
 <tr>
-<td>sonar.cxx.includeDirectories</td>
+<td>sonar.cxx.includeDirectories<br/>Note: sonar.cxx.include_directories in 0.9 release</td>
 <td>system, project</td>
 <td><\td>
 <td>Comma separated list of directories where the plugin will be looking for included files.
