@@ -35,7 +35,7 @@ Where the fields have the following semantics:
 <tr>
 <td>key [RULE_ID]</td>
 <td>varchar(200)</td>
-<td>Id of the rule, should match the ID in the external reports</td>
+<td>Id of the rule, should match the ID in the external reports.<br>Note: Only alphabetic characters, digits and underscores are permitted for declaring the key. First sign should not be a digit.</td>
 </tr>
 
 <tr>
