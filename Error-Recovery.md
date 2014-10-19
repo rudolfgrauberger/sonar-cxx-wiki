@@ -1,6 +1,9 @@
 ```
-Hint: Parse error recovery is by default turned off (sonar.cxx.errorRecoveryEnabled=false).
-To enable it set 'General / Parse error recovery' to true in the C++ plugin settings.
+Hint:
+Parse error recovery is by default turned off
+(sonar.cxx.errorRecoveryEnabled=false).
+To enable it set 'General / Parse error recovery'
+to true in the C++ plugin settings.
 ```
 
 To get meaningful *SonarQube* results your code should be syntactically correct code. The C++ community plugin has error recovery on declaration level, but do not expect as much guidance as you can get from a C++ compiler.
