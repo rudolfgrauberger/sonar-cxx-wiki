@@ -37,13 +37,13 @@ Since SonarQube 4.2, it is possible to run an analysis on a multi-language proje
 
 SonarQube is using the file extension to define which plugin to use (for this plugin ```sonar.cxx.suffixes.sources```). All other rules are equal to single language projects.
 
-For more hints see http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner
+For more hints see [Analyzing with SonarQube Runner](http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner)
 
 **Multi-module Project**
 
 A multi-module project consits of different sub-projects (modules) which can be defined by defining
 * all the configuration in the properties file in the root folder or
-* the configuration in multiple properties files.
+* the configuration in multiple properties files in the root folders of the module subfolders.
 
 Relative paths are handled different for multi-module projects:
 * By default, the module base directory is guessed from the module identifier. But it can be redefined using the ```sonar.projectBaseDir``` property.
@@ -56,10 +56,33 @@ module2.sonar.projectBaseDir=modules/mod2
 
 * A project that defines modules (or a module that defines sub-modules) cannot define a source code folder to be analyzed.
 
-For more hints see http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner
+```
+root (folder with sonar-project.properties:1)
+|-- module1 (folder with sonar-project.properties:2)
+|     |-- src
+|-- Module 2 (folder with sonar-project.properties:3)
+|     |-- sources
+```
+
+sonar-project.properties:1
+```
+# Set modules IDs
+sonar.modules=module1,module2
+# Modules inherit properties set at parent level
+sonar.sources=src
+# By default, the base directory for a module is <current_dir>/<module_ID>.
+module2.sonar.projectBaseDir=Module 2
+```
+
+sonar-project.properties:3
+```
+sonar.sources=sources
+```
+
+For more hints see [Analyzing with SonarQube Runner](http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner)
 
 **sonar-runner advanced usage**
 
 The root folder of the project to analyze can be set through the sonar.projectBaseDir property since SonarQube Runner 2.4 (was previously project.home). This folder must contain a sonar-project.properties file if the mandatory properties (like sonar.projectKey) are not specified on the command line.
 
-For more hints see http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner
+For more hints see [Analyzing with SonarQube Runner](http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner)
