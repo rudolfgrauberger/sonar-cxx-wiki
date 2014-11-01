@@ -2,7 +2,8 @@ Setting up the plugin and the build chain the most common issues are path issues
 
 **General hints**
 
-* Use always slashes (/) in the configuration file as path separator. <br>*Hint: It is also possible to use backslashes but you have to escape it with another backslash (\\ => \\\\) which is worse to read.*
+* The location of your configuration file ```sonar-project.properties``` defines the root folder of your project. All other files and folders should be on root level or in a subfolder.<br>*Hint: Only exception is ```sonar.cxx.includeDirectories``` where you can define additional include directories outside of root.*
+* Use always slashes (/) in the configuration file ```sonar-project.properties``` as path separator. <br>*Hint: It is also possible to use backslashes but you have to escape it with another backslash (\\ => \\\\) which is worse to read.*
 
 
 
