@@ -41,9 +41,22 @@ For more hints see http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQu
 
 **Multi-module Project**
 
-For more hints see http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner
+A multi-module project consits of different sub-projects (modules) which can be defined by defining
+* all the configuration in the properties file in the root folder or
+* the configuration in multiple properties files.
 
-TBD
+Relative paths are handled different for multi-module projects:
+* By default, the module base directory is guessed from the module identifier. But it can be redefined using the ```sonar.projectBaseDir``` property.
+
+* If the module is not located directly in the parent folder, but in a deeper directory structure the module base directory can be defined by setting projectBaseDir for each module.
+```
+module1.sonar.projectBaseDir=modules/mod1
+module2.sonar.projectBaseDir=modules/mod2
+```
+
+* A project that defines modules (or a module that defines sub-modules) cannot define a source code folder to be analyzed.
+
+For more hints see http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner
 
 **sonar-runner advanced usage**
 
