@@ -44,3 +44,9 @@ For more hints see http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQu
 For more hints see http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner
 
 TBD
+
+**sonar-runner advanced usage**
+
+The root folder of the project to analyze can be set through the sonar.projectBaseDir property since SonarQube Runner 2.4 (was previously project.home). This folder must contain a sonar-project.properties file if the mandatory properties (like sonar.projectKey) are not specified on the command line.
+
+For more hints see http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner
