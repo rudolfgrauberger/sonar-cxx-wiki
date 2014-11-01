@@ -25,6 +25,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Detect and fix parsing errors]]
 
 ### HowTo...
+* [[Path and path separator issues]]
 * [[Get code coverage metrics]]
 * [[Get test execution metrics]]
 * [[Get code issues]]
