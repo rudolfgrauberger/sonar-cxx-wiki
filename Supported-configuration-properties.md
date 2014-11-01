@@ -1,7 +1,7 @@
 The C++ Community Plugin uses the following properties during analysis. See [here](
 http://docs.codehaus.org/display/SONAR/Analyzing+Source+Code) for the ways how to pass them to the plugin.
 
-Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/display/SONAR/Analysis+Parameters) the plugin supports the parameter below:
+Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/display/SONAR/Analysis+Parameters) the latest released plugin supports the parameter below:
 
 <table>
 <tr>
@@ -32,7 +32,7 @@ Example: .H,.h
 </tr>
 
 <tr>
-<td>sonar.cxx.includeDirectories<br/>Note: sonar.cxx.include_directories in 0.9 release</td>
+<td>sonar.cxx.includeDirectories</td>
 <td>system, project</td>
 <td><\td>
 <td>Comma separated list of directories where the plugin will be looking for included files.
@@ -221,4 +221,5 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 </tr>
 </table>
 
-* Use sonar.cxx.include_directories for the 0.9 release
+Hints:
+* Use sonar.cxx.include_directories instead of sonar.cxx.includeDirectories for the 0.9.0 release
