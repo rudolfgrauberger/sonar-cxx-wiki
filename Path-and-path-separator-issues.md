@@ -6,7 +6,16 @@ Setting up the plugin and the build chain the most common issues are path issues
 * Use always slashes (```/```) in the configuration file ```sonar-project.properties``` as path separator. <br>*Hint: It is also possible to use backslashes but you have to escape it with another backslash (```\``` => ```\\```) which is hard to read.*
 * Relative paths defined in configuration file are always relative to root folder.
 
-sonar-project.properties example:
+```
+root (folder with sonar-project.properties)
+|-- src (folder with source files)
+|-- tests
+|     |-- unittests (folder with unit test results)
+|-- build (folder with reports)
+```
+
+resulting sonar-project.properties:
+
 ```
 sonar.sources=src
 sonar.tests=tests/unittests
