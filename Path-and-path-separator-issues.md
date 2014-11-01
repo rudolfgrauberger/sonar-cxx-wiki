@@ -20,7 +20,7 @@ root (folder with sonar-project.properties)
 
 resulting sonar-project.properties:
 
-```
+```INI
 sonar.sources=src
 sonar.tests=tests/unittests
 sonar.cxx.cppcheck.reportPath=build/cppcheck-report.xml
@@ -49,7 +49,7 @@ Relative paths are handled different for multi-module projects:
 * By default, the module base directory is guessed from the module identifier. But it can be redefined using the ```sonar.projectBaseDir``` property.
 
 * If the module is not located directly in the parent folder, but in a deeper directory structure the module base directory can be defined by setting projectBaseDir for each module.
-```
+```INI
 module1.sonar.projectBaseDir=modules/mod1
 module2.sonar.projectBaseDir=modules/mod2
 ```
@@ -65,7 +65,7 @@ root (folder with sonar-project.properties:1)
 ```
 
 sonar-project.properties:1
-```
+```INI
 # Set modules IDs
 sonar.modules=module1,module2
 # Modules inherit properties set at parent level
@@ -75,7 +75,7 @@ module2.sonar.projectBaseDir=Module 2
 ```
 
 sonar-project.properties:3
-```
+```INI
 sonar.sources=sources
 ```
 
