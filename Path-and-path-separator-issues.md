@@ -91,6 +91,7 @@ module2.sonar.projectBaseDir=Module 2
 
 sonar-project.properties:3
 ```INI
+# Redefine src from base for module2
 sonar.sources=sources
 ```
 
