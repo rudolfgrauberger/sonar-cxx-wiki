@@ -53,7 +53,7 @@ For more hints see [Analyzing with SonarQube Runner](http://docs.codehaus.org/di
 
 **Multi-module Project**
 
-**Hint: Over the last versions there where a lot of changes, especially for multi-module projects. We recommend to use SonarQube 4.5.1 and Cxx Plugin 0.9.2 or later.
+**Hint:** Over the last versions there where a lot of changes, especially for multi-module projects. We recommend to use SonarQube 4.5.1 and Cxx Plugin 0.9.2 or later.
 
 A multi-module project consits of different sub-projects (modules) which can be defined by defining
 * all the configuration in the properties file in the root folder or
