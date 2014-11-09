@@ -1,7 +1,3 @@
-```
-*** Draft, not reviewed yet ***
-```
-
 Setting up the plugin and the build chain the most common issues are path issues at the beginning. Using different build chains, differences on the operating systems and the different SonarQube project types are making the things not easier. On this page you find some hints to get your system up and running.
 
 **General configuration file hints (simple project, single language)**
@@ -28,7 +24,7 @@ sonar.cxx.cppcheck.reportPath=build/cppcheck-report.xml
 
 **General report file hints (simple project, single language)**
 
-* Report files are XML output files from your tools (e.g. XML output from cppcheck).
+* Report files are XML output files from your tools (e.g. XML output from Cppcheck).
 * For all report files use the native path separator of your operating system for path items. This is backslash (\\) on Microsoft Windows and slash (/) on Linux.
 * Prefer using absolute paths in report files this makes troubleshooting much easier.<br>*Hint: Relative paths in report files are always relative to root folder (see also Multi-language and Multi-module projects below). Start relative paths always with ```.\```on Windows or ```./``` on Linux.*
 
@@ -47,7 +43,7 @@ Cppcheck example on Microsoft Windows with relative path:
 </results>
 ```
 
-**Multi-language Projects**
+**Multi-language Projects (SonarQube 4.2 and later)**
 
 Since SonarQube 4.2, it is possible to run an analysis on a multi-language project. To do so, the ```sonar.language``` property just has to be removed. Conversely, if for some reason you want to perform a single language-only analysis, make sure sonar.language is specified.
 
@@ -56,6 +52,8 @@ SonarQube is using the file extension to define which plugin to use (for this pl
 For more hints see [Analyzing with SonarQube Runner](http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner)
 
 **Multi-module Project**
+
+**Hint: Over the last versions there where a lot of changes, especially for multi-module projects. We recommend to use SonarQube 4.5.1 and Cxx Plugin 0.9.2 or later.
 
 A multi-module project consits of different sub-projects (modules) which can be defined by defining
 * all the configuration in the properties file in the root folder or
@@ -98,7 +96,7 @@ sonar.sources=sources
 
 For more hints see [Analyzing with SonarQube Runner](http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner)
 
-**sonar-runner advanced usage**
+**sonar-runner advanced usage (SonarQube Runner 2.4 and later)**
 
 The root folder of the project to analyze can be set through the sonar.projectBaseDir property since SonarQube Runner 2.4 (was previously project.home). This folder must contain a sonar-project.properties file if the mandatory properties (like sonar.projectKey) are not specified on the command line.
 
