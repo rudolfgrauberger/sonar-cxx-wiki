@@ -28,6 +28,7 @@ sonar.cxx.cppcheck.reportPath=build/cppcheck-report.xml
 
 **General report file hints (simple project, single language)**
 
+* Report files are XML output files from your tools (e.g. XML output from cppcheck).
 * For all report files use the native path separator of your operating system for path items. This is backslash (\\) on Microsoft Windows and slash (/) on Linux.
 * Prefer using absolute paths in report files this makes troubleshooting much easier.<br>*Hint: Relative paths in report files are always relative to root folder (see also Multi-language and Multi-module projects below). Start relative paths always with ```.\```on Windows or ```./``` on Linux.*
 
