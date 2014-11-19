@@ -1,3 +1,6 @@
+
+* defining rules in extensions/rules is no longer supported by this plugin *
+
 ## Extending rules in supported code analysers
 
 If you're using a patched or not-yet-supported version of an integrated code checker (like Cppcheck), you probably want to see those new checks in SonarQube, too. To do this, you have to:
