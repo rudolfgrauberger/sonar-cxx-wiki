@@ -1,5 +1,5 @@
 
-* defining rules in extensions/rules is no longer supported by this plugin 
+* defining rules in extensions/rules folder in sonarqube server is no longer supported by this plugin 
 
 ## Extending rules in supported code analysers
 
