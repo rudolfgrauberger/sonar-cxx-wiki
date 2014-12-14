@@ -8,7 +8,8 @@
 * Folder ```..\Sonar\sonar-x.y.z\extensions\rules``` is no longer supported. Add file content via settings in the web ui to ```sonar.cxx.other.rules``` in the C++ community backend settings instead.
 * Lines of Code (LoC) are counted differentially compared to V0.2: Macro definitions are no more counted as LoC. Leads to changes in LoC and derived metrics.
 
-** Upgrade to 0.9.2**
+
+**Upgrade to 0.9.2**
 
 * DRAFT => TODO
 * Unit Tests: SonarQube does not support 'virtual files' anymore. In case your report files contain 'filename' tags they must match with 'physical files'.
