@@ -35,6 +35,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Roadmap]]
 * [[Contribute]]
 * [[Build the plugin]]
+* [[Release Procedure]]
 * [[Misc. notes on development]]
 
 ### Troubleshooting
