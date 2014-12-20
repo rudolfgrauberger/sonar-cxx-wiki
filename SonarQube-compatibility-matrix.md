@@ -48,6 +48,18 @@
 <td>X</td>
 <td>X</td>
 </tr>
+
+<tr>
+<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9.2">v0.9.2*</a></td>
+<td>-</td>	
+<td>-</td>	
+<td>-</td>	
+<td>-</td>	
+<td>-</td>
+<td>-</td>	
+<td>-</td>
+<td>X</td>
+</tr>
 </table>
 
 \*: Not released yet.
