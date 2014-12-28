@@ -14,6 +14,7 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 <td>Comma separated list of file name extensions to be considered as C++ source files during analysis.
 <br>
 <i>Scope:</i> system, project
+<br>
 <i>Default:</i> .cxx,.cpp,.cc,.c
 </td>
 </tr>
@@ -23,6 +24,7 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 <td>Comma separated list of file name extensions to be considered as C++ header files during analysis.
 <br>
 <i>Scope:</i> system, project
+<br>
 <i>Default:</i> .hxx,.hpp,.hh,.h
 </td>
 </tr>
@@ -77,6 +79,7 @@ Example for the latter case:
 <td>Ant pattern describing the path to Cppcheck reports, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> cppcheck-reports/cppcheck-result-*.xml
 </td>
 </tr>
@@ -86,6 +89,7 @@ Example for the latter case:
 <td>Ant pattern describing the path to RATS reports, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> rats-reports/rats-result-*.xml
 </td>
 </tr>
@@ -95,6 +99,7 @@ Example for the latter case:
 <td>Ant pattern describing the path to Valgrind reports, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> valgrind-reports/valgrind-result-*.xml
 </td>
 </tr>
@@ -104,6 +109,7 @@ Example for the latter case:
 <td>Ant pattern describing the path to Vera++ reports, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> vera++-reports/vera++-result-*.xml
 </td>
 </tr>
@@ -113,6 +119,7 @@ Example for the latter case:
 <td>Ant pattern describing the path to unit test execution reports, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> xunit-reports/xunit-result-*.xml
 </td>
 </tr>
@@ -122,6 +129,7 @@ Example for the latter case:
 <td>Ant pattern describing the path to pc-lint reports, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> pclint-reports/pclint-result-*.xml
 </td>
 </tr>
@@ -131,6 +139,7 @@ Example for the latter case:
 <td>Ant pattern describing the path to unit test execution reports, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> other-result/other-result-*.xml
 </td>
 </tr>
@@ -155,6 +164,7 @@ Example: cppunit-1.x-to-junit-1.0.xsl
 <td>Ant pattern describing the path of unit test coverage reports, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> coverage-reports/coverage-*.xml
 </td>
 </tr>
@@ -164,6 +174,7 @@ Example: cppunit-1.x-to-junit-1.0.xsl
 <td>Ant pattern describing the path of integration test coverage reports, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> coverage-reports/it-coverage-*.xml
 </td>
 </tr>
@@ -173,6 +184,7 @@ Example: cppunit-1.x-to-junit-1.0.xsl
 <td>Ant pattern describing the path of overall test coverage reports, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> coverage-reports/overall-coverage-*.xml
 </td>
 </tr>
@@ -183,6 +195,7 @@ Example: cppunit-1.x-to-junit-1.0.xsl
 The current default settings can be used for VC++ compiler log file.
 <br>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> compiler-reports/BuildLog.htm
 </td>
 </tr>
@@ -198,6 +211,7 @@ Regular expression for four groups with this sequence:
 <li>message text</li>
 </ol>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> ^.*[\\\\,/](.*)\\(([0-9]+)\\)\\x20:\\x20warning\\x20(C\\d\\d\\d\\d):(.*)$
 </td>
 <tr>
@@ -208,6 +222,7 @@ Regular expression for four groups with this sequence:
 Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
 <br>
 <i>Scope:</i> project
+<br>
 <i>Default:</i> UTF-16
 <br>
 </td>
