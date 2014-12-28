@@ -10,7 +10,7 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 </tr>
 
 <tr>
-<td>sonar.cxx.suffixes.sources</td>
+<td><smaller>sonar.cxx.suffixes.sources</smaller></td>
 <td>Comma separated list of file name extensions to be considered as C++ source files during analysis.
 <br>
 <i>Scope:</i> system, project
