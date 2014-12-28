@@ -28,7 +28,7 @@ the point where we can think about a release, make sure that:
   SonarQube as a tool for that.
 * The [sample project](https://github.com/wenns/sonar-cxx/tree/master/sonar-cxx-plugin/src/samples/SampleProject2)
 still works with the latest build
-* The <parent>-section in the pom.xml references a recent version of the parent pom.
+* The parent-section in the pom.xml references a recent version of the parent pom.
 * Core users did some field testing and didn't found any serious issues
 
 ## Release Procedure

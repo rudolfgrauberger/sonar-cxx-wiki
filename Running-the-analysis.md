@@ -2,7 +2,8 @@ _The C++ Community plugin wont execute neither test runners not coverage tracers
 
 ### Usage
 
-You can analyze your projects using the usual means (see [this](http://www.sonarqube.org/at-long-last-sonarqube-is-a-true-polyglot/) page for all available). All runners should work. See below for details.
+You can analyze your projects using the usual means (see [this](
+http://docs.sonarqube.org/display/SONAR/Analyzing+Source+Code) page for all available). All runners should work. See below for details.
 
 ### The usual setup
 
@@ -30,7 +31,7 @@ For details how to invoke the tools and tie it all together see the [sample proj
 
 There is a maven plugin which automates running of a sonar analysis on a C++ project but requires a maven setup. Running a SonarQube analysis on maven projects is quite simple and usually a matter of:
 
-1. Getting and installing the [cxx-maven-plugin](https://github.com/franckbonin/cxx-maven-plugin) ([usage](https://github.com/franckbonin/cxx-maven-plugin/wiki/Introduction)). If you use multiple source directories and depend on cxx:addsource goal, you shall use -Dsonar.phase=cxx:addsource option (see [Sonar Maven Plugin Project Configuration](http://docs.codehaus.org/display/SONAR/Analysis+Parameters) )
+1. Getting and installing the [cxx-maven-plugin](https://github.com/franckbonin/cxx-maven-plugin) ([usage](https://github.com/franckbonin/cxx-maven-plugin/wiki/Introduction)). If you use multiple source directories and depend on cxx:addsource goal, you shall use -Dsonar.phase=cxx:addsource option (see [Sonar Maven Plugin Project Configuration](http://docs.sonarqube.org/display/SONAR/Analyzing+with+Maven) )
 
 2. Setting the language property and the source directory in your pom:
 ``` 

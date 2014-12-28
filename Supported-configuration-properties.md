@@ -203,9 +203,10 @@ Default: UTF-16
 </tr>
 </table>
 
+**Hints V0.9.0:**
+* Use ```sonar.cxx.include_directories``` instead of ```sonar.cxx.includeDirectories```
 
-**Hints:**
-* V0.9.1: Configuration setting ```sonar.cxx.cppncss.reportPath``` is no longer supported.
-* V0.9.1: Rename configuration setting ```sonar.cxx.externalrules.reportPath``` to ```sonar.cxx.other.reportPath```
-* V0.9.1: Rename configuration setting ```sonar.cxx.include_directories``` to ```sonar.cxx.includeDirectories```
-* V0.9.0: Use ```sonar.cxx.include_directories``` instead of ```sonar.cxx.includeDirectories```
+**Hints V0.9.1:**
+* Configuration setting ```sonar.cxx.cppncss.reportPath``` is no longer supported.
+* Rename configuration setting ```sonar.cxx.externalrules.reportPath``` to ```sonar.cxx.other.reportPath```
+* Rename configuration setting ```sonar.cxx.include_directories``` to ```sonar.cxx.includeDirectories```
