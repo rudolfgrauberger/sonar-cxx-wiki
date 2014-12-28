@@ -6,34 +6,36 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 <table>
 <tr>
 <td>Property</td>
-<td>Scope</td>
 <td>Description</td>
 </tr>
 
 <tr>
 <td>sonar.cxx.suffixes.sources</td>
-<td>system, project</td>
 <td>Comma separated list of file name extensions to be considered as C++ source files during analysis.
 <br>
-Default: .cxx,.cpp,.cc,.c
+<i>Scope:</i> system, project
+<i>Default:</i> .cxx,.cpp,.cc,.c
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.suffixes.headers</td>
-<td>system, project</td>
 <td>Comma separated list of file name extensions to be considered as C++ header files during analysis.
 <br>
-Default: .hxx,.hpp,.hh,.h
+<i>Scope:</i> system, project
+<i>Default:</i> .hxx,.hpp,.hh,.h
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.includeDirectories</td>
-<td>system, project</td>
 <td>Comma separated list of directories where the plugin will be looking for included files.
 <br>
 Note: the plugin doesn't know any standard include paths. If they should be used, configure them manually using this property.
+<br>
+<i>Scope:</i> system, project
+<br>
+<i>Default:</i>
 <br>
 Example: include, /usr/include
 </td>
@@ -41,8 +43,11 @@ Example: include, /usr/include
 
 <tr>
 <td>sonar.cxx.forceIncludes</td>
-<td>system, project</td>
 <td> Comma separated list of header files to be implicitly included at the beginning of each source file, for details see [[Force Include]]
+<br>
+<i>Scope:</i> system, project
+<br>
+<i>Default:</i>
 <br>
 Example: VS10Macros.h
 </td>
@@ -50,11 +55,14 @@ Example: VS10Macros.h
 
 <tr>
 <td>sonar.cxx.defines<\td>
-<td>system, project<\td>
 <td>
 List of macros which should be used during analysis. The syntax is the same the body of #define-directives, except the #define keyword itself. This is a multiline property, which means:
 <li> If you're using Sonar's Web UI just write a macro per line </li>
 <li> When setting via .properties-file seperate macros using '\n\' </li>
+<br>
+<i>Scope:</i> system, project
+<br>
+<i>Default:</i>
 <br>
 Example for the latter case:
 <code>sonar.cxx.defines = va_arg(a, b) 0, \n\<br>
@@ -66,74 +74,77 @@ Example for the latter case:
 
 <tr>
 <td>sonar.cxx.cppcheck.reportPath</td>
-<td>project</td>
 <td>Ant pattern describing the path to Cppcheck reports, <b>relative to projects root</b>.
 <br>
-Default: cppcheck-reports/cppcheck-result-*.xml
+<i>Scope:</i> project
+<i>Default:</i> cppcheck-reports/cppcheck-result-*.xml
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.rats.reportPath</td>
-<td>project</td>
 <td>Ant pattern describing the path to RATS reports, <b>relative to projects root</b>.
 <br>
-Default: rats-reports/rats-result-*.xml
+<i>Scope:</i> project
+<i>Default:</i> rats-reports/rats-result-*.xml
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.valgrind.reportPath</td>
-<td>project</td>
 <td>Ant pattern describing the path to Valgrind reports, <b>relative to projects root</b>.
 <br>
-Default: valgrind-reports/valgrind-result-*.xml
+<i>Scope:</i> project
+<i>Default:</i> valgrind-reports/valgrind-result-*.xml
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.vera.reportPath</td>
-<td>project</td>
 <td>Ant pattern describing the path to Vera++ reports, <b>relative to projects root</b>.
 <br>
-Default: vera++-reports/vera++-result-*.xml
+<i>Scope:</i> project
+<i>Default:</i> vera++-reports/vera++-result-*.xml
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.xunit.reportPath</td>
-<td>project</td>
 <td>Ant pattern describing the path to unit test execution reports, <b>relative to projects root</b>.
 <br>
-Default: xunit-reports/xunit-result-*.xml
+<i>Scope:</i> project
+<i>Default:</i> xunit-reports/xunit-result-*.xml
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.pclint.reportPath</td>
-<td>project</td>
 <td>Ant pattern describing the path to pc-lint reports, <b>relative to projects root</b>.
 <br>
-Default: pclint-reports/pclint-result-*.xml
+<i>Scope:</i> project
+<i>Default:</i> pclint-reports/pclint-result-*.xml
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.other.reportPath</td>
-<td>project</td>
 <td>Ant pattern describing the path to unit test execution reports, <b>relative to projects root</b>.
 <br>
-Default: other-result/other-result-*.xml
+<i>Scope:</i> project
+<i>Default:</i> other-result/other-result-*.xml
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.xunit.xsltURL</td>
-<td>project</td>
 <td>A name of a built in XSLT-file or an URL to an external one. Available builtins:
 <li>boosttest-1.x-to-junit-1.0.xsl: For transforming Boost-reports</li>
 <li>cpptestunit-1.x-to-junit-1.0.xsl: For transforming CppTestUnit-reports</li>
 <li>cppunit-1.x-to-junit-1.0.xsl: For transforming CppUnit-reports</li>
+<br>
+<i>Scope:</i> project
+<br>
+<i>Default:</i>
 <br>
 Example: cppunit-1.x-to-junit-1.0.xsl
 </td>
@@ -141,44 +152,43 @@ Example: cppunit-1.x-to-junit-1.0.xsl
 
 <tr>
 <td>sonar.cxx.coverage.reportPath</td>
-<td>project</td>
 <td>Ant pattern describing the path of unit test coverage reports, <b>relative to projects root</b>.
 <br>
-Default: coverage-reports/coverage-*.xml
+<i>Scope:</i> project
+<i>Default:</i> coverage-reports/coverage-*.xml
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.coverage.itReportPath</td>
-<td>project</td>
 <td>Ant pattern describing the path of integration test coverage reports, <b>relative to projects root</b>.
 <br>
-Default: coverage-reports/it-coverage-*.xml
+<i>Scope:</i> project
+<i>Default:</i> coverage-reports/it-coverage-*.xml
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.coverage.overallReportPath</td>
-<td>project</td>
 <td>Ant pattern describing the path of overall test coverage reports, <b>relative to projects root</b>.
 <br>
-Default: coverage-reports/overall-coverage-*.xml
+<i>Scope:</i> project
+<i>Default:</i> coverage-reports/overall-coverage-*.xml
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.compiler.reportPath</td>
-<td>project</td>
 <td>Ant pattern describing the path to compiler output file, <b>relative to projects root</b>.
 The current default settings can be used for VC++ compiler log file.
 <br>
-Default: compiler-reports/BuildLog.htm
+<i>Scope:</i> project
+<i>Default:</i> compiler-reports/BuildLog.htm
 </td>
 </tr>
 
 <tr>
 <td>sonar.cxx.compiler.regex</td>
-<td>project</td>
 <td>
 Regular expression for four groups with this sequence:
 <ol>
@@ -187,17 +197,18 @@ Regular expression for four groups with this sequence:
 <li>message id</li>
 <li>message text</li>
 </ol>
-Default: ^.*[\\\\,/](.*)\\(([0-9]+)\\)\\x20:\\x20warning\\x20(C\\d\\d\\d\\d):(.*)$
+<i>Scope:</i> project
+<i>Default:</i> ^.*[\\\\,/](.*)\\(([0-9]+)\\)\\x20:\\x20warning\\x20(C\\d\\d\\d\\d):(.*)$
 </td>
 <tr>
 
 <tr>
 <td>sonar.cxx.compiler.charset</td>
-<td>project</td>
 <td>
 Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
 <br>
-Default: UTF-16
+<i>Scope:</i> project
+<i>Default:</i> UTF-16
 <br>
 </td>
 </tr>
