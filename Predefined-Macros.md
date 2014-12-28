@@ -46,7 +46,7 @@ Predefined macros of C++ community plugin:
 
 <tr>
 <td>__cplusplus</td>
-<td>1</td>
+<td>201103L</td>
 <td></td>
 </tr>
 
