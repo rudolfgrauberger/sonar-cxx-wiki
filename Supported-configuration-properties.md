@@ -35,11 +35,11 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 <br>
 Note: the plugin doesn't know any standard include paths. If they should be used, configure them manually using this property.
 <br>
+<i>Example:</i> include, /usr/include
+<br>
 <i>Scope:</i> system, project
 <br>
 <i>Default:</i>
-<br>
-Example: include, /usr/include
 </td>
 </tr>
 
@@ -47,11 +47,11 @@ Example: include, /usr/include
 <td>sonar.cxx.forceIncludes</td>
 <td> Comma separated list of header files to be implicitly included at the beginning of each source file, for details see [[Force Include]]
 <br>
+<i>Example:</i> VS10Macros.h
+<br>
 <i>Scope:</i> system, project
 <br>
 <i>Default:</i>
-<br>
-Example: VS10Macros.h
 </td>
 </tr>
 
@@ -62,15 +62,15 @@ List of macros which should be used during analysis. The syntax is the same the 
 <li> If you're using Sonar's Web UI just write a macro per line </li>
 <li> When setting via .properties-file seperate macros using '\n\' </li>
 <br>
-<i>Scope:</i> system, project
-<br>
-<i>Default:</i>
-<br>
-Example for the latter case:
+<i>Example:</i>
 <code>sonar.cxx.defines = va_arg(a, b) 0, \n\<br>
                           PRIx64 ""       \n\<br>
                           DEBUG 1
 </code>
+<br>
+<i>Scope:</i> system, project
+<br>
+<i>Default:</i>
 <\td>
 <\tr>
 
@@ -151,11 +151,11 @@ Example for the latter case:
 <li>cpptestunit-1.x-to-junit-1.0.xsl: For transforming CppTestUnit-reports</li>
 <li>cppunit-1.x-to-junit-1.0.xsl: For transforming CppUnit-reports</li>
 <br>
+<i>Example</i>: cppunit-1.x-to-junit-1.0.xsl
+<br>
 <i>Scope:</i> project
 <br>
 <i>Default:</i>
-<br>
-Example: cppunit-1.x-to-junit-1.0.xsl
 </td>
 </tr>
 
