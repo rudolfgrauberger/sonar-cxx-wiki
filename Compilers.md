@@ -10,7 +10,7 @@ To feed GCC warnings into SonarQube, make sure to:
 
 ### Microsofts Visual Studio Compiler
 
-The compiler sensor consumes the warning messages available in the build log. Depending on the configuration properties there are more or less warning available.
+The compiler sensor consumes the warning messages available in the build log. Depending on the configuration properties there are more or less warnings available.
 
 **Visual Studio settings**
 
@@ -20,7 +20,10 @@ The compiler sensor consumes the warning messages available in the build log. De
 
 ![MSVS cpp.user-propery-pages](https://cloud.githubusercontent.com/assets/2315215/3085369/b7b3f4d4-e50f-11e3-8e9e-6d1712db1320.PNG)
 
-A regular expression can be configured to extract the information for SonarQube:
+**SonarQube Configuration settings**
+
+To read the messages from the LOG file the following configuration settings have to be defined. The regular expression can be configured and must match to the format in the LOG file.
+
 ```
 sonar.cxx.compiler.parser=Visual C++
 sonar.cxx.compiler.reportPath=*.log
