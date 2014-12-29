@@ -22,6 +22,34 @@ The compiler sensor consumes the warning messages available in the build log. De
 
 ![MSVS cpp.user-propery-pages](https://cloud.githubusercontent.com/assets/2315215/3085369/b7b3f4d4-e50f-11e3-8e9e-6d1712db1320.PNG)
 
+**Create the LOG file from the command line**
+
+Visual Studio provides two tools to build and analyze a project from the command line. With both tools it is the easiest to redirect stdout to a LOG file.
+
+```
+[devenv.exe|msbuild.exe] ... > output.log
+```
+
+Additional both tools provide command line options to redirect the output to a file:
+
+
+* Devenv example doing a solution rebuild and write the warnings to *example.log*.
+
+```
+rem VS2010
+call "%ProgramFiles(x86)%\Microsoft Visual Studio 10.0\Common7\Tools\vsvars32.bat"
+devenv example.sln /rebuild Release /out example.log
+
+```
+
+* MSBuild example doing a project rebuild and write the warnings to *example.log*.
+```
+rem VS2010
+call "%ProgramFiles(x86)%\Microsoft Visual Studio 10.0\Common7\Tools\vsvars32.bat"
+MSBuild.exe example.proj /t:rebuild /p:Configuration=Release /p:WarningLevel=3 /fileLogger /fileLoggerParameters:WarningsOnly;LogFile=example.log;Verbosity=normal;Encoding=UTF-8
+
+```
+
 **SonarQube Configuration settings**
 
 To read the messages from the LOG file the following configuration settings have to be defined. The regular expression can be configured and must match to the format in the LOG file.
