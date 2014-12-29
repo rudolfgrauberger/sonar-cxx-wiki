@@ -18,6 +18,8 @@ The compiler sensor consumes the warning messages available in the build log. De
 
 * Enable Code Analysis on Build. This feature is available in Premium or Ultimate editions only. Select ```Configuration Properties\Code Analysis\General```, activate ```Enable Code Analysis on Build```. As default you can use ```Microsoft Native Recommended Rules```.
 
+* Open ```Tools\Options``` and set option for ```Project and Solutions\Build and Run``` to ```MSBuild Project build log verbosity = Normal```.
+
 ![MSVS cpp.user-propery-pages](https://cloud.githubusercontent.com/assets/2315215/3085369/b7b3f4d4-e50f-11e3-8e9e-6d1712db1320.PNG)
 
 **SonarQube Configuration settings**
