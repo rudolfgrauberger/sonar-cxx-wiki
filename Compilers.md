@@ -8,23 +8,27 @@ To feed GCC warnings into SonarQube, make sure to:
 3. Activate the rules from the rule repository "compiler-gcc"
 4. Run the analysis
 
-### Microsofts Visual Compiler
-The compiler sensor consumes the warning messages available in the MS build log. A regular expression can be configured to extract the information for SonarQube.
+### Microsofts Visual Studio Compiler
 
+The compiler sensor consumes the warning messages available in the build log. Depending on the configuration properties there are more or less warning available.
+
+**Visual Studio settings**
+
+* To create the warnings you have to activate the following configuration properties. Open the project property page with ```Project\Properties```. Select ```Configuration Properties\C/C++\General``` and set ```Warning Level``` to ```Level3``` or ```Level4```.
+
+* Enable Code Analysis on Build. This feature is available in Premium or Ultimate editions only. Select ```Configuration Properties\Code Analysis\General```, activate ```Enable Code Analysis on Build```. As default you can use ```Microsoft Native Recommended Rules```.
+
+![MSVS cpp.user-propery-pages](https://cloud.githubusercontent.com/assets/2315215/3085369/b7b3f4d4-e50f-11e3-8e9e-6d1712db1320.PNG)
+
+A regular expression can be configured to extract the information for SonarQube:
 ```
 sonar.cxx.compiler.parser=Visual C++
 sonar.cxx.compiler.reportPath=*.log
 sonar.cxx.compiler.charset=UTF-8
 sonar.cxx.compiler.regex=^.*>(?<filename>.*)\\((?<line>[0-9]+)\\):\\x20warning\\x20(?<id>C\\d\\d\\d\\d):(?<message>.*)$
 ```
- 
-Preconditions:
-- set option for 'Project and Solutions -> Build and Run': MSBuild Project build log verbosity = Normal
-- enable code analysis on build (per *.vcxproj property or on cpp user property page). This feature is available in premium or ultimate VS edition.
 
-![MSVS cpp.user-propery-pages](https://cloud.githubusercontent.com/assets/2315215/3085369/b7b3f4d4-e50f-11e3-8e9e-6d1712db1320.PNG)
-
-A typical log file for MSVC 11.0/12.0 will contain Compiler warnings shown in the following excerpt:
+A typical log file contains compiler warnings as shown in the following excerpt:
 ```
 Build started 26.02.2014 17:59:20.
      1>Project "D:\training-kit\plaza_common\Source\sample.dll.vcxproj" on node 3 (Rebuild target(s)).
