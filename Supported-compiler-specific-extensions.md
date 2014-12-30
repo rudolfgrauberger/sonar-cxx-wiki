@@ -2,7 +2,7 @@ C++ community plugin implements a C++03 and C++11 compatible grammar. Additional
 
 ###Preprocessor
 
-**With GCC'S it is allowed to leave the variable argument out entirely**
+**With GCC's it is allowed to leave the variable argument out entirely**
 
 Example:
 ```C++
