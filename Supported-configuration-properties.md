@@ -75,6 +75,18 @@ List of macros which should be used during analysis. The syntax is the same the 
 <\tr>
 
 <tr>
+<td>sonar.cxx.cFilesPatterns</td>
+<td>
+Comma-separated list of wildcard patterns used to detect C files. When
+a file matches any of the patterns, it is parsed in C-compatibility mode.
+<br>
+<i>Scope:</i> project
+<br>
+<i>Default:</i> *.c,*.C
+</td>
+</tr>
+
+<tr>
 <td>sonar.cxx.cppcheck.reportPath</td>
 <td>Ant pattern describing the path to Cppcheck reports, <b>relative to projects root</b>.
 <br>
@@ -160,6 +172,18 @@ List of macros which should be used during analysis. The syntax is the same the 
 </tr>
 
 <tr>
+<td>sonar.cxx.xunit.provideDetails</td>
+<td>
+If "True", tries to assign testcases in reports to test resources in SonarQube,
+thus making the drillown to details possible
+<br>
+<i>Scope:</i> project
+<br>
+<i>Default:</i> True
+</td>
+</tr>
+
+<tr>
 <td>sonar.cxx.coverage.reportPath</td>
 <td>Ant pattern describing the path of unit test coverage reports, <b>relative to projects root</b>.
 <br>
@@ -186,6 +210,18 @@ List of macros which should be used during analysis. The syntax is the same the 
 <i>Scope:</i> project
 <br>
 <i>Default:</i> coverage-reports/overall-coverage-*.xml
+</td>
+</tr>
+
+<tr>
+<td>sonar.cxx.coverage.forceZeroCoverage</td>
+<td>
+If 'True', assign zero line coverage to source files without coverage report(s),
+which results in a more realistic overall Technical Debt value.
+<br>
+<i>Scope:</i> project
+<br>
+<i>Default:</i> True
 </td>
 </tr>
 
