@@ -63,9 +63,11 @@ List of macros which should be used during analysis. The syntax is the same the 
 <li> When setting via .properties-file seperate macros using '\n\' </li>
 <br>
 <i>Example:</i>
-<code>va_arg(a, b) 0, \n\<\code><br>
-<code>PRIx64 ""       \n\<\code><br>
-<code>DEBUG 1<\code><br>
+<pre>
+va_arg(a, b) 0, \n\
+PRIx64 ""       \n\
+DEBUG 1
+</pre>
 <i>Scope:</i> system, project
 <br>
 <i>Default:</i>
