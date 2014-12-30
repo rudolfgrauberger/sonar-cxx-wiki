@@ -15,7 +15,7 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 <br>
 <i>Scope:</i> system, project
 <br>
-<i>Default:</i> .cxx,.cpp,.cc,.c
+<i>Default:</i> <code>.cxx,.cpp,.cc,.c</code>
 </td>
 </tr>
 
@@ -25,7 +25,7 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 <br>
 <i>Scope:</i> system, project
 <br>
-<i>Default:</i> .hxx,.hpp,.hh,.h
+<i>Default:</i> <code>.hxx,.hpp,.hh,.h</code>
 </td>
 </tr>
 
@@ -35,7 +35,7 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 <br>
 Note: the plugin doesn't know any standard include paths. If they should be used, configure them manually using this property.
 <br>
-<i>Example:</i> include, /usr/include
+<i>Example:</i> <code>include, /usr/include</code>
 <br>
 <i>Scope:</i> system, project
 <br>
@@ -47,7 +47,7 @@ Note: the plugin doesn't know any standard include paths. If they should be used
 <td>sonar.cxx.forceIncludes</td>
 <td> Comma separated list of header files to be implicitly included at the beginning of each source file, for details see [[Force Include]]
 <br>
-<i>Example:</i> VS10Macros.h
+<i>Example:</i> <code>VS10Macros.h</code>
 <br>
 <i>Scope:</i> system, project
 <br>
@@ -82,7 +82,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> *.c,*.C
+<i>Default:</i> <code>*.c,*.C</code>
 </td>
 </tr>
 
@@ -92,7 +92,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> cppcheck-reports/cppcheck-result-*.xml
+<i>Default:</i> <code>cppcheck-reports/cppcheck-result-*.xml</code>
 </td>
 </tr>
 
@@ -102,7 +102,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> rats-reports/rats-result-*.xml
+<i>Default:</i> <code>rats-reports/rats-result-*.xml</code>
 </td>
 </tr>
 
@@ -112,7 +112,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> valgrind-reports/valgrind-result-*.xml
+<i>Default:</i> <code>valgrind-reports/valgrind-result-*.xml</code>
 </td>
 </tr>
 
@@ -122,7 +122,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> vera++-reports/vera++-result-*.xml
+<i>Default:</i> <code>vera++-reports/vera++-result-*.xml</code>
 </td>
 </tr>
 
@@ -132,7 +132,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> xunit-reports/xunit-result-*.xml
+<i>Default:</i> <code>xunit-reports/xunit-result-*.xml</code>
 </td>
 </tr>
 
@@ -142,7 +142,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> pclint-reports/pclint-result-*.xml
+<i>Default:</i> <code>pclint-reports/pclint-result-*.xml</code>
 </td>
 </tr>
 
@@ -152,7 +152,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> other-result/other-result-*.xml
+<i>Default:</i> <code>other-result/other-result-*.xml</code>
 </td>
 </tr>
 
@@ -163,7 +163,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <li>cpptestunit-1.x-to-junit-1.0.xsl: For transforming CppTestUnit-reports</li>
 <li>cppunit-1.x-to-junit-1.0.xsl: For transforming CppUnit-reports</li>
 <br>
-<i>Example</i>: cppunit-1.x-to-junit-1.0.xsl
+<i>Example</i>: <code>cppunit-1.x-to-junit-1.0.xsl</code>
 <br>
 <i>Scope:</i> project
 <br>
@@ -179,7 +179,7 @@ thus making the drillown to details possible
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> True
+<i>Default:</i> <code>True</code>
 </td>
 </tr>
 
@@ -189,7 +189,7 @@ thus making the drillown to details possible
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> coverage-reports/coverage-*.xml
+<i>Default:</i> <code>coverage-reports/coverage-*.xml</code>
 </td>
 </tr>
 
@@ -199,7 +199,7 @@ thus making the drillown to details possible
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> coverage-reports/it-coverage-*.xml
+<i>Default:</i> <code>coverage-reports/it-coverage-*.xml</code>
 </td>
 </tr>
 
@@ -209,7 +209,7 @@ thus making the drillown to details possible
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> coverage-reports/overall-coverage-*.xml
+<i>Default:</i> <code>coverage-reports/overall-coverage-*.xml</code>
 </td>
 </tr>
 
@@ -221,7 +221,7 @@ which results in a more realistic overall Technical Debt value.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> True
+<i>Default:</i> <code>True</code>
 </td>
 </tr>
 
@@ -232,7 +232,7 @@ The current default settings can be used for VC++ compiler log file.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> compiler-reports/BuildLog.htm
+<i>Default:</i> <code>compiler-reports/BuildLog.htm</code>
 </td>
 </tr>
 
@@ -248,7 +248,7 @@ Regular expression for four groups with this sequence:
 </ol>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> ^.*[\\\\,/](.*)\\(([0-9]+)\\)\\x20:\\x20warning\\x20(C\\d\\d\\d\\d):(.*)$
+<i>Default:</i> <code>^.*[\\\\,/](.*)\\(([0-9]+)\\)\\x20:\\x20warning\\x20(C\\d\\d\\d\\d):(.*)$</code>
 </td>
 <tr>
 
@@ -259,7 +259,7 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> UTF-16
+<i>Default:</i> <code>UTF-16</code>
 <br>
 </td>
 </tr>
