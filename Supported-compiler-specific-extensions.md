@@ -37,6 +37,23 @@ Example:
 ... = x ? : y;
 ```
 
+Next: Mixed Declarations, Previous: Cast to Union, Up: C Extensions
+
+**GCC's Case Ranges**
+
+You can specify a range of consecutive values in a single case label, like this: ```case low ... high:```
+
+This has the same effect as the proper number of individual case labels, one for each integer value from low to high, inclusive.
+
+Be careful: Write spaces around the ..., for otherwise it may be parsed wrong when you use it with integer values. For example, write this: ```case 1 ... 5:``` rather than this: ```case 1...5:```
+
+Example:
+```C++
+switch(c) {
+   case 'A' ... 'C':
+      break;
+}
+```
 
 **Microsoft Visual Studio Attributted ATL support**
 
