@@ -46,7 +46,7 @@ devenv example.sln /rebuild Release /out example.log
 ```
 rem VS2010
 call "%ProgramFiles(x86)%\Microsoft Visual Studio 10.0\Common7\Tools\vsvars32.bat"
-MSBuild.exe example.proj /t:rebuild /p:Configuration=Release /p:WarningLevel=3 /fileLogger /fileLoggerParameters:WarningsOnly;LogFile=example.log;Verbosity=normal;Encoding=UTF-8
+MSBuild.exe example.proj /t:rebuild /p:Configuration=Release;WarningLevel=3 /fileLogger /fileLoggerParameters:WarningsOnly;LogFile=example.log;Verbosity=normal;Encoding=UTF-8
 
 ```
 
