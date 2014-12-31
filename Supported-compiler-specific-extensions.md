@@ -63,6 +63,30 @@ switch(c) {
 }
 ```
 
+**ISO C99: Designated Initializers**
+
+In ISO C99 you can give the elements in any order, specifying the array indices or structure field names they apply to
+
+Example:
+```C
+int a[6] = { [4] = 29, [2] = 15 }; // is equivalent to: int a[6] = { 0, 0, 15, 0, 29, 0 };
+```
+
+GCC's extension: To initialize a range of elements to the same value, write ‘[first ... last] = value’.
+
+Example:
+```C
+int widths[] = { [0 ... 9] = 1, [10 ... 99] = 2, [100] = 3 };
+```
+
+In a structure initializer, specify the name of a field to initialize with ‘.fieldname =’ before the element value.
+
+Example:
+```C
+struct point { int x, y; };
+struct point p = { .y = yvalue, .x = xvalue };
+```
+
 **Microsoft Visual Studio Attributted ATL support**
 
 There is a special flavor of ATL called 'Attributed ATL' or ATL and Attributes. The attributes were added to make programming ATL simpler. The attributes would typically lead to source code insertion.
