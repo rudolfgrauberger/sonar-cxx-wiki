@@ -60,7 +60,7 @@ Note: the plugin doesn't know any standard include paths. If they should be used
 <td>
 List of macros which should be used during analysis. The syntax is the same the body of #define-directives, except the #define keyword itself. This is a multiline property, which means:
 <li> If you're using Sonar's Web UI just write a macro per line </li>
-<li> When setting via .properties-file seperate macros using '\n\' </li>
+<li> When setting via .properties-file separate macros using '\n\' </li>
 <br>
 <i>Example:</i>
 <pre>
