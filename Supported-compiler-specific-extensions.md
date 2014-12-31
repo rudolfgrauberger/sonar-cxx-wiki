@@ -14,6 +14,7 @@ Results in:
 fprintf(stderr, "success!", );
 ```
 
+
 **GCC's special meaning of token paste operator**
 
 If variable argument is left out then the comma before the paste operator will be deleted.
@@ -51,6 +52,7 @@ Example:
 ... = x ? : y;
 ```
 
+
 **GCC's Case Ranges**
 
 You can specify a range of consecutive values in a single case label, like this: ```case low ... high:```. This has the same effect as the proper number of individual case labels, one for each integer value from low to high, inclusive. Be careful: Write spaces around the ..., for otherwise it may be parsed wrong when you use it with integer values. For example, write this: ```case 1 ... 5:``` rather than this: ```case 1...5:```.
@@ -62,6 +64,18 @@ switch(c) {
       break;
 }
 ```
+
+
+**ISO C99: Compound Literals**
+
+ISO C99 supports compound literals. A compound literal looks like a cast containing an initializer. Its value is an object of the type specified in the cast, containing the elements specified in the initializer; it is an lvalue.
+
+Example:
+```C
+struct foo {int a; char b[2];} structure;
+structure = ((struct foo) {x + y, 'a', 0});
+```     
+
 
 **ISO C99: Designated Initializers**
 
@@ -86,6 +100,7 @@ Example:
 struct point { int x, y; };
 struct point p = { .y = yvalue, .x = xvalue };
 ```
+
 
 **Microsoft Visual Studio Attributted ATL support**
 
