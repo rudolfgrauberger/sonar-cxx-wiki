@@ -102,6 +102,31 @@ struct point p = { .y = yvalue, .x = xvalue };
 ```
 
 
+
+**Microsoft Visual Studio Inline Assembler support**
+
+Visual Studio uses a proprietary __asm keyword which is not standard conform.
+Use a preprocessor macro to replace __asm with asm.
+
+Syntax:
+```C++
+__asm assembly-instruction [ ; ]
+__asm { assembly-instruction-list } [ ; ]
+```
+Example:
+```C++
+#define __asm asm
+__asm {
+   mov eax, num
+   mov ecx, power
+   shl eax, cl
+}
+__asm mov array[6], bx ;
+__asm mov array[6], bx // without ; at the end is currently not supported by Cxx Plugin
+```
+
+
+
 **Microsoft Visual Studio Attributted ATL support**
 
 There is a special flavor of ATL called 'Attributed ATL' or ATL and Attributes. The attributes were added to make programming ATL simpler. The attributes would typically lead to source code insertion.
