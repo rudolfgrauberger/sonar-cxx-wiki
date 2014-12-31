@@ -14,6 +14,20 @@ Results in:
 fprintf(stderr, "success!", );
 ```
 
+**GCC's special meaning of token paste operator**
+
+If variable argument is left out then the comma before the paste operator will be deleted.
+
+Example:
+```C++
+#define eprintf(format, ...) fprintf (stderr, format, ##__VA_ARGS__)
+eprintf("success!");
+```
+Results in:
+```C++
+fprintf(stderr, "success!");
+```
+
 
 ###Parser
 
