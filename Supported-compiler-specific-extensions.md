@@ -2,7 +2,7 @@ C++ community plugin implements a C++03 and C++11 compatible grammar. Additional
 
 ###Preprocessor
 
-**With GCC'S it is allowed to leave the variable argument out entirely**
+**With GCC's it is allowed to leave the variable argument out entirely**
 
 Example:
 ```C++
@@ -12,6 +12,21 @@ eprintf("success!");
 Results in:
 ```C++
 fprintf(stderr, "success!", );
+```
+
+
+**GCC's special meaning of token paste operator**
+
+If variable argument is left out then the comma before the paste operator will be deleted.
+
+Example:
+```C++
+#define eprintf(format, ...) fprintf (stderr, format, ##__VA_ARGS__)
+eprintf("success!");
+```
+Results in:
+```C++
+fprintf(stderr, "success!");
 ```
 
 
@@ -36,6 +51,80 @@ Example:
 ```C++
 ... = x ? : y;
 ```
+
+
+**GCC's Case Ranges**
+
+You can specify a range of consecutive values in a single case label, like this: ```case low ... high:```. This has the same effect as the proper number of individual case labels, one for each integer value from low to high, inclusive. Be careful: Write spaces around the ..., for otherwise it may be parsed wrong when you use it with integer values. For example, write this: ```case 1 ... 5:``` rather than this: ```case 1...5:```.
+
+Example:
+```C++
+switch(c) {
+   case 'A' ... 'C':
+      break;
+}
+```
+
+
+**ISO C99: Compound Literals**
+
+ISO C99 supports compound literals. A compound literal looks like a cast containing an initializer. Its value is an object of the type specified in the cast, containing the elements specified in the initializer; it is an lvalue.
+
+Example:
+```C
+struct foo {int a; char b[2];} structure;
+structure = ((struct foo) {x + y, 'a', 0});
+```     
+
+
+**ISO C99: Designated Initializers**
+
+In ISO C99 you can give the elements in any order, specifying the array indices or structure field names they apply to
+
+Example:
+```C
+int a[6] = { [4] = 29, [2] = 15 }; // is equivalent to: int a[6] = { 0, 0, 15, 0, 29, 0 };
+```
+
+GCC's extension: To initialize a range of elements to the same value, write ‘[first ... last] = value’.
+
+Example:
+```C
+int widths[] = { [0 ... 9] = 1, [10 ... 99] = 2, [100] = 3 };
+```
+
+In a structure initializer, specify the name of a field to initialize with ‘.fieldname =’ before the element value.
+
+Example:
+```C
+struct point { int x, y; };
+struct point p = { .y = yvalue, .x = xvalue };
+```
+
+
+
+**Microsoft Visual Studio Inline Assembler support**
+
+Visual Studio uses a proprietary __asm keyword which is not standard conform.
+Use a preprocessor macro to replace __asm with asm.
+
+Syntax:
+```C++
+__asm assembly-instruction [ ; ]
+__asm { assembly-instruction-list } [ ; ]
+```
+Example:
+```C++
+#define __asm asm
+__asm {
+   mov eax, num
+   mov ecx, power
+   shl eax, cl
+}
+__asm mov array[6], bx ;
+__asm mov array[6], bx // without ; at the end is currently not supported by Cxx Plugin
+```
+
 
 
 **Microsoft Visual Studio Attributted ATL support**

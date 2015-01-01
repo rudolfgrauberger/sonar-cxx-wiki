@@ -14,9 +14,9 @@ The compiler sensor consumes the warning messages available in the build log. De
 
 **Visual Studio settings**
 
-* To create the warnings you have to activate the following configuration properties. Open the project property page with ```Project\Properties```. Select ```Configuration Properties\C/C++\General``` and set ```Warning Level``` to ```Level3``` or ```Level4```.
+* To create the '[C/C++ Build Warnings C4001-C4999](http://msdn.microsoft.com/en-us/library/8x5x43k7.aspx)' you have to activate the following configuration properties. Open the project property page with ```Project\Properties```. Select ```Configuration Properties\C/C++\General``` and set ```Warning Level``` to ```Level3``` or ```Level4```.
 
-* Enable Code Analysis on Build. This feature is available in Premium or Ultimate editions only. Select ```Configuration Properties\Code Analysis\General```, activate ```Enable Code Analysis on Build```. As default you can use ```Microsoft Native Recommended Rules```.
+* Enable '[Code Analysis for C/C++ Warnings C6001-C28351](http://msdn.microsoft.com/en-us/library/a5b9aa09.aspx)'. This feature is available in Premium or Ultimate editions only. Select ```Configuration Properties\Code Analysis\General```, activate ```Enable Code Analysis on Build```. As default you can use ```Microsoft Native Recommended Rules```.
 
 * Open ```Tools\Options``` and set option for ```Project and Solutions\Build and Run``` to ```MSBuild Project build log verbosity = Normal```.
 
