@@ -18,10 +18,10 @@ conversion. A couple of ready-made stylesheets are available
 * cpptestunit-1.x-to-junit-1.0.xsl:     For transforming CppTestUnit-reports
 * cppunit-1.x-to-junit-1.0.xsl:         For transforming CppUnit-reports
 
-== Simple and detailed modes
+## Simple and detailed modes
 The test execution reports can be imported in two modes: 'simple' and
 'detailed', configurable via the configuration property
-_sonar.cxx.xunit.provideDetails_. In the simple mode, the plugin doesn't
+**sonar.cxx.xunit.provideDetails**. In the simple mode, the plugin doesn't
 try to assign the testcases found in the execution report to test
 source files in SonarQube, it just aggregates the numbers and assigns
 them to the project, yielding numbers like:
@@ -71,7 +71,7 @@ Done right, this allows drilling down to the details:
 ![Test details](images/testdetails.png)
 
 
-=== Supported reports
+## Supported reports
 JUnitReport is not really a standard. There are many flavors out
 there, which usually differ in subtle details. The reports supported by this plugin look like follows:
 
