@@ -29,6 +29,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Get code coverage metrics]]
 * [[Get test execution metrics]]
 * [[Get code issues]]
+* [[Create Custom Rules]]
 * [[Get debug information]]
 
 ### Development Related Stuff
