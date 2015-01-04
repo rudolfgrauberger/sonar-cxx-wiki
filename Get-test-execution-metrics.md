@@ -108,3 +108,24 @@ by this plugin look like follows:
 For details consult the
 [schema](https://github.com/wenns/sonar-cxx/blob/master/integration-tests/features/xunit.rnc)
 (written using 'Relax NG Compact' syntax)
+
+## Boost reports
+boosttest-1.x-to-junit-1.0.xsl specific features:
+* supports nested testsuite tags, example:
+
+Boost Unit Test report:
+```XML
+<TestLog>
+  <TestSuite name="Level1">
+    <TestSuite name="Level2">
+      <TestCase name="Test1">
+        <TestingTime>856000</TestingTime>
+      </TestCase>
+      ...
+```
+after transformation:
+```XML
+<testsuite tests="86" errors="0" failures="0" name="MergedTestSuite" skipped="0">
+  <testcase classname="Level1.Level2." name="Test1" time="0.856"/>
+  ...
+```
