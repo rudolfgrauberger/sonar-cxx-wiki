@@ -226,6 +226,16 @@ which results in a more realistic overall Technical Debt value.
 </tr>
 
 <tr>
+<td>sonar.cxx.compiler.parser</td>
+<td>The format of the warnings file. Currently supported are 'Visual C++' and 'GCC'.
+<br>
+<i>Scope:</i> project
+<br>
+<i>Default:</i> <code>Visual C++</code>
+</td>
+</tr>
+
+<tr>
 <td>sonar.cxx.compiler.reportPath</td>
 <td>Ant pattern describing the path to compiler output file, <b>relative to projects root</b>.
 The current default settings can be used for VC++ compiler log file.
