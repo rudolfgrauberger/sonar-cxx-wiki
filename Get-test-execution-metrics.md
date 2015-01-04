@@ -82,15 +82,13 @@ by this plugin look like follows:
 
 ```XML
 ...
-<testsuite name="ts"
-           filename="some path" ... >
+<testsuite name="ts" filename="some path" ... >
 
   <!-- optional: the testsuites can be nested: -->
   <testsuite name="nested ts"
            filename="some path" ... >
 
-    <testcase name="tc1" status="run" time="0.05" classname="classA"
-              filename="some path"/>
+    <testcase name="tc1" filename="some path" status="run" time="0.05" classname="classA"/>
     <testcase name="tc2" status="run" time="0" classname="classB">
       <failure message="..." type="">
         <![CDATA[test_component1.cc:17
@@ -110,8 +108,9 @@ For details consult the
 (written using 'Relax NG Compact' syntax)
 
 **Hints:**
-* filename attribute is optional and plugin specific
-* The XUnit sensor does not support nested testsuites. If this feature is needed the XSLT stylesheet has to flatten the namespaces.
+* The *filename* attribute is optional and plugin specific
+* The *testsuite*-tags can be nested
+* The root-tag can be also *testsuites*, the plugin just ignores that and processes enclosed *testsuite*-tags.
 
 ## Boost reports
 boosttest-1.x-to-junit-1.0.xsl specific features:
