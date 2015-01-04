@@ -10,8 +10,8 @@ Make sure the following preconditions are met, before running the test suite:
 
 * Python is installed
 * behave (http://pythonhosted.org/behave/) is installed
-* request module is available ('pip install requests' may help)
-* Optional: colorama module is installed ('pip install colorama')
+* [request module](https://pypi.python.org/pypi/requests) is available ('pip install requests' may help)
+* Optional: [colorama module](https://pypi.python.org/pypi/colorama/0.3.2) is installed ('pip install colorama')
 
 
 ## Usage
