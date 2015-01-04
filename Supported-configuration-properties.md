@@ -179,7 +179,7 @@ thus making the drilldown to details possible
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> <code>True</code>
+<i>Default:</i> <code>False</code>
 </td>
 </tr>
 
@@ -286,7 +286,7 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 
 **Hints V0.9.2:**
 * New property ```sonar.cxx.coverage.forceZeroCoverage``` set coverage for source files without coverage report to 0. For V0.9.1 compatibility set value to 'false'.
-* New property ```sonar.cxx.xunit.provideDetails```. To get detailed unit test information set property to 'true'. Because SonarQube does not support 'virtual files' any more test resources must be available.
+* New property ```sonar.cxx.xunit.provideDetails```. To get detailed unit test information set property to 'true'. This is also the V0.9.1 compatibility value. Because SonarQube does not support 'virtual files' any more test resources must be available.
 * new property ```sonar.cxx.cFilesPatterns```
 
 
