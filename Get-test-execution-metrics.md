@@ -21,7 +21,7 @@ conversion. A couple of ready-made stylesheets are available
 ## Simple and detailed modes
 The test execution reports can be imported in two modes: 'simple' and
 'detailed', configurable via the configuration property
-**sonar.cxx.xunit.provideDetails**. In the simple mode, the plugin doesn't
+**sonar.cxx.xunit.provideDetails**. In the simple mode, which is the default, the plugin doesn't
 try to assign the testcases found in the execution report to test
 source files in SonarQube, it just aggregates the numbers and assigns
 them to the project, yielding numbers like:
