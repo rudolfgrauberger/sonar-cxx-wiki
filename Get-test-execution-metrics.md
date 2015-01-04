@@ -29,15 +29,19 @@ them to the project, yielding numbers like:
 ![Test metrics](images/testmetrics.png)
 
 That's the easiest and fastest way to get results, but you lose the
-ability to drill down to test execution details. To get the them, you
-have to make sure that the plugin is able to assign the testcases to
-so called test resources in SonarQube. There are three ways to do
-that:
+ability to drill down to test execution details. To also gain it, do the following:
 
 1. Configure the locations of your tests using the property
-sonar.tests and according exclusion/inclusion properties (see .. for
-details). Check that the sources found in there can be parsed by the
-plugin (use the log file for that). Run the analysis and make sure all
+**sonar.tests** and according exclusion/inclusion properties (see
+[SonarQube analysis parameters](http://docs.sonarqube.org/display/SONAR/Analysis+Parameters) for
+details).
+
+2. Now help the plugin to assign the testcases found in the reports to
+the tests you configured in the previos step. There are two ways to
+do that:
+
+a. Check that your test sources can be parsed by the plugin (use the
+log file to control that). Run the analysis and make sure all
 testcases can be assigned, i.e. the log file doesn't contain messages
 like:
 
@@ -45,11 +49,11 @@ like:
 WARN  - ... no resource found, the testcase '??' has to be skipped
 ```
 
-2. Alternatively (or complementary, to address remaining cases) one
-can augment the reports either by adding a filename attribute to the
-testsuite-tag or changing the classname attribute of the
-testcase-tag.  The values of those attributes should hold a path to
-the according source file, relative to projects root, e.g.:
+b. Alternatively (or complementary, to address remaining cases) one
+can augment the reports either by adding a *filename* attribute to the
+*testsuite* or the *testcase* tag.  The values of those attributes
+should hold a path to the according source file, relative to projects
+root, e.g.:
 
 ```XML
 <testsuite name="ts" filename="tests/mytest.cc" ... >
@@ -61,7 +65,7 @@ and/or
 
 ```XML
 ...
-    <testcase name="tc" classname="tests/myothertest.cc" ... />
+    <testcase name="tc" filename="tests/myothertest.cc" ... />
 ...
 
 ```
@@ -73,20 +77,29 @@ Done right, this allows drilling down to the details:
 
 ## Supported reports
 JUnitReport is not really a standard. There are many flavors out
-there, which usually differ in subtle details. The reports supported by this plugin look like follows:
+there, which usually differ in subtle details. The reports supported
+by this plugin look like follows:
 
 ```XML
 ...
-<testsuite name="ts" tests="4" failures="2" disabled="1" errors="0" time="0.05">
-  <testcase name="tc1" status="run" time="0.05" classname="classA" />
-  <testcase name="tc2" status="run" time="0" classname="classB">
-    <failure message="..." type="">
-      <![CDATA[test_component1.cc:17
-               Value of: 112
-               Expected: bar.foo()
-               Which is: 111]]>
-    </failure>
-  </testcase>
+<testsuite name="ts"
+           filename="some path" ... >
+
+  <!-- optional: the testsuites can be nested: -->
+  <testsuite name="nested ts"
+           filename="some path" ... >
+
+    <testcase name="tc1" status="run" time="0.05" classname="classA"
+              filename="some path"/>
+    <testcase name="tc2" status="run" time="0" classname="classB">
+      <failure message="..." type="">
+        <![CDATA[test_component1.cc:17
+                 Value of: 112
+                 Expected: bar.foo()
+                 Which is: 111]]>
+      </failure>
+    </testcase>
+  </testsuite>
   ...
 </testsuite>
 ...
