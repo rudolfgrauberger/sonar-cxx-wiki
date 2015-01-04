@@ -226,6 +226,16 @@ which results in a more realistic overall Technical Debt value.
 </tr>
 
 <tr>
+<td>sonar.cxx.compiler.parser</td>
+<td>The format of the warnings file. Currently supported are 'Visual C++' and 'GCC'.
+<br>
+<i>Scope:</i> project
+<br>
+<i>Default:</i> <code>Visual C++</code>
+</td>
+</tr>
+
+<tr>
 <td>sonar.cxx.compiler.reportPath</td>
 <td>Ant pattern describing the path to compiler output file, <b>relative to projects root</b>.
 The current default settings can be used for VC++ compiler log file.
@@ -272,3 +282,8 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 * Configuration setting ```sonar.cxx.cppncss.reportPath``` is no longer supported.
 * Rename configuration setting ```sonar.cxx.externalrules.reportPath``` to ```sonar.cxx.other.reportPath```
 * Rename configuration setting ```sonar.cxx.include_directories``` to ```sonar.cxx.includeDirectories```
+
+**Hints V0.9.2:**
+* New property ```sonar.cxx.coverage.forceZeroCoverage``` set coverage for source files without coverage report to 0. For V0.9.1 compatibility set value to 'false'.
+
+
