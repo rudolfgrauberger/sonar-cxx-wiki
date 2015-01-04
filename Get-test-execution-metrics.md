@@ -109,6 +109,10 @@ For details consult the
 [schema](https://github.com/wenns/sonar-cxx/blob/master/integration-tests/features/xunit.rnc)
 (written using 'Relax NG Compact' syntax)
 
+**Hints:**
+* filename attribute is optional and plugin specific
+* The XUnit sensor does not support nested testsuites. If this feature is needed the XSLT stylesheet has to flatten the namespaces.
+
 ## Boost reports
 boosttest-1.x-to-junit-1.0.xsl specific features:
 * supports nested testsuite tags, example:
