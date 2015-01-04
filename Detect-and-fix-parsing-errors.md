@@ -4,29 +4,21 @@ In case the plugin is not able to parse the code this will result in a syntax er
 
 ```
 10: int Bar::foo(){
-11: 
-12: 
-13: 
+11:
+12:     int
+13:         x;
 14: 
-15: 
-16:     int
-17:         x;
-18: 
-19:     return 111;
-20: }
-21: 
+15:     return 111;
+16: }
+17: 
 -->  this is a syntax error
 23: 
 24: void Bar::do_valgrind_errors(){
-25: 
-26: 
-27: 
-28:     new float();
-29: 
-30: 
-31: 
-32:     int a;
-33:     if(a) std::cout << "fired!!!" <<
+25:  
+26:     new float();
+27:
+28:     int a;
+29:     if(a) std::cout << "fired!!!" <<
 
 Failed at rules:
         /-alignmentSpecifier
