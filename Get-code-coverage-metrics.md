@@ -24,6 +24,8 @@ Three types of test coverage are supported:  _Unit test_, _Integration test_ and
 * **sonar.cxx.coverage.itReportPath** for integration test coverage
 * **sonar.cxx.coverage.overallReportPath** for overall test coverage
 
+The plugin handles the three coverage types independent from each other and will do no aggregation for e.g. overall test coverage. Your external tool suite is responsible for combining the different coverage reports and providing three reports.
+
 The C++ Community plugin accepts three different formats for the test coverage reports, which will be recognized automatically:
 
 * Cobertura XML: the format introduced by [Cobertura](http://cobertura.github.io/cobertura/).
