@@ -32,11 +32,20 @@ Violations are created depending on the return value of the XPath expression. If
 * a boolean, then a file violation with the given message is created only if the boolean is true
 * anything else, no violation is created
 
-Example:
+Example: Create a warning if an identifier is shorter than 3 signs.
+
 ```C++
-matchFilePattern = "/**/*.cc"; // all files with .cc file extension
-xpathQuery = "//declaration";
-message = "Avoid declarations!";
+matchFilePattern = "";
+xpathQuery = "//IDENTIFIER[string-length(@tokenValue)<3]";
+message = "Use more meaningful identifiers!";
+```
+
+```C++
+void test()
+{
+  int i; // warning: Use more meaningful identifiers!"
+  int value;
+}
 ```
 
 ## File RegEx rule
@@ -48,8 +57,16 @@ This rule can be used to create rules which will be triggered when a line matche
 For each matching line a violation will be created. All Java regular expressions are supported, for a description see [here](http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html).
 
 Example:
+
 ```C++
 matchFilePattern = "/**/*.h"; // all files with .h file extension
 regularExpression = "#include\\s+\"stdafx\\.h\"";
-message = "Found '#include \"stdafx.h\"' in a header file!";
+message = "Found '#include "stdafx.h"' in a header file!";
+```
+
+```C++
+#include "stdafx.h" // warning "Found '#include "stdafx.h"' in a header file!"
+
+class MyClass {
+};
 ```
