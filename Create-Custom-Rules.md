@@ -1,6 +1,6 @@
-The plugin has three very universal checks to create custom rules. Optional for all rules an Ant-style matching pattern (matchFilePattern) for the path can be defined.
+The plugin has three very universal checks to create custom rules. Optional for all rules an Ant-style matching pattern (*matchFilePattern*) for the path can be defined. In case of an empty *matchFilePattern* all files are used.
 
-Following matchFilePattern rules are applied:
+Following **matchFilePattern** rules are applied:
 ```
 ? matches single character
 * matches zero or more characters
@@ -34,10 +34,10 @@ Violations are created depending on the return value of the XPath expression. If
 
 Example: Create a warning if an identifier is shorter than 3 signs.
 
-```C++
+```Java
 matchFilePattern = "";
 xpathQuery = "//IDENTIFIER[string-length(@tokenValue)<3]";
-message = "Use more meaningful identifiers!";
+message = "Use more meaningful identifier!";
 ```
 
 ```C++
@@ -52,13 +52,21 @@ void test()
 This rule can be used to create rules which will be triggered when a file matches a given regular expression.
 For each matching file a violation will be created. All Java regular expressions are supported, for a description see [here](http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html).
 
+Example: Create a file warning if a tab character is in the file.
+
+```Java
+matchFilePattern = "";
+regularExpression = "\t";
+message = "Found a tabulator in the file. Indent with blanks and not with tabulators!";
+```
+
 ## Line RegEx rule
 This rule can be used to create rules which will be triggered when a line matches a given regular expression.
 For each matching line a violation will be created. All Java regular expressions are supported, for a description see [here](http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html).
 
-Example: Create a warning if '#include "stdafx.h"' is in a header file
+Example: Create a line warning if '#include "stdafx.h"' is in a header file
 
-```C++
+```Java
 matchFilePattern = "/**/*.h"; // all files with .h file extension
 regularExpression = "#include\\s+\"stdafx\\.h\"";
 message = "Found '#include "stdafx.h"' in a header file!";
