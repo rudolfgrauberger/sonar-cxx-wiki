@@ -50,12 +50,12 @@ A Cppcheck run may take a while on a big code base. To cut down analysis times, 
 * Restrict checking of preprocessor configurations using the options ```-D -U```
 * Start with project include folders (-I) without system include folders. System include folders and include folders of big libraries like Boost, XERXES, ... make Cppcheck run much slower.
 * Get a faster machine ;)
- 
+
 To extend the set of known Cppcheck rules see [[Extending the code analysis]].
 
 ### Valgrind
 SonarQube can be fed with results of a Valgrind/Memcheck analysis. That's very valuable because:
-* due to its dynamic nature, the false positives rate is very low (Given good maintained suppression files, of course) 
+* due to its dynamic nature, the false positives rate is very low (Given good maintained suppression files, of course)
 * it is able to find serious issues which are often hard to detect otherwise
 
 Just tell Valgrind to generate XML output. The 'tool' option isn't necessary as 'memcheck' is the default one. Make sure the binaries contain debug info. The actual call should look something like:
@@ -64,13 +64,13 @@ Just tell Valgrind to generate XML output. The 'tool' option isn't necessary as 
 valgrind --xml=yes --xml-file=report.xml <program> <arguments>
 ```
 
-To extend the set of known Vagrind rules define them in the file _$SONARQUBEHOME/extensions/rules/valgrind_. See [[Extending the code analysis]] for details.
+To extend the set of known Valgrind rules define them in the file _$SONARQUBEHOME/extensions/rules/valgrind_. See [[Extending the code analysis]] for details.
 
 ### Vera++
 Vera++ does static C++ code checking, focusing mostly on style issues. To feed Vera++ analysis results into SonarQube:
 * Find all the files we want to be analysed
-* Pipe this list into Vera++ and 
-* Pipe the resulting output into a Perl script which finally generates the required XML. 
+* Pipe this list into Vera++ and
+* Pipe the resulting output into a Perl script which finally generates the required XML.
 
 Altogether:
 
@@ -89,7 +89,7 @@ rats -w 3 --xml <sources> > report.xml
 To extend the set of known RATS rules define them in the file _$SONARQUBEHOME/extensions/rules/rats_. See [[Extending the code analysis]] for details.
 
 ### PC-lint
-The PC-lint XML output needs to be formated to fit SonarQube.
+The PC-lint XML output needs to be formatted to fit SonarQube.
 
 ```
 // XML options for SONAR.
@@ -100,10 +100,10 @@ The PC-lint XML output needs to be formated to fit SonarQube.
 -"format=<issue file =\q%f\q line = \q%l\q number = \q%n\q desc = \q%m\q/>"
 -"format_specific= "
 -hFs1 // The height of a message should be 1 i.e. don't output the line in error
--e900 // 'Successful completion message' 
+-e900 // 'Successful completion message'
 ```
 
-This formatting has been verifed with PC-lint 9.0k. For further details on how to configure PC-lint please refer to [product page](http://www.gimpel.com/html/pcl.htm).
+This formatting has been verified with PC-lint 9.0k. For further details on how to configure PC-lint please refer to [product page](http://www.gimpel.com/html/pcl.htm).
 
 To extend the set of known PC-lint rules define them in the file _$SONARQUBEHOME/extensions/rules/pclint_. See [[Extending the code analysis]] for details.
 

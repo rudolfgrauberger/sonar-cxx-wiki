@@ -37,7 +37,7 @@ ability to drill down to test execution details. To also gain it, do the followi
 details).
 
 2. Now help the plugin to assign the testcases found in the reports to
-the tests you configured in the previos step. There are two ways to
+the tests you configured in the previous step. There are two ways to
 do that:
 
 a. Check that your test sources can be parsed by the plugin (use the

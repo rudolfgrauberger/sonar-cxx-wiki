@@ -3,7 +3,7 @@
 1. Make sure to compile and link with the ```--coverage``` flag. Disable optimizations and switch on debugging.
 2. Execute your application / your tests. This will generate .gcda-files.
 3. Collect the coverage information and generate the report using gcovr:
-```BASH 
+```BASH
 gcovr -x -r . > report.xml
 ```
 
@@ -14,7 +14,7 @@ covxml -f UTCoverage.cov -o bullseyecoverage-result-0.xml
 ```
 
 To merge two coverage files (e.g. to obtain the overall coverage):
-```BASH 
+```BASH
 covmerge -c ITCoverage.cov UTCoverage.cov -f ALLCOVERAGE.cov
 ````
 
@@ -52,6 +52,6 @@ CodeCoverage.exe analyze /output:result.xml out1.coverage out2.coverage
 Define the location of your coverage file in the SonarQube configuration file (sonar.cxx.coverage.reportPath) and start the sonar runner to read it.
 
 **Hints:**
-* Problems are mostly path problems. Ensure that the source files defined in your report file exist on the machine you are running the sonnar runner. Paths in report file could be absolute or relative to configuration file (.\\...).
+* Problems are mostly path problems. Ensure that the source files defined in your report file exist on the machine you are running the sonar runner. Paths in report file could be absolute or relative to configuration file (.\\...).
 * [Customizing Code Coverage Analysis](http://msdn.microsoft.com/en-us/library/jj159530.aspx)
 * [Troubleshooting Code Coverage](http://msdn.microsoft.com/en-us/library/jj159523.aspx)

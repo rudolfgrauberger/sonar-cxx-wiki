@@ -32,14 +32,14 @@ still works with the latest build
 * Core users did some field testing and didn't found any serious issues
 
 ## Release Procedure
-* Create and describe the release in Github, use the format of
+* Create and describe the release in GitHub, use the format of
   previous releases, i.e.
   * compose a list of fixed bugs
   * compose a list of enhancements
   * don't forget to thank to the contributors
 * Change the plugin version in the pom.xml, make sure the version
   string contains no 'SNAPSHOT'
-* Build and attach the resulting jars to the release on Github.
+* Build and attach the resulting jars to the release on GitHub.
 * Publish the release
 * Make a tag in git
 * Adjust the 'recent release'-Link in Readme.md

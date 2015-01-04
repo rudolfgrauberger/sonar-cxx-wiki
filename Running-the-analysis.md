@@ -17,7 +17,7 @@ Analysis of a C++ project involves usually three steps:
    - Optional: paths to the generated reports (see [[Supported configuration properties]])
 
 3. Make sure the SonarQube Server is running
-4. Use the SonarQube runner to start the analysis and feed the data into SonarQube. This usualy boils down to calling the runner in the root directory of your project:
+4. Use the SonarQube runner to start the analysis and feed the data into SonarQube. This usually boils down to calling the runner in the root directory of your project:
 ```BASH
 $ cd <project root>
 $ sonar-runner
@@ -34,13 +34,13 @@ There is a maven plugin which automates running of a sonar analysis on a C++ pro
 1. Getting and installing the [cxx-maven-plugin](https://github.com/franckbonin/cxx-maven-plugin) ([usage](https://github.com/franckbonin/cxx-maven-plugin/wiki/Introduction)). If you use multiple source directories and depend on cxx:addsource goal, you shall use -Dsonar.phase=cxx:addsource option (see [Sonar Maven Plugin Project Configuration](http://docs.sonarqube.org/display/SONAR/Analyzing+with+Maven) )
 
 2. Setting the language property and the source directory in your pom:
-``` 
+```
   <properties>
     ...
     <sonar.language>c++</sonar.language>
     ...
   </properties>
- 
+
   <build>
     ...
     <sourceDirectory> path </sourceDirectory>

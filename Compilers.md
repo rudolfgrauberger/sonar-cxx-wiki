@@ -26,7 +26,7 @@ The compiler sensor consumes the warning messages available in the build log. De
 
 * Open ```Tools\Options``` and set option for ```Project and Solutions\Build and Run``` to ```MSBuild Project build log verbosity = Normal```.
 
-![MSVS cpp.user-propery-pages](https://cloud.githubusercontent.com/assets/2315215/3085369/b7b3f4d4-e50f-11e3-8e9e-6d1712db1320.PNG)
+![MSVS cpp.user-property-pages](https://cloud.githubusercontent.com/assets/2315215/3085369/b7b3f4d4-e50f-11e3-8e9e-6d1712db1320.PNG)
 
 **Create the LOG file from the command line**
 
@@ -81,4 +81,4 @@ Build started 26.02.2014 17:59:20.
      1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(74): warning C4995: 'memcpy': name was marked as #pragma deprecated
      1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112): warning C4995: 'strcpy': name was marked as #pragma deprecated
 ```
-  
+

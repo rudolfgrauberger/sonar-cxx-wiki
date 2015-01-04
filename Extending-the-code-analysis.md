@@ -1,5 +1,5 @@
 
-* defining rules in extensions/rules folder in sonarqube server is no longer supported by this plugin 
+* defining rules in extensions/rules folder in SonarQube server is no longer supported by this plugin
 
 ## Extending rules in supported code analysers
 
@@ -7,7 +7,7 @@ If you're using a patched or not-yet-supported version of an integrated code che
 
 1. Define those rules using the XML format described further below in a file "rules.xml"
 2. Paste the content of file into the relevant configuration property in the SonarQube server.
-   ![Ui Settings](images/custom-rules-configuation.png)
+   ![UI Settings](images/custom-rules-configuation.png)
 3. Restart the SonarQube server
 4. Make sure the newly added rules are visible in the quality profile; enable them
 5. Run the analysis
@@ -16,7 +16,7 @@ If you're using a patched or not-yet-supported version of an integrated code che
 The format of rules file is expected to be the following:
 
 ```XML
-<rules> 
+<rules>
   <rule key="RULE_ID">
     <name><![CDATA[ ... put here the human readable name of this rule ... ]]></name>
     <configKey><![CDATA[RULE_ID@$(EXTERNALSENSORCLASS)]]></configKey>
@@ -93,13 +93,13 @@ It is also possible to add hyperlinks to the description, use ```<a>``` tags.
 
 
 ## Usage of unsupported code checkers
-If you're using a code checker which is **not** supported by the plugin, this feature is for you. It allows to feed violatios into SonarQube in a code checker agnostic way. To do this follow the steps below:
+If you're using a code checker which is **not** supported by the plugin, this feature is for you. It allows to feed violations into SonarQube in a code checker agnostic way. To do this follow the steps below:
 
 1. Create a XML file describing the rules and place it in global setting in the SonarQube server under sonar.cxx.customRules.cxxexternal
-   ![Ui Settings](images/external-custom-rules-configuation.png)
+   ![UI Settings](images/external-custom-rules-configuation.png)
    Use the format described above. You can import multiple custom rules by clicking the Add value and save the settings
 
-2. Run your checker and create a report 
+2. Run your checker and create a report
 
 3. Transform the report such that it conform to the following RNG schema:
    ```XML
@@ -183,7 +183,7 @@ After this you can run the cpplint_mod.py against any source file like this:
 <br>
 <code>python cpplint_mod.py source.cpp 2> report.txt</code>
 <br>
-The output file report.txt needs to be converted to the XML format described above. For convenience a Perl script is available 
+The output file report.txt needs to be converted to the XML format described above. For convenience a Perl script is available
 <a href="https://github.com/wenns/sonar-cxx/blob/master/sonar-cxx-plugin/src/tools/cpplintReport2checkstyleReport.perl">here</a>
 and can be run as follows:
 <code>perl cpplintReport2checkstyleReport.perl report.txt splint-result-0.xml</code>
@@ -205,7 +205,7 @@ to $SONARQUBEHOME/extension/rules/cxxexternal and restart the server
 <li>Convert the report with:
 <code>python <a href="">intelInspectorReport_2_cppcheckReport.py</a>
 in.csv out.xml <path to project> <test executable></code>
-The out.xml can be then used during the analysis to feed the Intel Inspector results into 
+The out.xml can be then used during the analysis to feed the Intel Inspector results into
 SonarQube.
 </li>
 </td>

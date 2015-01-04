@@ -138,7 +138,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 
 <tr>
 <td>sonar.cxx.pclint.reportPath</td>
-<td>Ant pattern describing the path to pc-lint reports, <b>relative to projects root</b>.
+<td>Ant pattern describing the path to PC-lint reports, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
 <br>
@@ -175,7 +175,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <td>sonar.cxx.xunit.provideDetails</td>
 <td>
 If "True", tries to assign testcases in reports to test resources in SonarQube,
-thus making the drillown to details possible
+thus making the drilldown to details possible
 <br>
 <i>Scope:</i> project
 <br>

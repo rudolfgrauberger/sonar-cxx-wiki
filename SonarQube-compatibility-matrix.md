@@ -3,7 +3,7 @@
 <table>
 <tr>
 <td><b>SonarQube version</b></td>
-<td>3.4</td>	
+<td>3.4</td>
 <td>3.5</td>
 <td>3.6</td>
 <td>3.7</td>
@@ -31,12 +31,12 @@
 
 <tr>
 <td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a></td>
-<td>X</td>	
-<td>X</td>	
-<td>X</td>	
-<td>X</td>	
 <td>X</td>
-<td>X</td>	
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
@@ -45,12 +45,12 @@
 
 <tr>
 <td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9.1">v0.9.1</a></td>
-<td>-</td>	
-<td>-</td>	
-<td>-</td>	
-<td>X</td>	
+<td>-</td>
+<td>-</td>
+<td>-</td>
 <td>X</td>
-<td>X</td>	
+<td>X</td>
+<td>X</td>
 <td>X</td>
 <td>X</td>
 <td>X</td>
@@ -59,12 +59,12 @@
 
 <tr>
 <td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9.2">v0.9.2*</a></td>
-<td>-</td>	
-<td>-</td>	
-<td>-</td>	
-<td>-</td>	
 <td>-</td>
-<td>-</td>	
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>

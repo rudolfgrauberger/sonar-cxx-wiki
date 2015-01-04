@@ -59,7 +59,7 @@ for multi-module projects. We recommend to use SonarQube 4.5.1 and
 Cxx Plugin 0.9.2 or later.
 ```
 
-A multi-module project consits of different sub-projects (modules) which can be defined by defining
+A multi-module project consists of different sub-projects (modules) which can be defined by defining
 * all the configuration in the properties file in the root folder or
 * the configuration in multiple properties files in the root folders of the module subfolders.
 

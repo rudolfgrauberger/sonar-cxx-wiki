@@ -7,14 +7,14 @@ In case the plugin is not able to parse the code this will result in a syntax er
 11:
 12:     int
 13:         x;
-14: 
+14:
 15:     return 111;
 16: }
-17: 
+17:
 -->  this is a syntax error
-23: 
+23:
 24: void Bar::do_valgrind_errors(){
-25:  
+25:
 26:     new float();
 27:
 28:     int a;
@@ -36,7 +36,7 @@ In both cases you should try to remove them with the hints on this page:
 
 **Provide syntactically correct code**
 
-The plugin expects to be fed with syntactically correct code. This is a conscious design decision: we do not want to re-implement a compiler and try to follow the KISS principle. Therefore the first step should be always to verify your code base on your target system with your build environment for correctness. Your build environment will give you more guidance as the C++ community plugin will do. Typical problems during 
+The plugin expects to be fed with syntactically correct code. This is a conscious design decision: we do not want to re-implement a compiler and try to follow the KISS principle. Therefore the first step should be always to verify your code base on your target system with your build environment for correctness. Your build environment will give you more guidance as the C++ community plugin will do. Typical problems during
 this step are:
 * libraries from build environment are missing
 * not all sources are available, especially 3rd party libraries are often missing
@@ -62,7 +62,7 @@ Visual Studio:
 
 **Missing support of compiler specific extensions**
 
-C++ community plugin implements a C++03 and C++11 compatible grammar but most compilers support additional compiler specific extensions. To get no syntax errors and meaningful results you have to find workarounds for these extensions. To keep the compiler grammer as simple as possible it was a conscious design decision to support such extensions mainly with marco definitions and not by an extension of the grammar. There are only some exceptions to this, where preprocessor directives won't work, see [[Supported compiler specific extensions]]. [[Dealing with compiler specific code peaces]] gives you an introduction how to do this.
+C++ community plugin implements a C++03 and C++11 compatible grammar but most compilers support additional compiler specific extensions. To get no syntax errors and meaningful results you have to find workarounds for these extensions. To keep the compiler grammar as simple as possible it was a conscious design decision to support such extensions mainly with macro definitions and not by an extension of the grammar. There are only some exceptions to this, where preprocessor directives won't work, see [[Supported compiler specific extensions]]. [[Dealing with compiler specific code peaces]] gives you an introduction how to do this.
 * [Microsoft-Specific Modifiers](http://msdn.microsoft.com/en-us/library/6bh0054z.aspx)
 * [GNU compiler extensions to the C++ Language](http://gcc.gnu.org/onlinedocs/gcc-4.9.0/gcc/C_002b_002b-Extensions.html)
 
