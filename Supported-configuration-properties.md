@@ -282,8 +282,12 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 * Configuration setting ```sonar.cxx.cppncss.reportPath``` is no longer supported.
 * Rename configuration setting ```sonar.cxx.externalrules.reportPath``` to ```sonar.cxx.other.reportPath```
 * Rename configuration setting ```sonar.cxx.include_directories``` to ```sonar.cxx.includeDirectories```
+* new properties ```sonar.cxx.forceIncludes```
 
 **Hints V0.9.2:**
 * New property ```sonar.cxx.coverage.forceZeroCoverage``` set coverage for source files without coverage report to 0. For V0.9.1 compatibility set value to 'false'.
+* New property ```sonar.cxx.xunit.provideDetails```. To get detailed unit test information set property to 'true'. Because SonarQube does not support 'virtual files' any more test resources must be available.
+* new property ```sonar.cxx.cFilesPatterns```
+
 
 
