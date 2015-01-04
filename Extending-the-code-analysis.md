@@ -17,12 +17,12 @@ The format of rules file is expected to be the following:
 
 ```XML
 <rules> 
-<rule key="RULE_ID">
-<name><![CDATA[ ... put here the human readable name of this rule ... ]]></name>
-<configKey><![CDATA[RULE_ID@$(EXTERNALSENSORCLASS)]]></configKey>
-<category name=" ... category type ... " />
-<description><![CDATA[ ... put here the human readable description of this rule ... ]]></description>
-</rule>
+  <rule key="RULE_ID">
+    <name><![CDATA[ ... put here the human readable name of this rule ... ]]></name>
+    <configKey><![CDATA[RULE_ID@$(EXTERNALSENSORCLASS)]]></configKey>
+    <category name=" ... category type ... " />
+    <description><![CDATA[ ... put here the human readable description of this rule ... ]]></description>
+  </rule>
 </rules>
 ```
 
@@ -72,17 +72,23 @@ Example:
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rules>
-<rule key="Te0001DataContextCannotBeSet">
-<name><![CDATA[Te0001DataContextCannotBeSet]]></name>
-<configKey>
-<![CDATA[Te0001DataContextCannotBeSet@PC_LINT]]>
-</configKey>
-<category name="Maintainability" />
-<description>
-<![CDATA[ Data Context Should no be set, please use another approach ]]>
-</description>
-</rule>
+  <rule key="Te0001DataContextCannotBeSet">
+    <name><![CDATA[Te0001DataContextCannotBeSet]]></name>
+    <configKey>
+      <![CDATA[Te0001DataContextCannotBeSet@PC_LINT]]>
+    </configKey>
+    <category name="Maintainability" />
+    <description>
+      <![CDATA[ Data Context Should no be set, please use another approach ]]>
+    </description>
+  </rule>
 </rules>
+```
+It is also possible to add hyperlinks to the description, use ```<a>``` tags.
+```HTML
+<description>
+  <![CDATA[<a href="http://example.com/xyz.html">Link</a>]]>
+</description>
 ```
 
 
