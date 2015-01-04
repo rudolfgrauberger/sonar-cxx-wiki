@@ -1,45 +1,33 @@
-The plugin contains a small [integration test suite](https://github.com/wenns/sonar-cxx/tree/master/sonar-cxx-plugin/src/test/integration) which is able to perform smoketest-like checks for a given build. Currently, the  following checks are carried out:
+The plugin contains a small but growing
+[integration test suite](https://github.com/wenns/sonar-cxx/tree/master/sonar-cxx-plugin/src/test/integration).
+It provides a means to check that the plugin works (or works not) with a
+particular SonarQube version/setup.
 
-- can the plugin be installed?
-- can SonarQube be started with this plugin installed?
-- does the log contain entries of type "WARN" and "ERROR"?
-- does the analysis of a trivial project exit without errors?
-- does the above analysis yield expected measures?
 
-The above checks can be automatically run against multiple SonarQube installations which may differ in version, used database backend etc.
-
-### Preconditions
+## Preconditions
 
 Make sure the following preconditions are met, before running the test suite:
 
-- Download, install and configure all SonarQube versions you would like to test against. Make sure they're installed in the same directory.
-- Copy the sitedef:
-```bash
-$ cp sitedefs_sample.py sitedefs.py
-```
-and adjust its content (SONAR_HOME, SONAR_VERSIONS, etc.)  to fit your site
-- Install [Python](https://www.python.org/)
-- Install the [requests](https://pypi.python.org/pypi/requests) module (using e.g. ```pip install requests```)
-- Optional: install the [colorama](https://pypi.python.org/pypi/colorama) module (using e.g. ```pip install colorama```) to get colorized output
+* Python is installed
+* behave (http://pythonhosted.org/behave/) is installed
+* request module is available ('pip install requests' may help)
+* Optional: colorama module is installed ('pip install colorama')
 
-### Usage
-Just compile the plugin:
-```bash
-$ mvn clean istall
-```
-... and run the script 'smoketests' in a shell:
 
-```bash
-$ sonar-cxx-plugin/src/test/integration/smoketest
+## Usage
+Either install the plugin, startup SonarQube manually and simply run:
+
+```BASH
+$ behave
 ```
 
-On Windows, call the interpreter explicitly:
+from the project root folder or let the test suite do the job by
+telling it the path to your SQ installation:
 
-```bash
-$ python sonar-cxx-plugin\src\test\integration\smoketest
+```BASH
+$ SONARHOME=/path/to/SonarQube behave
 ```
 
-If all goes well, the run should yield an output like the following:
-
-![Test suite run](images/smoketests.png)
-
+In the latter case, the suite will automatically install and test the
+jar in sonar-python-plugin/target. So make sure the plugin is build
+and the jar is available.
