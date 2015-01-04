@@ -4,7 +4,13 @@ The Community C++ Plugin supports feeding compiler warnings as violations into S
 To feed GCC warnings into SonarQube, make sure to:
 
 1. Capture the warnings from your build into a file (e.g build.log) using shell redirections or similar
-2. Set according property: ```sonar.cxx.compiler.reportPath=build.log```
+2. Set configuration properties, example:
+```
+sonar.cxx.compiler.parser=GCC
+sonar.cxx.compiler.reportPath=*.log
+sonar.cxx.compiler.charset=UTF-8
+sonar.cxx.compiler.regex=^(.*):([0-9]+):[0-9]+: warning: (.*)\\[(.*)\\]$
+```
 3. Activate the rules from the rule repository "compiler-gcc"
 4. Run the analysis
 
