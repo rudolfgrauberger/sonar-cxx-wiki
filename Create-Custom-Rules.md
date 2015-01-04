@@ -56,7 +56,7 @@ For each matching file a violation will be created. All Java regular expressions
 This rule can be used to create rules which will be triggered when a line matches a given regular expression.
 For each matching line a violation will be created. All Java regular expressions are supported, for a description see [here](http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html).
 
-Example:
+Example: Create a warning if '#include "stdafx.h"' is in a header file
 
 ```C++
 matchFilePattern = "/**/*.h"; // all files with .h file extension
