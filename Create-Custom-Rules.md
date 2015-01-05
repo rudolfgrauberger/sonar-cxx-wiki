@@ -69,7 +69,7 @@ Example: Create a line warning if '#include "stdafx.h"' is in a header file
 ```Java
 matchFilePattern = "/**/*.h"; // all files with .h file extension
 regularExpression = "#include\\s+\"stdafx\\.h\"";
-message = "Found '#include "stdafx.h"' in a header file!";
+message = "Found '#include \"stdafx.h\"' in a header file!";
 ```
 
 ```C++
