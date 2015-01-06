@@ -33,6 +33,6 @@ An example could look like this:
 ```
 sonar.sources=.
 sonar.tests=.
-sonar.test.inclusions=file:**/*Test*/**
-sonar.exclusions=file:**/*Test*/**
+sonar.test.inclusions=**/*Test*/**
+sonar.exclusions=**/*Test*/**
 ```
