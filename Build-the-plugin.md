@@ -57,7 +57,7 @@ See also [Coding a Plugin / Debugging](http://docs.codehaus.org/display/SONAR/De
 ###Testing
 
 We have plenty of unit tests (not all of them being really 'unit')  and a couple of integration-level smoke-tests.
-The former can be run with e.g. ```mvn test```; refer to [[Usage of the integration test suite]] on how to use the latter.
+The former can be run with e.g. ```mvn test```; refer to [[Integration test suite]] on how to use the latter.
 
 ###Helpful Links
 * [Extension Guide](http://docs.codehaus.org/display/SONAR/Extension+Guide)

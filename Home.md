@@ -37,7 +37,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Build the plugin]]
 * [[Release Procedure]]
 * [[Misc. notes on development]]
-* [[Usage of the integration test suite]]
+* [[Integration test suite]]
 
 ### Troubleshooting
 * [[FAQ]]
