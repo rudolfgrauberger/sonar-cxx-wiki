@@ -1,16 +1,50 @@
 
-* defining rules in extensions/rules folder in SonarQube server is no longer supported by this plugin
+****Note: Defining rules in extensions/rules folder in SonarQube server is no longer supported by this plugin****
 
 ## Extending rules in supported code analysers
 
-If you're using a patched or not-yet-supported version of an integrated code checker (like Cppcheck), you probably want to see those new checks in SonarQube, too. To do this, you have to:
+If you're using a patched or not-yet-supported version of an integrated code checker (like Cppcheck), you probably want to see those new checks in SonarQube, too. To do this, you have 2 different approachs availalbe.
 
-1. Define those rules using the XML format described further below in a file "rules.xml"
-2. Paste the content of file into the relevant configuration property in the SonarQube server.
+### Using a xml definition ###
+
+1. Define those rules using the XML format described further below in a temporary file.
+2. Paste the content of file into the relevant configuration property in the SonarQube server. For example for cppcheck.
    ![UI Settings](images/custom-rules-configuation.png)
-3. Restart the SonarQube server
+3. Restart the SonarQube server (This is the drawback of this method).
 4. Make sure the newly added rules are visible in the quality profile; enable them
 5. Run the analysis
+
+####  Properties ####
+  <table>
+  <tr>
+  <td><b>Property</b></td>
+  <td><b>Description</b></td>
+  </tr>
+  <tr>
+  <td>sonar.cxx.cppcheck.customRules</td>
+  <td>Cppcheck Custom Rules</td>
+  </tr>
+  <tr>
+  <td>sonar.cxx.valgrind.customRules</td>
+  <td>Valgrind Custom Rules</td>
+  </tr>
+  <tr>
+  <td>sonar.cxx.pclint.customRules</td>
+  <td>PClint Custom Rules</td>
+  </tr>
+  <tr>
+  <td>sonar.cxx.rats.customRules</td>
+  <td>RATS Custom Rules</td>
+  </tr>
+  <tr>
+  <td>sonar.cxx.vera.customRules</td>
+  <td>Vera++ Custom Rules</td>
+  </tr>
+  <tr>
+  <td>sonar.cxx.other.rules</td>
+  <td>Unsupported Code Checker Custom Rules, see below</td>
+  </tr>
+  <table>
 
 ### The format of the rules file
 The format of rules file is expected to be the following:
@@ -91,11 +125,21 @@ It is also possible to add hyperlinks to the description, use ```<a>``` tags.
 </description>
 ```
 
+### Using Template Rules ###
+This method allows the creation of rules on the fly, no need to for server restart. To do this follow these steps.
 
-## Usage of unsupported code checkers
+1. Locate the relevant custom rule for the code checker you want to extend.
+![Custom Rules Settings](images/create-custom-rule.png)
+2. Press create and fill in the details 
+![Custom Rules Settings](images/customrule.png)
+3. Enable the rule and run a new analysis 
+
+*These rules can be created using the rest api, see [https://github.com/jmecsoftware/QualityProfileEditorPlugin](https://github.com/jmecsoftware/QualityProfileEditorPlugin "Quality Editor Plugin") as an example*
+
+## Usage of unsupported code checkers ##
 If you're using a code checker which is **not** supported by the plugin, this feature is for you. It allows to feed violations into SonarQube in a code checker agnostic way. To do this follow the steps below:
 
-1. Create a XML file describing the rules and place it in global setting in the SonarQube server under sonar.cxx.customRules.cxxexternal
+1. Create a XML file describing the rules and place it in code analysis settings of the plugin in the SonarQube server under the property sonar.cxx.other.rules
    ![UI Settings](images/external-custom-rules-configuation.png)
    Use the format described above. You can import multiple custom rules by clicking the Add value and save the settings
 
@@ -146,7 +190,7 @@ If you're using a code checker which is **not** supported by the plugin, this fe
   <td>Description of the violation</td>
   </tr>
   <table>
-4. Set the property **sonar.cxx.externalrules.reportPath** to point to the location of transformed report (relative to project root) and run one analysis.
+4. Set the property **sonar.cxx.other.reportPath** to point to the location of transformed report (relative to project root) and run one analysis.
 
 
 ### Resources

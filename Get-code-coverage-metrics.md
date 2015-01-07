@@ -24,11 +24,15 @@ Three types of test coverage are supported:  _Unit test_, _Integration test_ and
 * **sonar.cxx.coverage.itReportPath** for integration test coverage
 * **sonar.cxx.coverage.overallReportPath** for overall test coverage
 
+The plugin handles the three coverage types independent from each other and will do no aggregation for e.g. overall test coverage. Your external tool suite is responsible for combining the different coverage reports and providing three reports.
+
 The C++ Community plugin accepts three different formats for the test coverage reports, which will be recognized automatically:
 
 * Cobertura XML: the format introduced by [Cobertura](http://cobertura.github.io/cobertura/).
 * The XML format used by [Bullseye](http://www.bullseye.com/).
 * The XML format used by [Microsoft Visual Studio](http://msdn.microsoft.com/de-de/library/dd537628.aspx).
+
+Finally you can decide how source files without coverage reports are handled. Setting the property **sonar.cxx.coverage.forceZeroCoverage** to 'true', assign zero line coverage to source files without coverage reports, which results in a more realistic overall Technical Debt value. 'false' will ignore such files in the overall coverage calculation.
 
 ### Notes for BullseyeCoverage users:
 SonarQube <3.2 provides metrics for line coverage and branch coverage. Bullseye users have function and branch/decision coverage instead. The C++ Community plugin converts the branch/decision coverage directly into branch coverage however line coverage is far more complex and cannot be correlated directly into function coverage.

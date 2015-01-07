@@ -11,5 +11,6 @@
 
 **Upgrade to 0.9.2**
 
-* DRAFT => TODO
-* Unit Tests: SonarQube does not support 'virtual files' anymore. In case your report files contain 'filename' tags they must match with 'physical files'.
+* Compatible with SonarQube 4.5
+* Coverage: New property ```sonar.cxx.coverage.forceZeroCoverage``` set coverage for source files without coverage report to zero. For V0.9.1 compatibility set value to 'false'.
+* Unit Tests: New property ```sonar.cxx.xunit.provideDetails```. To get detailed unit test information set property to 'true'. This is also the V0.9.1 compatibility value. SonarQube does not support 'virtual files' anymore. In case your report files contain 'filename' tags they must match with 'physical files'.

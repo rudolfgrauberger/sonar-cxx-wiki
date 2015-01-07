@@ -21,7 +21,7 @@ conversion. A couple of ready-made stylesheets are available
 ## Simple and detailed modes
 The test execution reports can be imported in two modes: 'simple' and
 'detailed', configurable via the configuration property
-**sonar.cxx.xunit.provideDetails**. In the simple mode, the plugin doesn't
+**sonar.cxx.xunit.provideDetails**. In the simple mode, which is the default, the plugin doesn't
 try to assign the testcases found in the execution report to test
 source files in SonarQube, it just aggregates the numbers and assigns
 them to the project, yielding numbers like:
@@ -82,15 +82,13 @@ by this plugin look like follows:
 
 ```XML
 ...
-<testsuite name="ts"
-           filename="some path" ... >
+<testsuite name="ts" filename="some path" ... >
 
   <!-- optional: the testsuites can be nested: -->
   <testsuite name="nested ts"
            filename="some path" ... >
 
-    <testcase name="tc1" status="run" time="0.05" classname="classA"
-              filename="some path"/>
+    <testcase name="tc1" filename="some path" status="run" time="0.05" classname="classA"/>
     <testcase name="tc2" status="run" time="0" classname="classB">
       <failure message="..." type="">
         <![CDATA[test_component1.cc:17
@@ -108,3 +106,29 @@ by this plugin look like follows:
 For details consult the
 [schema](https://github.com/wenns/sonar-cxx/blob/master/integration-tests/features/xunit.rnc)
 (written using 'Relax NG Compact' syntax)
+
+**Hints:**
+* The *filename* attribute is optional and plugin specific
+* The *testsuite*-tags can be nested
+* The root-tag can be also *testsuites*, the plugin just ignores that and processes enclosed *testsuite*-tags.
+
+## Boost reports
+boosttest-1.x-to-junit-1.0.xsl specific features:
+* supports nested testsuite tags, example:
+
+Boost Unit Test report:
+```XML
+<TestLog>
+  <TestSuite name="Level1">
+    <TestSuite name="Level2">
+      <TestCase name="Test1">
+        <TestingTime>856000</TestingTime>
+      </TestCase>
+      ...
+```
+after transformation:
+```XML
+<testsuite tests="86" errors="0" failures="0" name="MergedTestSuite" skipped="0">
+  <testcase classname="Level1.Level2." name="Test1" time="0.856"/>
+  ...
+```
