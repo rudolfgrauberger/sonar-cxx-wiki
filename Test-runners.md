@@ -60,7 +60,7 @@ Resulting Unit Test XML report:
   </TestSuite>
 </TestLog>
 ```
-Alternative command line to get only testsuite information (```--log_level=test_suite```):
+Alternative command line to get only test suite information (```--log_level=test_suite```):
 ```BASH
 <test executable> --log_format=XML --log_sink=<filename> --log_level=test_suite --report_level=no
 ```
