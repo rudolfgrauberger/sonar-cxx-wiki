@@ -28,6 +28,7 @@ the point where we can think about a release, make sure that:
   SonarQube as a tool for that.
 * The [sample project](https://github.com/wenns/sonar-cxx/tree/master/sonar-cxx-plugin/src/samples/SampleProject2)
 still works with the latest build
+* Make sure the sslr-cxx-toolkit works (can be started, parses complex files and doesnt throw exceptions)
 * The parent-section in the pom.xml references a recent version of the parent pom.
 * Core users did some field testing and didn't found any serious issues
 
@@ -42,5 +43,6 @@ still works with the latest build
 * Build and attach the resulting jars to the release on GitHub.
 * Publish the release
 * Make a tag in git
+* Change the plugin version in the pom.xml to <next-version>-SNAPSHOT
 * Adjust the 'recent release'-Link in Readme.md
 * Tweet/Announce
