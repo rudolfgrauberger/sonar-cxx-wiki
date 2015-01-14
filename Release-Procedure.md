@@ -41,8 +41,9 @@ still works with the latest build
 * Change the plugin version in the pom.xml, make sure the version
   string contains no 'SNAPSHOT'
 * Build and attach the resulting jars to the release on GitHub.
-* Publish the release
 * Make a tag in git
 * Change the plugin version in the pom.xml to <next-version>-SNAPSHOT
+* Push the changes and the new tag to GitHub
+* Publish the release
 * Adjust the 'recent release'-Link in Readme.md
 * Tweet/Announce
