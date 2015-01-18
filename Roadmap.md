@@ -1,33 +1,38 @@
 The Roadmap for development of this SonarQube plugin is roughly as follows:
 
-## 0.9.1 Release
-Should be ready by somewhere around 05.2014.
-It focuses on ease of use, the parsing error recovery being the core feature for that.
-Besides that, there will be an assortment of new checks, support for new Sonar versions and a couple of bug fixes. This milestone includes the issues which go in: 
-https://github.com/wenns/sonar-cxx/issues?milestone=2&page=1&state=open
+## 0.9.3 Release
 
-## 0.9.2 Release
-Should be ready by the end of 08.2014. It should focus on:
-- more standard compliance, especially the preprocessor should be
-looked at
-- updating dependencies (like SSLR) to most recent versions
-- add a couple of new features (like dependency analysis) 
-The following milestone includes the issues which go in:
+Should be ready by the end of 05.2015.
 
-https://github.com/wenns/sonar-cxx/issues?milestone=3&page=1&state=open
+We try to fullfil following goals:
 
-## 0.9.X Releases
-Releases after the 0.9.1 should focus getting all of c++ parsed. Other topics to address include:
-- Improving the performance
+- Rework the support of various C++ extensions and C
+- Proceed in getting more C++11 syntax parsed
+- Port the plugin to the API of SQ LTS
+- Extend the BDD test suite, use it to detect regressions with new SQ versions early
+- Fix (most of) known bugs
+- Develop a strategy how to deal with future SSLR versions,
+  which would lack support for preprocessing
+
+The according milestone is:
+
+https://github.com/wenns/sonar-cxx/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22M+0.9.3%22
+
+
+## Future Releases
+
+Other major topics:
+
 - Compatibility with other plugins in Sonar-Space (like the Issues plugin)
-- lexerless parser
+- lexerless parser (??)
 
-We should strive to release every 3-4 months. As soon as we are 100% compliant, we release the version 1.0.
+We should strive to release every 3-4 months. As soon as we are 100%
+compliant, we release the version 1.0.
 
-To reach standard compliance, we have to address (at least) following issues
-- Support for user-defined literals (Section 2.14.8) 
+To reach standard compliance, we have to address (at least) following
+issues:
+- Support for user-defined literals (Section 2.14.8)
 - Support trigraphs
-- Issue #47
 - Issue #49
 
 A good benchmark for testing is parsing of Boost.
