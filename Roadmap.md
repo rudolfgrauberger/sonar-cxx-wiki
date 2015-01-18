@@ -11,8 +11,6 @@ We try to fullfil following goals:
 - Port the plugin to the API of SQ LTS
 - Extend the BDD test suite, use it to detect regressions with new SQ versions early
 - Fix (most of) known bugs
-- Develop a strategy how to deal with future SSLR versions,
-  which would lack support for preprocessing
 
 The according milestone is:
 
@@ -25,12 +23,15 @@ Other major topics:
 
 - Compatibility with other plugins in Sonar-Space (like the Issues plugin)
 - lexerless parser (??)
+- Develop a strategy how to deal with future SSLR versions,
+  which would lack support for preprocessing
 
 We should strive to release every 3-4 months. As soon as we are 100%
 compliant, we release the version 1.0.
 
 To reach standard compliance, we have to address (at least) following
 issues:
+- Whitespace handling in the preprocessor
 - Support for user-defined literals (Section 2.14.8)
 - Support trigraphs
 - Issue #49
