@@ -14,7 +14,7 @@ XSLT stylesheet which is able to perform X -> JUnitReport
 conversion. A couple of ready-made stylesheets are available
 [here](https://github.com/wenns/sonar-cxx/tree/master/sonar-cxx-plugin/src/main/resources/xsl):
 
-* boosttest-1.x-to-junit-1.0.xsl:       For transforming Boost-reports
+* boosttest-1.x-to-junit-1.0.xsl:       For transforming Boost-reports (only simple mode)
 * cpptestunit-1.x-to-junit-1.0.xsl:     For transforming CppTestUnit-reports
 * cppunit-1.x-to-junit-1.0.xsl:         For transforming CppUnit-reports
 
@@ -113,22 +113,4 @@ For details consult the
 * The root-tag can be also *testsuites*, the plugin just ignores that and processes enclosed *testsuite*-tags.
 
 ## Boost reports
-boosttest-1.x-to-junit-1.0.xsl specific features:
-* supports nested testsuite tags, example:
-
-Boost Unit Test report:
-```XML
-<TestLog>
-  <TestSuite name="Level1">
-    <TestSuite name="Level2">
-      <TestCase name="Test1">
-        <TestingTime>856000</TestingTime>
-      </TestCase>
-      ...
-```
-after transformation:
-```XML
-<testsuite tests="86" errors="0" failures="0" name="MergedTestSuite" skipped="0">
-  <testcase classname="Level1.Level2." name="Test1" time="0.856"/>
-  ...
-```
+* boosttest-1.x-to-junit-1.0.xsl supports only simple mode currently.

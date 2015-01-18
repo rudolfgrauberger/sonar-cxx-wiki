@@ -1,5 +1,5 @@
 The plugin contains a small but growing
-[integration test suite](https://github.com/wenns/sonar-cxx/tree/master/sonar-cxx-plugin/src/test/integration).
+[integration test suite](https://github.com/wenns/sonar-cxx/tree/master/integration-tests).
 
 This testsuite is not only a means to check that the plugin works (or
 works not) with a particular SonarQube version/setup. It also strives
