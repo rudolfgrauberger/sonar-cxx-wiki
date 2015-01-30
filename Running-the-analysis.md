@@ -1,4 +1,4 @@
-_The C++ Community plugin wont execute neither test runners nor coverage tracers nor static checkers itself. All this data has to be provided in form of reports. See [[Running tools]]._
+_The C++ Community plugin won't execute neither test runners nor coverage tracers nor static checkers itself. All this data has to be provided in form of reports. See [[Running tools]]._
 
 ### Usage
 
