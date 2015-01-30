@@ -2,8 +2,8 @@ _The C++ Community plugin won't execute neither test runners nor coverage tracer
 
 ### Usage
 
-You can analyze your projects using the usual means (see [this](
-http://docs.sonarqube.org/display/SONAR/Analyzing+Source+Code) page for all available). All runners should work. See below for details.
+You can analyze your projects using the usual means (see [Analyzing Source Code](
+http://docs.sonarqube.org/display/SONAR/Analyzing+Source+Code)). All runners should work. See below for details.
 
 ### The usual setup
 
