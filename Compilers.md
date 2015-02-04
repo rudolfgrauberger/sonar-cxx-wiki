@@ -3,8 +3,9 @@ The Community C++ Plugin supports feeding compiler warnings as violations into S
 ### GNU C++ Compiler
 To feed GCC warnings into SonarQube, make sure to:
 
-1. Capture the warnings from your build into a file (e.g build.log) using shell redirections or similar
-2. Set configuration properties, example:
+1. Add the '-fdiagnostics-show-option' option in your GCC build options (CFLAGS, CPPFLAGS or similar)
+2. Capture the warnings from your build into a file (e.g build.log) using shell redirections or similar
+3. Set configuration properties, example:
 ```
 sonar.cxx.compiler.parser=GCC
 sonar.cxx.compiler.reportPath=*.log
