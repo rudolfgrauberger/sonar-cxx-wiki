@@ -13,6 +13,7 @@
 <td>4.3</td>
 <td>4.4</td>
 <td>4.5.1</td>
+<td>4.5.2</td>
 </tr>
 
 <tr>
@@ -27,6 +28,7 @@
 <td>May. 2014</td>
 <td>Jul. 2014</td>
 <td>Sep. 2014</td>
+<td>-</td>
 </tr>
 
 <tr>
@@ -37,6 +39,7 @@
 <td>X</td>
 <td>X</td>
 <td>X</td>
+<td>-</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
@@ -55,6 +58,7 @@
 <td>X</td>
 <td>X</td>
 <td>X</td>
+<td>-</td>
 </tr>
 
 <tr>
@@ -69,7 +73,24 @@
 <td>-</td>
 <td>-</td>
 <td>X</td>
+<td>-</td>
 </tr>
+
+<tr>
+<td>v0.9.3*</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+</tr>
+
 </table>
 
 \*: Not released yet.
