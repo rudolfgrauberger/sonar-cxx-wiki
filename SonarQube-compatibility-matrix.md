@@ -12,7 +12,7 @@
 <td>4.2</td>
 <td>4.3</td>
 <td>4.4</td>
-<td>4.5</td>
+<td>4.5.1</td>
 </tr>
 
 <tr>
@@ -58,7 +58,7 @@
 </tr>
 
 <tr>
-<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9.2">v0.9.2*</a></td>
+<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9.2">v0.9.2</a></td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
