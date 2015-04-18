@@ -56,6 +56,25 @@ call "%ProgramFiles(x86)%\Microsoft Visual Studio 10.0\Common7\Tools\vsvars32.ba
 MSBuild.exe example.proj /t:rebuild /p:Configuration=Release;WarningLevel=3 /fileLogger /fileLoggerParameters:WarningsOnly;LogFile=example.log;Verbosity=normal;Encoding=UTF-8
 
 ```
+**Retriving compiler infomation from buildlog**
+
+Version 0.9.3 and above extracts includes, defines and compiler options from the build log automatically.
+
+This feature is enabled only if the produced log during compilation contains enough information (msbuild verbosity set to detailed or diagnostic). For example
+   
+```
+msbuild.exe /v:Detailed  Solution.SLN > buildlog.log
+```
+
+and then
+
+```
+sonar.cxx.compiler.reportPath=buildlog.log
+```
+
+will automate much of the plugin configuration, otherwise set using sonar.cxx.includeDirectories and sonar.cxx.defines.
+
+This feature can be used in any version of visual studio and  it is independent of the Code Analysis described in earlier sections. Altough they come together using the same sonar.cxx.compiler.reportPath option.
 
 **SonarQube Configuration settings**
 

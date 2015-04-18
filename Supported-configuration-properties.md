@@ -238,7 +238,8 @@ which results in a more realistic overall Technical Debt value.
 <tr>
 <td>sonar.cxx.compiler.reportPath</td>
 <td>Ant pattern describing the path to compiler output file, <b>relative to projects root</b>.
-The current default settings can be used for VC++ compiler log file.
+The current default settings can be used for VC++ compiler log file. If available compiler macros and includes will be taken also from build log and used during the pre processing of sources. See [[Compilers]]
+
 <br>
 <i>Scope:</i> project
 <br>
@@ -289,5 +290,6 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 * New property ```sonar.cxx.xunit.provideDetails```. To get detailed unit test information set property to 'true'. This is also the V0.9.1 compatibility value. Because SonarQube does not support 'virtual files' any more test resources must be available.
 * new property ```sonar.cxx.cFilesPatterns```
 
-
+**Hints V0.9.3:**
+* For Visual Studio users, after compiling solution with /v:Diagnostic feed the log with sonar.cxx.compiler.reportPath=buildlog.log to automatically retrieve includes, defines and compiler options
 
