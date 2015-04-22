@@ -1,6 +1,6 @@
 <table>
  <tr>
-  <td>SonarQube version /<br>cxx plug-in version</td>
+  <td><b>SonarQube version /<br>C++ Community plugin</b></td>
   <td></td>
   <td></td>
   <td></td>
@@ -8,97 +8,97 @@
  </tr>
  <tr>
   <td></td>
-  <td>v0.9</td>
-  <td>v0.9.1</td>
-  <td>v0.9.2</td>
-  <td>v0.9.3*</td>
+  <td><b>v0.9</b></td>
+  <td><b>v0.9.1</b></td>
+  <td><b>v0.9.2</b></td>
+  <td><b>v0.9.3*</b></td>
  </tr>
  <tr>
-  <td>3.4.x</td>
-  <td>X</td>
-  <td>-</td>
-  <td>-</td>
-  <td>-</td>
- </tr>
- <tr>
-  <td>3.5.x</td>
+  <td><b>3.4.x</b></td>
   <td>X</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
  </tr>
  <tr>
-  <td>3.6.x</td>
+  <td><b>3.5.x</b></td>
   <td>X</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
  </tr>
  <tr>
-  <td>3.7.x</td>
+  <td><b>3.6.x</b></td>
+  <td>X</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+ </tr>
+ <tr>
+  <td><b>3.7.x</b></td>
   <td>X</td>
   <td>X</td>
   <td>-</td>
   <td>-</td>
  </tr>
  <tr>
-  <td>4.0.x</td>
+  <td><b>4.0.x</b></td>
   <td>X</td>
   <td>X</td>
   <td>-</td>
   <td>-</td>
  </tr>
  <tr>
-  <td>4.1.x</td>
+  <td><b>4.1.x</b></td>
   <td>X</td>
   <td>X</td>
   <td>-</td>
   <td>-</td>
  </tr>
  <tr>
-  <td>4.2.x</td>
+  <td><b>4.2.x</b></td>
   <td>-</td>
   <td>X</td>
   <td>-</td>
   <td>-</td>
  </tr>
  <tr>
-  <td>4.3.x</td>
+  <td><b>4.3.x</b></td>
   <td>-</td>
   <td>X</td>
   <td>-</td>
   <td>-</td>
  </tr>
  <tr>
-  <td>4.4.x</td>
+  <td><b>4.4.x</b></td>
   <td>-</td>
   <td>X</td>
   <td>-</td>
   <td>-</td>
  </tr>
  <tr>
-  <td>4.5.0, 4.5.1</td>
+  <td><b>4.5.0, 4.5.1</b></td>
   <td>-</td>
   <td>X</td>
   <td>X</td>
   <td>-</td>
  </tr>
  <tr>
-  <td>4.5.2+</td>
+  <td><b>4.5.2+</b></td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>X</td>
  </tr>
  <tr>
-  <td>5.0.x</td>
+  <td><b>5.0.x</b></td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>X</td>
  </tr>
  <tr>
-  <td>5.1.x</td>
+  <td><b>5.1.x</b></td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
