@@ -36,3 +36,11 @@ sonar.tests=.
 sonar.test.inclusions=**/*Test*/**
 sonar.exclusions=**/*Test*/**
 ```
+
+===
+
+**Q: Unable to parse UTF-8 with BOM files.**
+
+**A:** Reading files with a specific file encoding is a SonarQube core feature. Normally you set the source file encoding in the project configuration with ```sonar.sourceEncoding```. The list of available encodings depends on your JVM. See http://docs.oracle.com/javase/1.5.0/docs/guide/intl/encoding.doc.html.
+Currently (SonarQube 5.1) file encodings with BOM are not supported by the core. You have to use another encoding or to remove the BOM with a script before reading it with SonarQube.
+
