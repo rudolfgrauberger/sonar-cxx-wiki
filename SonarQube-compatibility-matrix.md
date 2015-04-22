@@ -12,8 +12,10 @@
 <td>4.2</td>
 <td>4.3</td>
 <td>4.4</td>
-<td>4.5.1</td>
-<td>4.5.2</td>
+<td>4.5.0 & 4.5.1</td>
+<td>4.5.2+</td>
+<td>5.0.x</td>
+<td>5.1.x</td>
 </tr>
 
 <tr>
@@ -29,6 +31,8 @@
 <td>Jul. 2014</td>
 <td>Sep. 2014</td>
 <td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 
 <tr>
@@ -39,6 +43,8 @@
 <td>X</td>
 <td>X</td>
 <td>X</td>
+<td>-</td>
+<td>-</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
@@ -59,6 +65,8 @@
 <td>X</td>
 <td>X</td>
 <td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 
 <tr>
@@ -74,6 +82,8 @@
 <td>-</td>
 <td>X</td>
 <td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 
 <tr>
@@ -88,6 +98,8 @@
 <td>-</td>
 <td>-</td>
 <td>-</td>
+<td>X</td>
+<td>X</td>
 <td>X</td>
 </tr>
 
