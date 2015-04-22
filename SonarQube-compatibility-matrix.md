@@ -1,108 +1,107 @@
-<br>
-<br>
 <table>
-<tr>
-<td><b>SonarQube version</b></td>
-<td>3.4</td>
-<td>3.5</td>
-<td>3.6</td>
-<td>3.7</td>
-<td>4.0</td>
-<td>4.1</td>
-<td>4.2</td>
-<td>4.3</td>
-<td>4.4</td>
-<td>4.5.0 & 4.5.1</td>
-<td>4.5.2+</td>
-<td>5.0.x</td>
-<td>5.1.x</td>
-</tr>
-
-<tr>
-<td><b>Plugin version / Release Date</b></td>
-<td>Jan. 2013</td>
-<td>Mar. 2013</td>
-<TD>Jun. 2013</td>
-<td>Aug. 2013</td>
-<td>Nov. 2013</td>
-<td>Jan. 2014</td>
-<td>Mar. 2014</td>
-<td>May. 2014</td>
-<td>Jul. 2014</td>
-<td>Sep. 2014</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9">v0.9</a></td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9.1">v0.9.1</a></td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td><a href="https://github.com/wenns/sonar-cxx/releases/tag/cxx-0.9.2">v0.9.2</a></td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td>v0.9.3*</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-</tr>
-
+ <tr>
+  <td>SonarQube version /<br>cxx plug-in version</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td>v0.9</td>
+  <td>v0.9.1</td>
+  <td>v0.9.2</td>
+  <td>v0.9.3*</td>
+ </tr>
+ <tr>
+  <td>3.4.x</td>
+  <td>X</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+ </tr>
+ <tr>
+  <td>3.5.x</td>
+  <td>X</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+ </tr>
+ <tr>
+  <td>3.6.x</td>
+  <td>X</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+ </tr>
+ <tr>
+  <td>3.7.x</td>
+  <td>X</td>
+  <td>X</td>
+  <td>-</td>
+  <td>-</td>
+ </tr>
+ <tr>
+  <td>4.0.x</td>
+  <td>X</td>
+  <td>X</td>
+  <td>-</td>
+  <td>-</td>
+ </tr>
+ <tr>
+  <td>4.1.x</td>
+  <td>X</td>
+  <td>X</td>
+  <td>-</td>
+  <td>-</td>
+ </tr>
+ <tr>
+  <td>4.2.x</td>
+  <td>-</td>
+  <td>X</td>
+  <td>-</td>
+  <td>-</td>
+ </tr>
+ <tr>
+  <td>4.3.x</td>
+  <td>-</td>
+  <td>X</td>
+  <td>-</td>
+  <td>-</td>
+ </tr>
+ <tr>
+  <td>4.4.x</td>
+  <td>-</td>
+  <td>X</td>
+  <td>-</td>
+  <td>-</td>
+ </tr>
+ <tr>
+  <td>4.5.0, 4.5.1</td>
+  <td>-</td>
+  <td>X</td>
+  <td>X</td>
+  <td>-</td>
+ </tr>
+ <tr>
+  <td>4.5.2+</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>X</td>
+ </tr>
+ <tr>
+  <td>5.0.x</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>X</td>
+ </tr>
+ <tr>
+  <td>5.1.x</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>X</td>
+ </tr>
 </table>
-
-\*: Not released yet.
