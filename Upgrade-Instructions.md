@@ -1,3 +1,31 @@
+**Upgrade to 0.9.3**
+
+* Compatible with SonarQube 4.5.2, 4.5.4, 5.0.x and 5.1.x 
+* C++ Community plugin rules visible under 'c++ SonarQube'. Some of the rules has changed rule keys. Especially template rules are not activated by default. Please check listed rules below if they have the same state in your profile as before:
+  * FileCyclomaticComplexity => FileComplexity
+  * InvalidFileEncoding => FileEncoding
+  * UseFileHeader => FileHeader
+  * NotAllowedFixMeTag => FixmeTagPresence
+  * FunctionCyclomaticComplexity => FunctionComplexity
+  * NoHardcodedAccount => HardcodedAccount
+  * NoHardcodedIp => HardcodedIp
+  * IndentationCheck => Indentation
+  * MissingInclude => MissingIncludeFile
+  * NewLineAtEOF => MissingNewLineAtEndOfFile
+  * ReservedNamesCheck => ReservedNames
+  * SafetyTagCheck => SafetyTag
+  * SwitchLastCaseIsDefaultCheck => SwitchLastCaseIsDefault
+  * NoTabCharacter => TabCharacter
+  * NotAllowedToDoTag => TodoTagPresence
+
+
+**Upgrade to 0.9.2**
+
+* Compatible with SonarQube 4.5
+* Coverage: New property ```sonar.cxx.coverage.forceZeroCoverage``` set coverage for source files without coverage report to zero. For V0.9.1 compatibility set value to 'false'.
+* Unit Tests: New property ```sonar.cxx.xunit.provideDetails```. To get detailed unit test information set property to 'true'. This is also the V0.9.1 compatibility value. SonarQube does not support 'virtual files' anymore. In case your report files contain 'filename' tags they must match with 'physical files'.
+
+
 **Upgrade to 0.9.1**
 
 * Compatible with SonarQube 3.7 to 4.2.
@@ -7,10 +35,3 @@
 * Upgrade quality profiles: Backup the quality profile as XML. Search and replace in old quality profile ```<repositoryKey>cxxexternal</repositoryKey>``` with ```<repositoryKey>other</repositoryKey>```. Restore it after this replacement again.
 * Folder ```..\Sonar\sonar-x.y.z\extensions\rules``` is no longer supported. Add file content via settings in the web UI to ```sonar.cxx.other.rules``` in the C++ community backend settings instead.
 * Lines of Code (LoC) are counted differentially compared to V0.2: Macro definitions are no more counted as LoC. Leads to changes in LoC and derived metrics.
-
-
-**Upgrade to 0.9.2**
-
-* Compatible with SonarQube 4.5
-* Coverage: New property ```sonar.cxx.coverage.forceZeroCoverage``` set coverage for source files without coverage report to zero. For V0.9.1 compatibility set value to 'false'.
-* Unit Tests: New property ```sonar.cxx.xunit.provideDetails```. To get detailed unit test information set property to 'true'. This is also the V0.9.1 compatibility value. SonarQube does not support 'virtual files' anymore. In case your report files contain 'filename' tags they must match with 'physical files'.
