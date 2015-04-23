@@ -1,6 +1,7 @@
 **Upgrade to 0.9.3**
 
-* Compatible with SonarQube 4.5.2, 4.5.4, 5.0.x and 5.1.x 
+* Compatible with SonarQube 4.5.2, 4.5.4, 5.0.x and 5.1.x
+* Since SonarQube 5.0, there is a built-in support for SCM information on source files. In case you don't want to use it set ```sonar.scm.disabled=true``` to your project configuration to disable [SCM support](http://docs.sonarqube.org/display/SONAR/SCM+support).
 * C++ Community plugin rules visible under 'c++ SonarQube'. Some of the rules has changed rule keys. Especially template rules are not activated by default. Please check listed rules below if they have the same state in your profile as before:
   * FileCyclomaticComplexity => FileComplexity
   * InvalidFileEncoding => FileEncoding
