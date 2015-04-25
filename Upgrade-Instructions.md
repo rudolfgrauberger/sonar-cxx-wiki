@@ -7,6 +7,7 @@
 * Property ```sonar.cxx.coverage.forceZeroCoverage``` supports line, integration and overall coverage now. 
 * Since SonarQube 5.0, there is a built-in support for SCM information on source files. In case you don't want to use it set ```sonar.scm.disabled=true``` to your project configuration to disable [SCM support](http://docs.sonarqube.org/display/SONAR/SCM+support).
 * Support of new syntax highlighter API ([SONAR-3893](https://jira.codehaus.org/browse/SONAR-3893)): Formatting of source code is different.
+* Cppcheck/inconclusive messages: there is [inconclusive] at the beginning of the message now.
 * C++ Community plugin rules visible under 'c++ SonarQube'. Some of the rules has changed rule keys. Especially template rules are not activated by default. Please check listed rules below if they have the same state in your profile as before:
   * FileCyclomaticComplexity => FileComplexity
   * InvalidFileEncoding => FileEncoding
