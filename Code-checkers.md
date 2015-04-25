@@ -67,7 +67,14 @@ valgrind --xml=yes --xml-file=report.xml <program> <arguments>
 To extend the set of known Valgrind rules see [[Extending the code analysis]].
 
 ### Vera++
-Vera++ does static C++ code checking, focusing mostly on style issues. To feed Vera++ analysis results into SonarQube:
+Vera++ does static C++ code checking, focusing mostly on style issues. There are two possibilities to create a report.
+
+Newer versions of Vera++ support the ```--checkstyle-report (-c)``` command line option to create a Checkstyle XML report:
+```BASH
+vera++ -s -c vera3.xml main.cxx
+```
+
+Another possibility with older versions is to convert the output wit a Perl script. To feed Vera++ analysis results into SonarQube:
 * Find all the files we want to be analysed
 * Pipe this list into Vera++ and
 * Pipe the resulting output into a Perl script which finally generates the required XML.
@@ -76,6 +83,17 @@ Altogether:
 
 ```BASH
 find <path> -regex ".*\.cc\|.*\.hh" | vera++ - -showrules -nodup |& vera++Report2checkstyleReport.perl > report.xml
+```
+
+An example output could looks like this:
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.0">
+  <file name="main.cxx">
+    <error source="T013" severity="info" line="1" message="no copyright notice found" />
+    <error source="T011" severity="info" line="2" message="closing curly bracket not in the same line or column" />
+  </file>
+</checkstyle>
 ```
 
 To extend the set of known Vera++ rules see [[Extending the code analysis]].
