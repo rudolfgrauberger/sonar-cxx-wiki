@@ -216,7 +216,7 @@ thus making the drilldown to details possible
 <tr>
 <td>sonar.cxx.coverage.forceZeroCoverage</td>
 <td>
-If 'True', assign zero line coverage to source files without coverage report(s),
+If 'True', assign zero line, integration and overall coverage to source files without coverage report(s),
 which results in a more realistic overall Technical Debt value.
 <br>
 <i>Scope:</i> project
