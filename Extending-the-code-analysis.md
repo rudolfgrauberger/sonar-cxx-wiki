@@ -47,8 +47,44 @@ If you're using a patched or not-yet-supported version of an integrated code che
   <table>
 
 ### The format of the rules file
-The format of rules file is expected to be the following:
+The format of rules file is expected to be the following ([RulesDefinitionXmlLoader](http://javadocs.sonarsource.org/4.4/apidocs/org/sonar/api/server/rule/RulesDefinitionXmlLoader.html)):
 
+V0.9.3 and later:
+```XML
+<rules>
+   <rule>
+     <!-- required fields -->
+     <key>the-rule-key</key>
+     <name>The purpose of the rule</name>
+
+     <!-- optional fields -->
+     <description>
+       <![CDATA[The description]]>
+     </description>
+     <internalKey>Checker/TreeWalker/LocalVariableName</internalKey>
+     <severity>BLOCKER</severity>
+     <cardinality>MULTIPLE</cardinality>
+     <status>BETA</status>
+     <param>
+       <key>the-param-key</key>
+       <tag>style</tag>
+       <tag>security</tag>
+       <description>
+         <![CDATA[the param-description]]>
+       </description>
+       <defaultValue>42</defaultValue>
+     </param>
+     <param>
+       <key>another-param</key>
+     </param>
+
+     <!-- deprecated fields -->
+     <configKey>Checker/TreeWalker/LocalVariableName</configKey>
+     <priority>BLOCKER</priority>
+   </rule>
+ </rules>
+```
+Deprecated but still supported:
 ```XML
 <rules>
   <rule key="RULE_ID">
