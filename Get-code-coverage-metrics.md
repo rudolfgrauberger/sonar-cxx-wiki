@@ -32,7 +32,7 @@ The C++ Community plugin accepts three different formats for the test coverage r
 * The XML format used by [Bullseye](http://www.bullseye.com/).
 * The XML format used by [Microsoft Visual Studio](http://msdn.microsoft.com/de-de/library/dd537628.aspx).
 
-Finally you can decide how source files without coverage reports are handled. Setting the property **sonar.cxx.coverage.forceZeroCoverage** to 'true', assign zero line coverage to source files without coverage reports, which results in a more realistic overall Technical Debt value. 'false' will ignore such files in the overall coverage calculation.
+Finally you can decide how source files without coverage reports are handled. Setting the property **sonar.cxx.coverage.forceZeroCoverage** to 'true', assign zero line, integration and overall coverage to source files without coverage reports, which results in a more realistic overall Technical Debt value. 'false' will ignore such files in the overall coverage calculation.
 
 ### Notes for BullseyeCoverage users:
 SonarQube <3.2 provides metrics for line coverage and branch coverage. Bullseye users have function and branch/decision coverage instead. The C++ Community plugin converts the branch/decision coverage directly into branch coverage however line coverage is far more complex and cannot be correlated directly into function coverage.
