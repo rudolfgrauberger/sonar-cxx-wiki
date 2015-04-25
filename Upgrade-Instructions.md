@@ -3,7 +3,8 @@
 * Compatible with SonarQube 4.5.2, 4.5.4, 5.0.x and 5.1.x
 * Java Runtime Environment 7 and 8 are supported. JRE 8 is recommended because of higher system performance.
 * External rules (other) does not support Sqale characteristics.
-* Metric COMMENT_BLANK_LINES is deprecated and no more supported ([SONAR-3768](https://jira.codehaus.org/browse/SONAR-3768)). 
+* Metric COMMENT_BLANK_LINES is deprecated and no more supported ([SONAR-3768](https://jira.codehaus.org/browse/SONAR-3768)).
+* Property ```sonar.cxx.coverage.forceZeroCoverage``` supports line, integration and overall coverage now. 
 * Since SonarQube 5.0, there is a built-in support for SCM information on source files. In case you don't want to use it set ```sonar.scm.disabled=true``` to your project configuration to disable [SCM support](http://docs.sonarqube.org/display/SONAR/SCM+support).
 * Support of new syntax highlighter API ([SONAR-3893](https://jira.codehaus.org/browse/SONAR-3893)): Formatting of source code is different.
 * C++ Community plugin rules visible under 'c++ SonarQube'. Some of the rules has changed rule keys. Especially template rules are not activated by default. Please check listed rules below if they have the same state in your profile as before:
