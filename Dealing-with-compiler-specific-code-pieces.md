@@ -94,3 +94,5 @@ To use the header file you have to edit some settings corresponding to your comp
 <br>Copy your settings from the visual studio project (Project\Properties\Configuration Properties\C/C++\Preprocessor). Have also a look to the 'Inherited values' (Edit\Inherited values).
 
 7) Include the header file with [[Force Include]].
+
+8) From version 0.9.3, Microsoft compiler settings can be retrieved from build log compilation. The current support is fairly good and should be able to understand most of your build settings and all previous steps can be skipped when using this approach. See [[Compilers]]
