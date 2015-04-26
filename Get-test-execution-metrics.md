@@ -14,7 +14,8 @@ XSLT stylesheet which is able to perform X -> JUnitReport
 conversion. A couple of ready-made stylesheets are available
 [here](https://github.com/wenns/sonar-cxx/tree/master/sonar-cxx-plugin/src/main/resources/xsl):
 
-* boosttest-1.x-to-junit-1.0.xsl:       For transforming Boost-reports (only simple mode)
+* boosttest-1.x-to-junit-1.0.xsl:       For transforming Boost-reports
+* boosttest-1.x-to-junit-dummy-1.0.xsl: For transforming Boost-reports, simulating virtual files
 * cpptestunit-1.x-to-junit-1.0.xsl:     For transforming CppTestUnit-reports
 * cppunit-1.x-to-junit-1.0.xsl:         For transforming CppUnit-reports
 
@@ -113,4 +114,93 @@ For details consult the
 * The root-tag can be also *testsuites*, the plugin just ignores that and processes enclosed *testsuite*-tags.
 
 ## Boost reports
-* boosttest-1.x-to-junit-1.0.xsl supports only simple mode currently.
+
+Below is an example for a Boost unit test and the resulting report. There are different settings for ```log_level``` possible, ```log_level=test_suite``` is the recommended setting.
+
+The Boost unit test framework is working with namespaces and not classes like other test frameworks.
+
+**Source code of unit test:**
+```C++
+#define BOOST_TEST_MAIN
+#include "boost/test/unit_test.hpp"
+
+BOOST_AUTO_TEST_CASE(WithoutSuite)
+{
+	BOOST_REQUIRE(false);
+}
+
+BOOST_AUTO_TEST_SUITE(FirstLevel)
+
+BOOST_AUTO_TEST_CASE(OnFirstLevel)
+{
+	BOOST_REQUIRE(false);
+}
+
+BOOST_AUTO_TEST_SUITE(SecondLevel)
+
+BOOST_AUTO_TEST_CASE(OnSecondLevel)
+{
+	BOOST_REQUIRE(false);
+}
+
+BOOST_AUTO_TEST_SUITE(ThirdLevel)
+
+BOOST_AUTO_TEST_CASE(OnThirdLevel)
+{
+	BOOST_REQUIRE(false);
+}
+
+BOOST_AUTO_TEST_SUITE_END()
+BOOST_AUTO_TEST_SUITE_END()
+BOOST_AUTO_TEST_SUITE_END()
+```
+
+**resulting boost unit test report (input for the transformation):**
+
+```XML
+<?xml version="1.0" encoding="utf-8"?>
+<TestLog>
+  <TestSuite name="Master Test Suite">
+    <TestCase name="WithoutSuite">
+      <FatalError file="c:/example/nestedsuitstest.cpp" line="9"><![CDATA[critical check false failed]]></FatalError>
+      <TestingTime>0</TestingTime>
+    </TestCase>
+    <TestSuite name="FirstLevel">
+      <TestCase name="OnFirstLevel">
+        <FatalError file="c:/example/nestedsuitstest.cpp" line="16"><![CDATA[critical check false failed]]></FatalError>
+        <TestingTime>0</TestingTime>
+      </TestCase>
+      <TestSuite name="SecondLevel">
+        <TestCase name="OnSecondLevel">
+          <FatalError file="c:/example/nestedsuitstest.cpp" line="23"><![CDATA[critical check false failed]]></FatalError>
+          <TestingTime>0</TestingTime>
+        </TestCase>
+        <TestSuite name="ThirdLevel">
+          <TestCase name="OnThirdLevel">
+            <FatalError file="c:/example/nestedsuitstest.cpp" line="30"><![CDATA[critical check false failed]]></FatalError>
+            <TestingTime>0</TestingTime>
+          </TestCase>
+        </TestSuite>
+      </TestSuite>
+    </TestSuite>
+  </TestSuite>
+</TestLog>
+```
+
+
+**Simulating virtual files (boosttest-1.x-to-junit-dummy-1.0.xsl)**
+
+In older versions it was possible to add unit test results with virtual file items only. To migrate from older versions you can use the transformation 'boosttest-1.x-to-junit-dummy-1.0.xsl'. The advantage is that you can use ```sonar.cxx.xunit.provideDetails=true``` and get at least a list of all unit tests with the execution times.
+
+Create a subfolder below your project configuration file with a dummy unit test file. The file name must be 'dummy.cpp'. Additional you have to set ```sonar.tests=cxx-xunit``` and ````sonar.cxx.xunit.xsltURL=boosttest-1.x-to-junit-dummy-1.0.xsl```.
+
+As a result you get 'detailed' unit test information pointing all to the file 'dummy.cpp'.
+
+```
+root-|
+     |-- sonar-project.properties
+     |      sonar.cxx.xunit.xsltURL=boosttest-1.x-to-junit-dummy-1.0.xsl
+     |      sonar.tests=cxx-xunit
+     |-- cxx-xunit
+               | dummy.cpp
+```
