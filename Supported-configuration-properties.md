@@ -160,6 +160,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <td>sonar.cxx.xunit.xsltURL</td>
 <td>A name of a built in XSLT-file or an URL to an external one. Available builtins:
 <li>boosttest-1.x-to-junit-1.0.xsl: For transforming Boost-reports</li>
+<li>boosttest-1.x-to-junit-dummy-1.0.xsl: For transforming Boost-reports, simulating virtual files</li>
 <li>cpptestunit-1.x-to-junit-1.0.xsl: For transforming CppTestUnit-reports</li>
 <li>cppunit-1.x-to-junit-1.0.xsl: For transforming CppUnit-reports</li>
 <br>
