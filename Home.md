@@ -21,7 +21,7 @@ This WiKi contains as well usage guidelines as also developer resources. Just na
 * [[Supported compiler specific extensions]]
 * [[Running tools]]
 * [[Extending the code analysis]]
-* [[Dealing with compiler specific code peaces]]
+* [[Dealing with compiler specific code pieces]]
 * [[Detect and fix parsing errors]]
 
 ### HowTo...
