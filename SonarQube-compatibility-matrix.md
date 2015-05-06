@@ -59,21 +59,21 @@
   <td><b>4.2.x</b></td>
   <td>-</td>
   <td>X</td>
-  <td>-</td>
+  <td>X</td>
   <td>-</td>
  </tr>
  <tr>
   <td><b>4.3.x</b></td>
   <td>-</td>
   <td>X</td>
-  <td>-</td>
+  <td>X</td>
   <td>-</td>
  </tr>
  <tr>
   <td><b>4.4.x</b></td>
   <td>-</td>
   <td>X</td>
-  <td>-</td>
+  <td>X</td>
   <td>-</td>
  </tr>
  <tr>
