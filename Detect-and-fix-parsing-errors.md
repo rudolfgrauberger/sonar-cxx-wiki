@@ -46,7 +46,7 @@ this step are:
 
 To parse the code in the same way as in your build environment you have to set the same macros as in your build environment. Copy your project specific macros to [sonar.cxx.defines](https://github.com/wenns/sonar-cxx/wiki/Supported-configuration-properties). For system specific macros it is in most cases easier to write once a header file for the target build environment and reuse this header file with [[Force Include]] in all projects. For more help see:
 * [[Predefined Macros]]
-* [[Dealing with compiler specific code peaces]]
+* [[Dealing with compiler specific code pieces]]
 
 Visual Studio:
 * Project settings: Property Page / Configuration properties / C/C++ / Preprocessor / Preprocessor Definitions
