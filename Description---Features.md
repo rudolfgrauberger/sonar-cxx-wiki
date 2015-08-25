@@ -40,7 +40,7 @@ the amount of metrics collected:
 
 ## Known Limitations
 - Not all of C++ can be parsed by now. You may hit parse errors when analyzing your project.
-- The the plugin expects to be fed with syntactically correct code. This is a conscious design decision: we do not want to reimplement a compiler and try to follow the KISS principle. Do not expect as much guidance as you can get from a c++ compiler.
+- The plugin expects to be fed with syntactically correct code. This is a conscious design decision: we do not want to reimplement a compiler and try to follow the KISS principle. Do not expect as much guidance as you can get from a c++ compiler.
 - The plugin doesn't know about standard include paths. You have to configure them manually using the property **sonar.cxx.includeDirectories**
 - Have also a look at the [issue tracker](https://github.com/wenns/sonar-cxx/issues?state=open)
  
