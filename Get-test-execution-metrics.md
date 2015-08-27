@@ -198,9 +198,10 @@ As a result you get 'detailed' unit test information pointing all to the file 'd
 
 ```
 root-|
-     |-- sonar-project.properties
+     |-- sonar-project.properties (see additional settings below)
+     |      sonar.cxx.xunit.provideDetails=true
      |      sonar.cxx.xunit.xsltURL=boosttest-1.x-to-junit-dummy-1.0.xsl
      |      sonar.tests=cxx-xunit
-     |-- cxx-xunit
-               | dummy.cpp
+     |-- cxx-xunit (additional subfolder)
+               | dummy.cpp (dummy file in subfolder)
 ```
