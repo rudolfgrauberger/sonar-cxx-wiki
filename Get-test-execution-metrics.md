@@ -188,7 +188,7 @@ BOOST_AUTO_TEST_SUITE_END()
 ```
 
 
-**Simulating virtual files (boosttest-1.x-to-junit-dummy-1.0.xsl)**
+**Simulating virtual files (boosttest-1.x-to-junit-dummy-1.0.xsl, SQ 4.5 LTS only)**
 
 In older versions it was possible to add unit test results with virtual file items only. To migrate from older versions you can use the transformation 'boosttest-1.x-to-junit-dummy-1.0.xsl'. The advantage is that you can use ```sonar.cxx.xunit.provideDetails=true``` and get at least a list of all unit tests with the execution times.
 
