@@ -8,17 +8,28 @@ sonar-runner -X ...
 ```
 Second option is -e to give you execution error messages:
 ```
-sonar-runner -X ...
+sonar-runner -e ...
 -e,--errors Produce execution error messages
 ```
 
-**Step 2:** If you need more debug information you can add the **sonar.verbose** property by adding the command line parameter -Dsonar.verbose=true.
+
+**Step 2:** Control level of logs
+
+If you need more debug information you can add the ```sonar.verbose``` property by adding the command line parameter ```-Dsonar.verbose=true```.
 
 ```
 sonar-runner -X -Dsonar.verbose=true ...
 ```
 
+ There is also the ```sonar.log.level``` which controls the quantity / level of logs produced during an analysis. ```sonar.verbose``` activates DEBUG mode for the analyzer. This is a shortcut of ```sonar.log.level=DEBUG```.
+* ```sonar.log.level=DEBUG```: Display INFO logs + more details at DEBUG level. Similar to ```sonar.verbose=true```
+* ```sonar.log.level=TRACE```: Display DEBUG logs + all the SQL queries + their timings executed by the analyzer. Similar to ```sonar.showProfiling=FULL```
+* you can combine the flags, e.g. ```sonar.log.level=TRACE|DEBUG```
+* ```sonar.showProfiling``` is deprecated since 5.1, replaced by ```sonar.log.level=TRACE|DEBUG```
+
+
 **Step 3:** Redirect output to a LOG file
+
 By default the output is written to stdout. For analysis purpose it is recommended to redirect it to a LOG file.
 
 Microsoft Windows:
