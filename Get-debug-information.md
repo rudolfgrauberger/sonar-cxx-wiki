@@ -30,9 +30,9 @@ sonar-runner -X -Dsonar.verbose=true ...
 
 **Step 3:** Redirect output to a LOG file
 
-By default the output is written to stdout. For analysis purpose it is recommended to redirect it to a LOG file.
+By default the output is written to stdout. Errors are written to stderr. For analysis purpose it is recommended to redirect both to a LOG file.
 
 Microsoft Windows:
 ```
-sonar-runner -X -e -Dsonar.verbose=true ... > sonar-runner.log
+sonar-runner -X -e -Dsonar.verbose=true ... > sonar-runner.log 2>&1
 ```
