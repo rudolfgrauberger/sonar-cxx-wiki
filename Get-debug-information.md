@@ -23,5 +23,5 @@ By default the output is written to stdout. For analysis purpose it is recommend
 
 Microsoft Windows:
 ```
-sonar-runner -X -Dsonar.verbose=true ... > sonar-runner.log
+sonar-runner -X -e -Dsonar.verbose=true ... > sonar-runner.log
 ```
