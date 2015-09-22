@@ -25,7 +25,7 @@ This rule allows to define C++ rules with help of an XPath expression.
 
 The rules must be written in [XPath](http://en.wikipedia.org/wiki/XPath) (version 1.0) to navigate the language's [Abstract Syntax Tree](http://en.wikipedia.org/wiki/Abstract_syntax_tree) (AST). For the plugin an SSLR Toolkit is provided to help you navigate the AST. Each language's SSLR Toolkit is a standalone application that displays the AST for a piece of code source that you feed into it, allowing you to read the node names and attributes from your code sample and write your XPath expression. Knowing the XPath language is the only prerequisite, and there are a lot of tutorials on XPath online (see http://www.w3schools.com/xpath/ for example).
 
-The proper SSLR Toolkit can be downloaded from here (TODO).
+The proper SSLR Toolkit can be downloaded from [the Maven Central Repository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22sslr-cxx-toolkit%22).
 
 Violations are created depending on the return value of the XPath expression. If the XPath expression returns:
 * a single or list of AST nodes, then a line violation with the given message is created for each node
