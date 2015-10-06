@@ -25,7 +25,7 @@ The compiler sensor consumes the warning messages available in the build log. De
 
 * Enable '[Code Analysis for C/C++ Warnings C6001-C28351](http://msdn.microsoft.com/en-us/library/a5b9aa09.aspx)'. This feature is available in Premium or Ultimate editions only. Select ```Configuration Properties\Code Analysis\General```, activate ```Enable Code Analysis on Build```. As default you can use ```Microsoft Native Recommended Rules```.
 
-* Open ```Tools\Options``` and set option for ```Project and Solutions\Build and Run``` to ```MSBuild Project build log verbosity = Normal```.
+* Open ```Tools\Options``` and set option for ```Project and Solutions\Build and Run``` to ```MSBuild Project build log verbosity = Detailed```.
 
 ![MSVS cpp.user-property-pages](https://cloud.githubusercontent.com/assets/2315215/3085369/b7b3f4d4-e50f-11e3-8e9e-6d1712db1320.PNG)
 
@@ -53,10 +53,10 @@ devenv example.sln /rebuild Release /out example.log
 ```
 rem VS2010
 call "%ProgramFiles(x86)%\Microsoft Visual Studio 10.0\Common7\Tools\vsvars32.bat"
-MSBuild.exe example.proj /t:rebuild /p:Configuration=Release;WarningLevel=3 /fileLogger /fileLoggerParameters:WarningsOnly;LogFile=example.log;Verbosity=normal;Encoding=UTF-8
+MSBuild.exe example.proj /t:rebuild /p:Configuration=Release;WarningLevel=3 /fileLogger /fileLoggerParameters:WarningsOnly;LogFile=example.log;Verbosity=detailed;Encoding=UTF-8
 
 ```
-**Retriving compiler infomation from buildlog**
+**Retrieving compiler infomation from buildlog**
 
 Version 0.9.3 and above extracts includes, defines and compiler options from the build log automatically.
 
