@@ -2,7 +2,7 @@ To collect test execution metrics with the C++ Community plugin follow
 the steps below:
 
 1. Get an execution report out of your favorite test framework. See
-[[Test runners]] for examples. The reports has to be JUnitReport-like, for details see ....
+[[Test runners]] for examples. The reports has to be JUnitReport-like, for details see [below](#supported-reports).
 
 2. Configure your SonarQube project by setting the property
 **sonar.cxx.xunit.reportPath** to point to the created report[s] and
