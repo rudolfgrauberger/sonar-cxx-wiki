@@ -13,7 +13,7 @@
   <td><b>v0.9.1</b></td>
   <td><b>v0.9.2</b></td>
   <td><b>v0.9.3</b></td>
-  <td></td>
+  <td><b>v0.9.4</b></td>
  </tr>
  <tr>
   <td><b>3.4.x</b></td>
@@ -21,7 +21,7 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
-  <td></td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>3.5.x</b></td>
@@ -29,7 +29,7 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
-  <td></td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>3.6.x</b></td>
@@ -37,7 +37,7 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
-  <td></td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>3.7.x</b></td>
@@ -45,7 +45,7 @@
   <td>X</td>
   <td>-</td>
   <td>-</td>
-  <td></td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>4.0.x</b></td>
@@ -53,7 +53,7 @@
   <td>X</td>
   <td>-</td>
   <td>-</td>
-  <td></td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>4.1.x</b></td>
@@ -61,7 +61,7 @@
   <td>X</td>
   <td>-</td>
   <td>-</td>
-  <td></td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>4.2.x</b></td>
@@ -69,7 +69,7 @@
   <td>X</td>
   <td>X</td>
   <td>-</td>
-  <td></td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>4.3.x</b></td>
@@ -77,7 +77,7 @@
   <td>X</td>
   <td>X</td>
   <td>-</td>
-  <td></td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>4.4.x</b></td>
@@ -85,7 +85,7 @@
   <td>X</td>
   <td>X</td>
   <td>-</td>
-  <td></td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>4.5.0, 4.5.1</b></td>
@@ -93,7 +93,7 @@
   <td>X</td>
   <td>X</td>
   <td>-</td>
-  <td></td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>4.5.2+</b></td>
@@ -101,7 +101,7 @@
   <td>-</td>
   <td>-</td>
   <td>X</td>
-  <td></td>
+  <td>X</td>
  </tr>
  <tr>
   <td><b>5.0.x</b></td>
@@ -109,7 +109,7 @@
   <td>-</td>
   <td>-</td>
   <td>X</td>
-  <td></td>
+  <td>X</td>
  </tr>
  <tr>
   <td><b>5.1.x</b></td>
@@ -117,6 +117,14 @@
   <td>-</td>
   <td>-</td>
   <td>X</td>
-  <td></td>
+  <td>X</td>
+ </tr>
+ <tr>
+  <td><b>5.2.x</b></td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>partial</td>
  </tr>
 </table>
