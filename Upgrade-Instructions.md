@@ -1,13 +1,14 @@
 **Upgrade to 0.9.4**
-* Compatible with SonarQube 4.5.2, 4.5.4, 5.0.x and 5.1.x
+* Compatible with SonarQube 4.5.2+, 5.0.x and 5.1.x
 * Java Runtime Environment 7 and 8 are supported. JRE 8 is recommended because of higher system performance.
 * Default values for ```reportPath``` values has been removed to get meaningful error messages. In case you were using the defaults you have to explicit define them in the ```sonar-project.properties``` file now.
 * ```forceZeroCoverage```: Depends on which key (```sonar.cxx.coverage.reportPath```, ```sonar.cxx.coverage.itReportPath```, ```sonar.cxx.coverage.overallReportPath```) is defined in the ```sonar-project.properties``` file now. Defining ```forceZeroCoverage``` alone will no more work.
+* It is now possible to define Sqale characteristics for external rules (other) but there are still no predefined values.
 
 
 **Upgrade to 0.9.3**
 
-* Compatible with SonarQube 4.5.2, 4.5.4, 5.0.x and 5.1.x
+* Compatible with SonarQube 4.5.2+, 5.0.x and 5.1.x
 * Java Runtime Environment 7 and 8 are supported. JRE 8 is recommended because of higher system performance.
 * External rules (other) does not support Sqale characteristics.
 * Metric COMMENT_BLANK_LINES is deprecated and no more supported ([SONAR-3768](https://jira.codehaus.org/browse/SONAR-3768)).
