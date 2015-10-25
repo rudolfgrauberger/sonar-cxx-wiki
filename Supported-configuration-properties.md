@@ -148,7 +148,17 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 
 <tr>
 <td>sonar.cxx.other.reportPath</td>
-<td>Ant pattern describing the path to unit test execution reports, <b>relative to projects root</b>.
+<td>Ant pattern describing the path to other reports, <b>relative to projects root</b>.
+<br>
+<i>Scope:</i> project
+<br>
+<i>Default:</i>
+</td>
+</tr>
+
+<tr>
+<td>sonar.cxx.other.sqales</td>
+<td>SQALE characteristics for 'external' code analysers. Ant pattern describing the path to SQALE characteristics, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
 <br>
@@ -279,7 +289,7 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 **Hints V0.9.4:**
 * Default values for ```reportPath``` values has been removed to get meaningful error messages. In case you were using the defaults you have to explicit define them in the ```sonar-project.properties``` file now.
 * ```forceZeroCoverage```: Depends on which key (```sonar.cxx.coverage.reportPath```, ```sonar.cxx.coverage.itReportPath```, ```sonar.cxx.coverage.overallReportPath```) is defined in the ```sonar-project.properties``` file now. Defining ```forceZeroCoverage``` alone will no more work.
-* It is now possible to define Sqale characteristics for external rules (other) but there are still no predefined values.
+* EXPERIMENTAL: It is now possible to define SQALE characteristics for external rules (other) ```sonar.cxx.other.sqales```.
 
 **Hints V0.9.3:**
 * Starting with this version it is possible to automatically retrieve includes, defines and compiler options from a Visual Studio log file. Create the log file with the option ```/v:Diagnostic``` and assign it to ```sonar.cxx.compiler.reportPath```.
