@@ -161,6 +161,42 @@ It is also possible to add hyperlinks to the description, use ```<a>``` tags.
 </description>
 ```
 
+### SQALE characteristics (>= V0.9.4) ###
+Starting with the version 0.9.4 it is also possible to define SQALE characteristics for other rules. To define the SQALE characteristics an extra XML file has to be defined and assigned to ```sonar.cxx.other.sqales```. Assign the XML file on server side to the configuration property on the page 'C++ settings / (2) Code analysis' and restart the server to enable it (same as with rule definitions). 
+
+Example:
+
+```XML
+<sqale>
+  <chc>
+    <key>PORTABILITY</key>
+    <name>Portability</name>
+    <chc>
+      <key>COMPILER_RELATED_PORTABILITY</key>
+      <name>Compiler related portability</name>
+      <chc>
+        <rule-repo>other</rule-repo>
+        <rule-key>key</rule-key>
+        <prop>
+          <key>remediationFunction</key>
+          <txt>linear_offset</txt>
+        </prop>
+        <prop>
+          <key>remediationFactor</key>
+          <val>5</val>
+          <txt>mn</txt>
+        </prop>
+        <prop>
+          <key>offset</key>
+          <val>10</val>
+          <txt>mn</txt>
+        </prop>
+      </chc>
+    </chc>
+  </chc>
+</sqale>
+```
+
 ### Using Template Rules ###
 This method allows the creation of rules on the fly, no need to for server restart. To do this follow these steps.
 
