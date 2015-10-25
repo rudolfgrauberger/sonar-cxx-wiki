@@ -162,7 +162,7 @@ It is also possible to add hyperlinks to the description, use ```<a>``` tags.
 ```
 
 ### SQALE characteristics (>= V0.9.4) ###
-Starting with the version 0.9.4 it is also possible to define SQALE characteristics for other rules. To define the SQALE characteristics an extra XML file has to be defined and assigned to ```sonar.cxx.other.sqales```. Assign the XML file on server side to the configuration property on the page 'C++ settings / (2) Code analysis' and restart the server to enable it (same as with rule definitions). 
+Starting with the version 0.9.4 it is also possible to define SQALE characteristics for other rules. To define the SQALE characteristics an extra XML file has to be defined and assigned to ```sonar.cxx.other.sqales```. Assign the XML file on server side to the configuration property on the page 'C++ settings / (2) Code analysis' and restart the server to enable it (same as with rule definitions). The XML file must fit the [XML schema for SQALE characteristics](https://github.com/wenns/sonar-cxx/blob/master/sonar-cxx-plugin/src/main/resources/com/sonar/sqale/cxx-model-project.xsd). For more complex examples have a look to the folder [SQALE](https://github.com/wenns/sonar-cxx/blob/master/sonar-cxx-plugin/src/main/resources/com/sonar/sqale/).
 
 Example:
 
