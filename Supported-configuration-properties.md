@@ -217,8 +217,7 @@ thus making the drilldown to details possible
 <tr>
 <td>sonar.cxx.coverage.forceZeroCoverage</td>
 <td>
-If 'True', assign zero line, integration and overall coverage to source files without coverage report(s),
-which results in a more realistic overall Technical Debt value.
+If 'True', source files without coverage report results are set to zero coverage. This results in more realistic overall Technical Debt values. This setting is only enabled if one ore more of the keys ```sonar.cxx.coverage.reportPath```, ```sonar.cxx.coverage.itReportPath``` or ```sonar.cxx.coverage.overallReportPath``` is defined (e.g. ```sonar.cxx.coverage.forceZeroCoverage``` and ```sonar.cxx.coverage.reportPath``` for line coverage). In case you have no report you have to assign a dummy report.
 <br>
 <i>Scope:</i> project
 <br>
