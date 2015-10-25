@@ -277,8 +277,18 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 </tr>
 </table>
 
-**Hints V0.9.0:**
-* Use ```sonar.cxx.include_directories``` instead of ```sonar.cxx.includeDirectories```
+**Hints V0.9.4:**
+* Default values for ```reportPath``` values has been removed to get meaningful error messages. In case you were using the defaults you have to explicit define them in the ```sonar-project.properties``` file now.
+* ```forceZeroCoverage```: Depends on which key (```sonar.cxx.coverage.reportPath```, ```sonar.cxx.coverage.itReportPath```, ```sonar.cxx.coverage.overallReportPath```) is defined in the ```sonar-project.properties``` file now. Defining ```forceZeroCoverage``` alone will no more work.
+* It is now possible to define Sqale characteristics for external rules (other) but there are still no predefined values.
+
+**Hints V0.9.3:**
+* Starting with this version it is possible to automatically retrieve includes, defines and compiler options from a Visual Studio log file. Create the log file with the option ```/v:Diagnostic``` and assign it to ```sonar.cxx.compiler.reportPath```.
+
+**Hints V0.9.2:**
+* New property ```sonar.cxx.coverage.forceZeroCoverage``` set coverage for source files without coverage report to 0. For V0.9.1 compatibility set value to 'false'.
+* New property ```sonar.cxx.xunit.provideDetails```. To get detailed unit test information set property to 'true'. This is also the V0.9.1 compatibility value. Because SonarQube does not support 'virtual files' any more test resources must be available.
+* new property ```sonar.cxx.cFilesPatterns```
 
 **Hints V0.9.1:**
 * Configuration setting ```sonar.cxx.cppncss.reportPath``` is no longer supported.
@@ -286,11 +296,6 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 * Rename configuration setting ```sonar.cxx.include_directories``` to ```sonar.cxx.includeDirectories```
 * new property ```sonar.cxx.forceIncludes```
 
-**Hints V0.9.2:**
-* New property ```sonar.cxx.coverage.forceZeroCoverage``` set coverage for source files without coverage report to 0. For V0.9.1 compatibility set value to 'false'.
-* New property ```sonar.cxx.xunit.provideDetails```. To get detailed unit test information set property to 'true'. This is also the V0.9.1 compatibility value. Because SonarQube does not support 'virtual files' any more test resources must be available.
-* new property ```sonar.cxx.cFilesPatterns```
-
-**Hints V0.9.3:**
-* For Visual Studio users, after compiling solution with /v:Diagnostic feed the log with sonar.cxx.compiler.reportPath=buildlog.log to automatically retrieve includes, defines and compiler options
+**Hints V0.9.0:**
+* Use ```sonar.cxx.include_directories``` instead of ```sonar.cxx.includeDirectories```
 
