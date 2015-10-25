@@ -92,7 +92,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> <code>cppcheck-reports/cppcheck-result-*.xml</code>
+<i>Default:</i>
 </td>
 </tr>
 
@@ -102,7 +102,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> <code>rats-reports/rats-result-*.xml</code>
+<i>Default:</i>
 </td>
 </tr>
 
@@ -112,7 +112,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> <code>valgrind-reports/valgrind-result-*.xml</code>
+<i>Default:</i>
 </td>
 </tr>
 
@@ -122,7 +122,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> <code>vera++-reports/vera++-result-*.xml</code>
+<i>Default:</i>
 </td>
 </tr>
 
@@ -132,7 +132,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> <code>xunit-reports/xunit-result-*.xml</code>
+<i>Default:</i>
 </td>
 </tr>
 
@@ -142,7 +142,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> <code>pclint-reports/pclint-result-*.xml</code>
+<i>Default:</i>
 </td>
 </tr>
 
@@ -152,7 +152,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> <code>other-result/other-result-*.xml</code>
+<i>Default:</i>
 </td>
 </tr>
 
@@ -190,7 +190,7 @@ thus making the drilldown to details possible
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> <code>coverage-reports/coverage-*.xml</code>
+<i>Default:</i>
 </td>
 </tr>
 
@@ -200,7 +200,7 @@ thus making the drilldown to details possible
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> <code>coverage-reports/it-coverage-*.xml</code>
+<i>Default:</i>
 </td>
 </tr>
 
@@ -210,7 +210,7 @@ thus making the drilldown to details possible
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> <code>coverage-reports/overall-coverage-*.xml</code>
+<i>Default:</i>
 </td>
 </tr>
 
@@ -244,7 +244,7 @@ The current default settings can be used for VC++ compiler log file. If availabl
 <br>
 <i>Scope:</i> project
 <br>
-<i>Default:</i> <code>compiler-reports/BuildLog.htm</code>
+<i>Default:</i>
 </td>
 </tr>
 
