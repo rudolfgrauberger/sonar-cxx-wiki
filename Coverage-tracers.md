@@ -6,7 +6,7 @@
 ```BASH
 gcovr -x -r . > report.xml
 ```
-Note that gcovr version greater than 2.4 generates xml reports which may not be consumed as coverage reports for the project.
+Note that gcovr version (> 2.4) generates xml reports which may not be consumed as coverage reports for the project.
 
 ### Bullseye
 Create the XML coverage report with:
