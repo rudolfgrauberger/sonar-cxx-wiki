@@ -287,7 +287,7 @@ Below you find a list of code analyzers which have already been integrated using
 This will generate the following files:
 <ul>
 <li>
-<b>cpplint.xml</b>: that should be copied to $SONARQUBEHOME/extensions/rules/cxxexternal
+<b>cpplint.xml</b>: that should be copied to web ui as per above and server restarted after save
 </li>
 <li>
 <b>cpplint_mod.py</b>: that should be used to check the code
