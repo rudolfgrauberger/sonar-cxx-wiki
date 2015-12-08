@@ -314,7 +314,7 @@ and can be run as follows:
 <ol>
 <li>Copy the
 <a href="https://github.com/wenns/sonar-cxx/blob/master/sonar-cxx-plugin/src/main/resources/external/intel_inspector_rules.xml">Intel Inspector rules</a>
-to $SONARQUBEHOME/extension/rules/cxxexternal and restart the server
+to sonar web ui, as per above and restart server.
 </li>
 <li>Modify the used SonarQube quality profile to accommodate the newly added rules</li>
 <li>Run your test/application using the Intel Inspector and generate a CSV report</li>
