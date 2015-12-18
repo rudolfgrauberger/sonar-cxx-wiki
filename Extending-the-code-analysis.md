@@ -197,6 +197,40 @@ Example:
 </sqale>
 ```
 
+Example of Levels 1 and 2 of a [SQALE Quality Model](http://www.sqale.org/wp-content/uploads/2010/08/SQALE-Method-EN-V1-0.pdf):
+
+| Characteristic | Subcharacteristic |
+|----------------|-------------------|
+| Reusability | Extractability |
+| Reusability | Conciseness |
+| Reusability | Stability |
+| Portability | Language related portability |
+| Portability | Time zone related portability |
+| Portability | Hardware related portability |
+| Portability | External application related portability |
+| Portability | Compiler related portability |
+| Portability | OS related portability |
+| Maintainability | Understandability |
+| Maintainability | Readability |
+| Security | OS related security |
+| Security | User related security |
+| Security | Statement related security |
+| Efficiency | ROM related efficiency |
+| Efficiency | RAM related efficiency |
+| Efficiency | CPU related efficiency |
+| Changeability | Architecture related changeability |
+| Changeability | Logic related changeability |
+| Changeability | Data related changeability |
+| Reliability | Fault tolerance |
+| Reliability | Architecture related reliability |
+| Reliability | Resource related reliability |
+| Reliability | Synchronization related reliability |
+| Reliability | Statement related reliability |
+| Reliability | Logic related reliability |
+| Reliability | Data related reliability |
+| Testability | Integration Testing testability |
+| Testability | Unit Testing testability |
+
 ### Using Template Rules ###
 This method allows the creation of rules on the fly, no need to for server restart. To do this follow these steps.
 
