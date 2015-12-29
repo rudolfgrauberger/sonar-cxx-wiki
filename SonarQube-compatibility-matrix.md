@@ -125,6 +125,6 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
-  <td>partial</td>
+  <td>-</td>
  </tr>
 </table>
