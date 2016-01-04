@@ -21,12 +21,12 @@ git config --global core.safecrlf true
 ```
 Get sources by executing:
 ```
-git clone https://github.com/wenns/sonar-cxx.git
+git clone https://github.com/SonarOpenCommunity/sonar-cxx.git
 ```
 
 Committers must configure their SSH key (see GitHub documentation for Windows and Mac) and clone repository:
 ```
-git clone git@github.com:wenns/sonar-cxx.git
+git clone git@github.com:SonarOpenCommunity/sonar-cxx.git
 ```
 
 ###Build
