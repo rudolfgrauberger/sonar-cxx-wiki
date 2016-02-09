@@ -4,7 +4,7 @@ To keep the compiler grammar as simple as possible it was a conscious design dec
 
 In the description below you find some typical practices to mock the extensions or to replace them with supported alternatives.
 
-Additional data types are typically replaces with known data types:
+Additional data types are typically replaced with known data types:
 ```C++
 #define __int32 int
 __int32 n=0;
