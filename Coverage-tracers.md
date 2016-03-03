@@ -2,12 +2,11 @@
 
 1. Make sure to compile and link with the ```--coverage``` flag. Disable optimizations and switch on debugging.
 2. Execute your application / your tests. This will generate .gcda files.
-3. Collect the coverage information and generate the report using gcovr:
+3. Execute gcov to use the .gcda files precedently generated, it will generate .gcov files somewhere you define.
+4. Collect the coverage information and generate the report using gcovr:
 ```BASH
-gcovr -x -r . > report.xml
+gcovr -x --object-directory=ABSOLUTE_PATH_TO_GCOV_FILES_FOLDER > report.xml
 ```
-Note that gcovr version (> 2.4) generates xml reports which may not be consumed as coverage reports for the project.
-
 ### Bullseye
 Create the XML coverage report with:
 ```BASH
