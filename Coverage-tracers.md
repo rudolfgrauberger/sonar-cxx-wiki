@@ -8,7 +8,7 @@
 gcovr -x --object-directory=ABSOLUTE_PATH_TO_GCOV_FILES_FOLDER > report.xml
 ```
 **Hints:**
-* gcov coverage reports requires gcovr version <= 2.4 (as newer versions will not work with sonar-cxx). Version 3.2 or later does not meet the sonar-cxx requirements with paths in the generated xml reports and will not work.
+* sonar-cxx plugin requires gcov coverage reports with paths in the generated xml reports.
 
 ### Bullseye
 Create the XML coverage report with:
