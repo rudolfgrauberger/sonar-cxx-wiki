@@ -56,11 +56,11 @@ V0.9.3 and later:
      <!-- required fields -->
      <key>the-rule-key</key>
      <name>The purpose of the rule</name>
-
-     <!-- optional fields -->
      <description>
        <![CDATA[The description]]>
      </description>
+
+     <!-- optional fields -->
      <internalKey>Checker/TreeWalker/LocalVariableName</internalKey>
      <severity>BLOCKER</severity>
      <cardinality>MULTIPLE</cardinality>
