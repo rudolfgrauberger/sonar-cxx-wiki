@@ -103,7 +103,9 @@ Build started 26.02.2014 17:59:20.
 ```
 
 **Visual Studio 2015 regular expression**
+
 The following regular expression handles Visual Studio 2015 and VC-14 compiler
+
 ```
 sonar.cxx.compiler.regex=^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$
 ```
