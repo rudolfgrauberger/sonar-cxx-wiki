@@ -102,3 +102,8 @@ Build started 26.02.2014 17:59:20.
      1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112): warning C4995: 'strcpy': name was marked as #pragma deprecated
 ```
 
+**Visual Studio 2015 regular expression**
+The following regular expression handles Visual Studio 2015 and VC-14 compiler
+```
+sonar.cxx.compiler.regex=^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$
+```
