@@ -12,6 +12,7 @@ This Wiki contains usage guidelines and developer resources. Just navigate to th
 
 ### Usage
 * [[Running the analysis]]
+* [[Running cxx plugin outside SonarQube Cxx Lint]]
 * [[Predefined Macros]]
 * [[Force Include]]
 * [[Error Recovery]]
