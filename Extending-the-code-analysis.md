@@ -361,3 +361,46 @@ SonarQube.
 </td>
 </tr>
 </table>
+
+
+## Writing your own rules using SSLR, aka custom cxx-rules
+
+You can write custom rules based in SSLR and in Cxx Api, to do this you need to create your own plugin and create a dependency in you pom.xml to the Cxx Plugin version you are using. And extend your checks with CustomCxxRulesDefinition
+
+```
+    <dependency>
+      <groupId>org.codehaus.sonar-plugins.cxx</groupId>
+      <artifactId>sonar-cxx-plugin</artifactId>
+      <type>sonar-plugin</type>
+      <version>0.9.5-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+```
+
+### Example of a rule
+```
+public class MyCustomRulesDefinition extends CustomCxxRulesDefinition {
+
+  @Override
+  public String repositoryName() {
+    return "Repository";
+  }
+
+  @Override
+  public String repositoryKey() {
+    return "repo";
+  }
+
+  @SuppressWarnings("rawtypes")
+  @Override
+  public Class[] checkClasses() {
+    return new Class[] { UsingNamespaceCheck.class };
+  }
+}
+```
+
+### Installation and usage
+Follows a normal procedure for any Sonar plugin, drop in extensions/plugins in you Sonar server and restart. After this enable the rules and run a new analysis.
+
+### Sample code
+You can use the https://github.com/SonarOpenCommunity/cxx-custom-checks-example-plugin as a base for your rules, kudos @felipebz
