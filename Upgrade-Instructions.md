@@ -1,4 +1,11 @@
+**Upgrade to 0.9.5**
+
+* Compatible with SonarQube 4.5.2+, 5.0.x, 5.1.x, 5.3.x and 5.4.x
+* Java Runtime Environment 7 and 8 are supported. JRE 8 is recommended because of higher system performance.
+
+
 **Upgrade to 0.9.4**
+
 * Compatible with SonarQube 4.5.2+, 5.0.x and 5.1.x
 * Java Runtime Environment 7 and 8 are supported. JRE 8 is recommended because of higher system performance.
 * Default values for ```reportPath``` values has been removed to get meaningful error messages. In case you were using the defaults you have to explicit define them in the ```sonar-project.properties``` file now.
