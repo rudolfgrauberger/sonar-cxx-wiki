@@ -109,3 +109,20 @@ The following regular expression handles Visual Studio 2015 and VC-14 compiler
 ```
 sonar.cxx.compiler.regex=^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$
 ```
+
+* Regular expressions summary table
+
+<table>
+<tr>
+<td>Visual Studio Version</td>
+<td>Regular Expression</td>
+</tr>
+
+<tr>
+<td>Visual Studio 2010 to 2013</td>
+<td>^.*>(?<filename>.*)\\((?<line>[0-9]+)\\):\\x20warning\\x20(?<id>C\\d\\d\\d\\d):(?<message>.*)$</td>
+</tr>
+<tr>
+<td>Visual Studio 2015</td>
+<td>^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$</td>
+</tr>
