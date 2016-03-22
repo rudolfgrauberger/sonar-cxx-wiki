@@ -17,7 +17,22 @@ sonar.cxx.compiler.regex=^(.*):([0-9]+):[0-9]+: warning: (.*)\\[(.*)\\]$
 
 ### Microsofts Visual Studio Compiler
 
-The compiler sensor consumes the warning messages available in the build log. Depending on the configuration properties there are more or less warnings available.
+The compiler sensor consumes the warning messages available in the build log. Depending on the configuration properties there are more or less warnings available. Brefly these are the regular expressions that should be used, see details in next secitons
+
+<table>
+<tr>
+<td>Visual Studio Version</td>
+<td>Regular Expression</td>
+</tr>
+
+<tr>
+<td>Visual Studio 2010 to 2013</td>
+<td>^.*>(?<filename>.*)\\((?<line>[0-9]+)\\):\\x20warning\\x20(?<id>C\\d\\d\\d\\d):(?<message>.*)$</td>
+</tr>
+<tr>
+<td>Visual Studio 2015</td>
+<td>^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$</td>
+</tr>
 
 **Visual Studio settings**
 
@@ -110,19 +125,3 @@ The following regular expression handles Visual Studio 2015 and VC-14 compiler
 sonar.cxx.compiler.regex=^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$
 ```
 
-* Regular expressions summary table
-
-<table>
-<tr>
-<td>Visual Studio Version</td>
-<td>Regular Expression</td>
-</tr>
-
-<tr>
-<td>Visual Studio 2010 to 2013</td>
-<td>^.*>(?<filename>.*)\\((?<line>[0-9]+)\\):\\x20warning\\x20(?<id>C\\d\\d\\d\\d):(?<message>.*)$</td>
-</tr>
-<tr>
-<td>Visual Studio 2015</td>
-<td>^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$</td>
-</tr>
