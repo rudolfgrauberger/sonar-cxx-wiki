@@ -17,7 +17,7 @@ sonar.cxx.compiler.regex=^(.*):([0-9]+):[0-9]+: warning: (.*)\\[(.*)\\]$
 
 ### Microsofts Visual Studio Compiler
 
-The compiler sensor consumes the warning messages available in the build log. Depending on the configuration properties there are more or less warnings available. Brefly these are the regular expressions that should be used, see details in next secitons
+The compiler sensor consumes the warning messages available in the build log. Depending on the configuration properties there are more or less warnings available. Briefly these are the regular expressions that should be used, see details in next sections.
 
 <table>
 <tr>
@@ -33,6 +33,7 @@ The compiler sensor consumes the warning messages available in the build log. De
 <td>Visual Studio 2015</td>
 <td>^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$</td>
 </tr>
+
 
 **Visual Studio settings**
 
