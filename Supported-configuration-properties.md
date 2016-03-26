@@ -311,6 +311,7 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 * ```sonar.cxx.nunit.reportsPaths```: XML output from the NUnit console runner is supported now
 * ```reportPath```: path can be relative or absolute now. Paths inside and outside of root folder are supported.
 * ```reportPath```: Single path or comma separated list of paths is supported.
+* Support of placeholder in configuration file. Format is ${xxx}, supported are environment variables, Java system properties and SonarQube properties.
 
 **Hints V0.9.4:**
 * Default values for ```reportPath``` values has been removed to get meaningful error messages. In case you were using the defaults you have to explicit define them in the ```sonar-project.properties``` file now.
