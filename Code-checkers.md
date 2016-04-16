@@ -66,6 +66,20 @@ valgrind --xml=yes --xml-file=report.xml <program> <arguments>
 
 To extend the set of known Valgrind rules see [[Extending the code analysis]].
 
+### Dr. Memory
+SonarQube can be fed with results of a Dr. Memory analysis.
+
+Just launch your program with Dr. Memory. The actual call should look something like:
+
+```BASH
+drmemory.exe -logdir c:/logs -- c:/path/to/my/app
+```
+Now, you just have to fill the sonar.cxx.drmemory.reportPath:
+
+```BASH
+sonar.cxx.drmemory.reportPath=c:/logs/**/results.txt
+```
+
 ### Vera++
 Vera++ does static C++ code checking, focusing mostly on style issues. There are two possibilities to create a report.
 
