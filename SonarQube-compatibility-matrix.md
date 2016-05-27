@@ -50,7 +50,7 @@
   <td>-</td>
  </tr>
  <tr>
-  <td><b>3.7.x</b></td>
+  <td><b>3.7.x (LTS)</b></td>
   <td>X</td>
   <td>X</td>
   <td>-</td>
