@@ -161,4 +161,13 @@
   <td>-</td>
   <td>X</td>
  </tr>
+ <tr>
+  <td><b>5.5.x</b></td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>X</td>
+ </tr>
 </table>
