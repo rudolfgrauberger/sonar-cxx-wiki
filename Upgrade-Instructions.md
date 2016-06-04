@@ -1,6 +1,11 @@
+**Upgrade to 0.9.6**
+
+* Compatible with SonarQube 5.6.x
+* Java Runtime Environment 8 is supported.
+
 **Upgrade to 0.9.5**
 
-* Compatible with SonarQube 4.5.2+, 5.0.x, 5.1.x, 5.3.x and 5.4.x
+* Compatible with SonarQube 4.5.2+, 5.0.x, 5.1.x, 5.3.x, 5.4.x and 5.5.x
 * Java Runtime Environment 7 and 8 are supported. JRE 8 is recommended because of higher system performance.
 * Undocumented public API detection: documentation for methods marked with "override" is optional now. This results typically in less documentation issues.
 * Improved calculation of metric COMPLEXITY_IN_CLASSES. Values for COMPLEXITY_IN_CLASSES can be different.
