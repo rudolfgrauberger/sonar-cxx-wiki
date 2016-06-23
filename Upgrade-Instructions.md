@@ -1,7 +1,9 @@
 **Upgrade to 0.9.6**
 
 * Compatible with SonarQube 5.6.x
-* Java Runtime Environment 8 is supported.
+* Java Runtime Environment 8 is supported (end of Java 7 support).
+* remove deprecated SQALE quality model; `sonar.cxx.other.sqales` is no more supported
+* support of new SonarQube quality model; update the [format of the rule files](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Extending-the-code-analysis#the-format-of-the-rules-file)
 
 **Upgrade to 0.9.5**
 
