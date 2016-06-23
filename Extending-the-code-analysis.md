@@ -137,6 +137,25 @@ V0.9.6 and later:
   </rule>
 </rules>
 ```
+
+Example:
+```XML
+<rules>
+  <rule>
+    <key>S1442</key>
+    <name>"alert(...)" should not be used</name>
+    <description>alert(...) can be useful for debugging during development, but ...</description>
+    <tag>cwe</tag>
+    <tag>security</tag>
+    <tag>user-experience</tag>
+    <debtRemediationFunction>CONSTANT_ISSUE</debtRemediationFunction>
+    <debtRemediationFunctionBaseOffset>10min</debtRemediationFunctionBaseOffset>
+  </rule>
+
+  <!-- another rules... -->
+</rules>
+```
+
 Deprecated but still supported:
 ```XML
 <rules>
@@ -149,49 +168,7 @@ Deprecated but still supported:
 </rules>
 ```
 
-Where the fields have the following semantics:
-
-<table>
-<tr>
-<td><b>Tag/Attribute</b></td>
-<td><b>MySql</b></td>
-<td><b>Semantic</b></td>
-</tr>
-
-<tr>
-<td>key [RULE_ID]</td>
-<td>varchar(200)</td>
-<td>Id of the rule, should match the ID in the external reports.<br>Note: Only alphabetic characters, digits and underscores are permitted for declaring the key. First sign should not be a digit.</td>
-</tr>
-
-<tr>
-<td>name</td>
-<td>varchar(200)</td>
-<td>Can be really anything, in the quality profile in SonarQube its the first name that is displayed per rule</td>
-</tr>
-
-<tr>
-<td>configKey</td>
-<td>varchar(500)</td>
-<td>This key is used later by the sensor to configure the code analyzer ([Extending+Coding+Rules] (http://docs.codehaus.org/display/SONAR/Extending+Coding+Rules)) </td>
-</tr>
-
-<tr>
-<td>category name</td>
-<td></td>
-<td>Can be anything, examples include Maintainability Style Usability etc</td>
-</tr>
-
-<tr>
-<td>description</td>
-<td>mediumtext</td>
-<td>In the quality profile in SonarQube UI, the description will be show after expanding each rule</td>
-</tr>
-
-</table>
-
 Example:
-
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rules>
