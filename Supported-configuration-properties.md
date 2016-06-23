@@ -127,6 +127,16 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 </tr>
 
 <tr>
+<td>sonar.cxx.drmemory.reportPath</td>
+<td>Ant pattern describing the path to <a href="http://drmemory.org/">Dr Memory</a> reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<i>Scope:</i> project
+<br>
+<i>Default:</i>
+</td>
+</tr>
+
+<tr>
 <td>sonar.cxx.xunit.reportPath</td>
 <td>Ant pattern describing the path to unit test execution reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 <br>
@@ -185,6 +195,16 @@ thus making the drilldown to details possible
 </tr>
 
 <tr>
+<td>sonar.cxx.xunit.reportsPaths</td>
+<td>Ant pattern describing the path to unit test execution reports (XUnit XML output). Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<i>Scope:</i> project
+<br>
+<i>Default:</i>
+</td>
+</tr>
+
+<tr>
 <td>sonar.cxx.pclint.reportPath</td>
 <td>Ant pattern describing the path to PC-lint reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 <br>
@@ -206,7 +226,7 @@ thus making the drilldown to details possible
 
 <tr>
 <td>sonar.cxx.other.sqales</td>
-<td>SQALE characteristics for 'external' code analysers. Ant pattern describing the path to SQALE characteristics, <b>relative to projects root</b>.
+<td><b>deprecated with v0.9.6:</b> SQALE characteristics for 'external' code analysers. Ant pattern describing the path to SQALE characteristics, <b>relative to projects root</b>.
 <br>
 <i>Scope:</i> project
 <br>
@@ -305,6 +325,12 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 </td>
 </tr>
 </table>
+
+**Hints V0.9.6:**
+* SQALE quality model is no more supported: ```sonar.cxx.other.sqales```
+* support of new [SonarQube Quality Model](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Extending-the-code-analysis#the-format-of-the-rules-file)
+* support of [Dr Memory](http://drmemory.org/) reports: ```sonar.cxx.drmemory.reportPath```
+* ```sonar.cxx.xunit.reportsPaths```: XUnit over sonar-dotnet-tests-library is supported now
 
 **Hints V0.9.5:**
 * ```sonar.cxx.vstest.reportsPaths```: TRX output from VSTest is supported now
