@@ -156,6 +156,13 @@ Example:
 </rules>
 ```
 
+It is also possible to add hyperlinks to the description, use ```<a>``` tags.
+```HTML
+<description>
+  <![CDATA[<a href="http://example.com/xyz.html">Link</a>]]>
+</description>
+```
+
 Deprecated but still supported:
 ```XML
 <rules>
@@ -168,30 +175,7 @@ Deprecated but still supported:
 </rules>
 ```
 
-Example:
-```XML
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<rules>
-  <rule key="Te0001DataContextCannotBeSet">
-    <name><![CDATA[Te0001DataContextCannotBeSet]]></name>
-    <configKey>
-      <![CDATA[Te0001DataContextCannotBeSet@PC_LINT]]>
-    </configKey>
-    <category name="Maintainability" />
-    <description>
-      <![CDATA[ Data Context Should no be set, please use another approach ]]>
-    </description>
-  </rule>
-</rules>
-```
-It is also possible to add hyperlinks to the description, use ```<a>``` tags.
-```HTML
-<description>
-  <![CDATA[<a href="http://example.com/xyz.html">Link</a>]]>
-</description>
-```
-
-### SQALE characteristics (>= V0.9.4) ###
+### Deprecated: SQALE characteristics (only V0.9.4, V0.9.5) ###
 Starting with the version 0.9.4 it is also possible to define SQALE characteristics for other rules. To define the SQALE characteristics an extra XML file has to be defined and assigned to ```sonar.cxx.other.sqales```. Assign the XML file on server side to the configuration property on the page 'C++ settings / (2) Code analysis' and restart the server to enable it (same as with rule definitions). The XML file must fit the [XML schema for SQALE characteristics](https://github.com/wenns/sonar-cxx/blob/master/sonar-cxx-plugin/src/main/resources/com/sonar/sqale/cxx-model-project.xsd). For more complex examples have a look to the folder [SQALE](https://github.com/wenns/sonar-cxx/blob/master/sonar-cxx-plugin/src/main/resources/com/sonar/sqale/).
 
 Example:
@@ -228,38 +212,6 @@ Example:
 ```
 
 Example of Levels 1 and 2 of a [SQALE Quality Model](http://www.sqale.org/wp-content/uploads/2010/08/SQALE-Method-EN-V1-0.pdf):
-
-| Characteristic | Subcharacteristic |
-|----------------|-------------------|
-| Reusability | Extractability |
-| Reusability | Conciseness |
-| Reusability | Stability |
-| Portability | Language related portability |
-| Portability | Time zone related portability |
-| Portability | Hardware related portability |
-| Portability | External application related portability |
-| Portability | Compiler related portability |
-| Portability | OS related portability |
-| Maintainability | Understandability |
-| Maintainability | Readability |
-| Security | OS related security |
-| Security | User related security |
-| Security | Statement related security |
-| Efficiency | ROM related efficiency |
-| Efficiency | RAM related efficiency |
-| Efficiency | CPU related efficiency |
-| Changeability | Architecture related changeability |
-| Changeability | Logic related changeability |
-| Changeability | Data related changeability |
-| Reliability | Fault tolerance |
-| Reliability | Architecture related reliability |
-| Reliability | Resource related reliability |
-| Reliability | Synchronization related reliability |
-| Reliability | Statement related reliability |
-| Reliability | Logic related reliability |
-| Reliability | Data related reliability |
-| Testability | Integration Testing testability |
-| Testability | Unit Testing testability |
 
 ### Using Template Rules ###
 This method allows the creation of rules on the fly, no need to for server restart. To do this follow these steps.
