@@ -41,6 +41,10 @@ If you're using a patched or not-yet-supported version of an integrated code che
   <td>Vera++ Custom Rules</td>
   </tr>
   <tr>
+  <td>sonar.cxx.drmemory.customRules</td>
+  <td>Dr Memory Analysis Rules</td>
+  </tr>
+  <tr>
   <td>sonar.cxx.other.rules</td>
   <td>Unsupported Code Checker Custom Rules, see below</td>
   </tr>
