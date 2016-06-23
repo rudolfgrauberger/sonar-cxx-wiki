@@ -51,42 +51,91 @@ If you're using a patched or not-yet-supported version of an integrated code che
   <table>
 
 ### The format of the rules file
-The format of rules file is expected to be the following ([RulesDefinitionXmlLoader](http://javadocs.sonarsource.org/4.4/apidocs/org/sonar/api/server/rule/RulesDefinitionXmlLoader.html)):
+The format of rules file is expected to be the following ([RulesDefinitionXmlLoader](https://github.com/SonarSource/sonarqube/blob/master/sonar-plugin-api/src/main/java/org/sonar/api/server/rule/RulesDefinitionXmlLoader.java)):
 
-V0.9.3 and later:
+V0.9.6 and later:
 ```XML
 <rules>
-   <rule>
-     <!-- required fields -->
-     <key>the-rule-key</key>
-     <name>The purpose of the rule</name>
-     <description>
-       <![CDATA[The description]]>
-     </description>
+  <rule>
+    <!-- Required key. Max length is 200 characters. -->
+    <key>the-rule-key</key>
 
-     <!-- optional fields -->
-     <internalKey>Checker/TreeWalker/LocalVariableName</internalKey>
-     <severity>BLOCKER</severity>
-     <cardinality>MULTIPLE</cardinality>
-     <status>BETA</status>
-     <param>
-       <key>the-param-key</key>
-       <tag>style</tag>
-       <tag>security</tag>
-       <description>
-         <![CDATA[the param-description]]>
-       </description>
-       <defaultValue>42</defaultValue>
-     </param>
-     <param>
-       <key>another-param</key>
-     </param>
+    <!-- Required name. Max length is 200 characters. -->
+    <name>The purpose of the rule</name>
 
-     <!-- deprecated fields -->
-     <configKey>Checker/TreeWalker/LocalVariableName</configKey>
-     <priority>BLOCKER</priority>
-   </rule>
- </rules>
+    <!-- Required description. No max length. -->
+    <description>
+      <![CDATA[The description]]>
+    </description>
+    <!-- Optional format of description. Supported values are HTML (default) and MARKDOWN. -->
+    <descriptionFormat>HTML</descriptionFormat>
+
+    <!-- Optional key for configuration of some rule engines -->
+    <internalKey>Checker/TreeWalker/LocalVariableName</internalKey>
+
+    <!-- Default severity when enabling the rule in a Quality profile.  -->
+    <!-- Possible values are INFO, MINOR, MAJOR (default), CRITICAL, BLOCKER. -->
+    <severity>BLOCKER</severity>
+
+    <!-- Possible values are SINGLE (default) and MULTIPLE for template rules -->
+    <cardinality>SINGLE</cardinality>
+
+    <!-- Status displayed in rules console. Possible values are BETA, READY (default), DEPRECATED. -->
+    <status>BETA</status>
+
+    <!-- Type as defined by the SonarQube Quality Model. Possible values are CODE_SMELL (default), BUG and VULNERABILITY.-->
+    <type>BUG</type>
+
+    <!-- Optional tags. See org.sonar.api.server.rule.RuleTagFormat. The maximal length of all tags is 4000 characters. -->
+    <tag>misra</tag>
+    <tag>multi-threading</tag>
+
+    <!-- Optional parameters -->
+    <param>
+      <!-- Required key. Max length is 128 characters. -->
+      <key>the-param-key</key>
+      <description>
+        <![CDATA[the optional description, in HTML format. Max length is 4000 characters.]]>
+      </description>
+      <!-- Optional default value, used when enabling the rule in a Quality profile. Max length is 4000 characters. -->
+      <defaultValue>42</defaultValue>
+    </param>
+    <param>
+      <key>another-param</key>
+    </param>
+
+    <!-- Quality Model - type of debt remediation function -->
+    <!-- See enum {@link org.sonar.api.server.debt.DebtRemediationFunction.Type} for supported values -->
+    <!-- It was previously named 'debtRemediationFunction' which is still supported but deprecated since 5.5 -->
+    <!-- Since 5.5 -->
+    <remediationFunction>LINEAR_OFFSET</remediationFunction>
+
+    <!-- Quality Model - raw description of the "gap", used for some types of remediation functions. -->
+    <!-- See {@link org.sonar.api.server.rule.RulesDefinition.NewRule#setGapDescription(String)} -->
+    <!-- It was previously named 'effortToFixDescription' which is still supported but deprecated since 5.5 -->
+    <!-- Since 5.5 -->
+    <gapDescription>Effort to test one uncovered condition</gapFixDescription>
+
+    <!-- Quality Model - gap multiplier of debt remediation function. Must be defined only for some function types. -->
+    <!-- See {@link org.sonar.api.server.rule.RulesDefinition.DebtRemediationFunctions} -->
+    <!-- It was previously named 'debtRemediationFunctionCoefficient' which is still supported but deprecated since 5.5 -->
+    <!-- Since 5.5 -->
+    <remediationFunctionGapMultiplier>10min</remediationFunctionGapMultiplier>
+
+    <!-- Quality Model - base effort of debt remediation function. Must be defined only for some function types. -->
+    <!-- See {@link org.sonar.api.server.rule.RulesDefinition.DebtRemediationFunctions} -->
+    <!-- It was previously named 'debtRemediationFunctionOffset' which is still supported but deprecated since 5.5 -->
+    <!-- Since 5.5 -->
+    <remediationFunctionBaseEffort>2min</remediationFunctionBaseEffort>
+
+    <!-- Deprecated field, replaced by "internalKey" -->
+    <configKey>Checker/TreeWalker/LocalVariableName</configKey>
+
+    <!-- Deprecated field, replaced by "severity" -->
+    <priority>BLOCKER</priority>
+
+  </rule>
+</rules>
 ```
 Deprecated but still supported:
 ```XML
