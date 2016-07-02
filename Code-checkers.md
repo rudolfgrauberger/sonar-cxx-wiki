@@ -127,3 +127,49 @@ To extend the set of known PC-lint rules see [[Extending the code analysis]].
 
 _Note: Rules for this tool are disabled by default, so they need to be enabled in the relevant quality profile before they can be imported into SonarQube._
 
+### Dr. Memory
+SonarQube can be fed with results of a [Dr. Memory](http://drmemory.org/) analysis.
+
+Just launch your program with **Dr. Memory**. The actual call should look something like:
+
+```BASH
+drmemory.exe -logdir c:/logs -- c:/path/to/my/app
+```
+Now, you just have to fill the **sonar.cxx.drmemory.reportPath**:
+
+```BASH
+sonar.cxx.drmemory.reportPath=c:/logs/**/results.txt
+```
+
+The results.txt file should look something like:
+
+```BASH
+Dr. Memory version 1.8.0 build 8 built on Sep  9 2014 16:27:02
+Dr. Memory results for pid 1952: "Mask.Acceptance.Tests.exe"
+Application cmdline: "Mask.Acceptance.Tests.exe"
+Recorded 108 suppression(s) from default C:\Program Files (x86)\Dr. Memory\bin\suppress-default.txt
+
+Error #1: UNINITIALIZED READ: reading register eax
+# 0 ImageElementParser::Parse                                                 [r:\developpement\mask\peage\api_masque\sources\maskcpp\core\parsing\imageelementparser.cpp:21]
+# 1 MRTComponentsParser::Parse                                                [r:\developpement\mask\peage\api_masque\sources\maskcpp\core\parsing\mrtcomponentsparser.cpp:47]
+# 2 MRTPageParser::Parse                                                      [r:\developpement\mask\peage\api_masque\sources\maskcpp\core\parsing\mrtpageparser.cpp:13]
+# 3 MRTFileParser::Parse                                                      [r:\developpement\mask\peage\api_masque\sources\maskcpp\core\parsing\mrtfileparser.cpp:22]
+# 4 MRTMasqueParserAdapter::Parser                                            [r:\developpement\mask\peage\api_masque\sources\maskcpp\core\parsing\mrtmasqueparseradapter.cpp:12]
+# 5 Mask::Load                                                                [r:\developpement\mask\peage\api_masque\sources\maskcpp\core\mask.cpp:15]
+# 6 Mask::Load                                                                [r:\developpement\mask\peage\api_masque\sources\maskcpp\core\mask.cpp:8]
+# 7 BitmapGenerationConfiguration::AndGetResultAsBmpContent                   [r:\developpement\mask\peage\api_masque\sources\maskcpp\factory\maskfactory.h:72]
+# 8 MaskAcceptanceTest::LaunchTest                                            [r:\developpement\mask\peage\api_masque\tests\acceptance\acceptancetestexecutor.cpp:68]
+# 9 conditions::Conditions_OnImage_Test::TestBody                             [r:\developpement\mask\peage\api_masque\tests\acceptance\conditionstest.cpp:44]
+#10 testing::internal::HandleSehExceptionsInMethodIfSupported<>               [r:\developpement\mask\build\packages\external.google-test.1.6.2-dev\sources\src\gtest.cc:2075]
+#11 testing::internal::HandleExceptionsInMethodIfSupported<>                  [r:\developpement\mask\build\packages\external.google-test.1.6.2-dev\sources\src\gtest.cc:2126]
+#12 testing::Test::Run                                                        [r:\developpement\mask\build\packages\external.google-test.1.6.2-dev\sources\src\gtest.cc:2162]
+#13 testing::TestInfo::Run                                                    [r:\developpement\mask\build\packages\external.google-test.1.6.2-dev\sources\src\gtest.cc:2338]
+#14 testing::TestCase::Run                                                    [r:\developpement\mask\build\packages\external.google-test.1.6.2-dev\sources\src\gtest.cc:2445]
+#15 testing::internal::UnitTestImpl::RunAllTests                              [r:\developpement\mask\build\packages\external.google-test.1.6.2-dev\sources\src\gtest.cc:4237]
+#16 testing::internal::HandleSehExceptionsInMethodIfSupported<>               [r:\developpement\mask\build\packages\external.google-test.1.6.2-dev\sources\src\gtest.cc:2075]
+#17 testing::internal::HandleExceptionsInMethodIfSupported<>                  [r:\developpement\mask\build\packages\external.google-test.1.6.2-dev\sources\src\gtest.cc:2126]
+#18 testing::UnitTest::Run                                                    [r:\developpement\mask\build\packages\external.google-test.1.6.2-dev\sources\src\gtest.cc:3874]
+#19 main                                                                      [r:\developpement\mask\build\packages\external.google-test.1.6.2-dev\sources\src\gtest_main.cc:38]
+Note: @0:00:11.965 in thread 1804
+Note: instruction: test   %eax %eax
+```
