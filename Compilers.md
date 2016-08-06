@@ -73,7 +73,7 @@ call "%ProgramFiles(x86)%\Microsoft Visual Studio 10.0\Common7\Tools\vsvars32.ba
 MSBuild.exe example.proj /t:rebuild /p:Configuration=Release;WarningLevel=3 /fileLogger /fileLoggerParameters:WarningsOnly;LogFile=example.log;Verbosity=detailed;Encoding=UTF-8
 
 ```
-**Retrieving compiler infomation from buildlog**
+**Retrieving compiler information from buildlog**
 
 Version 0.9.3 and above extracts includes, defines and compiler options from the build log automatically.
 
