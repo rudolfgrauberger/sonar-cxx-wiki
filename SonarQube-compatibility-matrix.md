@@ -199,4 +199,24 @@
   <td>-</td>
   <td>X</td>
  </tr>
+ <tr>
+  <td><b>6.0.x</b></td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+ </tr>
+ <tr>
+  <td><b>6.1.x</b></td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+ </tr>
 </table>
