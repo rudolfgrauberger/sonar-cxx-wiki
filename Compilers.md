@@ -10,16 +10,23 @@ To feed GCC warnings into SonarQube, make sure to:
 sonar.cxx.compiler.parser=GCC
 sonar.cxx.compiler.reportPath=*.log
 sonar.cxx.compiler.charset=UTF-8
-```
-If gcc outputs the column numbers
-```
 sonar.cxx.compiler.regex=^(.*):([0-9]+):[0-9]+: warning: (.*)\\[(.*)\\]$
 ```
-Else if gcc doesn't output the column numbers (e.g. -fno-show-column is set or gcc version 4.4.7)
+<table>
+<tr>
+<td>GCC output Variant</td>
+<td>Regular Expression</td>
+</tr>
 
-```
-sonar.cxx.compiler.regex=^(.*):([0-9]+): warning: (.*)\\[(.*)\\]$
-```
+<tr>
+<td>column numbers are present</td>
+<td>^(.*):([0-9]+):[0-9]+: warning: (.*)\\[(.*)\\]$</td>
+</tr>
+<tr>
+<td>No column numbers, e.g. -fno-show-column or gcc 4.4.7 </td>
+<td>^(.*):([0-9]+): warning: (.*)\\[(.*)\\]$</td>
+</tr>
+</table>
 3. Activate the rules from the rule repository "compiler-gcc"
 4. Run the analysis
 
