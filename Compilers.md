@@ -35,11 +35,11 @@ The compiler sensor consumes the warning messages available in the build log. De
 
 <tr>
 <td>Visual Studio 2010 to 2013</td>
-<td>^.*>(?<filename>.*)\\((?<line>[0-9]+)\\):\\x20warning\\x20(?<id>C\\d\\d\\d\\d):(?<message>.*)$</td>
+<td>``^.*>(?<filename>.*)\\((?<line>[0-9]+)\\):\\x20warning\\x20(?<id>C\\d\\d\\d\\d):(?<message>.*)$``</td>
 </tr>
 <tr>
 <td>Visual Studio 2015</td>
-<td>^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$</td>
+<td>``^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$``</td>
 </tr>
 </table>
 
