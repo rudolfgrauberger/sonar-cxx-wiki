@@ -10,6 +10,9 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 *Default:* `.cxx,.cpp,.cc,.c`
 
 Comma separated list of file name extensions to be considered as C++ source files during analysis.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.suffixes.headers
@@ -18,6 +21,9 @@ Comma separated list of file name extensions to be considered as C++ source file
 *Default:* `.hxx,.hpp,.hh,.h`
 
 Comma separated list of file name extensions to be considered as C++ header files during analysis.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.includeDirectories
@@ -26,10 +32,11 @@ Comma separated list of file name extensions to be considered as C++ header file
 *Default:* `---`
 
 Comma separated list of directories where the plugin will be looking for included files.
+* Note: the plugin doesn't know any standard include paths. If they should be used, configure them manually using this property.
+
 <br>
-Note: the plugin doesn't know any standard include paths. If they should be used, configure them manually using this property.
 <br>
-<i>Example:</i> `include, /usr/include`
+*Example:* `include, /usr/include`
 
 ===
 ### sonar.cxx.forceIncludes
@@ -39,17 +46,20 @@ Note: the plugin doesn't know any standard include paths. If they should be used
 
 Comma separated list of header files to be implicitly included at the beginning of each source file, for details see [[Force Include]]
 <br>
-<i>Example:</i> `VS10Macros.h`
+<br>
+*Example:* `VS10Macros.h`
 
 ===
 ### sonar.cxx.defines
 *Scope:* `system, project`
 <br>
+<br>
 *Default:* `---`
 
 List of macros which should be used during analysis. The syntax is the same the body of #define-directives, except the #define keyword itself. This is a multiline property, which means:
 * If you're using Sonar's Web UI just write a macro per line 
-* When setting via .properties-file separate macros using '\n\' 
+* When setting via .properties-file separate macros using `\n\` 
+<br>
 <br>
 *Example:*
 <pre>
@@ -66,6 +76,9 @@ DEBUG 1
 
 Comma-separated list of wildcard patterns used to detect C files. When
 a file matches any of the patterns, it is parsed in C-compatibility mode.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.cppcheck.reportPath
@@ -74,6 +87,9 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 *Default:* `---`
 
 Ant pattern describing the path to Cppcheck reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.rats.reportPath
@@ -82,6 +98,9 @@ Ant pattern describing the path to Cppcheck reports. Path can be relative or abs
 *Default:* `---`
 
 Ant pattern describing the path to RATS reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.valgrind.reportPath
@@ -90,6 +109,9 @@ Ant pattern describing the path to RATS reports. Path can be relative or absolut
 *Default:* `---`
 
 Ant pattern describing the path to Valgrind reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.vera.reportPath
@@ -98,6 +120,9 @@ Ant pattern describing the path to Valgrind reports. Path can be relative or abs
 *Default:* `---`
 
 Ant pattern describing the path to Vera++ reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.drmemory.reportPath
@@ -106,6 +131,9 @@ Ant pattern describing the path to Vera++ reports. Path can be relative or absol
 *Default:* `---`
 
 Ant pattern describing the path to <a href="http://drmemory.org/">Dr Memory</a> reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.xunit.reportPath
@@ -114,6 +142,9 @@ Ant pattern describing the path to <a href="http://drmemory.org/">Dr Memory</a> 
 *Default:* `---`
 
 Ant pattern describing the path to unit test execution reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.xunit.xsltURL
@@ -127,7 +158,8 @@ A name of a built in XSLT-file or an URL to an external one. Available builtins:
 * cpptestunit-1.x-to-junit-1.0.xsl: For transforming CppTestUnit-reports
 * cppunit-1.x-to-junit-1.0.xsl: For transforming CppUnit-reports
 <br>
-<i>Example</i>: `cppunit-1.x-to-junit-1.0.xsl`
+<br>
+*Example*: `cppunit-1.x-to-junit-1.0.xsl`
 
 ===
 ### sonar.cxx.xunit.provideDetails
@@ -137,6 +169,9 @@ A name of a built in XSLT-file or an URL to an external one. Available builtins:
 
 If "True", tries to assign testcases in reports to test resources in SonarQube,
 thus making the drilldown to details possible
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.vstest.reportsPaths
@@ -145,6 +180,9 @@ thus making the drilldown to details possible
 *Default:* `---`
 
 Ant pattern describing the path to unit test execution reports. TRX output from VSTest. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.nunit.reportsPaths
@@ -153,14 +191,21 @@ Ant pattern describing the path to unit test execution reports. TRX output from 
 *Default:* `---`
 
 Ant pattern describing the path to unit test execution reports. XML output from the NUnit console runner. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.xunit.reportsPaths
 *Scope:* `project`
 <br>
+<br>
 *Default:* `---`
 
 Ant pattern describing the path to unit test execution reports (XUnit XML output). Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.pclint.reportPath
@@ -169,6 +214,9 @@ Ant pattern describing the path to unit test execution reports (XUnit XML output
 *Default:* `---`
 
 Ant pattern describing the path to PC-lint reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.other.reportPath
@@ -177,6 +225,9 @@ Ant pattern describing the path to PC-lint reports. Path can be relative or abso
 *Default:* `---`
 
 Ant pattern describing the path to other reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.other.sqales
@@ -185,6 +236,9 @@ Ant pattern describing the path to other reports. Path can be relative or absolu
 *Default:* `---`
 
 <b>deprecated with v0.9.6:</b> SQALE characteristics for 'external' code analysers. Ant pattern describing the path to SQALE characteristics, <b>relative to projects root</b>.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.coverage.reportPath
@@ -193,6 +247,9 @@ Ant pattern describing the path to other reports. Path can be relative or absolu
 *Default:* `---`
 
 Ant pattern describing the path of unit test coverage reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.coverage.itReportPath
@@ -201,6 +258,9 @@ Ant pattern describing the path of unit test coverage reports. Path can be relat
 *Default:* `---`
 
 Ant pattern describing the path of integration test coverage reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.coverage.overallReportPath
@@ -209,6 +269,9 @@ Ant pattern describing the path of integration test coverage reports. Path can b
 *Default:* `---`
 
 Ant pattern describing the path of overall test coverage reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.coverage.forceZeroCoverage
@@ -217,6 +280,9 @@ Ant pattern describing the path of overall test coverage reports. Path can be re
 *Default:* `True`
 
 If 'True', source files without coverage report results are set to zero coverage. This results in more realistic overall Technical Debt values. This setting is only enabled if one ore more of the keys sonar.cxx.coverage.reportPath, sonar.cxx.coverage.itReportPath or sonar.cxx.coverage.overallReportPath is defined (e.g. sonar.cxx.coverage.forceZeroCoverage and sonar.cxx.coverage.reportPath for line coverage). In case you have no report you have to assign a dummy report.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.compiler.parser
@@ -225,6 +291,9 @@ If 'True', source files without coverage report results are set to zero coverage
 *Default:* `Visual C++`
 
 The format of the warnings file. Currently supported are 'Visual C++' and 'GCC'.
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.compiler.reportPath
@@ -234,6 +303,9 @@ The format of the warnings file. Currently supported are 'Visual C++' and 'GCC'.
 
 Ant pattern describing the path to compiler output file. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 The current default settings can be used for VC++ compiler log file. If available compiler macros and includes will be taken also from build log and used during the pre processing of sources. See [[Compilers]]
+<br>
+<br>
+*Example:*
 
 ===
 ### sonar.cxx.compiler.regex
@@ -247,6 +319,10 @@ Regular expression for four groups with this sequence:
 * message id
 * message text
 
+<br>
+<br>
+*Example:*
+
 ===
 ### sonar.cxx.compiler.charset
 *Scope:* `project`
@@ -254,6 +330,9 @@ Regular expression for four groups with this sequence:
 *Default:* `UTF-16`
 
 Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
+<br>
+<br>
+*Example:*
 
 ---
 
