@@ -13,7 +13,7 @@ Comma separated list of file name extensions to be considered as C++ source file
 
 ===
 ### sonar.cxx.suffixes.headers
-*Scope:* system, project
+*Scope:* `system, project`
 <br>
 *Default:* `.hxx,.hpp,.hh,.h`
 
@@ -21,9 +21,9 @@ Comma separated list of file name extensions to be considered as C++ header file
 
 ===
 ### sonar.cxx.includeDirectories
-*Scope:* system, project
+*Scope:* `system, project`
 <br>
-*Default:*
+*Default:* `---`
 
 Comma separated list of directories where the plugin will be looking for included files.
 <br>
@@ -33,25 +33,25 @@ Note: the plugin doesn't know any standard include paths. If they should be used
 
 ===
 ### sonar.cxx.forceIncludes
-*Scope:* system, project
+*Scope:* `system, project`
 <br>
-*Default:*
+*Default:* `---`
 
 Comma separated list of header files to be implicitly included at the beginning of each source file, for details see [[Force Include]]
 <br>
 <i>Example:</i> `VS10Macros.h`
 
 ===
-### sonar.cxx.defines<\td>
-*Scope:* system, project
+### sonar.cxx.defines
+*Scope:* `system, project`
 <br>
-*Default:*
+*Default:* `---`
 
 List of macros which should be used during analysis. The syntax is the same the body of #define-directives, except the #define keyword itself. This is a multiline property, which means:
-<li> If you're using Sonar's Web UI just write a macro per line </li>
-<li> When setting via .properties-file separate macros using '\n\' </li>
+* If you're using Sonar's Web UI just write a macro per line 
+* When setting via .properties-file separate macros using '\n\' 
 <br>
-<i>Example:</i>
+*Example:*
 <pre>
 va_arg(a, b) 0, \n\
 PRIx64 ""       \n\
@@ -60,7 +60,7 @@ DEBUG 1
 
 ===
 ### sonar.cxx.cFilesPatterns
-*Scope:* project
+*Scope:* `project`
 <br>
 *Default:* `*.c,*.C`
 
@@ -69,69 +69,69 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 
 ===
 ### sonar.cxx.cppcheck.reportPath
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path to Cppcheck reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.rats.reportPath
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path to RATS reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.valgrind.reportPath
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path to Valgrind reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.vera.reportPath
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path to Vera++ reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.drmemory.reportPath
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path to <a href="http://drmemory.org/">Dr Memory</a> reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.xunit.reportPath
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path to unit test execution reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.xunit.xsltURL
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 A name of a built in XSLT-file or an URL to an external one. Available builtins:
-<li>boosttest-1.x-to-junit-1.0.xsl: For transforming Boost-reports</li>
-<li>boosttest-1.x-to-junit-dummy-1.0.xsl: For transforming Boost-reports, simulating virtual files</li>
-<li>cpptestunit-1.x-to-junit-1.0.xsl: For transforming CppTestUnit-reports</li>
-<li>cppunit-1.x-to-junit-1.0.xsl: For transforming CppUnit-reports</li>
+* boosttest-1.x-to-junit-1.0.xsl: For transforming Boost-reports
+* boosttest-1.x-to-junit-dummy-1.0.xsl: For transforming Boost-reports, simulating virtual files
+* cpptestunit-1.x-to-junit-1.0.xsl: For transforming CppTestUnit-reports
+* cppunit-1.x-to-junit-1.0.xsl: For transforming CppUnit-reports
 <br>
 <i>Example</i>: `cppunit-1.x-to-junit-1.0.xsl`
 
 ===
 ### sonar.cxx.xunit.provideDetails
-*Scope:* project
+*Scope:* `project`
 <br>
 *Default:* `False`
 
@@ -140,79 +140,79 @@ thus making the drilldown to details possible
 
 ===
 ### sonar.cxx.vstest.reportsPaths
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path to unit test execution reports. TRX output from VSTest. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.nunit.reportsPaths
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path to unit test execution reports. XML output from the NUnit console runner. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.xunit.reportsPaths
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path to unit test execution reports (XUnit XML output). Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.pclint.reportPath
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path to PC-lint reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.other.reportPath
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path to other reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.other.sqales
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 <b>deprecated with v0.9.6:</b> SQALE characteristics for 'external' code analysers. Ant pattern describing the path to SQALE characteristics, <b>relative to projects root</b>.
 
 ===
 ### sonar.cxx.coverage.reportPath
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path of unit test coverage reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.coverage.itReportPath
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path of integration test coverage reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.coverage.overallReportPath
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path of overall test coverage reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 
 ===
 ### sonar.cxx.coverage.forceZeroCoverage
-*Scope:* project
+*Scope:* `project`
 <br>
 *Default:* `True`
 
@@ -220,7 +220,7 @@ If 'True', source files without coverage report results are set to zero coverage
 
 ===
 ### sonar.cxx.compiler.parser
-*Scope:* project
+*Scope:* `project`
 <br>
 *Default:* `Visual C++`
 
@@ -228,30 +228,28 @@ The format of the warnings file. Currently supported are 'Visual C++' and 'GCC'.
 
 ===
 ### sonar.cxx.compiler.reportPath
-*Scope:* project
+*Scope:* `project`
 <br>
-*Default:*
+*Default:* `---`
 
 Ant pattern describing the path to compiler output file. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 The current default settings can be used for VC++ compiler log file. If available compiler macros and includes will be taken also from build log and used during the pre processing of sources. See [[Compilers]]
 
 ===
 ### sonar.cxx.compiler.regex
-*Scope:* project
+*Scope:* `project`
 <br>
 *Default:* `^.*[\\\\,/](.*)\\(([0-9]+)\\)\\x20:\\x20warning\\x20(C\\d\\d\\d\\d):(.*)$`
 
 Regular expression for four groups with this sequence:
-<ol>
-<li>file name</li>
-<li>line number</li>
-<li>message id</li>
-<li>message text</li>
-</ol>
+* file name
+* line number
+* message id
+* message text
 
 ===
 ### sonar.cxx.compiler.charset
-*Scope:* project
+*Scope:* `project`
 <br>
 *Default:* `UTF-16`
 
