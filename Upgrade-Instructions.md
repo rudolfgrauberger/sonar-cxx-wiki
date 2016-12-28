@@ -1,3 +1,20 @@
+Follow the general [installation steps](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Installation). Changes in the different versions are described below:
+
+**Upgrade to 0.9.7**
+
+* Compatible with SonarQube 5.6.x, 6.0, 6.1 and 6.2
+* Java Runtime Environment 8 is supported (Java 9 is not support).
+* Improved report handling: there is a tolerant and a strict mode now. In tolerant mode analysis continue in case of errors in a report file. In strict mode an error in a report file will stop the analysis (`sonar.cxx.errorRecoveryEnabled`). In versions before this one behaviour was sometimes strict and sometimes tolerant.
+* `sonar.cxx.forceZeroCoverage`: better detection of executable lines. Resulting coverage can be slightly different.
+* Improved CPD algorithm with additional configuration settings `sonar.cxx.cpd.ignoreLiterals` and `sonar.cxx.cpd.ignoreIdentifiers`. To get same numbers as before set both to `False`.
+* Detailed mode from test metrics is no more supported with SQ 5.6 API.
+* Xpath check no more supported with SQ 5.6 API.
+* Computation of package/file tangle metrics no more supported with SQ 5.6 API.
+* `Unit Test Success (%)` is no more supported with SQ 5.6 API.
+* With SQ 6.2 overall and integration coverage metrics are no more supported.
+* remove deprecated SQALE quality model; `sonar.cxx.other.sqales` is no more supported
+* support of new SonarQube quality model; update the [format of the rule files](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Extending-the-code-analysis#the-format-of-the-rules-file)
+
 **Upgrade to 0.9.6**
 
 * Compatible with SonarQube 5.6.x
