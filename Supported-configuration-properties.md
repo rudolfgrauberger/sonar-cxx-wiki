@@ -238,6 +238,8 @@ A name of a built in XSLT-file or an URL to an external one. Available builtins:
 *Scope:* `project`
 <br>
 *Default:* `False`
+<br>
+*History:* `no more supported with v0.9.7+`
 
 If "True", tries to assign testcases in reports to test resources in SonarQube,
 thus making the drilldown to details possible
@@ -306,8 +308,10 @@ Ant pattern describing the path to other reports. Path can be relative or absolu
 *Scope:* `project`
 <br>
 *Default:* `---`
+<br>
+*History:* `no more supported with v0.9.6+`
 
-<b>deprecated with v0.9.6:</b> SQALE characteristics for 'external' code analysers. Ant pattern describing the path to SQALE characteristics, <b>relative to projects root</b>.
+SQALE characteristics for 'external' code analysers. Ant pattern describing the path to SQALE characteristics, <b>relative to projects root</b>.
 <br>
 <br>
 *Example:*
@@ -414,6 +418,7 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 * The default value of `sonar.cxx.errorRecoveryEnabled` is *True* now. To go back to old behaviour set the value to *False*.
 * `sonar.cxx.forceZeroCoverage`: better detection of executable lines. Resulting coverage can be slightly different.
 * Improved CPD algorithm with additional configuration settings `sonar.cxx.cpd.ignoreLiterals` and `sonar.cxx.cpd.ignoreIdentifiers`. To get same numbers as before set both to `False`.
+* `sonar.cxx.xunit.provideDetails`is no more supported
 
 **Hints V0.9.6:**
 * SQALE quality model is no more supported: ```sonar.cxx.other.sqales```
