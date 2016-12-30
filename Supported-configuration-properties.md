@@ -58,7 +58,7 @@ Comma separated list of header files to be implicitly included at the beginning 
 List of macros which should be used during analysis. The syntax is the same the body of #define-directives, except the #define keyword itself. This is a multiline property, which means:
 * If you're using Sonar's Web UI just write a macro per line 
 * When setting via .properties-file separate macros using `\n\` 
-<br>
+
 <br>
 *Example:*
 <pre>
@@ -94,7 +94,7 @@ Defines *tolerant* or *strict* error handling mode. This setting has impact on p
  * parsing error means that source code file does not fit to C/C++ grammar
  * in *tolerant* mode (`True`) syntax errors within a declaration are skipped, analysis is continued with next declaration in source code file. For details see [Error Recovery](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Error-Recovery).
  * in *strict* mode (`False`) analysis of source code file fails after an syntax error. Source code file is ignored.
-<br>
+
 <br>
 *Example:* `sonar.cxx.errorRecoveryEnabled=True`
 
