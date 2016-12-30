@@ -3,6 +3,38 @@ http://docs.codehaus.org/display/SONAR/Analyzing+Source+Code) for the ways how t
 
 Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/display/SONAR/Analysis+Parameters) the latest released plugin supports the parameter below:
 
+* [sonar.cxx.suffixes.sources](#sonarcxxsuffixessources)
+* [sonar.cxx.suffixes.headers](#sonarcxxsuffixesheaders)
+* [sonar.cxx.includeDirectories](#sonarcxxincludeDirectories)
+* [sonar.cxx.forceIncludes](#sonarcxxforceIncludes)
+* [sonar.cxx.defines](#sonarcxxdefines)
+* [sonar.cxx.cFilesPatterns](#sonarcxxcFilesPatterns)
+* [sonar.cxx.errorRecoveryEnabled](#sonarcxxerrorRecoveryEnabled)
+* [sonar.cxx.cpd.ignoreLiterals](#sonarcxxcpdignoreLiterals)
+* [sonar.cxx.cpd.ignoreIdentifiers](#sonarcxxcpdignoreIdentifiers)
+* [sonar.cxx.cppcheck.reportPath](#sonarcxxcppcheckreportPath)
+* [sonar.cxx.rats.reportPath](#sonarcxxratsreportPath)
+* [sonar.cxx.valgrind.reportPath](#sonarcxxvalgrindreportPath)
+* [sonar.cxx.vera.reportPath](#sonarcxxverareportPath)
+* [sonar.cxx.drmemory.reportPath](#sonarcxxdrmemoryreportPath)
+* [sonar.cxx.xunit.reportPath](#sonarcxxxunitreportPath)
+* [sonar.cxx.xunit.xsltURL](#sonarcxxxunitxsltURL)
+* [sonar.cxx.xunit.provideDetails](#sonarcxxxunitprovideDetails)
+* [sonar.cxx.vstest.reportsPaths](#sonarcxxvstestreportsPaths)
+* [sonar.cxx.nunit.reportsPaths](#sonarcxxnunitreportsPaths)
+* [sonar.cxx.xunit.reportsPaths](#sonarcxxxunitreportsPaths)
+* [sonar.cxx.pclint.reportPath](#sonarcxxpclintreportPath)
+* [sonar.cxx.other.reportPath](#sonarcxxotherreportPath)
+* [sonar.cxx.other.sqales](#sonarcxxothersqales)
+* [sonar.cxx.coverage.reportPath](#sonarcxxcoveragereportPath)
+* [sonar.cxx.coverage.itReportPath](#sonarcxxcoverageitReportPath)
+* [sonar.cxx.coverage.overallReportPath](#sonarcxxcoverageoverallReportPath)
+* [sonar.cxx.coverage.forceZeroCoverage](#sonarcxxcoverageforceZeroCoverage)
+* [sonar.cxx.compiler.parser](#sonarcxxcompilerparser)
+* [sonar.cxx.compiler.reportPath](#sonarcxxcompilerreportPath)
+* [sonar.cxx.compiler.regex](#sonarcxxcompilerregex)
+* [sonar.cxx.compiler.charset](#sonarcxxcompilercharset)
+
 ===
 ### sonar.cxx.suffixes.sources
 *Scope:* `system, project`
@@ -97,6 +129,28 @@ Defines *tolerant* or *strict* error handling mode. This setting has impact on p
 
 <br>
 *Example:* `sonar.cxx.errorRecoveryEnabled=True`
+
+
+===
+### sonar.cxx.cpd.ignoreLiterals
+*Scope:* `project, module`
+<br>
+*Default:* `False`
+
+CPD ignores literal value differences when evaluating a duplicate block. This means that foo=42; and foo=43; will be seen as equivalent.
+<br>
+<br>
+*Example:* `sonar.cxx.cpd.ignoreLiterals=False`
+
+### sonar.cxx.cpd.ignoreIdentifiers
+*Scope:* `project, module`
+<br>
+*Default:* `True`
+
+CPD ignores identifier value differences when evaluating a duplicate block.; i.e., variable names, methods names, and so forth.
+<br>
+<br>
+*Example:* `sonar.cxx.cpd.ignoreIdentifiers=True`
 
 ===
 ### sonar.cxx.cppcheck.reportPath
