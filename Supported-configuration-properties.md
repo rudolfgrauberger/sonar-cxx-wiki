@@ -53,7 +53,6 @@ Comma separated list of header files to be implicitly included at the beginning 
 ### sonar.cxx.defines
 *Scope:* `system, project`
 <br>
-<br>
 *Default:* `---`
 
 List of macros which should be used during analysis. The syntax is the same the body of #define-directives, except the #define keyword itself. This is a multiline property, which means:
@@ -79,6 +78,25 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 <br>
 *Example:*
+
+===
+### sonar.cxx.errorRecoveryEnabled
+*Scope:* `project, module`
+<br>
+*Default:* `True`
+
+Defines *tolerant* or *strict* error handling mode. This setting has impact on parsing the source files and reading report files:
+* **report files:**
+ * error in an report file could be for example invalid file references or line numbers
+ * in *tolerant* mode (`True`) analysis continue in case of errors in a report file
+ * in *strict* mode (`False`) an error in a report file will stop the analysis
+* **source code parsing:**
+ * parsing error means that source code file does not fit to C/C++ grammar
+ * in *tolerant* mode (`True`) syntax errors within a declaration are skipped, analysis is continued with next declaration in source code file. For details see [Error Recovery](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Error-Recovery).
+ * in *strict* mode (`False`) analysis of source code file fails after an syntax error. Source code file is ignored.
+<br>
+<br>
+*Example:* `sonar.cxx.errorRecoveryEnabled=True`
 
 ===
 ### sonar.cxx.cppcheck.reportPath
