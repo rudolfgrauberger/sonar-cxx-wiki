@@ -408,6 +408,13 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 
 ---
 
+
+**Hints V0.9.7:**
+* Improved report handling: there is a tolerant and a strict mode now. In tolerant mode analysis continue in case of errors in a report file. In strict mode an error in a report file will stop the analysis (`sonar.cxx.errorRecoveryEnabled`). In versions before this one behaviour was sometimes strict and sometimes tolerant.
+* The default value of `sonar.cxx.errorRecoveryEnabled` is *True* now. To go back to old behaviour set the value to *False*.
+* `sonar.cxx.forceZeroCoverage`: better detection of executable lines. Resulting coverage can be slightly different.
+* Improved CPD algorithm with additional configuration settings `sonar.cxx.cpd.ignoreLiterals` and `sonar.cxx.cpd.ignoreIdentifiers`. To get same numbers as before set both to `False`.
+
 **Hints V0.9.6:**
 * SQALE quality model is no more supported: ```sonar.cxx.other.sqales```
 * support of new [SonarQube Quality Model](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Extending-the-code-analysis#the-format-of-the-rules-file)
