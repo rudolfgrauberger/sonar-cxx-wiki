@@ -8,7 +8,7 @@ Follow the general [installation steps](https://github.com/SonarOpenCommunity/so
 * The default value of `sonar.cxx.errorRecoveryEnabled` is *True* now. To go back to old behaviour set the value to *False*.
 * `sonar.cxx.forceZeroCoverage`: better detection of executable lines. Resulting coverage can be slightly different.
 * Improved CPD algorithm with additional configuration settings `sonar.cxx.cpd.ignoreLiterals` and `sonar.cxx.cpd.ignoreIdentifiers`. To get same numbers as before set both to `False`.
-* Detailed mode from test metrics is no more supported with SQ 5.6 API.
+* Detailed mode from test metrics is no more supported with SQ 5.6 API (`sonar.cxx.xunit.provideDetails`).
 * Xpath check no more supported with SQ 5.6 API.
 * Computation of package/file tangle metrics no more supported with SQ 5.6 API.
 * `Unit Test Success (%)` is no more supported with SQ 5.6 API.
