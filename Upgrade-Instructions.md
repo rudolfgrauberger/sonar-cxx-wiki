@@ -5,6 +5,7 @@ Follow the general [installation steps](https://github.com/SonarOpenCommunity/so
 * Compatible with SonarQube 5.6.x, 6.0, 6.1 and 6.2
 * Java Runtime Environment 8 is supported (Java 9 is not support).
 * Improved report handling: there is a tolerant and a strict mode now. In tolerant mode analysis continue in case of errors in a report file. In strict mode an error in a report file will stop the analysis (`sonar.cxx.errorRecoveryEnabled`). In versions before this one behaviour was sometimes strict and sometimes tolerant.
+* The default value of `sonar.cxx.errorRecoveryEnabled` is *True* now. To go back to old behaviour set the value to *False*.
 * `sonar.cxx.forceZeroCoverage`: better detection of executable lines. Resulting coverage can be slightly different.
 * Improved CPD algorithm with additional configuration settings `sonar.cxx.cpd.ignoreLiterals` and `sonar.cxx.cpd.ignoreIdentifiers`. To get same numbers as before set both to `False`.
 * Detailed mode from test metrics is no more supported with SQ 5.6 API.
