@@ -145,7 +145,7 @@ CPD ignores literal value differences when evaluating a duplicate block. This me
 ### sonar.cxx.cpd.ignoreIdentifiers
 *Scope:* `project, module`
 <br>
-*Default:* `True`
+*Default:* `False`
 
 CPD ignores identifier value differences when evaluating a duplicate block.; i.e., variable names, methods names, and so forth.
 <br>
