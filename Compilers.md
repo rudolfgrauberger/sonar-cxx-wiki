@@ -29,10 +29,11 @@ The compiler sensor consumes the warning messages available in the build log. De
 
 
 
-| Visual Studio Version        | Regular Expression           |
-| ---------------------------- |----------------------------- | 
-| Visual Studio 2010 to 2013   | `^.*>(?<filename>.*)\\((?<line>[0-9]+)\\):\\x20warning\\x20(?<id>C\\d\\d\\d\\d):(?<message>.*)$`   |
-| Visual Studio 2015           | `^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$`   |   
+| Visual Studio Version              | Regular Expression           |
+| ---------------------------------- |----------------------------- | 
+| Visual Studio 2010                 | `^.*>(?<filename>.*)\\((?<line>[0-9]+)\\):\\x20warning\\x20(?<id>C\\d\\d\\d\\d):(?<message>.*)$` |
+| Visula Studio 2013<br>MSBUILD, TFS | `^(.*)\((\d+)\):\x20warning\x20(C\d+):\x20(.*)$` |
+| Visual Studio 2015                 | `^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$` |   
 
 
 
