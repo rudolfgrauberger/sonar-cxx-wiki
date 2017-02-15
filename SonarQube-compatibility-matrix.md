@@ -19,7 +19,7 @@
   <td><b>v0.9.4</b></td>
   <td><b>v0.9.5</b></td>
   <td><b>v0.9.6</b></td>
-  <td><b>v0.9.7-snapshot</b></td>
+  <td><b>v0.9.7</b></td>
  </tr>
  <tr>
   <td><b>3.4.x</b></td>
