@@ -27,15 +27,23 @@ sonar.cxx.compiler.regex=^(.*):([0-9]+): warning: (.*)\\[(.*)\\]$
 
 The compiler sensor consumes the warning messages available in the build log. Depending on the configuration properties there are more or less warnings available. Briefly these are the regular expressions that should be used, see details in next sections.
 
+The format of the build log looks different for parallel project builds (MSBuild options `/maxcpucount:xx`) and the regular expression has to consider this. 
 
+| log type | Example |
+|----------|---------|
+| single process | `c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(55): warning C4995: 'memcpy': name was marked as #pragma deprecated` |
+| multiple processes | ` 1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(55): warning C4995: 'memcpy': name was marked as #pragma deprecated` |
 
-| Visual Studio Version              | Regular Expression           |
+| Visual Studio Version              | Regular Expression           | 
 | ---------------------------------- |----------------------------- | 
-| Visual Studio 2010                 | `^.*>(?<filename>.*)\\((?<line>[0-9]+)\\):\\x20warning\\x20(?<id>C\\d\\d\\d\\d):(?<message>.*)$` |
-| Visula Studio 2013<br>MSBUILD, TFS | `^(.*)\((\d+)\):\x20warning\x20(C\d+):\x20(.*)$` |
-| Visual Studio 2015                 | `^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$` |   
+| Visual Studio 2010-2015                 | `^(.*)\((\d+)\)\x20*:\x20warning\x20(C\d+):(.*)$` |
+| Visual Studio 2010-2015 (`/maxcpucount:xx`)                | `^.*>(.*)\((\d+)\)\x20*:\x20warning\x20(C\d+):(.*)$` |
 
+You have to use additonal escape sequences (`\`-> `\\`) for property or xml files.
 
+```
+sonar.cxx.compiler.regex=^.*>(.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$
+```
 
 **Visual Studio settings**
 
@@ -120,11 +128,4 @@ Build started 26.02.2014 17:59:20.
      1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112): warning C4995: 'strcpy': name was marked as #pragma deprecated
 ```
 
-**Visual Studio 2015 regular expression**
-
-The following regular expression handles Visual Studio 2015 and VC-14 compiler
-
-```
-sonar.cxx.compiler.regex=^.*[\\\\,/](.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$
-```
 
