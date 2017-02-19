@@ -128,4 +128,6 @@ Build started 26.02.2014 17:59:20.
      1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112): warning C4995: 'strcpy': name was marked as #pragma deprecated
 ```
 
+**TFS builds with SonarQube MSBuild scanner**
 
+_Please see some additional hints here [discussion #616](https://github.com/SonarOpenCommunity/sonar-cxx/issues/616)_
