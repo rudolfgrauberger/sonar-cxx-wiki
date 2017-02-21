@@ -9,6 +9,7 @@
   <td></td>
   <td></td>
   <td></td>
+  <td></td>
  </tr>
  <tr>
   <td></td>
@@ -20,10 +21,12 @@
   <td><b>v0.9.5</b></td>
   <td><b>v0.9.6</b></td>
   <td><b>v0.9.7</b></td>
+  <td><b>v0.9.8</b></td>
  </tr>
  <tr>
   <td><b>3.4.x</b></td>
   <td>X</td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -42,10 +45,12 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>3.6.x</b></td>
   <td>X</td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -64,11 +69,13 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>4.0.x</b></td>
   <td>X</td>
   <td>X</td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -86,12 +93,14 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>4.2.x</b></td>
   <td>-</td>
   <td>X</td>
   <td>X</td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -108,12 +117,14 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>4.4.x</b></td>
   <td>-</td>
   <td>X</td>
   <td>X</td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -130,6 +141,7 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>4.5.2+ (LTS)</b></td>
@@ -139,6 +151,7 @@
   <td>X</td>
   <td>X</td>
   <td>X</td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
  </tr>
@@ -152,6 +165,7 @@
   <td>X</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>5.1.x</b></td>
@@ -163,9 +177,11 @@
   <td>X</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>5.2.x</b></td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -185,6 +201,7 @@
   <td>X</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>5.4.x</b></td>
@@ -194,6 +211,7 @@
   <td>-</td>
   <td>-</td>
   <td>X</td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
  </tr>
@@ -207,6 +225,7 @@
   <td>X</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>5.6.x (LTS)</b></td>
@@ -216,6 +235,7 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>X</td>
   <td>X</td>
   <td>X</td>
  </tr>
@@ -229,6 +249,7 @@
   <td>-</td>
   <td>-</td>
   <td>X</td>
+  <td>X</td>
  </tr>
  <tr>
   <td><b>6.1.x</b></td>
@@ -240,9 +261,23 @@
   <td>-</td>
   <td>-</td>
   <td>X</td>
+  <td>X</td>
  </tr>
  <tr>
   <td><b>6.2.x</b></td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>X</td>
+  <td>X</td>
+ </tr>
+ <tr>
+  <td><b>6.3.x</b></td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
