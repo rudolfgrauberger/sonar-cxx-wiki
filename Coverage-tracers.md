@@ -5,7 +5,7 @@
 3. Execute gcov to use the .gcda files precedently generated, it will generate .gcov files somewhere you define.
 4. Collect the coverage information and generate the report using gcovr:
 ```BASH
-gcovr -r ABSOLUTE_PATH_TO_SOURCE_FILES_FOLDER -x --object-directory=ABSOLUTE_PATH_TO_GCOV_FILES_FOLDER > report.xml
+gcovr -r WHERE_SONAR_SCANNER_WILL_RUN -x --object-directory=ABSOLUTE_PATH_TO_GCOV_FILES_FOLDER > report.xml
 ```
 **Hints:**
 * sonar-cxx plugin requires gcov coverage reports with paths in the generated xml reports.
