@@ -131,3 +131,81 @@ Build started 26.02.2014 17:59:20.
 **TFS builds with SonarQube MSBuild scanner**
 
 _Please see some additional hints here [discussion #616](https://github.com/SonarOpenCommunity/sonar-cxx/issues/616)_
+
+### JSON Compilation Database Format Specification support
+
+To support capturing include and define knowledge from other build systems it is possible to utilize [JSON Compilation Database Format Specification](http://clang.llvm.org/docs/JSONCompilationDatabase.html) support. JSON Compilation Database file is used as intermediate format between tools needing information about build process. File contains list of compiled files and how they were compiled.
+
+Sonar C++ plugin supports capturing of compiler defines (`-D`) and include configurations (`-I`) from compiler command lines. These settings are then only affecting analysis of specified file.
+
+In below example `hello.cpp` is compiled with `-DHELLO` and `world.cpp` is compiled with `-DWORLD`:
+
+```
+[
+  {
+    "file" : "hello.cpp"
+    "directory": "/home/user/build",
+    "command": "/usr/bin/gcc -DHELLO -o hello hello.cpp"
+  },
+  {
+    "file" : "world.cpp"
+    "directory": "/home/user/build",
+    "command": "/usr/bin/gcc -DWORLD -o world world.cpp"
+  }
+]
+```
+
+This specifies that `HELLO` define is only defined by Sonar C++ plugin when analyzing `hello.cpp` file. Similarly `WORLD` is defined only for `world.cpp`.
+
+To improve define and include knowledge further Sonar C++ plugin includes extension to define includes and defines for all unknown files (like header files) and then allow full definition of both compiler internal and external defines and includes with `defines` and `includes` fields. To define defines and includes for unknown files filename `__global__` is used.
+
+```
+[
+  {
+    "file": "__global__",
+    "defines": {
+      "__ARM_ARCH": "7",
+      "__UINT16_TYPE__": "short unsigned int",
+      ...
+    },
+    "includes" : [
+      "/opt/vendor/vendor-sdk/sysroots/x86_64-vendorsdk-linux/usr/lib/arm-vendor-linux-gnueabi/gcc/arm-vendor-linux-gnueabi/4.9.2/include",
+      ...
+    ]
+  },
+  {
+    "file" : "hello.cpp"
+    "directory": "/home/user/build",
+    "command": "/usr/bin/gcc -DHELLO -o hello hello.cpp",
+    "defines": {
+      "__ARM_ARCH": "7",
+      "__UINT16_TYPE__": "short unsigned int",
+      "__STDC_HOSTED__": "1",
+      "__GNUC__" : "4"
+      "__SIZEOF_SHORT__": "2",
+      "__INT_MAX__": "2147483647",
+      ...
+      "HELLO" : ""
+    },
+    "includes" : [
+      "/opt/vendor/vendor-sdk/sysroots/x86_64-vendorsdk-linux/usr/lib/arm-vendor-linux-gnueabi/gcc/arm-vendor-linux-gnueabi/4.9.2/include",
+      "/opt/vendor/vendor-sdk/sysroots/x86_64-vendorsdk-linux/usr/lib/arm-vendor-linux-gnueabi/gcc/arm-vendor-linux-gnueabi/4.9.2/include-fixed",
+      "/opt/vendor/vendor-sdk/sysroots/cortexa8hf-vfp-neon-vendor-linux-gnueabi/usr/include/c++/4.9.2",
+      "/opt/vendor/vendor-sdk/sysroots/cortexa8hf-vfp-neon-vendor-linux-gnueabi/usr/include/c++/4.9.2/arm-vendor-linux-gnueabi",
+      ...
+    ]
+  }
+]
+```
+
+To enable Sonar C++ analysis to utilize JSON compilation database support setting `sonar.cxx.jsonCompilationDatabase` needs to be defined in `sonar-project.properties`.
+
+```
+sonar.cxx.jsonCompilationDatabase=compile_commands.json
+```
+
+It is also possible to limit scanning of sources only to those specified in JSON compilation database file with setting `sonar.cxx.scanOnlySpecifiedSources`:
+
+```
+sonar.cxx.scanOnlySpecifiedSources=True
+```
