@@ -9,6 +9,7 @@ This Wiki contains usage guidelines and developer resources. Just navigate to th
 * [[Installation]]
 * [[Upgrade Instructions]]
 * [[SonarQube compatibility matrix]]
+* [[Installation into Docker Sonarqube Image]]
 
 ### Usage
 * [[Running the analysis]]
