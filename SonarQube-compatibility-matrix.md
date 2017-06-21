@@ -287,4 +287,16 @@
   <td>-</td>
   <td>X</td>
  </tr>
+ <tr>
+  <td><b>6.4.x</b></td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>X</td>
+ </tr>
 </table>
