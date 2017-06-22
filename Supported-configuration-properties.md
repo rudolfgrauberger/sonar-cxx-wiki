@@ -34,6 +34,8 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 * [sonar.cxx.compiler.reportPath](#sonarcxxcompilerreportPath)
 * [sonar.cxx.compiler.regex](#sonarcxxcompilerregex)
 * [sonar.cxx.compiler.charset](#sonarcxxcompilercharset)
+* [sonar.cxx.jsonCompilationDatabase](#sonarcxxjsonCompilationDatabase)
+* [sonar.cxx.scanOnlySpecifiedSources](#sonarcxxscanOnlySpecifiedSources)
 
 ===
 ### sonar.cxx.suffixes.sources
@@ -409,6 +411,31 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 <br>
 <br>
 *Example:*
+
+===
+### sonar.cxx.jsonCompilationDatabase
+*Scope:* `project`
+<br>
+*Default:* `---`
+
+Enable Sonar C++ analysis to utilize JSON compilation database support. Specifies file to be used as JSON compilation database. JSON compilation database is used to improve C++ symbol and include directory knowledge. Sonar C++ plugin also supports extension to allow importing of used compiler's internal symbols and includes.
+
+For more information please see: [JSON compilation database format specification support](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Compilers#json-compilation-database-format-specification-support)
+<br>
+<br>
+*Example:*
+
+===
+### sonar.cxx.scanOnlySpecifiedSources
+*Scope:* `project`
+<br>
+*Default:* `False`
+
+When using JSON compilation database support limit Sonar C++ plugin analysis to specified files in JSON compilation database. This setting can be used to limit analysis to only compiled files.
+<br>
+<br>
+*Example:*
+
 
 ---
 
