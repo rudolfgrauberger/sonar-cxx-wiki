@@ -36,6 +36,7 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 * [sonar.cxx.compiler.charset](#sonarcxxcompilercharset)
 * [sonar.cxx.jsonCompilationDatabase](#sonarcxxjsonCompilationDatabase)
 * [sonar.cxx.scanOnlySpecifiedSources](#sonarcxxscanOnlySpecifiedSources)
+* [sonar.cxx.clangsa.reportPath](#sonarcxxclangsareportpath)
 
 ===
 ### sonar.cxx.suffixes.sources
@@ -436,6 +437,20 @@ When using JSON compilation database support limit Sonar C++ plugin analysis to 
 <br>
 *Example:*
 
+
+===
+### sonar.cxx.clangsa.reportPath
+*Scope:* `project`
+<br>
+*Default:* `---`
+
+Ant pattern describing the path to Clang Static Analyzer plist reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Examples:*  
+`sonar.cxx.clangsa.reportPath=divzero.plist`  
+or  
+`sonar.cxx.clangsa.reportPath=analyzer_reports/*/*.plist`
 
 ---
 
