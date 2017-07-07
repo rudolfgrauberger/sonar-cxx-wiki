@@ -3,7 +3,7 @@ http://docs.codehaus.org/display/SONAR/Analyzing+Source+Code) for the ways how t
 
 Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/display/SONAR/Analysis+Parameters) the latest released plugin supports the parameter below:
 
-* [sonar.cxx.suffixes.sources](#sonarcxxsuffixessources)
+* [sonar.cxx.suffixes.sources](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxotherreportPath#sonarcxxsuffixessources)
 * [sonar.cxx.suffixes.headers](#sonarcxxsuffixesheaders)
 * [sonar.cxx.includeDirectories](#sonarcxxincludeDirectories)
 * [sonar.cxx.forceIncludes](#sonarcxxforceIncludes)
