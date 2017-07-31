@@ -79,6 +79,14 @@
   <td>-</td>
   <td>X</td>
  </tr>
+ <tr>
+  <td><b>6.5.x</b></td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>X</td>
+ </tr>
 </table>
 
 <em>(*) - upcoming release</em>
