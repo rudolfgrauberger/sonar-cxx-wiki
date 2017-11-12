@@ -1,5 +1,24 @@
 Follow the general [installation steps](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Installation). Changes in the different versions are described below:
 
+**Upgrade to 0.9.8**
+
+* Compatible with SonarQube 5.6 LTS, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7 LTS
+* Java Runtime Environment 8 is supported (Java 9 is not support).
+* There are some changes in the SQ core API, **starting with SQ 6.2:**
+   * The property `sonar.cxx.forceZeroCoverage` is no more supported. There is now a SQ core support basing on `EXECUTABLE_LINES_DATA`.
+   * Calculation of coverage values is slightly different now (coverage is typically a little bit higher).
+* `sonar.cxx.coverage.itReportPath` and `sonar.cxx.coverage.overallReportPath` are no more supported by the SQ core. There is no replacement available.
+   * Documentation metrics are no more supported by SQ. We added plugin specific metrics for `PUBLIC_API`, `PUBLIC_DOCUMENTED_API_DENSITY`, `PUBLIC_UNDOCUMENTED_API` as replacement. History of SQ values is lost.
+* Cognitive Complexity support. There are two known limitations:
+   * recursion is not handled
+   * cognitive complexity per file is not available (Metrics/Coverage/Cognitive Complexity)
+* Usagage of C plugin in parallel.
+  * Please keep in mind that the C plugin is still experimental.
+  * You can use all cxx configuration properties also for the C plugin: use `sonar.c.xxx` instead of `sonar.cxx.xxx`
+  * You have to set specific file extensions in `sonar.cxx.suffixes.sources`.
+  * `sonar.cxx.cFilesPatterns` should be set in the C plugin configuration but not in the Cxx plugin configuration.
+* Json compilation database support `sonar.cxx.jsonCompilationDatabase` is also experimantal only
+
 **Upgrade to 0.9.7**
 
 * Compatible with SonarQube 5.6.x, 6.0, 6.1 and 6.2
