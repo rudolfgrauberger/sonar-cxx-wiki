@@ -17,7 +17,7 @@ Follow the general [installation steps](https://github.com/SonarOpenCommunity/so
   * You can use all cxx configuration properties also for the C plugin: use `sonar.c.xxx` instead of `sonar.cxx.xxx`
   * You have to set specific file extensions in `sonar.cxx.suffixes.sources`.
   * `sonar.cxx.cFilesPatterns` should be set in the C plugin configuration but not in the Cxx plugin configuration.
-* Json compilation database support `sonar.cxx.jsonCompilationDatabase` is also experimantal only
+* Json compilation database support `sonar.cxx.jsonCompilationDatabase` is also experimental only
 
 **Upgrade to 0.9.7**
 
