@@ -12,10 +12,10 @@ Follow the general [installation steps](https://github.com/SonarOpenCommunity/so
 * Cognitive Complexity support. There are two known limitations:
    * recursion is not handled
    * cognitive complexity per file is not available (Metrics/Coverage/Cognitive Complexity)
-* Usagage of C plugin in parallel.
+* Usage of C plugin in parallel.
   * Please keep in mind that the C plugin is still experimental.
   * You can use all cxx configuration properties also for the C plugin: use `sonar.c.xxx` instead of `sonar.cxx.xxx`
-  * You have to set specific file extensions in `sonar.cxx.suffixes.sources`.
+  * You have to set specific file extensions in `sonar.cxx.suffixes.sources` and `sonar.c.suffixes.sources`.
   * `sonar.cxx.cFilesPatterns` should be set in the C plugin configuration but not in the Cxx plugin configuration.
 * Json compilation database support `sonar.cxx.jsonCompilationDatabase` is also experimental only
 
