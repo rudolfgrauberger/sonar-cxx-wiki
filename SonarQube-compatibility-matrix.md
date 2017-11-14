@@ -14,7 +14,7 @@
   <td><b>v0.9.5</b></td>
   <td><b>v0.9.6</b></td>
   <td><b>v0.9.7</b></td>
-  <td><b>v0.9.8*</b></td>
+  <td><b>v0.9.8</b></td>
   <td>next*</td>
  </tr>
  <tr>
