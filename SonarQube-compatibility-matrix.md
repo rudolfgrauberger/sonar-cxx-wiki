@@ -13,7 +13,7 @@
   <td><b>v0.9.5</b></td>
   <td><b>v0.9.7</b></td>
   <td><b>v0.9.8</b></td>
-  <td>v0.9.9</td>
+  <td><b>v0.9.9*</b></td>
  </tr>
  <tr>
   <td><b>3.7.x (LTS)</b></td>
