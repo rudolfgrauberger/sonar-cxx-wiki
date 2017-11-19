@@ -6,13 +6,11 @@
   <td></td>
   <td></td>
   <td></td>
-  <td></td>
  </tr>
  <tr>
   <td></td>
   <td><b>v0.9.1</b></td>
   <td><b>v0.9.5</b></td>
-  <td><b>v0.9.6</b></td>
   <td><b>v0.9.7</b></td>
   <td><b>v0.9.8</b></td>
   <td>next*</td>
@@ -20,7 +18,6 @@
  <tr>
   <td><b>3.7.x (LTS)</b></td>
   <td>X</td>
-  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -33,7 +30,6 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
-  <td>-</td>
  </tr>
   <tr>
   <td><b>5.6.x (LTS)</b></td>
@@ -41,12 +37,10 @@
   <td>-</td>
   <td>X</td>
   <td>X</td>
-  <td>X</td>
   <td>-</td>
  </tr>
  <tr>
   <td><b>6.0.x</b></td>
-  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>X</td>
@@ -57,14 +51,12 @@
   <td><b>6.1.x</b></td>
   <td>-</td>
   <td>-</td>
-  <td>-</td>
   <td>X</td>
   <td>X</td>
   <td>-</td>
  </tr>
  <tr>
   <td><b>6.2.x</b></td>
-  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>X</td>
@@ -76,13 +68,11 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
-  <td>-</td>
   <td>X</td>
   <td>-</td>
  </tr>
  <tr>
   <td><b>6.4.x</b></td>
-  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -94,7 +84,6 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
-  <td>-</td>
   <td>X</td>
   <td>-</td>
  </tr>
@@ -103,13 +92,11 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
-  <td>-</td>
   <td>X</td>
   <td>-</td>
  </tr>
  <tr>
   <td><b>6.7.x (LTS)</b></td>
-  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
