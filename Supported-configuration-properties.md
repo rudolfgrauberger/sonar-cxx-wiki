@@ -38,7 +38,7 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 * [sonar.cxx.scanOnlySpecifiedSources](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxscanonlyspecifiedsources)
 * [sonar.cxx.clangsa.reportPath](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxclangsareportpath)
 
-===
+___
 ### sonar.cxx.suffixes.sources
 *Scope:* `system, project`
 <br>
@@ -49,7 +49,7 @@ Comma separated list of file name extensions to be considered as C++ source file
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.suffixes.headers
 *Scope:* `system, project`
 <br>
@@ -60,7 +60,7 @@ Comma separated list of file name extensions to be considered as C++ header file
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.includeDirectories
 *Scope:* `system, project`
 <br>
@@ -73,7 +73,7 @@ Comma separated list of directories where the plugin will be looking for include
 <br>
 *Example:* `include, /usr/include`
 
-===
+___
 ### sonar.cxx.forceIncludes
 *Scope:* `system, project`
 <br>
@@ -84,7 +84,7 @@ Comma separated list of header files to be implicitly included at the beginning 
 <br>
 *Example:* `VS10Macros.h`
 
-===
+___
 ### sonar.cxx.defines
 *Scope:* `system, project`
 <br>
@@ -102,7 +102,7 @@ PRIx64 ""       \n\
 DEBUG 1
 </pre>
 
-===
+___
 ### sonar.cxx.cFilesPatterns
 *Scope:* `project`
 <br>
@@ -114,7 +114,7 @@ a file matches any of the patterns, it is parsed in C-compatibility mode.
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.errorRecoveryEnabled
 *Scope:* `project, module`
 <br>
@@ -134,7 +134,7 @@ Defines *tolerant* or *strict* error handling mode. This setting has impact on p
 *Example:* `sonar.cxx.errorRecoveryEnabled=True`
 
 
-===
+___
 ### sonar.cxx.cpd.ignoreLiterals
 *Scope:* `project, module`
 <br>
@@ -155,7 +155,7 @@ CPD ignores identifier value differences when evaluating a duplicate block.; i.e
 <br>
 *Example:* `sonar.cxx.cpd.ignoreIdentifiers=True`
 
-===
+___
 ### sonar.cxx.cppcheck.reportPath
 *Scope:* `project`
 <br>
@@ -166,7 +166,7 @@ Ant pattern describing the path to Cppcheck reports. Path can be relative or abs
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.rats.reportPath
 *Scope:* `project`
 <br>
@@ -177,7 +177,7 @@ Ant pattern describing the path to RATS reports. Path can be relative or absolut
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.valgrind.reportPath
 *Scope:* `project`
 <br>
@@ -188,7 +188,7 @@ Ant pattern describing the path to Valgrind reports. Path can be relative or abs
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.vera.reportPath
 *Scope:* `project`
 <br>
@@ -199,7 +199,7 @@ Ant pattern describing the path to Vera++ reports. Path can be relative or absol
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.drmemory.reportPath
 *Scope:* `project`
 <br>
@@ -210,7 +210,7 @@ Ant pattern describing the path to <a href="http://drmemory.org/">Dr Memory</a> 
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.xunit.reportPath
 *Scope:* `project`
 <br>
@@ -221,7 +221,7 @@ Ant pattern describing the path to unit test execution reports. Path can be rela
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.xunit.xsltURL
 *Scope:* `project`
 <br>
@@ -236,7 +236,7 @@ A name of a built in XSLT-file or an URL to an external one. Available builtins:
 <br>
 *Example*: `cppunit-1.x-to-junit-1.0.xsl`
 
-===
+___
 ### sonar.cxx.xunit.provideDetails
 *Scope:* `project`
 <br>
@@ -250,7 +250,7 @@ thus making the drilldown to details possible
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.vstest.reportsPaths
 *Scope:* `project`
 <br>
@@ -261,7 +261,7 @@ Ant pattern describing the path to unit test execution reports. TRX output from 
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.nunit.reportsPaths
 *Scope:* `project`
 <br>
@@ -272,7 +272,7 @@ Ant pattern describing the path to unit test execution reports. XML output from 
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.xunit.reportsPaths
 *Scope:* `project`
 <br>
@@ -284,7 +284,7 @@ Ant pattern describing the path to unit test execution reports (XUnit XML output
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.pclint.reportPath
 *Scope:* `project`
 <br>
@@ -295,7 +295,7 @@ Ant pattern describing the path to PC-lint reports. Path can be relative or abso
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.other.reportPath
 *Scope:* `project`
 <br>
@@ -306,7 +306,7 @@ Ant pattern describing the path to other reports. Path can be relative or absolu
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.other.sqales
 *Scope:* `project`
 <br>
@@ -319,7 +319,7 @@ SQALE characteristics for 'external' code analysers. Ant pattern describing the 
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.coverage.reportPath
 *Scope:* `project`
 <br>
@@ -330,7 +330,7 @@ Ant pattern describing the path of unit test coverage reports. Path can be relat
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.coverage.itReportPath
 *Scope:* `project`
 <br>
@@ -341,7 +341,7 @@ Ant pattern describing the path of integration test coverage reports. Path can b
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.coverage.overallReportPath
 *Scope:* `project`
 <br>
@@ -352,7 +352,7 @@ Ant pattern describing the path of overall test coverage reports. Path can be re
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.coverage.forceZeroCoverage
 *Scope:* `project`
 <br>
@@ -363,7 +363,7 @@ If 'True', source files without coverage report results are set to zero coverage
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.compiler.parser
 *Scope:* `project`
 <br>
@@ -374,7 +374,7 @@ The format of the warnings file. Currently supported are 'Visual C++' and 'GCC'.
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.compiler.reportPath
 *Scope:* `project`
 <br>
@@ -386,7 +386,7 @@ The current default settings can be used for VC++ compiler log file. If availabl
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.compiler.regex
 *Scope:* `project`
 <br>
@@ -402,7 +402,7 @@ Regular expression for four groups with this sequence:
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.compiler.charset
 *Scope:* `project`
 <br>
@@ -413,7 +413,7 @@ Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.jsonCompilationDatabase
 *Scope:* `project`
 <br>
@@ -426,7 +426,7 @@ For more information please see: [JSON compilation database format specification
 <br>
 *Example:*
 
-===
+___
 ### sonar.cxx.scanOnlySpecifiedSources
 *Scope:* `project`
 <br>
@@ -438,7 +438,7 @@ When using JSON compilation database support limit Sonar C++ plugin analysis to 
 *Example:*
 
 
-===
+___
 ### sonar.cxx.clangsa.reportPath
 *Scope:* `project`
 <br>
