@@ -100,6 +100,7 @@ sonar.sources=sources
 ```
 
 **Import reports in multi module configuration**
+
 From version 0.9.3 all reports are looked from the project root, instead of the module base dir. This change makes the plugin behavior consistent between all types of different configurations.
 
 For more hints see [Analyzing with SonarQube Runner](http://docs.codehaus.org/display/SONAR/Analyzing+with+SonarQube+Runner)
