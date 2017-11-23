@@ -3,7 +3,7 @@
 
 ## Extending rules in supported code analysers
 
-If you're using a patched or not-yet-supported version of an integrated code checker (like Cppcheck), you probably want to see those new checks in SonarQube, too. To do this, you have 2 different approachs availalbe.
+If you're using a patched or not-yet-supported version of an integrated code checker (like Cppcheck), you probably want to see those new checks in SonarQube, too. To do this, you have 2 different approachs available.
 
 ### Using a xml definition ###
 
