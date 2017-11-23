@@ -43,7 +43,7 @@
   <td><b>6.0.x</b></td>
   <td>-</td>
   <td>-</td>
-  <td>X</td>
+  <td>-</td>
   <td>X</td>
   <td>-</td>
  </tr>
@@ -51,7 +51,7 @@
   <td><b>6.1.x</b></td>
   <td>-</td>
   <td>-</td>
-  <td>X</td>
+  <td>-</td>
   <td>X</td>
   <td>-</td>
  </tr>
@@ -59,7 +59,7 @@
   <td><b>6.2.x</b></td>
   <td>-</td>
   <td>-</td>
-  <td>X</td>
+  <td>-</td>
   <td>X</td>
   <td>-</td>
  </tr>
