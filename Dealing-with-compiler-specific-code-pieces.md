@@ -43,7 +43,7 @@ To get an overview about available compiler specific extensions the links below 
 * [Microsoft-Specific Modifiers](http://msdn.microsoft.com/en-us/library/6bh0054z.aspx)
 * [GNU compiler extensions to the C++ language](http://gcc.gnu.org/onlinedocs/gcc-4.9.0/gcc/C_002b_002b-Extensions.html)
 
-###Example: Microsoft-specific extensions###
+### Example: Microsoft-specific extensions
 
 For Visual Studio 2010 there is an example how to deal with the compiler specific extension. You can use this as an template for your own adaptions.
 
