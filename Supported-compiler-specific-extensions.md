@@ -1,6 +1,6 @@
 C++ community plugin implements a C++03 and C++11 compatible grammar. Additional below listed compiler specific extensions are supported:
 
-###Preprocessor
+### Preprocessor
 
 **With GCC's it is allowed to leave the variable argument out entirely**
 
@@ -30,7 +30,7 @@ fprintf(stderr, "success!");
 ```
 
 
-###Parser
+### Parser
 
 **GCC's statement expression**
 
