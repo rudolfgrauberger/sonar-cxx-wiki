@@ -335,6 +335,8 @@ ___
 *Scope:* `project`
 <br>
 *Default:* `---`
+<br>
+*History:* no more supported with v0.9.9+ (or SQ6.2+)
 
 Ant pattern describing the path of integration test coverage reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 <br>
@@ -346,6 +348,8 @@ ___
 *Scope:* `project`
 <br>
 *Default:* `---`
+<br>
+*History:* no more supported with v0.9.9+ (or SQ6.2+)
 
 Ant pattern describing the path of overall test coverage reports. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 <br>
@@ -357,6 +361,8 @@ ___
 *Scope:* `project`
 <br>
 *Default:* `True`
+<br>
+*History:* no more supported with v0.9.9+ (or SQ6.2+)
 
 If 'True', source files without coverage report results are set to zero coverage. This results in more realistic overall Technical Debt values. This setting is only enabled if one ore more of the keys sonar.cxx.coverage.reportPath, sonar.cxx.coverage.itReportPath or sonar.cxx.coverage.overallReportPath is defined (e.g. sonar.cxx.coverage.forceZeroCoverage and sonar.cxx.coverage.reportPath for line coverage). In case you have no report you have to assign a dummy report.
 <br>
