@@ -455,6 +455,17 @@ or
 ---
 
 **Hints V0.9.8:**
+* There are some changes in the SQ core API, **starting with SQ 6.2:**
+   * The property `sonar.cxx.forceZeroCoverage` is no more supported. There is now a SQ core support basing on `EXECUTABLE_LINES_DATA`.
+* `sonar.cxx.coverage.itReportPath` and `sonar.cxx.coverage.overallReportPath` are no more supported by the SQ core. There is no replacement available.
+* Usagage of C plugin in parallel.
+  * Please keep in mind that the C plugin is still experimental.
+  * You can use all cxx configuration properties also for the C plugin: use `sonar.c.xxx` instead of `sonar.cxx.xxx`
+  * You have to set specific file extensions in `sonar.cxx.suffixes.sources`.
+  * `sonar.cxx.cFilesPatterns` should be set in the C plugin configuration but not in the Cxx plugin configuration.
+* Json compilation database support `sonar.cxx.jsonCompilationDatabase` is also experimental only.
+
+**Hints V0.9.8:**
 * Clang Static Analyzer support v5.0.0 (plist reports) available: `sonar.cxx.clangsa.reportPath`.
 * Clang Tidy support available: `sonar.cxx.clangtidy.reportPath`.
 * CxxOtherSensor: XSLT pre-analyse support available:
