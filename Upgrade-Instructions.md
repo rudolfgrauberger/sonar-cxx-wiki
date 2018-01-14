@@ -4,6 +4,7 @@ Follow the general [installation steps](https://github.com/SonarOpenCommunity/so
 
 * Compatible with SonarQube 6.7 LTS
 * Java Runtime Environment 8 is supported (Java 9 is not support).
+* Ensure that a rule is enabled if you get no results. In new SQ versions the default profile is read-only. The cxx plugin does not enable all rules per default.
 * There are some changes in the SQ core API, **starting with SQ 6.2:**
    * The property `sonar.cxx.forceZeroCoverage` is no more supported. There is now a SQ core support basing on `EXECUTABLE_LINES_DATA`.
    * Calculation of coverage values is slightly different now (coverage is typically a little bit higher).
@@ -24,6 +25,7 @@ Follow the general [installation steps](https://github.com/SonarOpenCommunity/so
 
 * Compatible with SonarQube 5.6 LTS, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7 LTS
 * Java Runtime Environment 8 is supported (Java 9 is not support).
+* Ensure that a rule is enabled if you get no results. In new SQ versions the default profile is read-only. The cxx plugin does not enable all rules per default.
 * There are some changes in the SQ core API, **starting with SQ 6.2:**
    * The property `sonar.cxx.forceZeroCoverage` is no more supported. There is now a SQ core support basing on `EXECUTABLE_LINES_DATA`.
    * Calculation of coverage values is slightly different now (coverage is typically a little bit higher).
