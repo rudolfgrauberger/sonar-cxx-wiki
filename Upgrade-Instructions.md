@@ -29,7 +29,7 @@ Follow the general [installation steps](https://github.com/SonarOpenCommunity/so
 * There are some changes in the SQ core API, **starting with SQ 6.2:**
    * The property `sonar.cxx.forceZeroCoverage` is no more supported. There is now a SQ core support basing on `EXECUTABLE_LINES_DATA`.
    * Calculation of coverage values is slightly different now (coverage is typically a little bit higher).
-* `sonar.cxx.coverage.itReportPath` and `sonar.cxx.coverage.overallReportPath` are no more supported by the SQ core. There is no replacement available.
+   * `sonar.cxx.coverage.itReportPath` and `sonar.cxx.coverage.overallReportPath` are no more supported by the SQ core. There is no replacement available.
    * Documentation metrics are no more supported by SQ. We added plugin specific metrics for `PUBLIC_API`, `PUBLIC_DOCUMENTED_API_DENSITY`, `PUBLIC_UNDOCUMENTED_API` as replacement. History of SQ values is lost.
 * Cognitive Complexity support. There are two known limitations:
    * recursion is not handled
