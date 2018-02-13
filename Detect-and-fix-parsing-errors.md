@@ -62,7 +62,7 @@ Visual Studio:
 
 **Missing support of compiler specific extensions**
 
-C++ community plugin implements a C++03 and C++11 compatible grammar but most compilers support additional compiler specific extensions. To get no syntax errors and meaningful results you have to find workarounds for these extensions. To keep the compiler grammar as simple as possible it was a conscious design decision to support such extensions mainly with macro definitions and not by an extension of the grammar. There are only some exceptions to this, where preprocessor directives won't work, see [[Supported compiler specific extensions]]. [[Dealing with compiler specific code peaces]] gives you an introduction how to do this.
+C++ community plugin implements a C++03 and C++11 compatible grammar but most compilers support additional compiler specific extensions. To get no syntax errors and meaningful results you have to find workarounds for these extensions. To keep the compiler grammar as simple as possible it was a conscious design decision to support such extensions mainly with macro definitions and not by an extension of the grammar. There are only some exceptions to this, where preprocessor directives won't work, see [[Supported compiler specific extensions]]. [[Dealing with compiler specific code pieces]] gives you an introduction how to do this.
 * [Microsoft-Specific Modifiers](http://msdn.microsoft.com/en-us/library/6bh0054z.aspx)
 * [GNU compiler extensions to the C++ Language](http://gcc.gnu.org/onlinedocs/gcc-4.9.0/gcc/C_002b_002b-Extensions.html)
 
