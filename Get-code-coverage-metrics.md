@@ -21,8 +21,8 @@ To collect C++ test coverage metrics with C++ Community Plugin, you have to:
 Three types of test coverage are supported:  _Unit test_, _Integration test_ and _Overall_ coverage. Use one of the following configuration properties dependent of the coverage type (see also [[Supported configuration properties]] for details):
 
 * **sonar.cxx.coverage.reportPath** for unit test coverage
-* **sonar.cxx.coverage.itReportPath** for integration test coverage
-* **sonar.cxx.coverage.overallReportPath** for overall test coverage
+* **sonar.cxx.coverage.itReportPath** for integration test coverage (until V0.9.9)
+* **sonar.cxx.coverage.overallReportPath** for overall test coverage (until V0.9.9)
 
 The plugin handles the three coverage types independent from each other and will do no aggregation for e.g. overall test coverage. Your external tool suite is responsible for combining the different coverage reports and providing three reports.
 
@@ -32,7 +32,7 @@ The C++ Community plugin accepts three different formats for the test coverage r
 * The XML format used by [Bullseye](http://www.bullseye.com/).
 * The XML format used by [Microsoft Visual Studio](http://msdn.microsoft.com/de-de/library/dd537628.aspx).
 
-Finally you can decide how source files without coverage reports are handled. Setting the property **sonar.cxx.coverage.forceZeroCoverage** to 'true', assign zero line, integration and overall coverage to source files without coverage reports, which results in a more realistic overall Technical Debt value. 'false' will ignore such files in the overall coverage calculation.
+SonarQube V6.7.x will assign zero line coverage to source files without coverage reports, which results in a more realistic overall Technical Debt value. 
 
 ### Notes for BullseyeCoverage users:
 SonarQube <3.2 provides metrics for line coverage and branch coverage. Bullseye users have function and branch/decision coverage instead. The C++ Community plugin converts the branch/decision coverage directly into branch coverage however line coverage is far more complex and cannot be correlated directly into function coverage.
@@ -44,15 +44,15 @@ Line coverage imported from a bullseye report means than function coverage + lin
 ### Notes for Visual Studio coverage users
 
 Prerequisites
-* Visual Studio Premium or Visual Studio Ultimate 2010, 2012 or 2013
+* Visual Studio Premium or Visual Studio Ultimate 2010 to 2017 Enterprise edition.
 * MSDN: [Using Code Coverage to Determine How Much Code is being Tested](http://msdn.microsoft.com/de-de/library/dd537628.aspx)
 
 Visual Studio provides block or line coverage:
-* __block coverage__:  A block is a piece of code with exactly one entry and exit point. If the program’s control flow passes through a block during a test run, that block is counted as covered. The number of times the block is used has no effect on the result. The block coverage is only on function level available.
+* __block coverage__:  A block is a piece of code with exactly one entry and exit point. If the program’s control flow passes through a block during a test run, that block is counted as covered. The number of times the block is used has no effect on the result. The block coverage is only on function level available. Block coverage is not supported by SonarQube.
 * __line coverage__: Counts the number of executed lines of code. A line could be covered (covered="yes"), not covered (covered="no") or partial covered (covered="partial").
 
 Mapping this to the SonarQube model results in:
-* Condition coverage within the code is not available. Block coverage will be set for each function in the first line.
+* Condition coverage within the code is not available.
 * SonarQube does not support partial covered lines. Partial covered lines are marked as covered.
 
 See below an example for coverage results calling with **myFunc(0, 1)**:
