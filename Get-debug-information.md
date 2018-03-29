@@ -28,7 +28,11 @@ sonar-runner -X -Dsonar.verbose=true ...
 
 By default the output is written to stdout. Errors are written to stderr. For analysis purpose it is recommended to redirect both to a LOG file.
 
-Microsoft Windows:
+Microsoft Windows command line:
 ```
 sonar-runner -X -Dsonar.verbose=true ... > sonar-runner.log 2>&1
+```
+Linux bash:
+```
+sonar-runner -X -Dsonar.verbose=true ... &> sonar-runner.log
 ```
