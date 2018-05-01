@@ -45,7 +45,7 @@ Line coverage imported from a bullseye report means than function coverage + lin
 
 Prerequisites
 * Visual Studio Premium or Visual Studio Ultimate 2010 to 2017 Enterprise edition.
-* MSDN: [Using Code Coverage to Determine How Much Code is being Tested](http://msdn.microsoft.com/de-de/library/dd537628.aspx) [English version](https://docs.microsoft.com/en-us/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
+* MSDN: [Using Code Coverage to Determine How Much Code is being Tested](http://msdn.microsoft.com/de-de/library/dd537628.aspx) The English version is [here](https://docs.microsoft.com/en-us/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested).
 
 Visual Studio provides block or line coverage:
 * __block coverage__:  A block is a piece of code with exactly one entry and exit point. If the program’s control flow passes through a block during a test run, that block is counted as covered. The number of times the block is used has no effect on the result. The block coverage is only on function level available. Block coverage is not supported by SonarQube.
