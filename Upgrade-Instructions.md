@@ -1,5 +1,20 @@
 Follow the general [installation steps](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Installation). Changes in the different versions are described below:
 
+**Upgrade to 1.0.0**
+
+* Compatible with SonarQube 6.7 LTS, 7.0 and 7.1
+* Java Runtime Environment 8 is supported (Java 9 is not support).
+* Ensure that a rule is enabled if you get no results. In new SQ versions the default profile is read-only. The cxx plugin does not enable all rules per default.
+* Cognitive Complexity support. There are two known limitations:
+   * recursion is not handled
+   * cognitive complexity per file is not available (Metrics/Coverage/Cognitive Complexity)
+* Usage of C plugin in parallel.
+  * Please keep in mind that the C plugin is still experimental.
+  * You can use all cxx configuration properties also for the C plugin: use `sonar.c.xxx` instead of `sonar.cxx.xxx`
+  * You have to set specific file extensions in `sonar.cxx.suffixes.sources` and `sonar.c.suffixes.sources`.
+  * `sonar.cxx.cFilesPatterns` should be set in the C plugin configuration but not in the Cxx plugin configuration.
+* Json compilation database support `sonar.cxx.jsonCompilationDatabase` is also experimental only
+
 **Upgrade to 0.9.9**
 
 * Compatible with SonarQube 6.7 LTS
