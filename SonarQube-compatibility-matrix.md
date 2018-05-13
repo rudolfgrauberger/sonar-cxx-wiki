@@ -6,6 +6,7 @@
   <td></td>
   <td></td>
   <td></td>
+  <td></td>
  </tr>
  <tr>
   <td></td>
@@ -14,7 +15,7 @@
   <td><b>v0.9.7</b></td>
   <td><b>v0.9.8</b></td>
   <td><b>v0.9.9</b></td>
-  <td><b>v1.0.0*</b></td>
+  <td><b>v1.0.0</b></td>
  </tr>
  <tr>
   <td><b>3.7.x (LTS)</b></td>
