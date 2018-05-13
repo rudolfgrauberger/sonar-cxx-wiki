@@ -14,7 +14,7 @@ Follow the general [installation steps](https://github.com/SonarOpenCommunity/so
   * You have to set specific file extensions in `sonar.cxx.suffixes.sources` and `sonar.c.suffixes.sources`.
   * `sonar.cxx.cFilesPatterns` should be set in the C plugin configuration but not in the Cxx plugin configuration.
 * Json compilation database support `sonar.cxx.jsonCompilationDatabase` is also experimental only
-  * `sonar.cxx.scanOnlySpecifiedSources` is no more supported. There where conflicts with sonar.sources.
+  * `sonar.cxx.scanOnlySpecifiedSources` is no more supported. There were conflicts with `sonar.sources` and `sonar.tests`.
 
 **Upgrade to 0.9.9**
 
