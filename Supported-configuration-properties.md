@@ -424,6 +424,8 @@ ___
 *Scope:* `project`
 <br>
 *Default:* `---`
+<br>
+*History:* `no more supported with v1.0.0+`
 
 Enable Sonar C++ analysis to utilize JSON compilation database support. Specifies file to be used as JSON compilation database. JSON compilation database is used to improve C++ symbol and include directory knowledge. Sonar C++ plugin also supports extension to allow importing of used compiler's internal symbols and includes.
 
@@ -460,7 +462,17 @@ or
 
 ---
 
-**Hints V0.9.8:**
+**Hints V1.0.0:**
+
+* Usage of C plugin in parallel.
+  * Please keep in mind that the C plugin is still experimental.
+  * You can use all cxx configuration properties also for the C plugin: use `sonar.c.xxx` instead of `sonar.cxx.xxx`
+  * You have to set specific file extensions in `sonar.cxx.suffixes.sources` and `sonar.c.suffixes.sources`.
+  * `sonar.cxx.cFilesPatterns` should be set in the C plugin configuration but not in the Cxx plugin configuration.
+* Json compilation database support `sonar.cxx.jsonCompilationDatabase` is also experimental only
+  * `sonar.cxx.scanOnlySpecifiedSources` is no more supported. There were conflicts with `sonar.sources` and `sonar.tests`.
+
+**Hints V0.9.9:**
 * There are some changes in the SQ core API, **starting with SQ 6.2:**
    * The property `sonar.cxx.forceZeroCoverage` is no more supported. There is now a SQ core support basing on `EXECUTABLE_LINES_DATA`.
 * `sonar.cxx.coverage.itReportPath` and `sonar.cxx.coverage.overallReportPath` are no more supported by the SQ core. There is no replacement available.
