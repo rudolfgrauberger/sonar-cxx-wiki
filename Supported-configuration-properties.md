@@ -37,6 +37,8 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 * [sonar.cxx.jsonCompilationDatabase](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxjsoncompilationdatabase)
 * [sonar.cxx.scanOnlySpecifiedSources](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxscanonlyspecifiedsources)
 * [sonar.cxx.clangsa.reportPath](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxclangsareportpath)
+* [sonar.cxx.funccomplexity.threshold](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxfunccomplexitythreshold)
+* [sonar.cxx.funcsize.threshold](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxfuncsizethreshold)
 
 ___
 ### sonar.cxx.suffixes.sources
@@ -445,7 +447,6 @@ When using JSON compilation database support limit Sonar C++ plugin analysis to 
 <br>
 *Example:*
 
-
 ___
 ### sonar.cxx.clangsa.reportPath
 *Scope:* `project`
@@ -460,7 +461,44 @@ Ant pattern describing the path to Clang Static Analyzer plist reports. Path can
 or  
 `sonar.cxx.clangsa.reportPath=analyzer_reports/*/*.plist`
 
+___
+### sonar.cxx.funccomplexity.threshold
+*Scope:* `project`
+<br>
+*Default:* `10`
+
+Cyclomatic complexity threshold used to classify a function as complex. The threshold is for the metrics:
+- Complex Functions: Number of functions with high cyclomatic complexity
+- Complex Functions (%): % of functions with high cyclomatic complexity
+- Complex Functions Lines of Code: Number of lines of code in functions with high cyclomatic complexity
+- Complex Functions Lines of Code (%): % of lines of code in functions with high cyclomatic complexity
+<br>
+
+___
+### sonar.cxx.funcsize.threshold
+*Scope:* `project`
+<br>
+*Default:* `20`
+
+Function size threshold to consider a function to be too big. The threshold is for the metrics:
+- Big Functions: Number of functions with too many lines
+- Big Functions Lines of Code: Number of lines of code in functions with too many lines
+- Big Functions (%): Number of lines of code in functions with too many lines
+- Big Functions Lines of Code (%): % of lines of code in functions with too many lines
+<br>
+
 ---
+
+**Hints V1.0.0:**
+
+* Usage of C plugin in parallel.
+  * Please keep in mind that the C plugin is still experimental.
+  * You can use all cxx configuration properties also for the C plugin: use `sonar.c.xxx` instead of `sonar.cxx.xxx`
+  * You have to set specific file extensions in `sonar.cxx.suffixes.sources` and `sonar.c.suffixes.sources`.
+  * `sonar.cxx.cFilesPatterns` should be set in the C plugin configuration but not in the Cxx plugin configuration.
+* Json compilation database support `sonar.cxx.jsonCompilationDatabase` is also experimental only
+  * `sonar.cxx.scanOnlySpecifiedSources` is no more supported. There were conflicts with `sonar.sources` and `sonar.tests`.
+* new configuration properties: `sonar.cxx.funccomplexity.threshold` and `sonar.cxx.funcsize.threshold`
 
 **Hints V1.0.0:**
 
