@@ -3,7 +3,7 @@
    - `sonar-cxx-plugin-x.y.z.jar`: is the c++ plug-in
    - `sonar-c-plugin-x.y.z.jar`: is the c plug-in
 - restart the SonarQube server
-- Navigate to the _Update Center_ (\<Your SonarQube URL\>/Administration/System/Update Center).<br>The _Update Center_ should list 'C++ (Community)' on the tab 'Installed'.
+- Navigate to the _Update Center_ (\<Your SonarQube URL\>/Administration/System/Update Center). The _Update Center_ should list 'C++ (Community)' on the tab 'Installed'.
 
 Additional tools:
-   - `sslr-cxx-toolkit-x.y.z.jar`: Is an additional tool to create an AST from source code. Helpful to create XPath checks. <br>This is not a plug-in. Don't copy it into the _plugins_ folder.
+   - `sslr-cxx-toolkit-x.y.z.jar`: Is an additional tool to create an AST from source code. Helpful to create XPath checks. This is not a plug-in. Don't copy it into the _plugins_ folder.
