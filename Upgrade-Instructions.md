@@ -3,7 +3,7 @@ Follow the general [installation steps](https://github.com/SonarOpenCommunity/so
 **Upgrade to 1.1.0**
 
 * Compatible with SonarQube 6.7 LTS, 7.0, 7.1 and 7.2
-* Java Runtime Environment 8 is supported (Java 9 is not support).
+* Java Runtime Environment 8 is supported (Java 9 is not supported).
 * Ensure that a rule is enabled if you get no results. In new SQ versions the default profile is read-only. The cxx plugin does not enable all rules per default.
 * Cognitive Complexity support. There are two known limitations:
    * recursion is not handled
