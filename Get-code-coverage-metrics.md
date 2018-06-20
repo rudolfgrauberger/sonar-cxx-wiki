@@ -96,3 +96,55 @@ Resulting Visual Studio XML coverage file:
   </modules>
 </results>
 ```
+
+### Notes for Testwell CTC++ coverage users
+
+#### Prerequisites
+
+- Testwell CTC++ Version 7.2 and later.
+- only textural reports are supported
+
+#### Generate instrumented executable
+
+Suppose we have the following source files that form a complete program: prime.c io.c calc.c. This program can be compiled and linked in many ways, one way being the following
+```
+cl –Feprime.exe prime.c io.c calc.c
+```
+or
+```
+gcc -o prime prime.c io.c calc.c
+```
+which results in the prime.exe / prime program.
+
+Now, we wish to apply CTC++ on our program, that is, we want to measure the files prime.c, io.c and calc.c and find out how thoroughly they were exercised in our test runs. First we need to instrument the files we wish to measure. Assume we wish to measure multicondition coverage. This can be done as follows:
+```
+ctc -i m cl –Feprime.exe prime.c io.c calc.c
+```
+or
+```
+ctc -i m gcc -o prime prime.c io.c calc.c
+```
+
+As a result we get the instrumented prime.exe program. Here 'ctc' is the CTC++ Preprocessor utility, which makes the instrumentation on the given C and C++ source files and drives compiling/linking of the new instrumented target. The '-i m' command-line options to ctc mean "instrument for multicondition".
+
+When ctc instruments source files, it maintains descriptions what the files contain (what interesting code there is to ctc, on what lines, etc.). This file is called symbolfile, and when it is not specified (like here) it will be MON.sym in current directory.
+
+All right, now prime.exe is the instrumented version of the program. Let's do one test run.
+
+#### Generate coverage report
+
+After this test run we notice that the file MON.dat has born in the current directory (same directory as the symbolfile MON.sym was created to). It is a datafile, containing the collected execution counters when the code in the instrumented files was executed.
+
+Now we wish to see the results of our test, i.e. what parts of the program the above run has executed. We use the CTC++ Postprocessor utility as follows:
+```
+ctcpost MON.sym MON.dat -p profile.txt
+```
+
+What we are asking here is that ctcpost takes the symbolfile MON.sym and the datafile MON.dat as input and produces an Execution Profile Listing to the file profile.txt.
+
+#### Read coverage file with SonarQube
+
+To get the results of our test to sonarqube we add the following line to configuration file sonar-project.properties:
+```
+sonar.cxx.coverage.reportPath=profile.txt
+```
