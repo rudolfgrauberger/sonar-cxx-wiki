@@ -27,3 +27,5 @@ In order to enable some sensor(s), administrator have to initially activate corr
 1. The default quality profile "C++ (Community) Sonar way" is read only. Therefore please create a copy of the default "Sonar way" profile ([http://sonarserver/profiles](http://sonarserver/profiles) -> C++ (Community) -> SonarWay -> gear-wheel -> Copy -> name your custom profile e.g. like "ProjectName Way")
 
 2. Afterwards activate relevant rules in "ProjectName Way" profile ([http://sonarserver/coding_rules](http://sonarserver/coding_rules) -> QualityProfiles -> Choose "ProjectName Way" -> Choose "inactive" on the same line -> Repositories -> Choose the desired sensor -> [bulk] activate rules you are interested in
+
+3. Finally analyzed project must be associated with the newly created quality profile. ([http://sonarserver/](http://sonarserver/) -> Choose the project -> Administration -> Quality Profiles -> C++ (Community) -> In the drop-down menu, please replace "Sonar way" with "ProjectName Way")
