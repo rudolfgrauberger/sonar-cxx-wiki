@@ -1,5 +1,7 @@
 Here is a quick guide how to run the supported analyzers and generate reports such that it fits SonarQube's needs.
 
+**IMPORTANT**: Quality rules have to be activated in order to enable the import of warnings. Please see [Activate quality rules](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Activate-quality-rules) for more info.
+
 ### Cppcheck
 
 In order to run Cppcheck and generate a fitting report, make sure:
