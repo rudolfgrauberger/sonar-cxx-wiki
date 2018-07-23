@@ -1,5 +1,7 @@
 The Community C++ Plugin supports feeding compiler warnings as violations into SonarQube. Here is a quick guide how to run the supported compilers and catch needed relevant output.
 
+**IMPORTANT**: Quality rules have to be activated in order to enable the import of warnings. Please see [Activate quality rules](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Activate-quality-rules) for more info.
+
 ### GNU C++ Compiler
 To feed GCC warnings into SonarQube, make sure to:
 
