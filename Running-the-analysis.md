@@ -3,7 +3,7 @@ _The C++ Community plugin won't execute neither test runners nor coverage tracer
 ### Usage
 
 You can analyze your projects using the usual means (see [Analyzing Source Code](
-http://docs.sonarqube.org/display/SONAR/Analyzing+Source+Code)). All runners should work. See below for details.
+http://docs.sonarqube.org/display/SONAR/Analyzing+Source+Code)). All scanners should work. See below for details.
 
 ### The usual setup
 
@@ -17,10 +17,10 @@ Analysis of a C++ project involves usually three steps:
    - Optional: paths to the generated reports (see [[Supported configuration properties]])
 
 3. Make sure the SonarQube Server is running
-4. Use the SonarQube runner to start the analysis and feed the data into SonarQube. This usually boils down to calling the runner in the root directory of your project:
+4. Use the SonarQube scanner to start the analysis and feed the data into SonarQube. This usually boils down to calling the scanner in the root directory of your project:
 ```BASH
 $ cd <project root>
-$ sonar-runner
+$ sonar-scanner
 ```
 
 There may be a Step '0' too: "_use your build system to make a build suitable for running the Step 1_". This may be the case for collecting coverage statistics when using gcc+gcov, for example.
@@ -34,7 +34,7 @@ There is a maven plugin which automates running of a sonar analysis on a C++ pro
 1. Getting and installing the [cxx-maven-plugin](https://github.com/franckbonin/cxx-maven-plugin) ([usage](https://github.com/franckbonin/cxx-maven-plugin/wiki/Introduction)). If you use multiple source directories and depend on cxx:addsource goal, you shall use -Dsonar.phase=cxx:addsource option (see [Sonar Maven Plugin Project Configuration](http://docs.sonarqube.org/display/SONAR/Analyzing+with+Maven) )
 
 2. Setting the language property and the source directory in your pom:
-```
+```XML
   <properties>
     ...
     <sonar.language>c++</sonar.language>
