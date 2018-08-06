@@ -58,3 +58,9 @@ Define the location of your coverage file in the SonarQube configuration file (s
 * Problems are mostly path problems. Ensure that the source files defined in your report file exist on the machine you are running the sonar runner. Paths in report file could be absolute or relative to configuration file (.\\...).
 * [Customizing Code Coverage Analysis](http://msdn.microsoft.com/en-us/library/jj159530.aspx)
 * [Troubleshooting Code Coverage](http://msdn.microsoft.com/en-us/library/jj159523.aspx)
+
+### Testwell CTC++
+
+Please see [Get-code-coverage-metrics](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Get-code-coverage-metrics) for more information about execution and import of Testwell CTC++ coverage reports
+
+* See also https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Get-code-coverage-metrics
