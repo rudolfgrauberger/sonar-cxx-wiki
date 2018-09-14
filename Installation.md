@@ -4,7 +4,7 @@
    - `sonar-c-plugin-x.y.z.jar`: is the c plug-in
 - restart the SonarQube server
 - Navigate to the _Update Center_ (\<Your SonarQube URL\>/Administration/System/Update Center). The _Update Center_ should list 'C++ (Community)' on the tab 'Installed'.
-- Alternatively, the update center in recent versions has been renamed to _Marketplace_, and can be found at (\<Your SonarQube URL\>/admin/marketplace).
+- Alternatively, the _Update Center_ in recent versions has been renamed to _Marketplace_, and can be found at (\<Your SonarQube URL\>/admin/marketplace).
 
 Additional tools:
    - `sslr-cxx-toolkit-x.y.z.jar`: Is an additional tool to create an AST from source code. Helpful to create XPath checks. This is not a plug-in. Don't copy it into the _plugins_ folder.
