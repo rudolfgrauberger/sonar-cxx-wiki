@@ -15,40 +15,20 @@ If you're using a patched or not-yet-supported version of an integrated code che
 5. Run the analysis
 
 ####  Properties ####
-  <table>
-  <tr>
-  <td><b>Property</b></td>
-  <td><b>Description</b></td>
-  </tr>
-  <tr>
-  <td>sonar.cxx.cppcheck.customRules</td>
-  <td>Cppcheck Custom Rules</td>
-  </tr>
-  <tr>
-  <td>sonar.cxx.valgrind.customRules</td>
-  <td>Valgrind Custom Rules</td>
-  </tr>
-  <tr>
-  <td>sonar.cxx.pclint.customRules</td>
-  <td>PClint Custom Rules</td>
-  </tr>
-  <tr>
-  <td>sonar.cxx.rats.customRules</td>
-  <td>RATS Custom Rules</td>
-  </tr>
-  <tr>
-  <td>sonar.cxx.vera.customRules</td>
-  <td>Vera++ Custom Rules</td>
-  </tr>
-  <tr>
-  <td>sonar.cxx.drmemory.customRules</td>
-  <td>Dr Memory Analysis Rules</td>
-  </tr>
-  <tr>
-  <td>sonar.cxx.other.rules</td>
-  <td>Unsupported Code Checker Custom Rules, see below</td>
-  </tr>
-  <table>
+| Property                           | Description                                      |
+|------------------------------------|--------------------------------------------------|
+| sonar.cxx.clangsa.customRules      | ClangSA Rules                                    |
+| sonar.cxx.clangtidy.customRules    | Clang-Tidy Rules                                 |
+| sonar.cxx.compiler-gcc.customRules | Compiler-GCC rules                               |
+| sonar.cxx.compiler-vc.customRules  | Compiler-VC Rules                                |
+| sonar.cxx.cppcheck.customRules     | Cppcheck Custom Rules                            |
+| sonar.cxx.drmemory.customRules     | Dr Memory Analysis Rules                         |
+| sonar.cxx.pclint.customRules       | PClint Custom Rules                              |
+| sonar.cxx.rats.customRules         | RATS Custom Rules                                |
+| sonar.cxx.valgrind.customRules     | Valgrind Custom Rules                            |
+| sonar.cxx.vera.customRules         | Vera++ Custom Rules                              |
+| sonar.cxx.other.rules              | Unsupported Code Checker Custom Rules, see below |
+
 
 ### The format of the rules file
 The format of rules file is expected to be the following ([RulesDefinitionXmlLoader](https://github.com/SonarSource/sonarqube/blob/master/sonar-plugin-api/src/main/java/org/sonar/api/server/rule/RulesDefinitionXmlLoader.java)):
