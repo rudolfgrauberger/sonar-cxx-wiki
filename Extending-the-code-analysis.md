@@ -19,7 +19,7 @@ If you're using a patched or not-yet-supported version of an integrated code che
 |------------------------------------|--------------------------------------------------|
 | sonar.cxx.clangsa.customRules      | ClangSA Rules                                    |
 | sonar.cxx.clangtidy.customRules    | Clang-Tidy Rules                                 |
-| sonar.cxx.compiler-gcc.customRules | Compiler-GCC rules                               |
+| sonar.cxx.compiler-gcc.customRules | Compiler-GCC Rules                               |
 | sonar.cxx.compiler-vc.customRules  | Compiler-VC Rules                                |
 | sonar.cxx.cppcheck.customRules     | Cppcheck Custom Rules                            |
 | sonar.cxx.drmemory.customRules     | Dr Memory Analysis Rules                         |
