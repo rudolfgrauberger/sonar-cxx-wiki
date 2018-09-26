@@ -228,3 +228,12 @@ Add this configuration to the `sonar-project.properties` file to import the gene
 sonar.cxx.clangsa.reportPath=analyzer_reports/*/*.plist
 ```
 
+### Clang Tidy
+Please use the properties...
+```propertis
+sonar.cxx.clangtidy.reportPath=
+sonar.cxx.clangtidy.customRules= #optional
+sonar.cxx.clangtidy.charset=     #optional
+```
+
+...in order to import the clang-tidy reports.
