@@ -3,7 +3,7 @@ In case of problems it is often helpful to turn debug information on. This will 
 **Step 1:** Produce execution **debug output**
 
 ```
-sonar-runner -X ...
+sonar-scanner -X ...
 -X,--debug Produce execution debug output
 ```
 
@@ -12,7 +12,7 @@ sonar-runner -X ...
 If you need more debug information you can add the ```sonar.verbose``` property by adding the command line parameter ```-Dsonar.verbose=true```.
 
 ```
-sonar-runner -X -Dsonar.verbose=true ...
+sonar-scanner -X -Dsonar.verbose=true ...
 ```
 
  There is also the `sonar.log.level` which controls the quantity / level of logs produced during an analysis. `sonar.verbose` activates DEBUG mode for the analyzer. This is a shortcut of `sonar.log.level=DEBUG`.
@@ -30,9 +30,9 @@ By default the output is written to stdout. Errors are written to stderr. For an
 
 Microsoft Windows command line:
 ```
-sonar-runner -X -Dsonar.verbose=true ... > sonar-runner.log 2>&1
+sonar-scanner -X -Dsonar.verbose=true ... > sonar-scanner.log 2>&1
 ```
 Linux bash:
 ```
-sonar-runner -X -Dsonar.verbose=true ... &> sonar-runner.log
+sonar-scanner -X -Dsonar.verbose=true ... &> sonar-scanner.log
 ```
