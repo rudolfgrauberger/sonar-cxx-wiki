@@ -34,6 +34,14 @@ Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/disp
 * [sonar.cxx.compiler.reportPath](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxcompilerreportpath)
 * [sonar.cxx.compiler.regex](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxcompilerregex)
 * [sonar.cxx.compiler.charset](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxcompilercharset)
+* [sonar.cxx.vc.reportPath](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxvcreportpath)
+* [sonar.cxx.vc.regex](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxvcregex)
+* [sonar.cxx.vc.charset](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxvccharset)
+* [sonar.cxx.gcc.reportPath](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxgccreportpath)
+* [sonar.cxx.gcc.regex](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxgccregex)
+* [sonar.cxx.gcc.charset](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxgcccharset)
+* [sonar.cxx.msbuild.reportPath](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxmsbuildreportpath)
+* [sonar.cxx.msbuild.charset](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxmsbuildcharset)
 * [sonar.cxx.jsonCompilationDatabase](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxjsoncompilationdatabase)
 * [sonar.cxx.scanOnlySpecifiedSources](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxscanonlyspecifiedsources)
 * [sonar.cxx.clangsa.reportPath](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxclangsareportpath)
@@ -446,7 +454,7 @@ ___
 <br>
 *Default:* `(.*>)?(?<file>.*)\\((?<line>\\d+)\\)\\x20:\\x20warning\\x20(?<id>C\\d+):(?<message>.*)`
 
-Regex must define the named groups <file>, <line>, <id>, <message>.
+Regex must define the named groups `<file>, <line>, <id>, <message>`.
 
 <br>
 <br>
@@ -480,8 +488,7 @@ ___
 <br>
 *Default:* `(?<file>.*):(?<line>[0-9]+):[0-9]+:\\x20warning:\\x20(?<message>.*)\\x20\\[(?<id>.*)\\]`
 
-Regex must define the named groups <file>, <line>, <id>, <message>.
-
+Regex must define the named groups `<file>, <line>, <id>, <message>`.
 <br>
 <br>
 *Example:*
@@ -493,6 +500,28 @@ ___
 *Default:* `UTF-8`
 
 Charset used for the compiler log file (sonar.cxx.gcc.reportPath) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
+<br>
+<br>
+*Example:*
+
+___
+### sonar.cxx.msbuild.reportPath
+*Scope:* `project`
+<br>
+*Default:* `---`
+
+Ant pattern describing the path to MSBuild output file. Path can be relative or absolute. Single path or comma separated list of paths is supported. If available compiler macros and includes will be taken also from build log and used during the preprocessing of source files (see [[Compilers]]).
+<br>
+<br>
+*Example:*
+
+___
+### sonar.cxx.msbuild.charset
+*Scope:* `project`
+<br>
+*Default:* `UTF-8`
+
+Charset used for the MSBuild log file (sonar.cxx.msbuild.reportPath) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
 <br>
 <br>
 *Example:*
