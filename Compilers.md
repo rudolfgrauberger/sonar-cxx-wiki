@@ -9,18 +9,17 @@ To feed GCC warnings into SonarQube, make sure to:
 2. Capture the warnings from your build into a file (e.g build.log) using shell redirections or similar
 3. Set configuration properties, example:
 ```
-sonar.cxx.compiler.parser=GCC
-sonar.cxx.compiler.reportPath=*.log
-sonar.cxx.compiler.charset=UTF-8
+sonar.cxx.gcc.reportPath=*.log
+sonar.cxx.gcc.charset=UTF-8
 ```
 If gcc outputs the column numbers
 ```
-sonar.cxx.compiler.regex=^(.*):([0-9]+):[0-9]+: warning: (.*)\\[(.*)\\]$
+sonar.cxx.gcc.regex=(?<file>.*):(?<line>[0-9]+):[0-9]+:\\x20warning:\\x20(?<message>.*)\\x20\\[(?<id>.*)\\]
 ```
 Else if gcc doesn't output the column numbers (e.g. -fno-show-column is set or gcc version 4.4.7)
 
 ```
-sonar.cxx.compiler.regex=^(.*):([0-9]+): warning: (.*)\\[(.*)\\]$
+sonar.cxx.gcc.regex=(?<file>.*):(?<line>[0-9]+):\\x20warning:\\x20(?<message>.*)\\x20\\[(?<id>.*)\\]
 ```
 3. Activate the rules from the rule repository "compiler-gcc"
 4. Run the analysis
@@ -38,13 +37,12 @@ The format of the build log looks different for parallel project builds (MSBuild
 
 | Visual Studio Version              | Regular Expression           | 
 | ---------------------------------- |----------------------------- | 
-| Visual Studio 2010-2015                 | `^(.*)\((\d+)\)\x20*:\x20warning\x20(C\d+):(.*)$` |
-| Visual Studio 2010-2015 (`/maxcpucount:xx`)                | `^.*>(.*)\((\d+)\)\x20*:\x20warning\x20(C\d+):(.*)$` |
+| Visual Studio 2010-2015                 | `(.*>)?(?<file>.*)\\((?<line>\\d+)\\)\\x20:\\x20warning\\x20(?<id>C\\d+):(?<message>.*)` |
 
 You have to use additonal escape sequences (`\`-> `\\`) for property or xml files.
 
 ```
-sonar.cxx.compiler.regex=^.*>(.*)\\((\\d+)\\)\\x20*:\\x20warning\\x20(C\\d+):(.*)$
+sonar.cxx.vc.regex=(.*>)?(?<file>.*)\\((?<line>\\d+)\\)\\x20:\\x20warning\\x20(?<id>C\\d+):(?<message>.*)
 ```
 
 **Visual Studio settings**
@@ -86,7 +84,7 @@ MSBuild.exe example.proj /t:rebuild /p:Configuration=Release;WarningLevel=3 /fil
 ```
 **Retrieving compiler information from buildlog**
 
-Version 0.9.3 and above extracts includes, defines and compiler options from the build log automatically.
+Version 0.9.3 and above extracts includes, defines and compiler options from the build log automatically (`sonar.cxx.compiler.reportPath`). Starting with version 1.2.0 you have to use `sonar.cxx.msbuild.reportPath`.
 
 This feature is enabled only if the produced log during compilation contains enough information (msbuild verbosity set to detailed or diagnostic). For example
    
@@ -97,22 +95,22 @@ msbuild.exe /v:Detailed  Solution.SLN > buildlog.log
 and then
 
 ```
-sonar.cxx.compiler.reportPath=buildlog.log
+sonar.cxx.msbuild.reportPath=buildlog.log
+sonar.cxx.msbuild.charset=UTF-8
 ```
 
-will automate much of the plugin configuration, otherwise set using sonar.cxx.includeDirectories and sonar.cxx.defines.
+will automate much of the plugin configuration, otherwise set using `sonar.cxx.includeDirectories` and `sonar.cxx.defines`.
 
-This feature can be used in any version of visual studio and  it is independent of the Code Analysis described in earlier sections. Altough they come together using the same sonar.cxx.compiler.reportPath option.
+This feature can be used in any version of visual studio and  it is independent of the Code Analysis described in earlier sections.
 
 **SonarQube Configuration settings**
 
 To read the messages from the LOG file the following configuration settings have to be defined. The regular expression can be configured and must match to the format in the LOG file.
 
 ```
-sonar.cxx.compiler.parser=Visual C++
-sonar.cxx.compiler.reportPath=*.log
-sonar.cxx.compiler.charset=UTF-8
-sonar.cxx.compiler.regex=^.*>(?<filename>.*)\\((?<line>[0-9]+)\\):\\x20warning\\x20(?<id>C\\d\\d\\d\\d):(?<message>.*)$
+sonar.cxx.vc.reportPath=*.log
+sonar.cxx.vc.charset=UTF-8
+sonar.cxx.vc.regex=(.*>)?(?<file>.*)\\((?<line>\\d+)\\)\\x20:\\x20warning\\x20(?<id>C\\d+):(?<message>.*)
 ```
 
 A typical log file contains compiler warnings as shown in the following excerpt:
