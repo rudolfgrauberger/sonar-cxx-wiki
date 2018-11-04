@@ -376,6 +376,8 @@ ___
 *Scope:* `project`
 <br>
 *Default:* `Visual C++`
+<br>
+*History:* `no more supported with v1.2.0+`
 
 The format of the warnings file. Currently supported are 'Visual C++' and 'GCC'.
 <br>
@@ -387,6 +389,8 @@ ___
 *Scope:* `project`
 <br>
 *Default:* `---`
+<br>
+*History:* `no more supported with v1.2.0+`
 
 Ant pattern describing the path to compiler output file. Path can be relative or absolute. Single path or comma separated list of paths is supported.
 The current default settings can be used for VC++ compiler log file. If available compiler macros and includes will be taken also from build log and used during the pre processing of sources. See [[Compilers]]
@@ -399,6 +403,8 @@ ___
 *Scope:* `project`
 <br>
 *Default:* `^.*[\\\\,/](.*)\\(([0-9]+)\\)\\x20:\\x20warning\\x20(C\\d\\d\\d\\d):(.*)$`
+<br>
+*History:* `no more supported with v1.2.0+`
 
 Regular expression for four groups with this sequence:
 * file name
@@ -415,8 +421,78 @@ ___
 *Scope:* `project`
 <br>
 *Default:* `UTF-16`
+<br>
+*History:* `no more supported with v1.2.0+`
 
 Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
+<br>
+<br>
+*Example:*
+
+___
+### sonar.cxx.vc.reportPath
+*Scope:* `project`
+<br>
+*Default:* `---`
+
+Ant pattern describing the path to compiler output file. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
+
+___
+### sonar.cxx.vc.regex
+*Scope:* `project`
+<br>
+*Default:* `(.*>)?(?<file>.*)\\((?<line>\\d+)\\)\\x20:\\x20warning\\x20(?<id>C\\d+):(?<message>.*)`
+
+Regex must define the named groups <file>, <line>, <id>, <message>.
+
+<br>
+<br>
+*Example:*
+
+___
+### sonar.cxx.vc.charset
+*Scope:* `project`
+<br>
+*Default:* `UTF-8`
+
+Charset used for the compiler log file (sonar.cxx.vc.reportPath) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
+<br>
+<br>
+*Example:*
+
+___
+### sonar.cxx.gcc.reportPath
+*Scope:* `project`
+<br>
+*Default:* `---`
+
+Ant pattern describing the path to compiler output file. Path can be relative or absolute. Single path or comma separated list of paths is supported.
+<br>
+<br>
+*Example:*
+
+___
+### sonar.cxx.gcc.regex
+*Scope:* `project`
+<br>
+*Default:* `(?<file>.*):(?<line>[0-9]+):[0-9]+:\\x20warning:\\x20(?<message>.*)\\x20\\[(?<id>.*)\\]`
+
+Regex must define the named groups <file>, <line>, <id>, <message>.
+
+<br>
+<br>
+*Example:*
+
+___
+### sonar.cxx.gcc.charset
+*Scope:* `project`
+<br>
+*Default:* `UTF-8`
+
+Charset used for the compiler log file (sonar.cxx.gcc.reportPath) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
 <br>
 <br>
 *Example:*
