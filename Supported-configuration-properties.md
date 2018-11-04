@@ -374,7 +374,7 @@ ___
 <br>
 *History:* no more supported with v0.9.9+ (or SQ6.2+)
 
-If 'True', source files without coverage report results are set to zero coverage. This results in more realistic overall Technical Debt values. This setting is only enabled if one ore more of the keys sonar.cxx.coverage.reportPath, sonar.cxx.coverage.itReportPath or sonar.cxx.coverage.overallReportPath is defined (e.g. sonar.cxx.coverage.forceZeroCoverage and sonar.cxx.coverage.reportPath for line coverage). In case you have no report you have to assign a dummy report.
+If 'True', source files without coverage report results are set to zero coverage. This results in more realistic overall Technical Debt values. This setting is only enabled if one ore more of the keys `sonar.cxx.coverage.reportPath`, `sonar.cxx.coverage.itReportPath` or `sonar.cxx.coverage.overallReportPath` is defined (e.g. `sonar.cxx.coverage.forceZeroCoverage` and `sonar.cxx.coverage.reportPath` for line coverage). In case you have no report you have to assign a dummy report.
 <br>
 <br>
 *Example:*
@@ -432,7 +432,7 @@ ___
 <br>
 *History:* `no more supported with v1.2.0+`
 
-Charset used for the compiler log file (sonar.cxx.compiler.reportPath) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
+Charset used for the compiler log file (`sonar.cxx.compiler.reportPath`) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
 <br>
 <br>
 *Example:*
@@ -466,7 +466,7 @@ ___
 <br>
 *Default:* `UTF-8`
 
-Charset used for the compiler log file (sonar.cxx.vc.reportPath) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
+Charset used for the compiler log file (`sonar.cxx.vc.reportPath`) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
 <br>
 <br>
 *Example:*
@@ -499,7 +499,7 @@ ___
 <br>
 *Default:* `UTF-8`
 
-Charset used for the compiler log file (sonar.cxx.gcc.reportPath) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
+Charset used for the compiler log file (`sonar.cxx.gcc.reportPath`) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
 <br>
 <br>
 *Example:*
@@ -521,7 +521,7 @@ ___
 <br>
 *Default:* `UTF-8`
 
-Charset used for the MSBuild log file (sonar.cxx.msbuild.reportPath) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
+Charset used for the MSBuild log file (`sonar.cxx.msbuild.reportPath`) e.g. UTF-8, UTF-16 (for more see java.nio.charset.Charset)
 <br>
 <br>
 *Example:*
@@ -594,7 +594,21 @@ Function size threshold to consider a function to be too big. The threshold is f
 
 ---
 
-**Hints V1.0.0:**
+**Hints V1.2.0:**
+
+* GCC and MSVC compiler sensor can be used at the same time now
+  * **BREAKING CHANGE :** `sonar.cxx.compiler` settings are no more supported!
+     * use `sonar.cxx.vc` to read MSVC reports
+     * use `sonar.cxx.gcc` to read GCC reports
+     * use `sonar.cxx.msbuild` to read includes and defines from MSBuild log file
+* Usage of C plugin in parallel.
+  * Please keep in mind that the C plugin is still experimental.
+  * You can use all cxx configuration properties also for the C plugin: use `sonar.c.xxx` instead of `sonar.cxx.xxx`
+  * You have to set specific (different) file extensions in `sonar.cxx.suffixes.sources` and `sonar.c.suffixes.sources`.
+  * Set `sonar.cxx.cFilesPatterns` in the C plugin configuration (but not in the Cxx plugin configuration).
+* Json compilation database support `sonar.cxx.jsonCompilationDatabase` is experimental only
+
+**Hints V1.1.0:**
 
 * Usage of C plugin in parallel.
   * Please keep in mind that the C plugin is still experimental.
