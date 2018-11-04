@@ -1,5 +1,28 @@
 Follow the general [installation steps](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Installation). Changes in the different versions are described below:
 
+**Upgrade to 1.2.0**
+
+* Compatible with SonarQube 6.7 LTS, 7.0, 7.1, 7.2, 7.3 and 7.4
+* Java Runtime Environment 8 is supported (Java 9 is not supported).
+* Ensure that a rule is enabled if you get no results. In new SQ versions the default profile is read-only. The cxx plugin does not enable all rules per default.
+* GCC and MSVC compiler sensor can be used at the same time now
+  - **BREAKING CHANGE :** `sonar.cxx.compiler` settings are no more supported!
+     - use `sonar.cxx.vc` to read MSVC reports
+     - use `sonar.cxx.gcc` to read GCC reports
+     - use `sonar.cxx.msbuild` to read includes and defines from MSBuild log file
+* Complexity metrics are performed on original source code now
+  * In the past we were first preprocessing the code and were calculating the complexity metrics on base of the preprocessed code. This could lead to confusing metric numbers because macro code is counted multiple times and could also be from external libraries. **Generated code (among others macro expansions) doesn't affect the calculation of cognitive / cyclomatic complexity now. This can lead to different but easier to understand metrics.**
+* Cognitive Complexity support. There are two known limitations:
+   * recursion is not handled
+   * cognitive complexity per file is not available (Metrics/Coverage/Cognitive Complexity)
+* Usage of C plugin in parallel.
+  * Please keep in mind that the C plugin is still experimental.
+  * You can use all cxx configuration properties also for the C plugin: use `sonar.c.xxx` instead of `sonar.cxx.xxx`
+  * You have to set specific (different) file extensions in `sonar.cxx.suffixes.sources` and `sonar.c.suffixes.sources`.
+  * Set `sonar.cxx.cFilesPatterns` in the C plugin configuration only (but not in the Cxx plugin configuration).
+* Json compilation database support `sonar.cxx.jsonCompilationDatabase` is also experimental only
+  * `sonar.cxx.scanOnlySpecifiedSources` is no more supported. There were conflicts with `sonar.sources` and `sonar.tests`.
+
 **Upgrade to 1.1.0**
 
 * Compatible with SonarQube 6.7 LTS, 7.0, 7.1 and 7.2
