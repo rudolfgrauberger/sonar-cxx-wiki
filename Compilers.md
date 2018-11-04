@@ -17,12 +17,13 @@ If gcc outputs the column numbers
 sonar.cxx.gcc.regex=(?<file>.*):(?<line>[0-9]+):[0-9]+:\\x20warning:\\x20(?<message>.*)\\x20\\[(?<id>.*)\\]
 ```
 Else if gcc doesn't output the column numbers (e.g. -fno-show-column is set or gcc version 4.4.7)
-
 ```
 sonar.cxx.gcc.regex=(?<file>.*):(?<line>[0-9]+):\\x20warning:\\x20(?<message>.*)\\x20\\[(?<id>.*)\\]
 ```
-3. Activate the rules from the rule repository "compiler-gcc"
-4. Run the analysis
+Hint: You have to use additional escape sequences (`\`-> `\\`) for the regex property in the configuration file!
+
+4. Activate the rules from the rule repository "compiler-gcc"
+5. Run the analysis
 
 ### Microsofts Visual Studio Compiler
 
@@ -37,9 +38,9 @@ The format of the build log looks different for parallel project builds (MSBuild
 
 | Visual Studio Version              | Regular Expression           | 
 | ---------------------------------- |----------------------------- | 
-| Visual Studio 2010-2015                 | `(.*>)?(?<file>.*)\\((?<line>\\d+)\\)\\x20:\\x20warning\\x20(?<id>C\\d+):(?<message>.*)` |
+| Visual Studio 2010-2015                 | `(.*>)?(?<file>.*)\((?<line>\d+)\)\x20:\x20warning\x20(?<id>C\d+):(?<message>.*)` |
 
-You have to use additonal escape sequences (`\`-> `\\`) for property or xml files.
+Hint: You have to use additional escape sequences (`\`-> `\\`) for the regex property in the configuration file!
 
 ```
 sonar.cxx.vc.regex=(.*>)?(?<file>.*)\\((?<line>\\d+)\\)\\x20:\\x20warning\\x20(?<id>C\\d+):(?<message>.*)
