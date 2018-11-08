@@ -601,6 +601,7 @@ Function size threshold to consider a function to be too big. The threshold is f
      * use `sonar.cxx.vc` to read MSVC reports
      * use `sonar.cxx.gcc` to read GCC reports
      * use `sonar.cxx.msbuild` to read includes and defines from MSBuild log file
+* Setting `sonar.cxx.missingIncludeWarnings` is no more available. Turn debug info on to get information.
 * Usage of C plugin in parallel.
   * Please keep in mind that the C plugin is still experimental.
   * You can use all cxx configuration properties also for the C plugin: use `sonar.c.xxx` instead of `sonar.cxx.xxx`
