@@ -12,6 +12,7 @@ Follow the general [installation steps](https://github.com/SonarOpenCommunity/so
      - use `sonar.cxx.msbuild` to read includes and defines from MSBuild log file
 * Complexity metrics are performed on original source code now
   * In the past we were first preprocessing the code and were calculating the complexity metrics on base of the preprocessed code. This could lead to confusing metric numbers because macro code is counted multiple times and could also be from external libraries. **Generated code (among others macro expansions) doesn't affect the calculation of cognitive / cyclomatic complexity now. This can lead to different but easier to understand metrics.**
+* Setting `sonar.cxx.missingIncludeWarnings` is no more available. Turn debug info on to get information.
 * Cognitive Complexity support. There are two known limitations:
    * recursion is not handled
    * cognitive complexity per file is not available (Metrics/Coverage/Cognitive Complexity)
