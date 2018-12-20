@@ -9,6 +9,7 @@
   <td></td>
   <td></td>
   <td></td>
+  <td></td>
  </tr>
  <tr>
   <td></td>
@@ -20,10 +21,12 @@
   <td><b>v1.0.0</b></td>
   <td><b>v1.1.0</b></td>
   <td><b>v1.2.0</b></td>
+  <td><b>v1.2.1</b></td>
  </tr>
  <tr>
   <td><b>3.7.x (LTS)</b></td>
   <td>X</td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -42,6 +45,7 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
   <tr>
   <td><b>5.6.x (LTS)</b></td>
@@ -49,6 +53,7 @@
   <td>-</td>
   <td>X</td>
   <td>X</td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -64,6 +69,7 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>6.1.x</b></td>
@@ -71,6 +77,7 @@
   <td>-</td>
   <td>-</td>
   <td>X</td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -86,6 +93,7 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>6.3.x</b></td>
@@ -93,6 +101,7 @@
   <td>-</td>
   <td>-</td>
   <td>X</td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -108,6 +117,7 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>6.5.x</b></td>
@@ -115,6 +125,7 @@
   <td>-</td>
   <td>-</td>
   <td>X</td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
@@ -130,12 +141,14 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>-</td>
  </tr>
  <tr>
   <td><b>6.7.x (LTS)</b></td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>X</td>
   <td>X</td>
   <td>X</td>
   <td>X</td>
@@ -152,6 +165,7 @@
   <td>X</td>
   <td>X</td>
   <td>X</td>
+  <td>X</td>
  </tr>
  <tr>
   <td><b>7.1</b></td>
@@ -160,6 +174,7 @@
   <td>-</td>
   <td>-</td>
   <td>-</td>
+  <td>X</td>
   <td>X</td>
   <td>X</td>
   <td>X</td>
@@ -174,6 +189,7 @@
   <td>-</td>
   <td>X</td>
   <td>X</td>
+  <td>X</td>
  </tr>
  <tr>
   <td><b>7.3</b></td>
@@ -185,9 +201,23 @@
   <td>-</td>
   <td>-</td>
   <td>X</td>
+  <td>X</td>
  </tr>
  <tr>
   <td><b>7.4</b></td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>X</td>
+  <td>X</td>
+ </tr>
+ <tr>
+  <td><b>7.5</b></td>
+  <td>-</td>
   <td>-</td>
   <td>-</td>
   <td>-</td>
