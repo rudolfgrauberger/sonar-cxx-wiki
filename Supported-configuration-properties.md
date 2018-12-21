@@ -594,6 +594,10 @@ Function size threshold to consider a function to be too big. The threshold is f
 
 ---
 
+**Hints V1.2.1:**
+
+*  no changes
+
 **Hints V1.2.0:**
 
 * GCC and MSVC compiler sensor can be used at the same time now
