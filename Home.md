@@ -36,6 +36,7 @@ This Wiki contains usage guidelines and developer resources. Just navigate to th
 
 ### Development Related Stuff
 * [[Contribute]]
+* [[Design Guidelines]]
 * [[Build the plugin]]
 * [[Release Procedure]]
 * [[Misc. notes on development]]
