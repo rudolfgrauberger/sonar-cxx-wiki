@@ -2,7 +2,8 @@ Changes on the plugin should follow the below design guidelines:
 
 - the main purpose of the plugin is to forward reports from 3rd party tools to SonarQube
   - we don't like to reinvent the wheel
-- The plugin expects to be fed with syntactically correct code. This is a conscious design decision: we do not want to reimplement a compiler.
+- the plugin expects to be fed with syntactically correct code
+  - use an external compiler to get detailed syntax and semantic issues
 - the plugin is responsible for syntax highlighting
 - the plugin is responsible to create software metrics
 - we always try to follow the KISS principle
@@ -10,7 +11,7 @@ Changes on the plugin should follow the below design guidelines:
 **erroneous configuration:**
 - in case of an erroneous configuration the scanner should stop with an error
   - should not create a new snapshot on the SonarQube server
-- configuration errors are logged in the LOG file
+- configuration errors are recorded in the scanner LOG file
 - configuration errors should not lead to technical debt
 
 **erroneous reports:**
