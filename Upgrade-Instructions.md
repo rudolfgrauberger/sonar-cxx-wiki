@@ -29,6 +29,17 @@ Follow the general [installation steps](https://github.com/SonarOpenCommunity/so
 * Complexity metrics are performed on original source code now
   * In the past we were first preprocessing the code and were calculating the complexity metrics on base of the preprocessed code. This could lead to confusing metric numbers because macro code is counted multiple times and could also be from external libraries. **Generated code (among others macro expansions) doesn't affect the calculation of cognitive / cyclomatic complexity now. This can lead to different but easier to understand metrics.**
 * Setting `sonar.cxx.missingIncludeWarnings` is no more available. Turn debug info on to get information.
+* The naming of the following metrics have been changed:
+  * perc_complex_functions -> CXX-PERC_COMPLEX_FUNCTIONS
+  * loc_in_complex_functions -> LOC_IN_COMPLEX_FUNCTIONS
+  * perc_loc_in_complex_functions -> CXX-PERC_LOC_IN_COMPLEX_FUNCTIONS
+  * big_functions -> CXX-BIG_FUNCTIONS
+  * loc_in_big_functions -> CXX-LOC_IN_BIG_FUNCTIONS
+  * perc_big_functions -> CXX-PERC_BIG_FUNCTIONS
+  * perc_loc_in_big_functions -> CXX-PERC_LOC_IN_BIG_FUNCTIONS
+  * loc_in_functions -> CXX-LOC_IN_FUNCTIONS
+  * To keep the old metric values run in your database before upgrading to 1.2.x:
+    `update dbo.metrics set name = upper('CXX-' + name) where name in ('complex_functions', 'perc_complex_functions', 'big_functions', 'perc_big_functions', 'loc_in_complex_functions', 'perc_loc_in_complex_functions', 'loc_in_big_functions', 'perc_loc_in_big_functions', 'loc_in_functions')`
 * Cognitive Complexity support. There are two known limitations:
    * recursion is not handled
    * cognitive complexity per file is not available (Metrics/Coverage/Cognitive Complexity)
