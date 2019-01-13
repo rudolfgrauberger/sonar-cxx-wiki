@@ -531,8 +531,6 @@ ___
 *Scope:* `project`
 <br>
 *Default:* `---`
-<br>
-*History:* `no more supported with v1.0.0+`
 
 Enable Sonar C++ analysis to utilize JSON compilation database support. Specifies file to be used as JSON compilation database. JSON compilation database is used to improve C++ symbol and include directory knowledge. Sonar C++ plugin also supports extension to allow importing of used compiler's internal symbols and includes.
 
@@ -546,6 +544,8 @@ ___
 *Scope:* `project`
 <br>
 *Default:* `False`
+<br>
+*History:* `no more supported with v1.0.0+`
 
 When using JSON compilation database support limit Sonar C++ plugin analysis to specified files in JSON compilation database. This setting can be used to limit analysis to only compiled files.
 <br>
