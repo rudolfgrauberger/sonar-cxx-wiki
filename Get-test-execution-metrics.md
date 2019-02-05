@@ -12,7 +12,7 @@ By default, the JUnitReport format is expected. To import a report in
 an other format _X_, set the property **sonar.cxx.xunit.xsltURL** to a
 XSLT stylesheet which is able to perform X -> JUnitReport
 conversion. A couple of ready-made stylesheets are available
-[here](https://github.com/wenns/sonar-cxx/tree/master/sonar-cxx-plugin/src/main/resources/xsl):
+[here](https://github.com/SonarOpenCommunity/sonar-cxx/tree/master/cxx-sensors/src/main/resources/xsl):
 
 * boosttest-1.x-to-junit-1.0.xsl:       For transforming Boost-reports
 * boosttest-1.x-to-junit-dummy-1.0.xsl: For transforming Boost-reports, simulating virtual files
