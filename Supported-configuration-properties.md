@@ -1,7 +1,7 @@
 The C++ Community Plugin uses the following properties during analysis. See [here](
-http://docs.codehaus.org/display/SONAR/Analyzing+Source+Code) for the ways how to pass them to the plugin.
+https://docs.sonarqube.org/latest/analysis/overview/) for the ways how to pass them to the plugin.
 
-Beside the general SonarQube [Analysis Parameters](http://docs.codehaus.org/display/SONAR/Analysis+Parameters) the latest released plugin supports the parameter below:
+Beside the general SonarQube [Analysis Parameters](https://docs.sonarqube.org/latest/analysis/analysis-parameters/) the latest released plugin supports the parameter below:
 
 * [sonar.cxx.suffixes.sources](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxsuffixessources)
 * [sonar.cxx.suffixes.headers](https://github.com/SonarOpenCommunity/sonar-cxx/wiki/Supported-configuration-properties#sonarcxxsuffixesheaders)
