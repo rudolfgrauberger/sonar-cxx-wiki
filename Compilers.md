@@ -8,16 +8,16 @@ To feed GCC warnings into SonarQube, make sure to:
 1. Add the '-fdiagnostics-show-option' option in your GCC build options (CFLAGS, CPPFLAGS or similar)
 2. Capture the warnings from your build into a file (e.g build.log) using shell redirections or similar
 3. Set configuration properties, example:
-```
+```properties
 sonar.cxx.gcc.reportPath=*.log
 sonar.cxx.gcc.charset=UTF-8
 ```
 If gcc outputs the column numbers
-```
+```properties
 sonar.cxx.gcc.regex=(?<file>.*):(?<line>[0-9]+):[0-9]+:\\x20warning:\\x20(?<message>.*)\\x20\\[(?<id>.*)\\]
 ```
 Else if gcc doesn't output the column numbers (e.g. -fno-show-column is set or gcc version 4.4.7)
-```
+```properties
 sonar.cxx.gcc.regex=(?<file>.*):(?<line>[0-9]+):\\x20warning:\\x20(?<message>.*)\\x20\\[(?<id>.*)\\]
 ```
 Hint: You have to use additional escape sequences (`\`-> `\\`) for the regex property in the configuration file!
@@ -42,7 +42,7 @@ The format of the build log looks different for parallel project builds (MSBuild
 
 Hint: You have to use additional escape sequences (`\`-> `\\`) for the regex property in the configuration file!
 
-```
+```properties
 sonar.cxx.vc.regex=(.*>)?(?<file>.*)\\((?<line>\\d+)\\)\\x20:\\x20warning\\x20(?<id>C\\d+):(?<message>.*)
 ```
 
@@ -60,7 +60,7 @@ sonar.cxx.vc.regex=(.*>)?(?<file>.*)\\((?<line>\\d+)\\)\\x20:\\x20warning\\x20(?
 
 Visual Studio provides two tools to build and analyze a project from the command line. With both tools it is the easiest to redirect stdout to a LOG file.
 
-```
+```cmd
 [devenv.exe|msbuild.exe] ... > output.log
 ```
 
@@ -69,7 +69,7 @@ Additional both tools provide command line options to redirect the output to a f
 
 * Devenv example doing a solution rebuild and write the warnings to *example.log*.
 
-```
+```bat
 rem VS2010
 call "%ProgramFiles(x86)%\Microsoft Visual Studio 10.0\Common7\Tools\vsvars32.bat"
 devenv example.sln /rebuild Release /out example.log
@@ -77,7 +77,7 @@ devenv example.sln /rebuild Release /out example.log
 ```
 
 * MSBuild example doing a project rebuild and write the warnings to *example.log*.
-```
+```bat
 rem VS2010
 call "%ProgramFiles(x86)%\Microsoft Visual Studio 10.0\Common7\Tools\vsvars32.bat"
 MSBuild.exe example.proj /t:rebuild /p:Configuration=Release;WarningLevel=3 /fileLogger /fileLoggerParameters:WarningsOnly;LogFile=example.log;Verbosity=detailed;Encoding=UTF-8
@@ -89,13 +89,13 @@ Version 0.9.3 and above extracts includes, defines and compiler options from the
 
 This feature is enabled only if the produced log during compilation contains enough information (msbuild verbosity set to detailed or diagnostic). For example
    
-```
+```bat
 msbuild.exe /v:Detailed  Solution.SLN > buildlog.log
 ```
 
 and then
 
-```
+```properties
 sonar.cxx.msbuild.reportPath=buildlog.log
 sonar.cxx.msbuild.charset=UTF-8
 ```
@@ -108,7 +108,7 @@ This feature can be used in any version of visual studio and  it is independent 
 
 To read the messages from the LOG file the following configuration settings have to be defined. The regular expression can be configured and must match to the format in the LOG file.
 
-```
+```properties
 sonar.cxx.vc.reportPath=*.log
 sonar.cxx.vc.charset=UTF-8
 sonar.cxx.vc.regex=(.*>)?(?<file>.*)\\((?<line>\\d+)\\)\\x20:\\x20warning\\x20(?<id>C\\d+):(?<message>.*)
@@ -141,7 +141,7 @@ Sonar C++ plugin supports capturing of compiler defines (`-D`) and include confi
 
 In below example `hello.cpp` is compiled with `-DHELLO` and `world.cpp` is compiled with `-DWORLD`:
 
-```
+```jsonc
 [
   {
     "file" : "hello.cpp"
@@ -160,7 +160,7 @@ This specifies that `HELLO` define is only defined by Sonar C++ plugin when anal
 
 To improve define and include knowledge further Sonar C++ plugin includes extension to define includes and defines for all unknown files (like header files) and then allow full definition of both compiler internal and external defines and includes with `defines` and `includes` fields. To define defines and includes for unknown files filename `__global__` is used.
 
-```
+```jsonc
 [
   {
     "file": "__global__",
@@ -201,12 +201,12 @@ To improve define and include knowledge further Sonar C++ plugin includes extens
 
 To enable Sonar C++ analysis to utilize JSON compilation database support setting `sonar.cxx.jsonCompilationDatabase` needs to be defined in `sonar-project.properties`.
 
-```
+```properties
 sonar.cxx.jsonCompilationDatabase=compile_commands.json
 ```
 
 It is also possible to limit scanning of sources only to those specified in JSON compilation database file with setting `sonar.cxx.scanOnlySpecifiedSources`:
 
-```
+```properties
 sonar.cxx.scanOnlySpecifiedSources=True
 ```
