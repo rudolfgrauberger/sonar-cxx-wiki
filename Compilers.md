@@ -38,12 +38,12 @@ The format of the build log looks different for parallel project builds (MSBuild
 
 | Visual Studio Version              | Regular Expression           | 
 | ---------------------------------- |----------------------------- | 
-| Visual Studio 2010-2015                 | `(.*>)?(?<file>.*)\((?<line>\d+)\)\x20:\x20warning\x20(?<id>C\d+):(?<message>.*)` |
+| Visual Studio 2010-2017                 | `(.*>)?\x20*(?<file>.*)\((?<line>\d+)\):\x20*warning\x20*(?<id>C\d+):\x20*(?<message>.*)` |
 
 Hint: You have to use additional escape sequences (`\`-> `\\`) for the regex property in the configuration file!
 
 ```properties
-sonar.cxx.vc.regex=(.*>)?(?<file>.*)\\((?<line>\\d+)\\)\\x20:\\x20warning\\x20(?<id>C\\d+):(?<message>.*)
+sonar.cxx.vc.regex=(.*>)?\\x20*(?<file>.*)\\((?<line>\\d+)\\):\\x20*warning\\x20*(?<id>C\\d+):\\x20*(?<message>.*)
 ```
 
 **Visual Studio settings**
@@ -111,7 +111,7 @@ To read the messages from the LOG file the following configuration settings have
 ```properties
 sonar.cxx.vc.reportPath=*.log
 sonar.cxx.vc.charset=UTF-8
-sonar.cxx.vc.regex=(.*>)?(?<file>.*)\\((?<line>\\d+)\\)\\x20:\\x20warning\\x20(?<id>C\\d+):(?<message>.*)
+sonar.cxx.vc.regex=(.*>)?\\x20*(?<file>.*)\\((?<line>\\d+)\\):\\x20*warning\\x20*(?<id>C\\d+):\\x20*(?<message>.*)
 ```
 
 A typical log file contains compiler warnings as shown in the following excerpt:
@@ -128,6 +128,8 @@ Build started 26.02.2014 17:59:20.
      1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(74): warning C4995: 'memcpy': name was marked as #pragma deprecated
      1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112): warning C4995: 'strcpy': name was marked as #pragma deprecated
 ```
+
+Show Result on [RegEx101](https://regex101.com/r/AtLczg/1)
 
 **TFS builds with SonarQube MSBuild scanner**
 
